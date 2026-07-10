@@ -1,0 +1,9 @@
+name = "claude-code-finder"
+pages_build_output_dir = "site"
+compatibility_date = "2024-11-01"
+
+# 投稿レジストリ用 D1（site/functions/api/submit-skill.ts が env.DB で参照）
+[[d1_databases]]
+binding = "DB"
+database_name = "claude-code-finder-submissions"
+database_id = "d47c3452-51e8-45bd-b652-4b7c0d1dd2a0"

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code 機能逆引き辞典</title>
+<meta name="description" content="Claude Codeでやりたいことから、使うべき機能・コマンド・設定・連携先を逆引きできる日本語辞典。スラッシュコマンド、CLI、権限、MCP、Hooks、Skills、Subagents、Web、Desktop、CI/CDまで網羅。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="ry071702-prog">
+<meta name="keywords" content="Claude Code,Claude Code 機能,Claude Code 逆引き,Claude Code コマンド,Claude Code slash commands,Claude Code MCP,Claude Code hooks,Claude Code skills">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://claude-code-finder.pages.dev/">
+<meta property="og:title" content="Claude Code 機能逆引き辞典">
+<meta property="og:description" content="〜がしたい → 〜機能。Claude Codeの全主要機能を日本語で逆引き＋コミュニティSkills。">
+<meta property="og:image" content="https://claude-code-finder.pages.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://claude-code-finder.pages.dev/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f5f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15120e" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+  // フラッシュ回避: 描画前にテーマ確定
+  (function(){try{var t=localStorage.getItem('ccf-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#finderTitle">本文へ移動</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo" aria-label="Claude Code 逆引き辞典">
+      <span class="brand-mark" aria-hidden="true">❯_</span>
+      <span class="brand-name">Claude Code 逆引き辞典</span>
+    </a>
+    <nav class="header-nav" aria-label="サイト内ナビ">
+      <a href="index.html" class="nav-tab" aria-current="page">逆引き</a>
+      <a href="guide.html" class="nav-tab">ガイド</a>
+      <a href="academy.html" class="nav-tab">講座</a>
+      <a href="updates.html" class="nav-tab">更新</a>
+      <a class="nav-ext" href="https://github.com/ry071702-prog/claude-code-finder" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="テーマ切替" title="テーマ切替">
+        <span class="material-icons-outlined icon-dark" aria-hidden="true">dark_mode</span>
+        <span class="material-icons-outlined icon-light" aria-hidden="true">light_mode</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="heroHeading">
+  <div class="hero-inner">
+    <p class="hero-kicker"><span class="kicker-dot" aria-hidden="true"></span>Function Finder ・ 公式ドキュメント準拠 ・ 週次更新</p>
+    <h1 id="heroHeading" class="hero-title">
+      <span class="hero-line1">“<span class="rotator"><span class="rotator-in" id="rotator">PRを直したい</span><span class="caret" aria-hidden="true"></span></span>”</span>
+      <span class="hero-line2">その機能へ、逆引きで<span class="hero-arrow" aria-hidden="true">❯</span></span>
+    </h1>
+    <p class="hero-sub">Claude Code の全主要機能を、目的から一発で — 全 <b id="heroCount" data-count="0">0</b> 件を横断検索</p>
+
+    <div class="hero-search">
+      <span class="material-icons-outlined search-ic" aria-hidden="true">search</span>
+      <span class="search-prompt" aria-hidden="true">❯</span>
+      <input id="searchInput" type="search" placeholder="例: PR を直したい / 権限 / 続き / MCP / スマホ" autocomplete="off" aria-label="機能を検索" aria-describedby="resultCount">
+      <kbd aria-hidden="true">/</kbd>
+      <button id="clearButton" class="clear-btn" type="button" aria-label="検索をクリア"><span class="material-icons-outlined" aria-hidden="true">close</span></button>
+    </div>
+
+    <div class="hero-examples" aria-label="検索例">
+      <span class="ex-label">よく使う:</span>
+      <button type="button" class="ex-chip" data-q="PR">PR を直す</button>
+      <button type="button" class="ex-chip" data-q="権限">権限・安全</button>
+      <button type="button" class="ex-chip" data-q="続き">続きから再開</button>
+      <button type="button" class="ex-chip" data-q="MCP">MCP 連携</button>
+      <button type="button" class="ex-chip" data-q="テスト">テスト</button>
+      <button type="button" class="ex-chip" data-q="並列">並列で回す</button>
+    </div>
+  </div>
+</section>
+
+<main id="main" class="page-shell">
+  <aside class="sidebar" aria-label="カテゴリ">
+    <div class="sidebar-box">
+      <div class="sidebar-title">カテゴリ</div>
+      <nav id="categoryNav" class="category-nav"></nav>
+    </div>
+  </aside>
+
+  <section class="content">
+    <div class="controls">
+      <div class="quick-filters" id="quickFilters" aria-label="種類フィルタ"></div>
+      <div class="controls-right">
+        <span id="resultCount" class="result-count" role="status" aria-live="polite">0件</span>
+        <label class="sort-wrap">
+          <span class="material-icons-outlined" aria-hidden="true">swap_vert</span>
+          <select id="sortSelect" aria-label="並び替え">
+            <option value="priority">おすすめ順</option>
+            <option value="category">カテゴリ順</option>
+            <option value="name">機能名順</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <section class="finder" aria-labelledby="finderTitle">
+      <h2 id="finderTitle" class="visually-hidden">検索結果</h2>
+      <div id="skillsHelp" class="skills-help" hidden>
+        <span class="material-icons-outlined" aria-hidden="true">bolt</span>
+        <div class="sh-steps">
+          <b>コミュニティSkillの入れ方</b>
+          <span><em>1</em> カードの <code>npx skills add …</code> をコピー</span>
+          <span><em>2</em> 自分のターミナルに貼って実行</span>
+          <span><em>3</em> Claude Code で使えるようになる（<code>-g</code>=全プロジェクト）</span>
+        </div>
+      </div>
+      <div id="cards" class="card-grid" role="list"></div>
+      <div id="emptyState" class="empty-state" hidden>
+        <span class="material-icons-outlined" aria-hidden="true">search_off</span>
+        <p>該当なし — 言い換えて検索してみてください</p>
+      </div>
+    </section>
+
+    <section class="map-section" aria-labelledby="mapTitle">
+      <div class="section-head">
+        <p class="section-kicker">Coverage Map</p>
+        <h2 id="mapTitle">機能カテゴリの全体像</h2>
+      </div>
+      <div id="coverageMap" class="coverage-grid"></div>
+    </section>
+
+    <section class="explore-section" aria-labelledby="exploreTitle">
+      <div class="section-head">
+        <p class="section-kicker">Explore More</p>
+        <h2 id="exploreTitle">辞典の先へ — 読んで学ぶ</h2>
+      </div>
+      <div class="bento-explore">
+        <a href="guide.html" class="bento-tile bento-lg">
+          <span class="bento-ic material-icons-outlined" aria-hidden="true">menu_book</span>
+          <div class="bento-body">
+            <h3>ガイド<span class="bento-arrow" aria-hidden="true">❯</span></h3>
+            <p>基本 / コマンド / 設定 / 連携 / 拡張 まで、目的別に通して読める本文集。逆引きの各項目を体系立てて理解したい時に。</p>
+          </div>
+          <span class="bento-count" data-explore="guide">—</span>
+        </a>
+        <a href="academy.html" class="bento-tile">
+          <span class="bento-ic material-icons-outlined" aria-hidden="true">school</span>
+          <div class="bento-body">
+            <h3>講座<span class="bento-arrow" aria-hidden="true">❯</span></h3>
+            <p>入門→中級→上級の3コースで、手を動かしながら学ぶ。進捗も記録。</p>
+          </div>
+          <span class="bento-count" data-explore="academy">3 コース</span>
+        </a>
+        <a href="updates.html" class="bento-tile">
+          <span class="bento-ic material-icons-outlined" aria-hidden="true">bolt</span>
+          <div class="bento-body">
+            <h3>更新<span class="bento-arrow" aria-hidden="true">❯</span></h3>
+            <p>主要な新機能ハイライト＋公式CHANGELOGを毎週自動取得。</p>
+          </div>
+          <span class="bento-count" data-explore="updates">週次更新</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="sources" class="sources" aria-labelledby="sourcesTitle">
+      <div class="section-head">
+        <p class="section-kicker">Official Sources</p>
+        <h2 id="sourcesTitle">根拠にした公式ページ</h2>
+      </div>
+      <div id="sourceList" class="source-list"></div>
+    </section>
+
+    <section class="submit-cta" aria-labelledby="submitCtaTitle">
+      <div class="submit-cta-inner">
+        <div>
+          <p class="section-kicker">Community</p>
+          <h2 id="submitCtaTitle">あなたの Skill を登録申請</h2>
+          <p class="submit-cta-sub">GitHub にある Claude Code の Skill を教えてください。人手で確認のうえ「コミュニティSkills」に掲載します（週次で自動更新）</p>
+        </div>
+        <button id="openSubmit" type="button" class="cta-btn">
+          <span class="material-icons-outlined" aria-hidden="true">add</span>Skill を登録
+        </button>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="prompt-mark" aria-hidden="true">❯</span>
+    <span>Claude Code 逆引き辞典 ・ 公式ドキュメントを参照して編集 ・ <a href="https://github.com/ry071702-prog/claude-code-finder" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+  </div>
+</footer>
+
+<div id="modalOverlay" class="modal-overlay" hidden>
+  <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <header class="modal-header">
+      <div class="modal-head-text">
+        <p id="modalCategory" class="modal-kicker"></p>
+        <h2 id="modalTitle"></h2>
+      </div>
+      <button id="modalClose" type="button" aria-label="閉じる"><span class="material-icons-outlined" aria-hidden="true">close</span></button>
+    </header>
+    <div id="modalBody" class="modal-body"></div>
+  </article>
+</div>
+
+<div id="submitOverlay" class="modal-overlay" hidden>
+  <article class="modal submit-modal" role="dialog" aria-modal="true" aria-labelledby="submitTitle">
+    <header class="modal-header">
+      <div class="modal-head-text">
+        <p class="modal-kicker">Community</p>
+        <h2 id="submitTitle">Skill を登録申請</h2>
+      </div>
+      <button id="submitClose" type="button" aria-label="閉じる"><span class="material-icons-outlined" aria-hidden="true">close</span></button>
+    </header>
+    <div class="modal-body">
+      <form id="submitForm" novalidate>
+        <label class="fld"><span>GitHub リポジトリ <b>*</b></span>
+          <input name="owner_repo" type="text" required placeholder="owner/repo（例: anthropics/skills）" autocomplete="off"></label>
+        <label class="fld"><span>Skill 名（任意・repo内で特定する場合）</span>
+          <input name="skill_name" type="text" placeholder="例: pdf（英小文字・数字・ハイフン）" autocomplete="off"></label>
+        <label class="fld"><span>連絡先（任意・X等）</span>
+          <input name="contact" type="text" placeholder="@your_handle など" autocomplete="off"></label>
+        <label class="fld"><span>ひとこと（任意・推薦理由）</span>
+          <textarea name="note" rows="2" placeholder="どんな時に便利か"></textarea></label>
+        <input name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+        <p id="submitMsg" class="submit-msg" role="status" aria-live="polite"></p>
+        <button type="submit" class="cta-btn" id="submitSend">申請を送信</button>
+        <p class="submit-fine">送信内容は人手で確認後に掲載します（skill は任意コード実行のため、提出＝掲載ではありません）</p>
+      </form>
+    </div>
+  </article>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/data-custom.js"></script>
+<script src="js/data-skills.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

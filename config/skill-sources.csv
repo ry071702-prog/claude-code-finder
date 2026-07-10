@@ -1,0 +1,17 @@
+# 取り込み対象の宣言的watchlist（info-collector の watchlist.csv に倣う）
+# type   : repo=単一リポジトリを走査 / search=GitHubコード検索(SKILL.md)で発見
+# value  : repo は "owner/repo"、search は検索クエリ
+# category: サイト上のカテゴリ（現状は community 固定でOK）
+# priority: 小さいほど上位（同星数時の tie-break）
+# enabled : true/false
+type,value,category,priority,enabled,notes
+repo,vercel-labs/agent-skills,community,10,true,Vercel公式スキル集
+repo,ry071702-prog/web-design-playbook,community,50,true,自作(dogfood)
+repo,anthropics/skills,community,5,true,Anthropic skills(存在すれば)
+search,"filename:SKILL.md claude code skill",community,100,true,標準スキル探索(best-effort)
+search,"path:skills filename:SKILL.md",community,110,true,skills配下のSKILL.md
+search,"topic:claude-code filename:SKILL.md",community,120,true,claude-codeトピックのskill
+search,"filename:SKILL.md npx skills add",community,130,true,配布前提のskill
+# marketplace系(plugins/*/skills/*/SKILL.md 同梱)は導入コマンドが plugin 経路のため別レーン化予定（TODO）
+# repo,anthropics/claude-plugins-official,community,200,false,公式plugin内skill(要marketplaceレーン)
+# repo,wshobson/agents,community,210,false,agents/skills(要marketplaceレーン)

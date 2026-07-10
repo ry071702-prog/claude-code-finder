@@ -1,0 +1,10 @@
+{
+  "name": "claude-code-finder",
+  "version": "1.0.0",
+  "description": "Claude Code 逆引き辞典。やりたいことから機能・スラッシュコマンド・設定・連携・コミュニティSkillを引く。MCP tool lookup(query) でセッション内にライブ提供。",
+  "author": { "name": "ry071702-prog", "url": "https://github.com/ry071702-prog" },
+  "repository": "https://github.com/ry071702-prog/claude-code-finder",
+  "homepage": "https://claude-code-finder.pages.dev/",
+  "license": "MIT",
+  "keywords": ["claude-code", "逆引き", "reference", "skills", "mcp"]
+}

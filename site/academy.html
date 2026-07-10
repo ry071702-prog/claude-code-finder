@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>講座 ｜ Claude Code 逆引き辞典</title>
+<meta name="description" content="Claude Code をインストールから計画→実装→検証まで、体系立てて学べる入門講座。">
+<meta name="robots" content="index,follow">
+<meta name="author" content="ry071702-prog">
+<meta name="theme-color" content="#f5f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15120e" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>(function(){try{var t=localStorage.getItem('ccf-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#acadMain">本文へ移動</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo" aria-label="Claude Code 逆引き辞典">
+      <span class="brand-mark" aria-hidden="true">❯_</span><span class="brand-name">Claude Code 逆引き辞典</span>
+    </a>
+    <nav class="header-nav" aria-label="サイト内ナビ">
+      <a href="index.html" class="nav-tab">逆引き</a>
+      <a href="guide.html" class="nav-tab">ガイド</a>
+      <a href="academy.html" class="nav-tab" aria-current="page">講座</a>
+      <a href="updates.html" class="nav-tab">更新</a>
+      <a class="nav-ext" href="https://github.com/ry071702-prog/claude-code-finder" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="テーマ切替" title="テーマ切替">
+        <span class="material-icons-outlined icon-dark" aria-hidden="true">dark_mode</span>
+        <span class="material-icons-outlined icon-light" aria-hidden="true">light_mode</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="hero-kicker"><span class="kicker-dot" aria-hidden="true"></span>Academy</p>
+    <h1 class="page-title" id="courseTitle">講座</h1>
+    <p class="page-sub" id="courseSub"></p>
+    <p class="course-badge" id="courseBadge"></p>
+    <nav id="coursePicker" class="course-picker" aria-label="コース選択"></nav>
+  </div>
+</section>
+
+<main id="acadMain" class="page-shell">
+  <aside class="sidebar" aria-label="レッスン一覧">
+    <div class="sidebar-box">
+      <div class="sidebar-title">レッスン</div>
+      <div id="acadProgress" class="acad-progress"></div>
+      <nav id="lessonNav" class="lesson-nav"></nav>
+    </div>
+  </aside>
+  <section class="content">
+    <article id="lessonView" class="lesson-view"></article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="prompt-mark" aria-hidden="true">❯</span>
+    <span>Claude Code 逆引き辞典 ・ 公式ドキュメントを参照して編集 ・ <a href="https://github.com/ry071702-prog/claude-code-finder" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+  </div>
+</footer>
+
+<script src="js/data-academy.js"></script>
+<script src="js/theme-toggle.js"></script>
+<script src="js/academy.js"></script>
+</body>
+</html>

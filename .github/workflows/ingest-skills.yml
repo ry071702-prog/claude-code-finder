@@ -1,0 +1,65 @@
+name: Ingest skills & changelog
+
+on:
+  schedule:
+    - cron: "0 22 * * 1"   # 毎週 月22:00 UTC = 火 07:00 JST
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "取り込み最大件数"
+        default: "120"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-skills
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      # 非LLM。GITHUB_TOKEN で GitHub API を叩く（star/SKILL.md 取得）。
+      - name: Fetch skills (non-LLM)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_skills.py --limit "${{ github.event.inputs.limit || '120' }}"
+
+      - name: Build site data
+        run: python scripts/build_data.py
+
+      # 非LLM。公式 anthropics/claude-code の CHANGELOG.md を取得して更新ページへ反映。
+      - name: Fetch official changelog (non-LLM)
+        run: python scripts/fetch_updates.py --limit 8
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # プラグイン同梱の逆引きデータ(MCP lookup 用)も同期
+      - name: Build plugin/MCP data
+        run: node scripts/build_plugin_data.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/skills/skills.jsonl site/js/data-skills.js site/js/data-changelog.js plugin/mcp/data.json
+          if git diff --cached --quiet; then
+            echo "変更なし（スキップ）"
+          else
+            git commit -m "data: refresh community skills & changelog ($(date -u +%Y-%m-%d))"
+            # 併走 push との競合に備え rebase してから push（失敗時は1回リトライ）
+            git pull --rebase --autostash origin main || true
+            git push || { git pull --rebase --autostash origin main && git push; }
+            echo "pushed → deploy.yml が連鎖してデプロイ"
+          fi

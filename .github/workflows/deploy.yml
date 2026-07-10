@@ -1,0 +1,46 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "wrangler.toml"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      # secrets は式評価コンテキストで真偽化できる（値は露出しない）
+      HAS_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guard (トークン未設定ならスキップ)
+        if: env.HAS_TOKEN != 'true'
+        run: echo "::notice::CLOUDFLARE_API_TOKEN 未設定のためデプロイをスキップ（ローカル wrangler で継続中）"
+
+      # ルート wrangler.toml（pages_build_output_dir=site + D1バインド）を使って
+      # site/ と site/functions/ を Cloudflare Pages へデプロイ。
+      - name: Deploy to Cloudflare Pages
+        if: env.HAS_TOKEN == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # commit message は Cloudflare API が長文/多バイトを弾くため短い ASCII 固定。
+          command: >-
+            pages deploy
+            --project-name=claude-code-finder
+            --branch=main
+            --commit-hash=${{ github.sha }}
+            --commit-message=ci

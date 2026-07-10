@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-code-finder",
+  "description": "Claude Code 逆引き辞典プラグイン。目的から機能・コマンド・設定・連携・コミュニティSkillを引く（MCP tool lookup 常駐）。",
+  "owner": { "name": "ry071702-prog", "url": "https://github.com/ry071702-prog" },
+  "plugins": [
+    {
+      "name": "claude-code-finder",
+      "source": "./plugin",
+      "description": "やりたいことから Claude Code の機能/コマンド/導入skillを逆引き。MCP tool lookup(query) でセッション内にライブ提供＋cc-finder skill。",
+      "category": "productivity",
+      "version": "1.0.0"
+    }
+  ]
+}
