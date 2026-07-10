@@ -113,9 +113,9 @@ window.CCF_ACADEMY = [
       {
         id:"l7", title:"並行して作業を回す",
         summary:"複数セッション・git worktree・バックグラウンドで待ち時間を減らす。",
-        body:"独立した作業は同時に走らせると速く終わります。git worktree で作業ツリーを分ければ、同じリポジトリの別ブランチを衝突させずに並行編集できます。長い処理はバックグラウンドに逃がし、終わったら結果だけ受け取る、という回し方も有効です。並行するほど「何をどこまでやったか」の把握が要になります。",
-        points:["独立作業は並行させて待ち時間を削る","git worktree でブランチ間の衝突を避ける","長い処理はバックグラウンド化して結果だけ回収"],
-        commands:["git worktree add ../feature-x feature-x"]
+        body:"独立した作業は同時に走らせると、待ち時間が大きく減ります。たとえば『機能Aの実装』と『機能Bのバグ調査』は互いに無関係なので、別々のセッションで並行させられます。ただし同じリポジトリで2つ同時に編集するとファイルが衝突するため、git worktree add ../feature-b feature-b で作業ツリーを分ければ、ブランチごとに独立したフォルダで安全に並行できます。時間のかかるテストやビルドはバックグラウンドに逃がし、終わったら結果だけ受け取る回し方も有効です。並行数が増えるほど『どれが何をどこまでやったか』の把握が要になるので、1タスク1セッション＋worktree で境界を明確にしておくのがコツです。",
+        points:["無関係な作業は別セッションで並行させ待ち時間を削る","git worktree で作業ツリーを分けてファイル衝突を避ける","重い処理はバックグラウンド化＋境界を明確にして把握を保つ"],
+        commands:["git worktree add ../feature-b feature-b","git worktree list"]
       }
     ]
   },
@@ -129,8 +129,8 @@ window.CCF_ACADEMY = [
       {
         id:"l1", title:"MCP で外部ツールに繋ぐ",
         summary:"Slack・社内 API・DB などを MCP サーバー経由で Claude の道具にする。",
-        body:"MCP（Model Context Protocol）は、外部ツールを Claude から呼べる形で公開する共通規格です。claude mcp add で接続を登録すると、その提供するツールを会話の中で使えます。認証が要るサーバーは初回に許可が必要です。自作もでき、標準入出力で JSON-RPC をやり取りする最小サーバーから始められます。",
-        points:["claude mcp add で接続を登録して道具を増やす","認証つきサーバーは初回に許可フローを通す","stdio + JSON-RPC の最小構成で自作もできる"],
+        body:"MCP（Model Context Protocol）は、外部ツールを Claude から呼べる形で公開する共通規格です。たとえば GitHub の MCP サーバーを繋げば『このリポジトリの Open な PR を一覧して』と会話の中で頼めますし、社内 API や DB を公開すれば実データを見ながら実装できます。接続は claude mcp add <name> -- <サーバ起動コマンド> で登録し、claude mcp list で状態を確認します。Slack や Notion のような認証が要るサーバーは初回に許可フロー（OAuth 等）を通します。自作も難しくなく、標準入出力で JSON-RPC をやり取りする最小サーバー（initialize / tools/list / tools/call に応答するだけ）から始められます。まずは既存サーバーを1つ繋いで『会話から外部ツールを呼べる』感覚を掴むのが近道です。",
+        points:["claude mcp add で接続登録→ claude mcp list で状態確認","認証つき(Slack/Notion等)は初回に OAuth 許可を通す","自作は stdio+JSON-RPC の最小サーバー（3メソッド応答）から"],
         commands:["claude mcp add <name> -- <command>","claude mcp list"]
       },
       {
