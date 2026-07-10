@@ -485,17 +485,33 @@
     if(!el) return;
     const words = ["PRを直したい","権限を安全に絞りたい","続きから再開したい","MCPで外部に繋ぎたい","並列で大きく変えたい","テストを書いて直したい","スマホから続けたい","計画だけ先に見たい"];
     if(reduceMotion){ el.textContent = words[0]; return; }
-    let i = 0;
-    setInterval(() => {
-      el.classList.add("swap-out");
-      setTimeout(() => {
-        i = (i + 1) % words.length;
-        el.textContent = words[i];
-        el.classList.remove("swap-out");
-        el.classList.add("swap-in");
-        setTimeout(() => el.classList.remove("swap-in"), 360);
-      }, 260);
-    }, 2600);
+    // タイプライター演出: 1文字ずつ打つ→保持→1文字ずつ消す→次の語へ
+    const TYPE = 78, DEL = 38, HOLD = 1500, GAP = 380;
+    const caret = el.parentNode && el.parentNode.querySelector(".caret");
+    let wi = 0;
+    function setTyping(on){ if(caret) caret.classList.toggle("typing", on); }
+    function typeWord(){
+      const chars = Array.from(words[wi]);
+      let ci = 0;
+      setTyping(true);
+      (function type(){
+        el.textContent = chars.slice(0, ci).join("");
+        if(ci < chars.length){ ci++; setTimeout(type, TYPE); }
+        else { setTyping(false); setTimeout(delWord, HOLD); }
+      })();
+    }
+    function delWord(){
+      const chars = Array.from(el.textContent);
+      let ci = chars.length;
+      setTyping(true);
+      (function del(){
+        el.textContent = chars.slice(0, ci).join("");
+        if(ci > 0){ ci--; setTimeout(del, DEL); }
+        else { wi = (wi + 1) % words.length; setTimeout(typeWord, GAP); }
+      })();
+    }
+    el.textContent = "";
+    typeWord();
   }
 
   /* ---------- dynamic: scroll reveal ---------- */

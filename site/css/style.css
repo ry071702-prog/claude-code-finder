@@ -109,6 +109,8 @@ b,strong{font-weight:700}
 @keyframes rotOut{to{opacity:0;transform:translateY(-.28em) rotateX(40deg)}}
 @keyframes rotIn{from{opacity:0;transform:translateY(.32em)}to{opacity:1;transform:none}}
 .caret{display:inline-block;width:.055em;height:.82em;margin-left:.06em;background:var(--accent);transform:translateY(.06em);animation:blink 1.05s steps(1) infinite}
+.caret.typing{animation:none;opacity:1}
+@media(prefers-reduced-motion:reduce){.caret{animation:none}}
 .hero-arrow{display:inline-block;margin-left:.12em;font-family:var(--mono);color:var(--accent);transform:translateY(-.04em);animation:nudge 1.6s ease-in-out infinite}
 @keyframes nudge{0%,100%{transform:translate(0,-.04em)}50%{transform:translate(.14em,-.04em)}}
 @keyframes blink{50%{opacity:.1}}
