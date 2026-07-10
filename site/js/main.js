@@ -419,6 +419,10 @@
       if(restoreFocus && restoreFocus.focus) restoreFocus.focus(); };
     openBtn.addEventListener("click", open);
     closeBtn.addEventListener("click", close);
+    // ヘッダの常時導線（一番下までスクロール不要）＋ 他ページから index.html#submit で来たら自動で開く
+    const headerBtn = document.getElementById("headerSubmit");
+    if(headerBtn) headerBtn.addEventListener("click", e => { e.preventDefault(); open(); });
+    if(location.hash === "#submit") open();
     overlay.addEventListener("click", e => { if(e.target === overlay) close(); });
     document.addEventListener("keydown", e => { if(e.key === "Escape" && !overlay.hidden) close(); });
 
