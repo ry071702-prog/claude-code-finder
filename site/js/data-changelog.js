@@ -7,6 +7,107 @@ window.CCF_CHANGELOG = {
   "source": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
   "versions": [
     {
+      "version": "2.1.207",
+      "items": [
+        {
+          "kind": "その他",
+          "text": "Auto mode is now available without CLAUDE_CODE_ENABLE_AUTO_MODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed remote managed settings from a non-interactive run (claude -p, the SDK) being permanently recorded as consented without ever showing the security consent dialog"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed spurious prompt-injection warnings triggered by benign system-generated conversation updates"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the auto-updater overwriting a custom launcher script or symlink at ~/.local/bin/claude on every release; /doctor now reports an externally managed launcher"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed compound commands with cd prompting for permission when the only output redirect was to /dev/null"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the transcript jumping above the start of the answer when a response finishes streaming"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed extensions.worktreeConfig being left in the repo's .git/config (breaking go-git tools like tea) after the last worktree.sparsePaths worktree was removed"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed malformed bracket patterns in rules globs, skill paths, .ignore, and .worktreeinclude breaking file reads, file suggestions, and worktree creation"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed a crash loop in agent teams where a malformed teammate mailbox message caused repeated errors every second until the mailbox file was manually deleted"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed background sessions auto-named by accepting a plan not showing that name on their agent-view row"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed background sessions that entered a git worktree resuming blank after a cold reopen from the agent list"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Remote Control task status updates being lost when the connection recovered from a network interruption or credential refresh"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Remote Control sessions hosted by the desktop app not showing background agent and workflow progress on mobile and web"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Deep research runs labeling every Fetch-phase agent \"unknown\" — chips now show the source hostname"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Bedrock repeatedly requesting fresh AWS SSO credentials from IAM Identity Center on every API request"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved agent view: pasting the same text again now expands the collapsed [Pasted text #N] placeholder instead of adding a second one"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved agent view: blocked session peeks now lead with the question and show a worded staleness clock (waiting 3m) instead of the same timestamp twice"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed Bedrock, Vertex, and Claude Platform on AWS to default to Claude Opus 4.8"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed auto mode to no longer read autoMode from .claude/settings.local.json (repo-resident); use ~/.claude/settings.json instead"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed an indefinite hang on Windows when AWS credential resolution stalls (e.g. a stuck credential_process): the 60-second stall guard now fires instead of waiting forever."
+        },
+        {
+          "kind": "その他",
+          "text": "Plugin hooks/monitors/MCP headersHelper: ${user_config.*} in shell-form commands is now rejected (shell-injection fix). Hooks: use exec form (args array) or $CLAUDE_PLUGIN_OPTION_<KEY>; monitors and headersHelper: read the value inside the script (config file or the server's env block)."
+        },
+        {
+          "kind": "その他",
+          "text": "Plugin option values (pluginConfigs) are no longer read from project-level .claude/settings.json; only user, --settings, and managed settings are honored"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed /usage-credits amount inputs silently stripping malformed values (e.g. a pasted timestamp) to digits; malformed amounts are now rejected with an error, and amounts over $1,000 require a typed confirmation"
+        }
+      ]
+    },
+    {
       "version": "2.1.206",
       "items": [
         {
@@ -534,107 +635,6 @@ window.CCF_CHANGELOG = {
         {
           "kind": "改善",
           "text": "Improved the install script to explain when installation is killed by the system running out of memory"
-        }
-      ]
-    },
-    {
-      "version": "2.1.199",
-      "items": [
-        {
-          "kind": "その他",
-          "text": "Stacked slash-skill invocations like /skill-a /skill-b do XYZ now load all leading skills (up to 5), not just the first"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed SSL certificate errors (TLS-inspecting proxies, missing NODE_EXTRA_CA_CERTS, expired certs) burning retries before showing actionable guidance — they now fail immediately with the fix hint"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed streaming responses being discarded when the API emits a mid-stream overloaded/server error after partial output — the partial is now kept with an incomplete-response notice"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed subagents cut off by a rate limit or server error silently failing instead of returning their partial work to the parent"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed subagents reporting API errors (e.g. usage limit reached) as successful results — the error is now reported to the parent agent"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed the background-agent daemon on Linux killing itself and every running agent every ~50 seconds after an unclean shutdown left a corrupted worker record"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background agents failing to cold-start over SSH on macOS with \"Could not switch to audit session\" (regression in 2.1.196)"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed claude stop being silently undone when it raced a background-agent respawn — the respawn now honors the stop"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background job progress indicators stalling for minutes while the job ran long commands"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background sessions on memory-starved machines showing a generic error — they now indicate low memory and suggest freeing resources"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed remote sessions briefly flapping between Working and Idle in the agent view when a background agent completes"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed idle subagents vanishing from the agent panel while other subagents were still working; surplus idle agents now collapse into an expandable summary row"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed typing /model or /fast while viewing a subagent silently opening the lead's model picker — a notice now explains the command applies to the lead"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed SessionStart, Setup, and SubagentStart hooks silently hiding stderr when exiting with code 2 — the error is now shown in the transcript"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed claude --dangerously-skip-permissions daemon <subcommand> being treated as a chat prompt instead of running the subcommand"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed SendMessage silently misrouting when a re-spawned agent reuses a previous agent's name — the tool now detects the mismatch and asks the caller to retarget"
-        },
-        {
-          "kind": "追加",
-          "text": "Fixed opening or resuming a session with no new messages needlessly growing the transcript file"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed backgrounding a session with ← or /background dropping its /color from the agent view row"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed resetting a corrupted config file from the startup recovery dialog destroying it unrecoverably — it now backs up the file first"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Claude in Chrome repeatedly opening the reconnect page when sessions run from different builds or config directories"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed plan mode not prompting for state-changing browser tool calls; read-only browser_batch calls are now correctly auto-allowed"
-        },
-        {
-          "kind": "その他",
-          "text": "Transient server rate-limit errors (429s unrelated to your usage limit) are now retried automatically with backoff for subscribers instead of failing the turn"
-        },
-        {
-          "kind": "その他",
-          "text": "CLAUDE_CODE_RETRY_WATCHDOG now raises the default retry count for non-capacity transient errors to 300 and lifts the cap of 15 on CLAUDE_CODE_MAX_RETRIES"
-        },
-        {
-          "kind": "その他",
-          "text": "claude agents session rows now show pull-request links as bare #N without the redundant \"PR\" label"
         }
       ]
     }

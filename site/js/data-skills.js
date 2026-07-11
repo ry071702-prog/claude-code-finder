@@ -2,8 +2,176 @@
 // GitHub の Claude Code Skills を非LLMで取り込んだもの（週次 ingest-skills.yml）。
 window.CCF_SKILLS = [
 {
-"id": "skill-anthropics-skills-algorithmic-art",
+"id": "skill-affaan-m-ecc-.agents-skills-agent-introspection-debugging",
 "priority": 400,
+"category": "community",
+"type": "skill",
+"want": "agent-introspection-debugging",
+"feature": "affaan-m/ECC",
+"summary": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
+"commands": [
+"npx skills add affaan-m/ECC@agent-introspection-debugging -g"
+],
+"install": "npx skills add affaan-m/ECC@agent-introspection-debugging -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"agent-introspection-debugging",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-affaan-m-ecc-.agents-skills-agent-sort",
+"priority": 401,
+"category": "community",
+"type": "skill",
+"want": "agent-sort",
+"feature": "affaan-m/ECC",
+"summary": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
+"commands": [
+"npx skills add affaan-m/ECC@agent-sort -g"
+],
+"install": "npx skills add affaan-m/ECC@agent-sort -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"agent-sort",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-affaan-m-ecc-.agents-skills-api-design",
+"priority": 402,
+"category": "community",
+"type": "skill",
+"want": "api-design",
+"feature": "affaan-m/ECC",
+"summary": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
+"commands": [
+"npx skills add affaan-m/ECC@api-design -g"
+],
+"install": "npx skills add affaan-m/ECC@api-design -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"api-design",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-affaan-m-ecc-.agents-skills-article-writing",
+"priority": 403,
+"category": "community",
+"type": "skill",
+"want": "article-writing",
+"feature": "affaan-m/ECC",
+"summary": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.",
+"commands": [
+"npx skills add affaan-m/ECC@article-writing -g"
+],
+"install": "npx skills add affaan-m/ECC@article-writing -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"article-writing",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-affaan-m-ecc-.agents-skills-backend-patterns",
+"priority": 404,
+"category": "community",
+"type": "skill",
+"want": "backend-patterns",
+"feature": "affaan-m/ECC",
+"summary": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+"commands": [
+"npx skills add affaan-m/ECC@backend-patterns -g"
+],
+"install": "npx skills add affaan-m/ECC@backend-patterns -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"backend-patterns",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-affaan-m-ecc-.agents-skills-benchmark-methodology",
+"priority": 405,
+"category": "community",
+"type": "skill",
+"want": "benchmark-methodology",
+"feature": "affaan-m/ECC",
+"summary": "Use after competitive-platform-analysis has produced a tiered competitor set. Scores each competitor across nine weighted dimensions (positioning, voice, visual craft, offer packaging, evidence, enterprise-readiness, thought leadership, pricing, client's strategic tension) with explicit 1–5 rubrics and a tension-plot. Precedes competitive-report-structure.",
+"commands": [
+"npx skills add affaan-m/ECC@benchmark-methodology -g"
+],
+"install": "npx skills add affaan-m/ECC@benchmark-methodology -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"benchmark-methodology",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-affaan-m-ecc-.agents-skills-brand-discovery",
+"priority": 406,
+"category": "community",
+"type": "skill",
+"want": "brand-discovery",
+"feature": "affaan-m/ECC",
+"summary": "Use when a brand needs to discover or articulate its identity through structured multi-session interviews. Covers purpose, positioning, audience, personality, voice, narrative, and founder-brand tension across 8 modules using laddering, 5 Whys, and projective techniques. Produces a resumable session with disk-persisted state and a master brandbook (90_SYNTHESIS.md).",
+"commands": [
+"npx skills add affaan-m/ECC@brand-discovery -g"
+],
+"install": "npx skills add affaan-m/ECC@brand-discovery -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"brand-discovery",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-affaan-m-ecc-.agents-skills-brand-voice",
+"priority": 407,
+"category": "community",
+"type": "skill",
+"want": "brand-voice",
+"feature": "affaan-m/ECC",
+"summary": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.",
+"commands": [
+"npx skills add affaan-m/ECC@brand-voice -g"
+],
+"install": "npx skills add affaan-m/ECC@brand-voice -g",
+"stars": 228285,
+"repoUrl": "https://github.com/affaan-m/ECC",
+"aliases": [
+"brand-voice",
+"affaan-m",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-anthropics-skills-skills-algorithmic-art",
+"priority": 408,
 "category": "community",
 "type": "skill",
 "want": "algorithmic-art",
@@ -13,7 +181,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@algorithmic-art -g"
 ],
 "install": "npx skills add anthropics/skills@algorithmic-art -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "algorithmic-art",
@@ -23,8 +191,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-brand-guidelines",
-"priority": 401,
+"id": "skill-anthropics-skills-skills-brand-guidelines",
+"priority": 409,
 "category": "community",
 "type": "skill",
 "want": "brand-guidelines",
@@ -34,7 +202,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@brand-guidelines -g"
 ],
 "install": "npx skills add anthropics/skills@brand-guidelines -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "brand-guidelines",
@@ -44,8 +212,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-canvas-design",
-"priority": 402,
+"id": "skill-anthropics-skills-skills-canvas-design",
+"priority": 410,
 "category": "community",
 "type": "skill",
 "want": "canvas-design",
@@ -55,7 +223,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@canvas-design -g"
 ],
 "install": "npx skills add anthropics/skills@canvas-design -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "canvas-design",
@@ -65,8 +233,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-claude-api",
-"priority": 403,
+"id": "skill-anthropics-skills-skills-claude-api",
+"priority": 411,
 "category": "community",
 "type": "skill",
 "want": "claude-api",
@@ -76,7 +244,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@claude-api -g"
 ],
 "install": "npx skills add anthropics/skills@claude-api -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "claude-api",
@@ -86,8 +254,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-doc-coauthoring",
-"priority": 404,
+"id": "skill-anthropics-skills-skills-doc-coauthoring",
+"priority": 412,
 "category": "community",
 "type": "skill",
 "want": "doc-coauthoring",
@@ -97,7 +265,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@doc-coauthoring -g"
 ],
 "install": "npx skills add anthropics/skills@doc-coauthoring -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "doc-coauthoring",
@@ -107,8 +275,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-docx",
-"priority": 405,
+"id": "skill-anthropics-skills-skills-docx",
+"priority": 413,
 "category": "community",
 "type": "skill",
 "want": "docx",
@@ -118,7 +286,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@docx -g"
 ],
 "install": "npx skills add anthropics/skills@docx -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "docx",
@@ -128,8 +296,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-frontend-design",
-"priority": 406,
+"id": "skill-anthropics-skills-skills-frontend-design",
+"priority": 414,
 "category": "community",
 "type": "skill",
 "want": "frontend-design",
@@ -139,7 +307,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@frontend-design -g"
 ],
 "install": "npx skills add anthropics/skills@frontend-design -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "frontend-design",
@@ -149,8 +317,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-internal-comms",
-"priority": 407,
+"id": "skill-anthropics-skills-skills-internal-comms",
+"priority": 415,
 "category": "community",
 "type": "skill",
 "want": "internal-comms",
@@ -160,7 +328,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@internal-comms -g"
 ],
 "install": "npx skills add anthropics/skills@internal-comms -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "internal-comms",
@@ -170,8 +338,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-mcp-builder",
-"priority": 408,
+"id": "skill-anthropics-skills-skills-mcp-builder",
+"priority": 416,
 "category": "community",
 "type": "skill",
 "want": "mcp-builder",
@@ -181,7 +349,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@mcp-builder -g"
 ],
 "install": "npx skills add anthropics/skills@mcp-builder -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "mcp-builder",
@@ -191,8 +359,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-pdf",
-"priority": 409,
+"id": "skill-anthropics-skills-skills-pdf",
+"priority": 417,
 "category": "community",
 "type": "skill",
 "want": "pdf",
@@ -202,7 +370,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pdf -g"
 ],
 "install": "npx skills add anthropics/skills@pdf -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pdf",
@@ -212,8 +380,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-pptx",
-"priority": 410,
+"id": "skill-anthropics-skills-skills-pptx",
+"priority": 418,
 "category": "community",
 "type": "skill",
 "want": "pptx",
@@ -223,7 +391,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pptx -g"
 ],
 "install": "npx skills add anthropics/skills@pptx -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pptx",
@@ -233,8 +401,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-skill-creator",
-"priority": 411,
+"id": "skill-anthropics-skills-skills-skill-creator",
+"priority": 419,
 "category": "community",
 "type": "skill",
 "want": "skill-creator",
@@ -244,7 +412,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@skill-creator -g"
 ],
 "install": "npx skills add anthropics/skills@skill-creator -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "skill-creator",
@@ -254,8 +422,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-slack-gif-creator",
-"priority": 412,
+"id": "skill-anthropics-skills-skills-slack-gif-creator",
+"priority": 420,
 "category": "community",
 "type": "skill",
 "want": "slack-gif-creator",
@@ -265,7 +433,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@slack-gif-creator -g"
 ],
 "install": "npx skills add anthropics/skills@slack-gif-creator -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "slack-gif-creator",
@@ -275,29 +443,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-template",
-"priority": 413,
-"category": "community",
-"type": "skill",
-"want": "template-skill",
-"feature": "anthropics/skills",
-"summary": "Replace with description of the skill and when Claude should use it.",
-"commands": [
-"npx skills add anthropics/skills@template -g"
-],
-"install": "npx skills add anthropics/skills@template -g",
-"stars": 159859,
-"repoUrl": "https://github.com/anthropics/skills",
-"aliases": [
-"template",
-"anthropics",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-anthropics-skills-theme-factory",
-"priority": 414,
+"id": "skill-anthropics-skills-skills-theme-factory",
+"priority": 421,
 "category": "community",
 "type": "skill",
 "want": "theme-factory",
@@ -307,7 +454,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@theme-factory -g"
 ],
 "install": "npx skills add anthropics/skills@theme-factory -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "theme-factory",
@@ -317,8 +464,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-web-artifacts-builder",
-"priority": 415,
+"id": "skill-anthropics-skills-skills-web-artifacts-builder",
+"priority": 422,
 "category": "community",
 "type": "skill",
 "want": "web-artifacts-builder",
@@ -328,7 +475,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@web-artifacts-builder -g"
 ],
 "install": "npx skills add anthropics/skills@web-artifacts-builder -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "web-artifacts-builder",
@@ -338,8 +485,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-webapp-testing",
-"priority": 416,
+"id": "skill-anthropics-skills-skills-webapp-testing",
+"priority": 423,
 "category": "community",
 "type": "skill",
 "want": "webapp-testing",
@@ -349,7 +496,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@webapp-testing -g"
 ],
 "install": "npx skills add anthropics/skills@webapp-testing -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "webapp-testing",
@@ -359,8 +506,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-anthropics-skills-xlsx",
-"priority": 417,
+"id": "skill-anthropics-skills-skills-xlsx",
+"priority": 424,
 "category": "community",
 "type": "skill",
 "want": "xlsx",
@@ -370,7 +517,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@xlsx -g"
 ],
 "install": "npx skills add anthropics/skills@xlsx -g",
-"stars": 159859,
+"stars": 160135,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "xlsx",
@@ -380,8 +527,428 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-deploy-to-vercel",
-"priority": 418,
+"id": "skill-browser-use-browser-use-browser_use-skills-browser-use",
+"priority": 425,
+"category": "community",
+"type": "skill",
+"want": "browser-use",
+"feature": "browser-use/browser-use",
+"summary": "Direct browser control via CDP for web interaction: automation, scraping, testing, screenshots, and site/app work.",
+"commands": [
+"npx skills add browser-use/browser-use@browser-use -g"
+],
+"install": "npx skills add browser-use/browser-use@browser-use -g",
+"stars": 104144,
+"repoUrl": "https://github.com/browser-use/browser-use",
+"aliases": [
+"browser-use",
+"browser-use",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-browser-use-browser-use-skills-browser-use",
+"priority": 426,
+"category": "community",
+"type": "skill",
+"want": "browser-use",
+"feature": "browser-use/browser-use",
+"summary": "Direct browser control via CDP for web interaction: automation, scraping, testing, screenshots, and site/app work.",
+"commands": [
+"npx skills add browser-use/browser-use@browser-use -g"
+],
+"install": "npx skills add browser-use/browser-use@browser-use -g",
+"stars": 104144,
+"repoUrl": "https://github.com/browser-use/browser-use",
+"aliases": [
+"browser-use",
+"browser-use",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-browser-use-browser-use-skills-cloud",
+"priority": 427,
+"category": "community",
+"type": "skill",
+"want": "cloud",
+"feature": "browser-use/browser-use",
+"summary": "Documentation reference for using Browser Use Cloud — the hosted API and SDK for browser automation. Use this skill whenever the user needs help with the Cloud REST API (v2 or v3), browser-use-sdk (Python or TypeScript), X-Browser-Use-API-Key authentication, cloud sessions, browser profiles, profile sync, CDP WebSocket connections, stealth browsers, residential proxies, CAPTCHA handling, webhooks, workspaces, skills marketplace, liveUrl streaming, pricing, or integration patterns (chat UI, subagent, adding browser tools to existing agents). Also trigger for questions about n8n/Make/Zapier integration, Playwright/ Puppeteer/Selenium on cloud infrastructure, or 1Password vault integration. Do NOT use this for the open-source Python library (Agent, Browser, Tools config) — use the open-source skill instead.",
+"commands": [
+"npx skills add browser-use/browser-use@cloud -g"
+],
+"install": "npx skills add browser-use/browser-use@cloud -g",
+"stars": 104144,
+"repoUrl": "https://github.com/browser-use/browser-use",
+"aliases": [
+"cloud",
+"browser-use",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-browser-use-browser-use-skills-open-source",
+"priority": 428,
+"category": "community",
+"type": "skill",
+"want": "open-source",
+"feature": "browser-use/browser-use",
+"summary": "Documentation reference for writing Python code using the browser-use open-source library. Use this skill whenever the user needs help with Agent, Browser, or Tools configuration, is writing code that imports from browser_use, asks about @sandbox deployment, supported LLM models, Actor API, custom tools, lifecycle hooks, MCP server setup, or monitoring/observability with Laminar or OpenLIT. Also trigger for questions about browser-use installation, prompting strategies, or sensitive data handling. Do NOT use this for Cloud API/SDK usage or pricing — use the cloud skill instead. Do NOT use this for directly automating a browser via CLI commands — use the browser-use skill instead.",
+"commands": [
+"npx skills add browser-use/browser-use@open-source -g"
+],
+"install": "npx skills add browser-use/browser-use@open-source -g",
+"stars": 104144,
+"repoUrl": "https://github.com/browser-use/browser-use",
+"aliases": [
+"open-source",
+"browser-use",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-browser-use-browser-use-skills-qa",
+"priority": 429,
+"category": "community",
+"type": "skill",
+"want": "qa",
+"feature": "browser-use/browser-use",
+"summary": "QA-test a website or web app and return a 1-5 quality score (5 = flawless, 1 = broken) with evidence. Use when the user wants to test, QA, evaluate, score, or \"check how good\" a site, page, flow, or app — including a local dev server (e.g. \"qa test localhost:5173\", \"does the checkout work?\", \"rate this landing page\"). Drives a real Browser Use cloud browser, tunneling localhost automatically.",
+"commands": [
+"npx skills add browser-use/browser-use@qa -g"
+],
+"install": "npx skills add browser-use/browser-use@qa -g",
+"stars": 104144,
+"repoUrl": "https://github.com/browser-use/browser-use",
+"aliases": [
+"qa",
+"browser-use",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-browser-use-browser-use-skills-remote-browser",
+"priority": 430,
+"category": "community",
+"type": "skill",
+"want": "remote-browser",
+"feature": "browser-use/browser-use",
+"summary": "Controls a local browser from a sandboxed remote machine. Use when the agent is running in a sandbox (no GUI) and needs to navigate websites, interact with web pages, fill forms, take screenshots, or expose local dev servers via tunnels.",
+"commands": [
+"npx skills add browser-use/browser-use@remote-browser -g"
+],
+"install": "npx skills add browser-use/browser-use@remote-browser -g",
+"stars": 104144,
+"repoUrl": "https://github.com/browser-use/browser-use",
+"aliases": [
+"remote-browser",
+"browser-use",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-browser-use-browser-use-skills-x402",
+"priority": 431,
+"category": "community",
+"type": "skill",
+"want": "x402",
+"feature": "browser-use/browser-use",
+"summary": "Set up Browser Use Cloud payments with x402 — pay per request from a crypto wallet (USDC on Base mainnet), no signup or API key. Two setups it works out up front — \"just use it\" (set up a wallet so you or Claude Code can run cloud browser tasks paid from the wallet — Claude writes and runs throwaway scripts, nothing touches your codebase) or \"build it in\" (install the SDK and write the key + code into your project). Walks through wallet setup, funding, .env, and a ~$1 test run. Use when the user asks about x402, pay-per-use, USDC payments, or wants Browser Use Cloud without an API key. For the free-tier signup (reverse-CAPTCHA → API key), use `browser-use cloud signup` or the `cloud` skill instead.",
+"commands": [
+"npx skills add browser-use/browser-use@x402 -g"
+],
+"install": "npx skills add browser-use/browser-use@x402 -g",
+"stars": 104144,
+"repoUrl": "https://github.com/browser-use/browser-use",
+"aliases": [
+"x402",
+"browser-use",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-add-app-to-server",
+"priority": 432,
+"category": "community",
+"type": "skill",
+"want": "add-app-to-server",
+"feature": "tldraw/tldraw",
+"summary": "This skill should be used when the user asks to \"add an app to my MCP server\", \"add UI to my MCP server\", \"add a view to my MCP tool\", \"enrich MCP tools with UI\", \"add interactive UI to existing server\", \"add MCP Apps to my server\", or needs to add interactive UI capabilities to an existing MCP server that already has tools. Provides guidance for analyzing existing tools and adding MCP Apps UI resources.",
+"commands": [
+"npx skills add tldraw/tldraw@add-app-to-server -g"
+],
+"install": "npx skills add tldraw/tldraw@add-app-to-server -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"add-app-to-server",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-skills-clean-copy",
+"priority": 433,
+"category": "community",
+"type": "skill",
+"want": "clean-copy",
+"feature": "tldraw/tldraw",
+"summary": "Reimplement the current branch on a new branch with a clean, narrative-quality git commit history. Use when asked to make a clean copy branch, clean up commit history by replaying work, or rebuild a branch as reviewable commits.",
+"commands": [
+"npx skills add tldraw/tldraw@clean-copy -g"
+],
+"install": "npx skills add tldraw/tldraw@clean-copy -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"clean-copy",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-skills-commit-changes",
+"priority": 434,
+"category": "community",
+"type": "skill",
+"want": "commit-changes",
+"feature": "tldraw/tldraw",
+"summary": "Create a git commit for the current changes. Use when asked to commit changes, make a commit, generate a commit message, or commit the current worktree with optional user-provided context.",
+"commands": [
+"npx skills add tldraw/tldraw@commit-changes -g"
+],
+"install": "npx skills add tldraw/tldraw@commit-changes -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"commit-changes",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-convert-web-app",
+"priority": 435,
+"category": "community",
+"type": "skill",
+"want": "convert-web-app",
+"feature": "tldraw/tldraw",
+"summary": "This skill should be used when the user asks to \"add MCP App support to my web app\", \"turn my web app into a hybrid MCP App\", \"make my web page work as an MCP App too\", \"wrap my existing UI as an MCP App\", \"convert iframe embed to MCP App\", \"turn my SPA into an MCP App\", or needs to add MCP App support to an existing web application while keeping it working standalone. Provides guidance for analyzing existing web apps and creating a hybrid web + MCP App with server-side tool and resource registration.",
+"commands": [
+"npx skills add tldraw/tldraw@convert-web-app -g"
+],
+"install": "npx skills add tldraw/tldraw@convert-web-app -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"convert-web-app",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-create-mcp-app",
+"priority": 436,
+"category": "community",
+"type": "skill",
+"want": "create-mcp-app",
+"feature": "tldraw/tldraw",
+"summary": "This skill should be used when the user asks to \"create an MCP App\", \"add a UI to an MCP tool\", \"build an interactive MCP View\", \"scaffold an MCP App\", or needs guidance on MCP Apps SDK patterns, UI-resource registration, MCP App lifecycle, or host integration. Provides comprehensive guidance for building MCP Apps with interactive UIs.",
+"commands": [
+"npx skills add tldraw/tldraw@create-mcp-app -g"
+],
+"install": "npx skills add tldraw/tldraw@create-mcp-app -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"create-mcp-app",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-skills-dotcom-release-crew",
+"priority": 437,
+"category": "community",
+"type": "skill",
+"want": "dotcom-release-crew",
+"feature": "tldraw/tldraw",
+"summary": "Post to the",
+"commands": [
+"npx skills add tldraw/tldraw@dotcom-release-crew -g"
+],
+"install": "npx skills add tldraw/tldraw@dotcom-release-crew -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"dotcom-release-crew",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-skills-issue",
+"priority": 438,
+"category": "community",
+"type": "skill",
+"want": "issue",
+"feature": "tldraw/tldraw",
+"summary": "Create a GitHub issue in the tldraw repository from a user description, then mature it through follow-up questions. Use when the user invokes issue, asks to create an issue, report a bug, file a feature request, or answers follow-up questions for an issue created by this skill.",
+"commands": [
+"npx skills add tldraw/tldraw@issue -g"
+],
+"install": "npx skills add tldraw/tldraw@issue -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"issue",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-migrate-oai-app",
+"priority": 439,
+"category": "community",
+"type": "skill",
+"want": "migrate-oai-app",
+"feature": "tldraw/tldraw",
+"summary": "This skill should be used when the user asks to \"migrate from OpenAI Apps SDK\", \"convert OpenAI App to MCP\", \"port from window.openai\", \"migrate from skybridge\", \"convert openai/outputTemplate\", or needs guidance on converting OpenAI Apps SDK applications to MCP Apps SDK. Provides step-by-step migration guidance with API mapping tables.",
+"commands": [
+"npx skills add tldraw/tldraw@migrate-oai-app -g"
+],
+"install": "npx skills add tldraw/tldraw@migrate-oai-app -g",
+"stars": 48689,
+"repoUrl": "https://github.com/tldraw/tldraw",
+"aliases": [
+"migrate-oai-app",
+"tldraw",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-alibaba-arthas-skills",
+"priority": 440,
+"category": "community",
+"type": "skill",
+"want": "arthas",
+"feature": "alibaba/arthas",
+"summary": "arthas 诊断 java应用，jvm问题 skill",
+"commands": [
+"npx skills add alibaba/arthas@skills -g"
+],
+"install": "npx skills add alibaba/arthas@skills -g",
+"stars": 37429,
+"repoUrl": "https://github.com/alibaba/arthas",
+"aliases": [
+"skills",
+"alibaba",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-alibaba-arthas-skills-cpu-high",
+"priority": 441,
+"category": "community",
+"type": "skill",
+"want": "arthas-cpu-high",
+"feature": "alibaba/arthas",
+"summary": "排查 JVM / 应用 CPU 飙高（线程定位 + 代码路径分析）",
+"commands": [
+"npx skills add alibaba/arthas@cpu-high -g"
+],
+"install": "npx skills add alibaba/arthas@cpu-high -g",
+"stars": 37429,
+"repoUrl": "https://github.com/alibaba/arthas",
+"aliases": [
+"cpu-high",
+"alibaba",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-alibaba-arthas-skills-eagleeye-traceid",
+"priority": 442,
+"category": "community",
+"type": "skill",
+"want": "arthas-eagleeye-traceid",
+"feature": "alibaba/arthas",
+"summary": "使用 Arthas 的 watch/trace 获取 EagleEye traceId / 获取请求的 traceId",
+"commands": [
+"npx skills add alibaba/arthas@eagleeye-traceid -g"
+],
+"install": "npx skills add alibaba/arthas@eagleeye-traceid -g",
+"stars": 37429,
+"repoUrl": "https://github.com/alibaba/arthas",
+"aliases": [
+"eagleeye-traceid",
+"alibaba",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-alibaba-arthas-skills-spring-context",
+"priority": 443,
+"category": "community",
+"type": "skill",
+"want": "arthas-springcontext-issues-resolve",
+"feature": "alibaba/arthas",
+"summary": "排查 Spring ApplicationContext / Bean / 配置注入等问题",
+"commands": [
+"npx skills add alibaba/arthas@spring-context -g"
+],
+"install": "npx skills add alibaba/arthas@spring-context -g",
+"stars": 37429,
+"repoUrl": "https://github.com/alibaba/arthas",
+"aliases": [
+"spring-context",
+"alibaba",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-abiosoft-colima-skills",
+"priority": 444,
+"category": "community",
+"type": "skill",
+"want": "colima",
+"feature": "abiosoft/colima",
+"summary": "Guide to using Colima — container runtimes (Docker, containerd, Kubernetes, Incus) on macOS and Linux via lightweight Lima VMs. Use this skill whenever Colima is (or should be) the container backend: installing Colima; `colima start/stop/status/delete/ssh`; picking or switching a runtime; the `Cannot connect to the Docker daemon at unix:///var/run/docker.sock` error; Docker contexts and socket location; registry mirrors / insecure registries; buildx; bind or volume mounts that show up empty in the container; disk space recovery/resize; reachable VM IP; GPU / AI model workloads; config files, profiles and `COLIMA_HOME`; or a Colima VM that won't start. ALSO use it for **writing scripts that drive Colima** — bootstrap, dev-env, deploy, or CI scripts that bring Colima up non-interactively — because the skill has the correct flags, profile-specific socket paths, idempotent `colima start` guards, and readiness/teardown patterns that hand-written scripts routinely get wrong (e.g. inventing a non-existent flag or hardcoding the wrong docker socket). Prefer this over generic Docker advice whenever Colima is the daemon. This skill is specifically about **Colima** — not Docker Desktop, minikube, Kind, K3d, Rancher Desktop, OrbStack, Podman, or plain `limactl`.",
+"commands": [
+"npx skills add abiosoft/colima -g"
+],
+"install": "npx skills add abiosoft/colima -g",
+"stars": 29854,
+"repoUrl": "https://github.com/abiosoft/colima",
+"aliases": [
+"skills",
+"abiosoft",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-vercel-labs-agent-skills-skills-deploy-to-vercel",
+"priority": 445,
 "category": "community",
 "type": "skill",
 "want": "deploy-to-vercel",
@@ -391,7 +958,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "deploy-to-vercel",
@@ -401,8 +968,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-vercel-cli-with-tokens",
-"priority": 419,
+"id": "skill-vercel-labs-agent-skills-skills-vercel-cli-with-tokens",
+"priority": 446,
 "category": "community",
 "type": "skill",
 "want": "vercel-cli-with-tokens",
@@ -412,7 +979,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-cli-with-tokens",
@@ -422,8 +989,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-composition-patterns",
-"priority": 420,
+"id": "skill-vercel-labs-agent-skills-skills-composition-patterns",
+"priority": 447,
 "category": "community",
 "type": "skill",
 "want": "vercel-composition-patterns",
@@ -433,7 +1000,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@composition-patterns -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@composition-patterns -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "composition-patterns",
@@ -443,8 +1010,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-vercel-optimize",
-"priority": 421,
+"id": "skill-vercel-labs-agent-skills-skills-vercel-optimize",
+"priority": 448,
 "category": "community",
 "type": "skill",
 "want": "vercel-optimize",
@@ -454,7 +1021,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-optimize -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-optimize -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-optimize",
@@ -464,8 +1031,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-react-best-practices",
-"priority": 422,
+"id": "skill-vercel-labs-agent-skills-skills-react-best-practices",
+"priority": 449,
 "category": "community",
 "type": "skill",
 "want": "vercel-react-best-practices",
@@ -475,7 +1042,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-best-practices -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-best-practices -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-best-practices",
@@ -485,8 +1052,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-react-native-skills",
-"priority": 423,
+"id": "skill-vercel-labs-agent-skills-skills-react-native-skills",
+"priority": 450,
 "category": "community",
 "type": "skill",
 "want": "vercel-react-native-skills",
@@ -496,7 +1063,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-native-skills -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-native-skills -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-native-skills",
@@ -506,8 +1073,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-react-view-transitions",
-"priority": 424,
+"id": "skill-vercel-labs-agent-skills-skills-react-view-transitions",
+"priority": 451,
 "category": "community",
 "type": "skill",
 "want": "vercel-react-view-transitions",
@@ -517,7 +1084,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-view-transitions -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-view-transitions -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-view-transitions",
@@ -527,8 +1094,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-web-design-guidelines",
-"priority": 425,
+"id": "skill-vercel-labs-agent-skills-skills-web-design-guidelines",
+"priority": 452,
 "category": "community",
 "type": "skill",
 "want": "web-design-guidelines",
@@ -538,7 +1105,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@web-design-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@web-design-guidelines -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "web-design-guidelines",
@@ -548,8 +1115,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-vercel-labs-agent-skills-writing-guidelines",
-"priority": 426,
+"id": "skill-vercel-labs-agent-skills-skills-writing-guidelines",
+"priority": 453,
 "category": "community",
 "type": "skill",
 "want": "writing-guidelines",
@@ -559,7 +1126,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@writing-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@writing-guidelines -g",
-"stars": 28888,
+"stars": 28915,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "writing-guidelines",
@@ -569,2584 +1136,1387 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-leoyeai-openclaw-master-skills-0codekit",
-"priority": 427,
-"category": "community",
-"type": "skill",
-"want": "0codekit",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "0codekit integration. Manage Workspaces. Use when the user wants to interact with 0codekit data.",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@0codekit -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@0codekit -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"0codekit",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-leoyeai-openclaw-master-skills-0xarchive",
-"priority": 428,
-"category": "community",
-"type": "skill",
-"want": "0xarchive",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "Query historical crypto market data from 0xArchive across Hyperliquid, Lighter.xyz, and HIP-3. Covers orderbooks, trades, candles, funding rates, open interest, liquidations, and data quality. Use when the user asks about crypto market data, orderbooks, trades, funding rates, or historical prices on Hyperliquid, Lighter.xyz, or HIP-3.",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@0xarchive -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@0xarchive -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"0xarchive",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-leoyeai-openclaw-master-skills-12-factor-apps",
-"priority": 429,
-"category": "community",
-"type": "skill",
-"want": "12-factor-apps",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "Perform 12-Factor App compliance analysis on any codebase. Use when evaluating application architecture, auditing SaaS applications, or reviewing cloud-native applications against the original 12-Factor methodology.",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@12-factor-apps -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@12-factor-apps -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"12-factor-apps",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-leoyeai-openclaw-master-skills-13-day-sprint-method",
-"priority": 430,
-"category": "community",
-"type": "skill",
-"want": "13-Day Sprint Method",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "Productivity system based on Maya calendar with 13 natural tones for project management and personal development",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@13-day-sprint-method -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@13-day-sprint-method -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"13-day-sprint-method",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-leoyeai-openclaw-master-skills-1688-product-search",
-"priority": 431,
-"category": "community",
-"type": "skill",
-"want": "1688-product-search",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "1688商品搜索SKILL：提供完整的1688商品搜索能力，包括类目查询、关键词搜索、图片搜索、商品详情、相关性商品、拉取货盘底池等9个核心接口。 支持多语言搜索和商品推荐，使用1688开放平台官方API，统一鉴权，Token全局缓存共享。",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@1688-product-search -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@1688-product-search -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"1688-product-search",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-leoyeai-openclaw-master-skills-openclaw-master-skills",
-"priority": 432,
-"category": "community",
-"type": "skill",
-"want": "openclaw-master-skills",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "A curated collection of 2109+ best OpenClaw skills — AI tools, productivity, marketing, frontend, mobile, backend, DevOps and more. Weekly updated by MyClaw.ai — Powered by MyClaw.ai",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@openclaw-master-skills -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@openclaw-master-skills -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"openclaw-master-skills",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-leoyeai-openclaw-master-skills-12",
-"priority": 433,
-"category": "community",
-"type": "skill",
-"want": "self-improvement",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@12 -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@12 -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"12",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-leoyeai-openclaw-master-skills-1215656-self-improving-agent-3-0-6",
-"priority": 434,
-"category": "community",
-"type": "skill",
-"want": "self-improvement",
-"feature": "LeoYeAI/openclaw-master-skills",
-"summary": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.",
-"commands": [
-"npx skills add LeoYeAI/openclaw-master-skills@1215656-self-improving-agent-3-0-6 -g"
-],
-"install": "npx skills add LeoYeAI/openclaw-master-skills@1215656-self-improving-agent-3-0-6 -g",
-"stars": 2085,
-"repoUrl": "https://github.com/LeoYeAI/openclaw-master-skills",
-"aliases": [
-"1215656-self-improving-agent-3-0-6",
-"LeoYeAI",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-zakirkun-guardian-cli-guardian-cli",
-"priority": 435,
-"category": "community",
-"type": "skill",
-"want": "guardian-cli",
-"feature": "zakirkun/guardian-cli",
-"summary": "An enterprise-grade, AI-powered penetration testing automation CLI tool. Orchestrates multiple specialized AI agents (Planner, ToolAgent, Analyst, Reporter) backed by 4 AI providers (OpenAI, Claude, Gemini, OpenRouter) and 19 integrated security tools through YAML-defined workflows. Produces professional Markdown, HTML, or JSON security reports with full evidence capture and traceability.",
-"commands": [
-"npx skills add zakirkun/guardian-cli -g"
-],
-"install": "npx skills add zakirkun/guardian-cli -g",
-"stars": 1737,
-"repoUrl": "https://github.com/zakirkun/guardian-cli",
-"aliases": [
-"guardian-cli",
-"zakirkun",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-api-gateway",
-"priority": 436,
-"category": "community",
-"type": "skill",
-"want": "api-gateway",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS API Gateway for REST and HTTP API management. Use when creating APIs, configuring integrations, setting up authorization, managing stages, implementing rate limiting, or troubleshooting API issues.",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@api-gateway -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@api-gateway -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"api-gateway",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-bedrock",
-"priority": 437,
-"category": "community",
-"type": "skill",
-"want": "bedrock",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS Bedrock foundation models for generative AI. Use when invoking foundation models, building AI applications, creating embeddings, configuring model access, or implementing RAG patterns.",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@bedrock -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@bedrock -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"bedrock",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-cloudformation",
-"priority": 438,
-"category": "community",
-"type": "skill",
-"want": "cloudformation",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS CloudFormation infrastructure as code for stack management. Use when writing templates, deploying stacks, managing drift, troubleshooting deployments, or organizing infrastructure with nested stacks.",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@cloudformation -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@cloudformation -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"cloudformation",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-cloudwatch",
-"priority": 439,
-"category": "community",
-"type": "skill",
-"want": "cloudwatch",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS CloudWatch monitoring for logs, metrics, alarms, and dashboards. Use when setting up monitoring, creating alarms, querying logs with Insights, configuring metric filters, building dashboards, or troubleshooting application issues.",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@cloudwatch -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@cloudwatch -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"cloudwatch",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-cognito",
-"priority": 440,
-"category": "community",
-"type": "skill",
-"want": "cognito",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS Cognito user authentication and authorization service. Use when setting up user pools, configuring identity pools, implementing OAuth flows, managing user attributes, or integrating with social identity providers.",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@cognito -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@cognito -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"cognito",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-dynamodb",
-"priority": 441,
-"category": "community",
-"type": "skill",
-"want": "dynamodb",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS DynamoDB NoSQL database for scalable data storage. Use when designing table schemas, writing queries, configuring indexes, managing capacity, implementing single-table design, or troubleshooting performance issues.",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@dynamodb -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@dynamodb -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"dynamodb",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-ec2",
-"priority": 442,
-"category": "community",
-"type": "skill",
-"want": "ec2",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS EC2 virtual machine management — instances, security groups, key pairs, AMIs, EBS volumes, Auto Scaling Groups, Spot Instances, Session Manager, placement groups, and instance lifecycle automation.\nTrigger on ANY of these, even when EC2 isn't named explicitly: - Launching or provisioning: \"spin up a server\", \"create a VM\", \"new instance\", \"run-instances\", mention of instance types (t3, m5, c5, r6, g5, p4d, t4g, c7g, etc.) - SSH / connectivity problems: \"connection refused\", \"connection timed out\", \"permission denied publickey\", \"can't connect to my instance\", \"SSH not working\" - Instance management: resize, stop, start, terminate, reboot, change instance type - Cost optimization: stop dev instances overnight, save money on EC2, spot vs on-demand, reserved instances - Auto Scaling: ASG, launch template, mixed instances policy, scale to zero, scheduled scaling - Spot Instances: spot fleet, spot interruption, capacity-optimized, price-capacity-optimized - AMIs and backups: create image, custom AMI, EBS snapshot, DLM lifecycle policy, copy AMI - Monitoring: EC2 CPU utilization, CloudWatch metrics for instance, instance status checks, console output - Access methods: Session Manager, EC2 Instance Connect, bastion host, port forwarding - Security: IMDSv2, instance metadata, IAM role on instance, security group rules - User data and bootstrap scripts, cloud-init",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@ec2 -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@ec2 -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"ec2",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-itsmostafa-aws-agent-skills-ecs",
-"priority": 443,
-"category": "community",
-"type": "skill",
-"want": "ecs",
-"feature": "itsmostafa/aws-agent-skills",
-"summary": "AWS ECS container orchestration for running Docker containers. Use when deploying containerized applications, configuring task definitions, setting up services, managing clusters, or troubleshooting container issues.",
-"commands": [
-"npx skills add itsmostafa/aws-agent-skills@ecs -g"
-],
-"install": "npx skills add itsmostafa/aws-agent-skills@ecs -g",
-"stars": 1136,
-"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
-"aliases": [
-"ecs",
-"itsmostafa",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-alchaincyf-x-mentor-skill-x-mentor-skill",
-"priority": 444,
-"category": "community",
-"type": "skill",
-"want": "x-mastery-mentor",
-"feature": "alchaincyf/x-mentor-skill",
-"summary": "$10K/hr级X/Twitter运营导师。基于Nicolas Cole、Dickie Bush、Sahil Bloom、Justin Welsh、\nDan Koe、Alex Hormozi六位顶级创作者的方法论 + X开源算法深度分析 + AI/科技赛道专精策略，\n提炼6个核心心智模型、10条决策启发式、完整的选题-写作-增长操作手册。\n通用方法论为底座，AI/科技赛道为专精。\n当用户提到「X运营」「推特」「Twitter」「怎么写推文」「怎么涨粉」「X策略」「推特选题」「tweet」「thread」「X算法」时使用。\n即使用户只是说「这条推文怎么写」「帮我想个X内容」「推特增长」「发推」「write a tweet」「X account」「grow on X」也应触发。",
-"commands": [
-"npx skills add alchaincyf/x-mentor-skill -g"
-],
-"install": "npx skills add alchaincyf/x-mentor-skill -g",
-"stars": 1036,
-"repoUrl": "https://github.com/alchaincyf/x-mentor-skill",
-"aliases": [
-"x-mentor-skill",
-"alchaincyf",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-raphaelsalaja-userinterface-wiki-skills",
-"priority": 445,
-"category": "community",
-"type": "skill",
-"want": "userinterface-wiki",
-"feature": "raphaelsalaja/userinterface-wiki",
-"summary": "UI/UX best practices for web interfaces. Use when reviewing animations, CSS, audio, typography, UX patterns, prefetching, or icon implementations. Covers 11 categories from animation principles to typography. Outputs file:line findings.",
-"commands": [
-"npx skills add raphaelsalaja/userinterface-wiki -g"
-],
-"install": "npx skills add raphaelsalaja/userinterface-wiki -g",
-"stars": 834,
-"repoUrl": "https://github.com/raphaelsalaja/userinterface-wiki",
-"aliases": [
-"skills",
-"raphaelsalaja",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-tripleyak-skillforge-skillforge",
-"priority": 446,
-"category": "community",
-"type": "skill",
-"want": "skillforge",
-"feature": "tripleyak/SkillForge",
-"summary": "Intelligent skill router, proactive advisor, and creator. Analyzes ANY input to recommend existing skills, improve them, or create new ones. Adds proactive Context Skill Advisor suggestions from session, project, and personal context using user-controlled Proactivity Levels.",
-"commands": [
-"npx skills add tripleyak/SkillForge -g"
-],
-"install": "npx skills add tripleyak/SkillForge -g",
-"stars": 790,
-"repoUrl": "https://github.com/tripleyak/SkillForge",
-"aliases": [
-"SkillForge",
-"tripleyak",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-feicaiclub-video-spec-builder-video-spec-builder",
-"priority": 447,
-"category": "community",
-"type": "skill",
-"want": "video-spec-builder",
-"feature": "feicaiclub/video-spec-builder",
-"summary": "当用户说想做一个视频、宣传片、产品演示、动画短片、抖音/YouTube 内容，或者说要改分镜、调节奏、换镜头、调字幕、加配音、改转场时使用。通过苏格拉底式追问收集视频需求，主动激发渲染层的全部能力（TTS / 字幕 / 3D / shader / 音频反应等），输出标准化的 video-spec.md 用于渲染。",
-"commands": [
-"npx skills add feicaiclub/video-spec-builder -g"
-],
-"install": "npx skills add feicaiclub/video-spec-builder -g",
-"stars": 754,
-"repoUrl": "https://github.com/feicaiclub/video-spec-builder",
-"aliases": [
-"video-spec-builder",
-"feicaiclub",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-talesofai-neta-skills-neta",
-"priority": 448,
-"category": "community",
-"type": "skill",
-"want": "neta",
-"feature": "talesofai/neta-skills",
-"summary": "Neta capability index and routing skill - help choose the appropriate Neta-related skill (neta-space / neta-creative / neta-adventure / neta-community / neta-suggest). Use this skill when you need to understand Neta's overall capabilities, decide which skill fits the current task, or migrate from older documentation that referenced the monolithic neta skill.",
-"commands": [
-"npx skills add talesofai/neta-skills@neta -g"
-],
-"install": "npx skills add talesofai/neta-skills@neta -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
-"aliases": [
-"neta",
-"talesofai",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-talesofai-neta-skills-neta-adventure",
-"priority": 449,
-"category": "community",
-"type": "skill",
-"want": "neta-adventure",
-"feature": "talesofai/neta-skills",
-"summary": "Neta Adventure Campaign skill - Create and play AI-driven interactive story adventures. Adventure campaigns provide story-crafting and story-telling modes where agents act as DM and roleplay characters following plot, rules, and special guidelines.",
-"commands": [
-"npx skills add talesofai/neta-skills@neta-adventure -g"
-],
-"install": "npx skills add talesofai/neta-skills@neta-adventure -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
-"aliases": [
-"neta-adventure",
-"talesofai",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-talesofai-neta-skills-neta-character",
-"priority": 450,
-"category": "community",
-"type": "skill",
-"want": "neta-character",
-"feature": "talesofai/neta-skills",
-"summary": "Neta Character Forging Skill - Guides users through creating or updating anime/cultural IP/original character (OC) VTokens (Virtual Tokens, TCP). Includes visual preview, character documentation, backstory confirmation, and complete creative workflow. Use this skill when users want to create new characters, modify existing ones, or begin character design.",
-"commands": [
-"npx skills add talesofai/neta-skills@neta-character -g"
-],
-"install": "npx skills add talesofai/neta-skills@neta-character -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
-"aliases": [
-"neta-character",
-"talesofai",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-talesofai-neta-skills-neta-community",
-"priority": 451,
-"category": "community",
-"type": "skill",
-"want": "neta-community",
-"feature": "talesofai/neta-skills",
-"summary": "Neta API community skill — browse interactive feeds, view collection details, like and interact with content, and browse content by tags and characters in a community context. Use this skill when the user wants to “see what people are making”, “scroll the feed”, or “interact with works”. Do not use it for taxonomy/keyword‑level research (handled by neta-suggest) or for generating images/videos/songs (handled by neta-creative).",
-"commands": [
-"npx skills add talesofai/neta-skills@neta-community -g"
-],
-"install": "npx skills add talesofai/neta-skills@neta-community -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
-"aliases": [
-"neta-community",
-"talesofai",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-talesofai-neta-skills-neta-creative",
-"priority": 452,
-"category": "community",
-"type": "skill",
-"want": "neta-creative",
-"feature": "talesofai/neta-skills",
-"summary": "Neta API creative skill — generate images, videos, songs, and MVs, and deconstruct creative ideas from existing works. Use this skill when the user wants to create or edit images/videos/songs/MVs, or create based on character settings and existing works. Do not use it for feed browsing or tag/category research (those are handled by neta-community and neta-suggest).",
-"commands": [
-"npx skills add talesofai/neta-skills@neta-creative -g"
-],
-"install": "npx skills add talesofai/neta-skills@neta-creative -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
-"aliases": [
-"neta-creative",
-"talesofai",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-talesofai-neta-skills-neta-elementum",
-"priority": 453,
-"category": "community",
-"type": "skill",
-"want": "neta-elementum",
-"feature": "talesofai/neta-skills",
-"summary": "Neta Elementum Alchemy Skill - Guides users through creating or updating style element (Elementum) VTokens (Virtual Tokens, TCP). Elementum encapsulates a visual concept (scene, prop, clothing, weapon, pose, atmosphere, meme, etc.) and can be referenced in make_image via /ElementName after creation. Use this skill when users want to create new Elementa, encapsulate visual styles or concepts, or modify existing Elementa.",
-"commands": [
-"npx skills add talesofai/neta-skills@neta-elementum -g"
-],
-"install": "npx skills add talesofai/neta-skills@neta-elementum -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
-"aliases": [
-"neta-elementum",
-"talesofai",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-talesofai-neta-skills-neta-space",
+"id": "skill-karakeep-app-karakeep-skills",
 "priority": 454,
 "category": "community",
 "type": "skill",
-"want": "neta-space",
-"feature": "talesofai/neta-skills",
-"summary": "Neta API space and world‑view browsing skill — browse worldbuilding, sub‑spaces, and playable content by space/hashtag. Use this skill when the user talks about worlds/spaces/universes/scenes, or wants to browse characters and gameplay based on space and activity structure. Do not use it for concrete media creation (handled by neta-creative).",
+"want": "karakeep",
+"feature": "karakeep-app/karakeep",
+"summary": "Official skill for how to use karakeep (the bookmark manager) and interact with it programmatically.",
 "commands": [
-"npx skills add talesofai/neta-skills@neta-space -g"
+"npx skills add karakeep-app/karakeep -g"
 ],
-"install": "npx skills add talesofai/neta-skills@neta-space -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
+"install": "npx skills add karakeep-app/karakeep -g",
+"stars": 27280,
+"repoUrl": "https://github.com/karakeep-app/karakeep",
 "aliases": [
-"neta-space",
-"talesofai",
+"skills",
+"karakeep-app",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-talesofai-neta-skills-neta-suggest",
+"id": "skill-op7418-guizang-ppt-skill-guizang-ppt-skill",
 "priority": 455,
 "category": "community",
 "type": "skill",
-"want": "neta-suggest",
-"feature": "talesofai/neta-skills",
-"summary": "Neta API research and recommendation skill — provide keyword/tag/category suggestions, validate taxonomy paths, and power multi‑mode content feeds, supporting progressive exploration from broad to precise. Use this skill when the user has no clear goal, wants topic/idea suggestions, or needs systematic content filtering by keywords/categories. It does not directly generate media (handled by neta-creative); community interactions are handled by neta-community.",
+"want": "guizang-ppt-skill",
+"feature": "op7418/guizang-ppt-skill",
+"summary": "生成横向翻页网页 PPT（单 HTML 文件），含 WebGL 背景、章节幕封、数据大字报、图片网格等模板。提供两种风格：① \"电子杂志 × 电子墨水\"（衬线 + 流体背景 + 暖色） ② \"瑞士国际主义\"（无衬线 + 网格点阵 + IKB/柠檬黄/柠檬绿/安全橙高亮）。当用户需要制作分享 / 演讲 / 发布会风格的网页 PPT，或提到\"杂志风 PPT\"、\"瑞士风 PPT\"、\"Swiss Style\"、\"horizontal swipe deck\"时使用。",
 "commands": [
-"npx skills add talesofai/neta-skills@neta-suggest -g"
+"npx skills add op7418/guizang-ppt-skill -g"
 ],
-"install": "npx skills add talesofai/neta-skills@neta-suggest -g",
-"stars": 737,
-"repoUrl": "https://github.com/talesofai/neta-skills",
+"install": "npx skills add op7418/guizang-ppt-skill -g",
+"stars": 20914,
+"repoUrl": "https://github.com/op7418/guizang-ppt-skill",
 "aliases": [
-"neta-suggest",
-"talesofai",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-denissergeevitch-repo-task-proof-loop-repo-task-proof-loop",
-"priority": 456,
-"category": "community",
-"type": "skill",
-"want": "repo-task-proof-loop",
-"feature": "DenisSergeevitch/repo-task-proof-loop",
-"summary": "Repo-local workflow skill for large coding tasks. Initializes .agent/tasks/TASK_ID artifacts, installs project-scoped Codex and Claude subagents, updates AGENTS.md plus the repo's Claude guide file with the workflow, and runs a spec-freeze → build → evidence → verify → fix loop with fresh-session verification.",
-"commands": [
-"npx skills add DenisSergeevitch/repo-task-proof-loop -g"
-],
-"install": "npx skills add DenisSergeevitch/repo-task-proof-loop -g",
-"stars": 720,
-"repoUrl": "https://github.com/DenisSergeevitch/repo-task-proof-loop",
-"aliases": [
-"repo-task-proof-loop",
-"DenisSergeevitch",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-ai-automation-workflows",
-"priority": 457,
-"category": "community",
-"type": "skill",
-"want": "ai-automation-workflows",
-"feature": "inference-sh/skills",
-"summary": "Build automated AI workflows combining multiple models and services. Patterns: batch processing, scheduled tasks, event-driven pipelines, agent loops. Tools: inference.sh CLI, bash scripting, Python SDK, webhook integration. Use for: content automation, data processing, monitoring, scheduled generation. Triggers: ai automation, workflow automation, batch processing, ai pipeline, automated content, scheduled ai, ai cron, ai batch job, automated generation, ai workflow, content at scale, automation script, ai orchestration",
-"commands": [
-"npx skills add inference-sh/skills@ai-automation-workflows -g"
-],
-"install": "npx skills add inference-sh/skills@ai-automation-workflows -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"ai-automation-workflows",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-ai-content-pipeline",
-"priority": 458,
-"category": "community",
-"type": "skill",
-"want": "ai-content-pipeline",
-"feature": "inference-sh/skills",
-"summary": "Build multi-step AI content creation pipelines combining image, video, audio, and text. Workflow examples: generate image -> animate -> add voiceover -> merge with music. Tools: FLUX, Veo, Kokoro TTS, OmniHuman, media merger, upscaling. Use for: YouTube videos, social media content, marketing materials, automated content. Triggers: content pipeline, ai workflow, content creation, multi-step ai, content automation, ai video workflow, generate and edit, ai content factory, automated content creation, ai production pipeline, media pipeline, content at scale",
-"commands": [
-"npx skills add inference-sh/skills@ai-content-pipeline -g"
-],
-"install": "npx skills add inference-sh/skills@ai-content-pipeline -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"ai-content-pipeline",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-ai-podcast",
-"priority": 459,
-"category": "community",
-"type": "skill",
-"want": "ai-podcast",
-"feature": "inference-sh/skills",
-"summary": "Generate multi-person talking head podcast videos from scratch using AI — character creation, TTS, avatar animation, and video stitching. Use when the user wants to create a podcast, talking head video, or multi-speaker conversation video.",
-"commands": [
-"npx skills add inference-sh/skills@ai-podcast -g"
-],
-"install": "npx skills add inference-sh/skills@ai-podcast -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"ai-podcast",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-ai-podcast-creation",
-"priority": 460,
-"category": "community",
-"type": "skill",
-"want": "ai-podcast-creation",
-"feature": "inference-sh/skills",
-"summary": "Create AI-powered podcasts with text-to-speech, music, and audio editing. Tools: Kokoro TTS, DIA TTS, Chatterbox, AI music generation, media merger. Capabilities: multi-voice conversations, background music, intro/outro, full episodes. Use for: podcast production, audiobooks, voice content, audio newsletters. Triggers: podcast, ai podcast, text to speech podcast, audio content, voice over, ai audiobook, multi voice, conversation ai, notebooklm alternative, audio generation, podcast automation, ai narrator, voice content, audio newsletter, podcast maker",
-"commands": [
-"npx skills add inference-sh/skills@ai-podcast-creation -g"
-],
-"install": "npx skills add inference-sh/skills@ai-podcast-creation -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"ai-podcast-creation",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-app-store-screenshots",
-"priority": 461,
-"category": "community",
-"type": "skill",
-"want": "app-store-screenshots",
-"feature": "inference-sh/skills",
-"summary": "App Store and Google Play screenshot creation with exact platform specs. Covers iOS/Android dimensions, gallery ordering, device mockups, and preview videos. Use for: app store optimization, ASO, app screenshots, app preview, play store listing. Triggers: app store screenshots, aso, app store optimization, play store screenshots, app preview, app listing, ios screenshots, android screenshots, app store images, app mockup, device mockup, app gallery, store listing",
-"commands": [
-"npx skills add inference-sh/skills@app-store-screenshots -g"
-],
-"install": "npx skills add inference-sh/skills@app-store-screenshots -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"app-store-screenshots",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-book-cover-design",
-"priority": 462,
-"category": "community",
-"type": "skill",
-"want": "book-cover-design",
-"feature": "inference-sh/skills",
-"summary": "Book cover design with genre-specific conventions, typography rules, and AI image generation. Covers fiction and non-fiction genres, sizing, thumbnail testing, and iteration workflows. Use for: self-publishing, ebook covers, print covers, audiobook covers, cover mockups. Triggers: book cover, cover design, ebook cover, book art, novel cover, self publishing cover, kindle cover, audiobook cover, book jacket, cover illustration, fiction cover, nonfiction cover",
-"commands": [
-"npx skills add inference-sh/skills@book-cover-design -g"
-],
-"install": "npx skills add inference-sh/skills@book-cover-design -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"book-cover-design",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-character-design-sheet",
-"priority": 463,
-"category": "community",
-"type": "skill",
-"want": "character-design-sheet",
-"feature": "inference-sh/skills",
-"summary": "Character consistency across AI-generated images with reference sheets and LoRA techniques. Covers turnaround views, expression sheets, color palettes, and style consistency tricks. Use for: character design, game art, illustration, animation, comics, visual novels. Triggers: character design, character sheet, character consistency, character reference, turnaround sheet, expression sheet, character art, consistent character, character concept, reference sheet, character creation, oc design, character bible",
-"commands": [
-"npx skills add inference-sh/skills@character-design-sheet -g"
-],
-"install": "npx skills add inference-sh/skills@character-design-sheet -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"character-design-sheet",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inference-sh-skills-content-repurposing",
-"priority": 464,
-"category": "community",
-"type": "skill",
-"want": "content-repurposing",
-"feature": "inference-sh/skills",
-"summary": "Content atomization — turn one piece of content into many formats. Covers blog-to-thread, blog-to-carousel, podcast-to-blog, video-to-quotes, and more. Use for: content marketing, social media, multi-platform distribution, content strategy. Triggers: content repurposing, repurpose content, content atomization, content recycling, one to many content, multi platform content, cross post, adapt content, reformat content, blog to thread, blog to video, podcast to blog, content multiplication",
-"commands": [
-"npx skills add inference-sh/skills@content-repurposing -g"
-],
-"install": "npx skills add inference-sh/skills@content-repurposing -g",
-"stars": 594,
-"repoUrl": "https://github.com/inference-sh/skills",
-"aliases": [
-"content-repurposing",
-"inference-sh",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-op7418-document-illustrator-skill-document-illustrator-skill",
-"priority": 465,
-"category": "community",
-"type": "skill",
-"want": "document-illustrator",
-"feature": "op7418/Document-illustrator-skill",
-"summary": "基于文档内容自动生成配图。AI 智能分析文档结构，归纳核心要点， 为每个主题生成符合特定风格的配图。支持封面图生成和自定义图片比例。 使用场景：当用户需要为文档、文章、笔记生成配图时。 关键词：配图、插图、illustration、generate images、document images",
-"commands": [
-"npx skills add op7418/Document-illustrator-skill -g"
-],
-"install": "npx skills add op7418/Document-illustrator-skill -g",
-"stars": 568,
-"repoUrl": "https://github.com/op7418/Document-illustrator-skill",
-"aliases": [
-"Document-illustrator-skill",
+"guizang-ppt-skill",
 "op7418",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-ksimback-tech-debt-skill-tech-debt-skill",
+"id": "skill-titanwings-colleague-skill-colleague-skill",
+"priority": 456,
+"category": "community",
+"type": "skill",
+"want": "dot-skill",
+"feature": "titanwings/colleague-skill",
+"summary": "Unified meta-skill engine for distilling colleague, relationship, or celebrity characters into reusable Skills. | 统一的 meta-skill 引擎，把 colleague、relationship、celebrity 三类对象蒸馏成可复用 Skill。",
+"commands": [
+"npx skills add titanwings/colleague-skill -g"
+],
+"install": "npx skills add titanwings/colleague-skill -g",
+"stars": 20207,
+"repoUrl": "https://github.com/titanwings/colleague-skill",
+"aliases": [
+"colleague-skill",
+"titanwings",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-.trae-skills-pua",
+"priority": 457,
+"category": "community",
+"type": "skill",
+"want": "pua",
+"feature": "tanweai/pua",
+"summary": "Trae-compatible PUA high-agency governance skill. Use only for explicit PUA requests, repeated failures, user frustration, giving-up/passive behavior, or unverified completion. Do not trigger for normal first-attempt tasks.",
+"commands": [
+"npx skills add tanweai/pua@pua -g"
+],
+"install": "npx skills add tanweai/pua@pua -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-codebuddy-pua",
+"priority": 458,
+"category": "community",
+"type": "skill",
+"want": "pua",
+"feature": "tanweai/pua",
+"summary": "让你的 AI 不敢摆烂。用大厂 PUA 话术穷尽一切方案。触发条件：(1) 任务失败 2+ 次或反复微调同一思路; (2) 即将说'我无法解决'、建议用户手动操作、未验证就归因环境; (3) 被动等待——不搜索、不读源码、只等指示; (4) 用户不满：'try harder'、'stop giving up'、'换个方法'、'为什么还不行'、'你再试试'、'你怎么又失败了'。适用于所有任务类型。首次失败或已知修复正在执行时不触发。",
+"commands": [
+"npx skills add tanweai/pua@pua -g"
+],
+"install": "npx skills add tanweai/pua@pua -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-codex-pua-cancel-loop",
+"priority": 459,
+"category": "community",
+"type": "skill",
+"want": "pua-cancel-loop",
+"feature": "tanweai/pua",
+"summary": "PUA cancel loop alias for Codex. Codex subcommand mapping for Claude Code /pua:cancel-loop style usage; invoke with $pua-cancel-loop.",
+"commands": [
+"npx skills add tanweai/pua@pua-cancel-loop -g"
+],
+"install": "npx skills add tanweai/pua@pua-cancel-loop -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua-cancel-loop",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-.trae-skills-pua-en",
+"priority": 460,
+"category": "community",
+"type": "skill",
+"want": "pua-en",
+"feature": "tanweai/pua",
+"summary": "Trae-compatible English PUA/PIP high-agency governance skill. Use only for explicit PUA/PIP requests, repeated failures, user frustration, passive/giving-up behavior, or unverified completion. Not for normal first-attempt tasks.",
+"commands": [
+"npx skills add tanweai/pua@pua-en -g"
+],
+"install": "npx skills add tanweai/pua@pua-en -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua-en",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-codebuddy-pua-en",
+"priority": 461,
+"category": "community",
+"type": "skill",
+"want": "pua-en",
+"feature": "tanweai/pua",
+"summary": "Put your AI on a Performance Improvement Plan. Forces exhaustive problem-solving with Western big-tech performance culture rhetoric and structured debugging. Trigger when: (1) task failed 2+ times or stuck tweaking same approach; (2) about to say 'I cannot', suggest manual work, or blame environment without verifying; (3) being passive—not searching, not reading source, just waiting; (4) user frustration: 'try harder', 'stop giving up', 'figure it out', 'again???', or similar. Also for complex debugging, env issues, config/deployment failures. All task types: code, config, research, writing, deployment, infra, API. Do NOT trigger on first-attempt failures or when a known fix is executing.",
+"commands": [
+"npx skills add tanweai/pua@pua-en -g"
+],
+"install": "npx skills add tanweai/pua@pua-en -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua-en",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-codex-pua-en",
+"priority": 462,
+"category": "community",
+"type": "skill",
+"want": "pua-en",
+"feature": "tanweai/pua",
+"summary": "Put your AI on a Performance Improvement Plan. Forces exhaustive problem-solving with Western big-tech performance culture rhetoric and structured debugging. Trigger when: (1) task failed 2+ times or stuck tweaking same approach; (2) about to say 'I cannot', suggest manual work, or blame environment without verifying; (3) being passive—not searching, not reading source, just waiting; (4) user frustration: 'try harder', 'stop giving up', 'figure it out', 'again???', or similar. Also for complex debugging, env issues, config/deployment failures. All task types: code, config, research, writing, deployment, infra, API. Do NOT trigger on first-attempt failures or when a known fix is executing.",
+"commands": [
+"npx skills add tanweai/pua@pua-en -g"
+],
+"install": "npx skills add tanweai/pua@pua-en -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua-en",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-codebuddy-pua-ja",
+"priority": 463,
+"category": "community",
+"type": "skill",
+"want": "pua-ja",
+"feature": "tanweai/pua",
+"summary": "お前のAIを詰めろ。日本企業の詰め文化と体系的デバッグ方法論で全ての手段を尽くさせる。トリガー条件：(1) タスク失敗2回以上または同じアプローチの微調整ループ; (2)「解決できません」と言おうとする・手動対応を推奨・未検証で環境を原因帰属; (3) 受け身——検索しない・ソースを読まない・指示待ち; (4) ユーザーの不満：'もっと頑張れ'、'なんでまた失敗したの'、'なんとかしろ'。全タスクタイプ適用。初回失敗や既知修正の実行中はトリガーしない。",
+"commands": [
+"npx skills add tanweai/pua@pua-ja -g"
+],
+"install": "npx skills add tanweai/pua@pua-ja -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua-ja",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tanweai-pua-.trae-skills-pua-trae",
+"priority": 464,
+"category": "community",
+"type": "skill",
+"want": "pua-trae",
+"feature": "tanweai/pua",
+"summary": "Trae-optimized PUA high-agency governance skill for npx skills installs. Use only for explicit PUA requests, repeated failures, user frustration, giving-up/passive behavior, or unverified completion. Do not trigger for normal first-attempt tasks.",
+"commands": [
+"npx skills add tanweai/pua@pua-trae -g"
+],
+"install": "npx skills add tanweai/pua@pua-trae -g",
+"stars": 18748,
+"repoUrl": "https://github.com/tanweai/pua",
+"aliases": [
+"pua-trae",
+"tanweai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-skills-advanced-evaluation",
+"priority": 465,
+"category": "community",
+"type": "skill",
+"want": "advanced-evaluation",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "This skill should be used for advanced LLM evaluation: LLM-as-judge systems, direct scoring, pairwise comparison, rubric calibration, evaluator bias mitigation, confidence scoring, and automated quality assessment.",
+"commands": [
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@advanced-evaluation -g"
+],
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@advanced-evaluation -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+"aliases": [
+"advanced-evaluation",
+"muratcankoylan",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-skills-bdi-mental-states",
 "priority": 466,
 "category": "community",
 "type": "skill",
-"want": "tech-debt-audit",
-"feature": "ksimback/tech-debt-skill",
-"summary": "Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimates, and a required \"looks bad but is actually fine\" section. Use when the user asks for a debt audit, codebase health check, architecture review, or code quality assessment of an entire repo. Does not auto-invoke.",
+"want": "bdi-mental-states",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "This skill should be used when modeling agent mental states with BDI concepts: beliefs, desires, intentions, RDF-to-belief transformations, rational agency traces, cognitive agents, BDI ontologies, and neuro-symbolic AI integration.",
 "commands": [
-"npx skills add ksimback/tech-debt-skill -g"
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@bdi-mental-states -g"
 ],
-"install": "npx skills add ksimback/tech-debt-skill -g",
-"stars": 529,
-"repoUrl": "https://github.com/ksimback/tech-debt-skill",
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@bdi-mental-states -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
 "aliases": [
-"tech-debt-skill",
-"ksimback",
+"bdi-mental-states",
+"muratcankoylan",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-browser-use-browser-harness-js-browser-harness-js",
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-skills-context-compression",
 "priority": 467,
 "category": "community",
 "type": "skill",
-"want": "cdp",
-"feature": "browser-use/browser-harness-js",
-"summary": "Drive Chrome via the DevTools Protocol from JavaScript. Run JS snippets through the `browser-harness-js` CLI — it auto-spawns a long-lived bun HTTP server holding a fully-typed CDP `Session`, and every call (`browser-harness-js 'await session.Page.navigate(...)'`) executes against the same persistent connection. Session, active target, and globals survive across calls. Use when the user wants to automate, script, or inspect a Chrome browser via CDP — single tab or multi-tab, attach to existing Chrome or to a new one launched with --remote-debugging-port.",
+"want": "context-compression",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "This skill should be used when long-running agent sessions need context compression, structured summarization, compaction, token-per-task optimization, or durable handoff summaries that preserve decisions, files, risks, and next actions.",
 "commands": [
-"npx skills add browser-use/browser-harness-js -g"
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-compression -g"
 ],
-"install": "npx skills add browser-use/browser-harness-js -g",
-"stars": 471,
-"repoUrl": "https://github.com/browser-use/browser-harness-js",
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-compression -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
 "aliases": [
-"browser-harness-js",
-"browser-use",
+"context-compression",
+"muratcankoylan",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-w3c-web-performance-skills",
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-skills-context-degradation",
 "priority": 468,
 "category": "community",
 "type": "skill",
-"want": "bikeshed-conversion",
-"feature": "w3c/web-performance",
-"summary": "Guidelines for converting W3C specs to Bikeshed format. Covers anchor ID preservation, dfn handling, and common pitfalls. Read this before any Bikeshed conversion or migration work.",
+"want": "context-degradation",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "This skill should be used for diagnosing and mitigating context degradation: lost-in-middle failures, context poisoning, context clash, context confusion, attention-pattern issues, and agent performance degradation caused by accumulated or conflicting context.",
 "commands": [
-"npx skills add w3c/web-performance@skills -g"
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-degradation -g"
 ],
-"install": "npx skills add w3c/web-performance@skills -g",
-"stars": 431,
-"repoUrl": "https://github.com/w3c/web-performance",
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-degradation -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
 "aliases": [
-"skills",
-"w3c",
+"context-degradation",
+"muratcankoylan",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-w3c-web-performance-bikeshed-conversion",
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-agent-skills-for-context-engineering",
 "priority": 469,
 "category": "community",
 "type": "skill",
-"want": "bikeshed-conversion",
-"feature": "w3c/web-performance",
-"summary": "Guidelines for converting W3C specs to Bikeshed format. Covers anchor ID preservation, dfn handling, and common pitfalls. Read this before any Bikeshed conversion or migration work.",
+"want": "context-engineering-collection",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "A comprehensive collection of Agent Skills for context engineering, harness engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, evaluating, or debugging agent systems that require effective context management and reliable operating loops.",
 "commands": [
-"npx skills add w3c/web-performance@bikeshed-conversion -g"
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@Agent-Skills-for-Context-Engineering -g"
 ],
-"install": "npx skills add w3c/web-performance@bikeshed-conversion -g",
-"stars": 431,
-"repoUrl": "https://github.com/w3c/web-performance",
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@Agent-Skills-for-Context-Engineering -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
 "aliases": [
-"bikeshed-conversion",
-"w3c",
+"Agent-Skills-for-Context-Engineering",
+"muratcankoylan",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-w3c-web-performance-publish-wg-minutes",
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-skills-context-fundamentals",
 "priority": 470,
 "category": "community",
 "type": "skill",
-"want": "publish-wg-minutes",
-"feature": "w3c/web-performance",
-"summary": "Process and publish WebPerfWG meeting minutes from Google Docs zip exports. Read this before handling any WebPerfWG meeting minute zip files.",
+"want": "context-fundamentals",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "This skill should be used to explain or reason about the foundational concepts of context engineering: what context is, the anatomy of a context window, how attention mechanics work, the U-shaped attention curve, why context quality matters more than quantity, and the mental models needed to interpret every other context-engineering decision. Use this for conceptual explanation, onboarding, and background reading. Route operational work to the specialized skills: debugging attention failures goes to context-degradation, token-efficiency work goes to context-optimization, conversation summarization goes to context-compression, and project-shape decisions go to project-development.",
 "commands": [
-"npx skills add w3c/web-performance@publish-wg-minutes -g"
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-fundamentals -g"
 ],
-"install": "npx skills add w3c/web-performance@publish-wg-minutes -g",
-"stars": 431,
-"repoUrl": "https://github.com/w3c/web-performance",
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-fundamentals -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
 "aliases": [
-"publish-wg-minutes",
-"w3c",
+"context-fundamentals",
+"muratcankoylan",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-frankois944-spm4kmp-docs",
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-skills-context-optimization",
 "priority": 471,
 "category": "community",
 "type": "skill",
-"want": "docs",
-"feature": "frankois944/spm4Kmp",
-"summary": "SPM For KMP: Use Apple Swift packages and Swift-import in a KMP project",
+"want": "context-optimization",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "This skill should be used for improving context efficiency: context budgeting, observation masking, prefix or KV-cache strategy, partitioning, token-cost reduction, retrieval scoping, and extending effective context capacity without lowering answer quality.",
 "commands": [
-"npx skills add frankois944/spm4Kmp -g"
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-optimization -g"
 ],
-"install": "npx skills add frankois944/spm4Kmp -g",
-"stars": 391,
-"repoUrl": "https://github.com/frankois944/spm4Kmp",
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@context-optimization -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
 "aliases": [
-"docs",
-"frankois944",
+"context-optimization",
+"muratcankoylan",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-eric-yibo-shen-zhangxuefeng-skillset-zhangxuefeng-skillset",
+"id": "skill-muratcankoylan-agent-skills-for-context-engineering-skills-evaluation",
 "priority": 472,
 "category": "community",
 "type": "skill",
-"want": "gaokao-mentor",
-"feature": "Eric-Yibo-Shen/zhangxuefeng-skillset",
-"summary": "张雪峰高考志愿填报顾问 AI。用张雪峰的说话方式和思维逻辑，替普通家庭消除志愿填报信息差。\n核心框架：城市>学校>专业；就业倒推法；四步决策流程（可行集→目标倒推→AI时代校正→冲稳保三方案）。\n涵盖：专业选择、院校推荐、就业前景、新高考选科、大学规划、AI时代风险校正。\n安装：npx skills add eric-yibo-shen/zhangxuefeng",
+"want": "evaluation",
+"feature": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+"summary": "This skill should be used when building agent evaluation systems: deterministic checks, regression suites, multi-dimensional rubrics, quality gates, production monitoring, baseline comparison, and outcome measurement for agent pipelines.",
 "commands": [
-"npx skills add Eric-Yibo-Shen/zhangxuefeng-skillset -g"
+"npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@evaluation -g"
 ],
-"install": "npx skills add Eric-Yibo-Shen/zhangxuefeng-skillset -g",
-"stars": 379,
-"repoUrl": "https://github.com/Eric-Yibo-Shen/zhangxuefeng-skillset",
+"install": "npx skills add muratcankoylan/Agent-Skills-for-Context-Engineering@evaluation -g",
+"stars": 17072,
+"repoUrl": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
 "aliases": [
-"zhangxuefeng-skillset",
-"Eric-Yibo-Shen",
+"evaluation",
+"muratcankoylan",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-affiliate-marketing-strategy",
+"id": "skill-weifeng2333-videocaptioner-skills",
 "priority": 473,
 "category": "community",
 "type": "skill",
-"want": "affiliate-marketing-strategy",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "E-commerce skills for AI agents — product research, marketing automation, supply chain optimization, and business analytics for online sellers across Amazon, Shopify, Etsy, TikTok Shop, and all platforms.",
+"want": "videocaptioner",
+"feature": "WEIFENG2333/VideoCaptioner",
+"summary": "Process video subtitles — transcribe speech, optimize/translate text, burn styled subtitles into video. Use when you need to add subtitles to a video, transcribe audio, translate subtitles, or customize subtitle styles.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@affiliate-marketing-strategy -g"
+"npx skills add WEIFENG2333/VideoCaptioner -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@affiliate-marketing-strategy -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add WEIFENG2333/VideoCaptioner -g",
+"stars": 15285,
+"repoUrl": "https://github.com/WEIFENG2333/VideoCaptioner",
 "aliases": [
-"affiliate-marketing-strategy",
-"nexscope-ai",
+"skills",
+"WEIFENG2333",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-api-monitoring",
+"id": "skill-crazyguitar-pysheeet-skills-py",
 "priority": 474,
 "category": "community",
 "type": "skill",
-"want": "api-monitoring",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "E-commerce skills for AI agents — product research, marketing automation, supply chain optimization, and business analytics for online sellers across Amazon, Shopify, Etsy, TikTok Shop, and all platforms.",
+"want": "py",
+"feature": "crazyguitar/pysheeet",
+"summary": "Comprehensive Python programming reference covering syntax, concurrency, networking, databases, ML/LLM development, and HPC. Use for: Python questions, Python interview preparation, debugging, performance optimization, async patterns, library examples, code review, best practices, MLOps workflows, distributed computing, security implementations, and any Python development tasks.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@api-monitoring -g"
+"npx skills add crazyguitar/pysheeet@py -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@api-monitoring -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add crazyguitar/pysheeet@py -g",
+"stars": 8149,
+"repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
-"api-monitoring",
-"nexscope-ai",
+"py",
+"crazyguitar",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-brand-monitoring",
+"id": "skill-crazyguitar-pysheeet-skills-readable-py",
 "priority": 475,
 "category": "community",
 "type": "skill",
-"want": "brand-monitoring",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "Brand monitoring tool for tracking mentions across social media platforms. Monitor Reddit, Google News, YouTube, and DuckDuckGo for brand mentions. Includes sentiment analysis, trend tracking, crisis detection, and competitor comparison. No API key required for basic monitoring.",
+"want": "readable-py",
+"feature": "crazyguitar/pysheeet",
+"summary": "Readable Python code rules inspired by The Art of Readable Code. Use when writing, reviewing, or refactoring Python code. Enforces short functions, flat control flow, clear naming, readable structure, and Pythonic idioms.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@brand-monitoring -g"
+"npx skills add crazyguitar/pysheeet@readable-py -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@brand-monitoring -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add crazyguitar/pysheeet@readable-py -g",
+"stars": 8149,
+"repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
-"brand-monitoring",
-"nexscope-ai",
+"readable-py",
+"crazyguitar",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-brand-protection-amazon",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-ad-certificate-abuse",
 "priority": 476,
 "category": "community",
 "type": "skill",
-"want": "brand-protection-amazon",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "Amazon brand protection toolkit. Detect hijackers, counterfeits, and unauthorized sellers. Includes MAP violation monitoring, trademark abuse detection, complaint templates for Brand Registry, and test buy evidence collection guides. No API key required.",
+"want": "competition-ad-certificate-abuse",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AD CS, certificate templates, enrollment rights, EKUs, SAN controls, PKINIT, certificate mapping, and cert-based privilege paths. Use when the user asks about ESC-style abuse, certificate templates, enrollment agents, EKUs, SAN or subject controls, smartcard or PKINIT logon, CA policy, or how an issued cert turns into accepted privilege. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@brand-protection-amazon -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-ad-certificate-abuse -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-amazon -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-ad-certificate-abuse -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"brand-protection-amazon",
-"nexscope-ai",
+"competition-ad-certificate-abuse",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-brand-protection-ebay",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-agent-cloud",
 "priority": 477,
 "category": "community",
 "type": "skill",
-"want": "brand-protection-ebay",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "eBay brand protection toolkit. Detect unauthorized sellers, counterfeits, and VeRO violations. Includes price monitoring, trademark abuse detection, VeRO complaint templates, and enforcement guides. No API key required.",
+"want": "competition-agent-cloud",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AI-agent, prompt-injection, MCP or toolchain, cloud, container, CI/CD, and supply-chain challenges. Use when the user asks to analyze prompt-to-tool flows, retrieval poisoning, mounted secrets, deployment drift, runtime-vs-manifest mismatches, registry provenance, or CI-produced artifacts under sandbox assumptions. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@brand-protection-ebay -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-agent-cloud -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-ebay -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-agent-cloud -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"brand-protection-ebay",
-"nexscope-ai",
+"competition-agent-cloud",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-brand-protection-shopify",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-android-hooking",
 "priority": 478,
 "category": "community",
 "type": "skill",
-"want": "brand-protection-shopify",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "Shopify/DTC brand protection toolkit. Detect counterfeit stores, unauthorized resellers, and trademark violations. Includes DMCA takedown templates, domain monitoring, and social media infringement detection. No API key required.",
+"want": "competition-android-hooking",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Android APK hooking, Frida tracing, request-signing recovery, SSL pinning bypass, JNI boundary inspection, and app trust-boundary analysis. Use when the user asks to hook an APK, inspect signer logic, trace Java or native boundaries, bypass pinning or root checks, inspect shared prefs or app databases, or replay accepted mobile requests. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@brand-protection-shopify -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-android-hooking -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-shopify -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-android-hooking -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"brand-protection-shopify",
-"nexscope-ai",
+"competition-android-hooking",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-brand-protection-tiktok",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-browser-persistence",
 "priority": 479,
 "category": "community",
 "type": "skill",
-"want": "brand-protection-tiktok",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "TikTok Shop brand protection toolkit. Detect unauthorized sellers, counterfeit products, and affiliate abuse. Includes TikTok IP Protection reporting, influencer misuse detection, and complaint templates. No API key required.",
+"want": "competition-browser-persistence",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for browser cookies, localStorage, sessionStorage, IndexedDB, Cache Storage, service workers, offline caches, and client-side session persistence. Use when the user asks to inspect browser state, replay cached auth or session behavior, explain why a page behaves differently after load, or trace how stored client state changes requests, rendering, or access. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@brand-protection-tiktok -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-browser-persistence -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-tiktok -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-browser-persistence -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"brand-protection-tiktok",
-"nexscope-ai",
+"competition-browser-persistence",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nexscope-ai-ecommerce-skills-brand-protection-walmart",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-bundle-sourcemap-recovery",
 "priority": 480,
 "category": "community",
 "type": "skill",
-"want": "brand-protection-walmart",
-"feature": "nexscope-ai/eCommerce-Skills",
-"summary": "Walmart brand protection toolkit. Detect unauthorized sellers, counterfeits, and MAP violations. Includes Walmart Brand Portal reporting, WFS seller monitoring, and complaint templates. No API key required.",
+"want": "competition-bundle-sourcemap-recovery",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for source maps, build manifests, chunk registries, emitted bundles, obfuscated loader flow, and frontend runtime recovery. Use when the user asks to reconstruct served JavaScript structure, inspect source maps or chunk maps, trace bundle loading, recover hidden routes or APIs from emitted assets, or explain runtime behavior from built frontend artifacts. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add nexscope-ai/eCommerce-Skills@brand-protection-walmart -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-bundle-sourcemap-recovery -g"
 ],
-"install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-walmart -g",
-"stars": 339,
-"repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-bundle-sourcemap-recovery -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"brand-protection-walmart",
-"nexscope-ai",
+"competition-bundle-sourcemap-recovery",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-0codekit",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-cloud-metadata-path",
 "priority": 481,
 "category": "community",
 "type": "skill",
-"want": "0codekit",
-"feature": "membranedev/application-skills",
-"summary": "0codekit integration. Manage Workspaces. Use when the user wants to interact with 0codekit data.",
+"want": "competition-cloud-metadata-path",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for cloud metadata services, instance identity, workload identity, link-local credential paths, role assumption, and metadata-to-privilege trust edges. Use when the user asks to inspect metadata-service access, instance credentials, pod or workload identity, link-local token paths, SSRF-to-metadata escalation, or explain how metadata-derived credentials turn into accepted cloud or control-plane privilege. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add membranedev/application-skills@0codekit -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-cloud-metadata-path -g"
 ],
-"install": "npx skills add membranedev/application-skills@0codekit -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-cloud-metadata-path -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"0codekit",
-"membranedev",
+"competition-cloud-metadata-path",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-10duke",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-container-runtime",
 "priority": 482,
 "category": "community",
 "type": "skill",
-"want": "10duke",
-"feature": "membranedev/application-skills",
-"summary": "10Duke integration. Manage data, records, and automate workflows. Use when the user wants to interact with 10Duke data.",
+"want": "competition-container-runtime",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for live container runtime analysis, mounted secrets, sidecars, namespaces, init containers, entrypoint drift, and route-to-container resolution. Use when the user asks why a live container differs from manifests, where a mounted secret is consumed, how a sidecar or init container changes runtime state, or which route resolves to which live container. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add membranedev/application-skills@10duke -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-container-runtime -g"
 ],
-"install": "npx skills add membranedev/application-skills@10duke -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-container-runtime -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"10duke",
-"membranedev",
+"competition-container-runtime",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-10to8",
+"id": "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-crypto-mobile",
 "priority": 483,
 "category": "community",
 "type": "skill",
-"want": "10to8",
-"feature": "membranedev/application-skills",
-"summary": "10to8 integration. Manage data, records, and automate workflows. Use when the user wants to interact with 10to8 data.",
+"want": "competition-crypto-mobile",
+"feature": "zhaoxuya520/reverse-skill",
+"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for crypto, encoding, steganography, APK, IPA, and mobile trust-boundary challenges. Use when the user asks to decode a blob, recover a transform chain or key, inspect hidden media payloads, hook an APK or IPA signer, inspect app storage, or replay mobile request-signing logic. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
 "commands": [
-"npx skills add membranedev/application-skills@10to8 -g"
+"npx skills add zhaoxuya520/reverse-skill@competition-crypto-mobile -g"
 ],
-"install": "npx skills add membranedev/application-skills@10to8 -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add zhaoxuya520/reverse-skill@competition-crypto-mobile -g",
+"stars": 7932,
+"repoUrl": "https://github.com/zhaoxuya520/reverse-skill",
 "aliases": [
-"10to8",
-"membranedev",
+"competition-crypto-mobile",
+"zhaoxuya520",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-123formbuilder",
+"id": "skill-narcooo-inkos-skills",
 "priority": 484,
 "category": "community",
 "type": "skill",
-"want": "123formbuilder",
-"feature": "membranedev/application-skills",
-"summary": "123FormBuilder integration. Manage data, records, and automate workflows. Use when the user wants to interact with 123FormBuilder data.",
+"want": "inkos",
+"feature": "Narcooo/inkos",
+"summary": "Story Creation AI Agent with Studio Chat, CLI, and TUI - use for long-form novels, standalone short fiction, scripts, storyboards, interactive-film projects, open-world / branching play, fan fiction, spinoffs, style imitation, continuations, covers, EPUB export, AIGC detection, and project analytics. Includes runtime skills, traceable web research, governed context assembly, protected/compressible context budgeting, persistent story state, multi-model routing, cover/image services, custom OpenAI-compatible providers, and InkOS Studio web UI.",
 "commands": [
-"npx skills add membranedev/application-skills@123formbuilder -g"
+"npx skills add Narcooo/inkos -g"
 ],
-"install": "npx skills add membranedev/application-skills@123formbuilder -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add Narcooo/inkos -g",
+"stars": 7889,
+"repoUrl": "https://github.com/Narcooo/inkos",
 "aliases": [
-"123formbuilder",
-"membranedev",
+"skills",
+"Narcooo",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-15five",
+"id": "skill-kaggle-kaggle-cli-skills",
 "priority": 485,
 "category": "community",
 "type": "skill",
-"want": "15five",
-"feature": "membranedev/application-skills",
-"summary": "15Five integration. Manage Persons, Organizations. Use when the user wants to interact with 15Five data.",
+"want": "kaggle-cli",
+"feature": "Kaggle/kaggle-cli",
+"summary": "Use the local Kaggle CLI skill for command guidance, workflows, and troubleshooting across competitions, datasets, kernels/notebooks, models, model variations and versions, inbox file uploads, forums/discussions, benchmarks, configuration, OAuth/API-token authentication, and accelerator quota. Activate this skill when the user asks about kaggle CLI commands, examples, flags, metadata files, download/upload flows, submissions, benchmark tasks, or Kaggle CLI behavior.",
 "commands": [
-"npx skills add membranedev/application-skills@15five -g"
+"npx skills add Kaggle/kaggle-cli -g"
 ],
-"install": "npx skills add membranedev/application-skills@15five -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add Kaggle/kaggle-cli -g",
+"stars": 7450,
+"repoUrl": "https://github.com/Kaggle/kaggle-cli",
 "aliases": [
-"15five",
-"membranedev",
+"skills",
+"Kaggle",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-1c",
+"id": "skill-feast-dev-feast-.claude-skills-feast-architecture",
 "priority": 486,
 "category": "community",
 "type": "skill",
-"want": "1c",
-"feature": "membranedev/application-skills",
-"summary": "1C-Bitrix integration. Manage data, records, and automate workflows. Use when the user wants to interact with 1C-Bitrix data.",
+"want": "feast-architecture",
+"feature": "feast-dev/feast",
+"summary": "The Open Source Feature Store for AI/ML",
 "commands": [
-"npx skills add membranedev/application-skills@1c -g"
+"npx skills add feast-dev/feast@feast-architecture -g"
 ],
-"install": "npx skills add membranedev/application-skills@1c -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add feast-dev/feast@feast-architecture -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"1c",
-"membranedev",
+"feast-architecture",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-1crm",
+"id": "skill-feast-dev-feast-skills-feast-architecture",
 "priority": 487,
 "category": "community",
 "type": "skill",
-"want": "1crm",
-"feature": "membranedev/application-skills",
-"summary": "1CRM integration. Manage data, records, and automate workflows. Use when the user wants to interact with 1CRM data.",
+"want": "feast-architecture",
+"feature": "feast-dev/feast",
+"summary": "Internals of the Feast codebase — how each component works, where the key abstractions live, and the data flow through the system. Use when asked how feast apply works, how the registry stores data, how materialization moves data, how get_online_features retrieves features, how the feature server works, how the Kubernetes operator manages deployments, or when navigating the codebase to understand where to make a change.",
 "commands": [
-"npx skills add membranedev/application-skills@1crm -g"
+"npx skills add feast-dev/feast@feast-architecture -g"
 ],
-"install": "npx skills add membranedev/application-skills@1crm -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add feast-dev/feast@feast-architecture -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"1crm",
-"membranedev",
+"feast-architecture",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-membranedev-application-skills-1forge",
+"id": "skill-feast-dev-feast-.claude-skills-feast-dev",
 "priority": 488,
 "category": "community",
 "type": "skill",
-"want": "1forge",
-"feature": "membranedev/application-skills",
-"summary": "1Forge integration. Manage data, records, and automate workflows. Use when the user wants to interact with 1Forge data.",
+"want": "feast-dev",
+"feature": "feast-dev/feast",
+"summary": "The Open Source Feature Store for AI/ML",
 "commands": [
-"npx skills add membranedev/application-skills@1forge -g"
+"npx skills add feast-dev/feast@feast-dev -g"
 ],
-"install": "npx skills add membranedev/application-skills@1forge -g",
-"stars": 242,
-"repoUrl": "https://github.com/membranedev/application-skills",
+"install": "npx skills add feast-dev/feast@feast-dev -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"1forge",
-"membranedev",
+"feast-dev",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-second-state-qwen3_asr_rs-skills",
+"id": "skill-feast-dev-feast-skills-feast-dev",
 "priority": 489,
 "category": "community",
 "type": "skill",
-"want": "skills",
-"feature": "second-state/qwen3_asr_rs",
-"summary": "Rust implementation of Qwen3-ASR automatic speech recognition",
+"want": "feast-dev",
+"feature": "feast-dev/feast",
+"summary": "Development guide for contributing to the Feast codebase. Covers environment setup, testing, linting, project structure, and PR workflow for feast-dev/feast.",
 "commands": [
-"npx skills add second-state/qwen3_asr_rs -g"
+"npx skills add feast-dev/feast@feast-dev -g"
 ],
-"install": "npx skills add second-state/qwen3_asr_rs -g",
-"stars": 242,
-"repoUrl": "https://github.com/second-state/qwen3_asr_rs",
+"install": "npx skills add feast-dev/feast@feast-dev -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"skills",
-"second-state",
+"feast-dev",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-second-state-qwen3_tts_rs-skills",
+"id": "skill-feast-dev-feast-.claude-skills-feast-testing",
 "priority": 490,
 "category": "community",
 "type": "skill",
-"want": "audio-tts",
-"feature": "second-state/qwen3_tts_rs",
-"summary": "Generate speech audio from text using Qwen3 TTS, or clone a voice from reference audio. Triggered when the user wants to convert text to speech, generate audio, read text aloud, or clone/mimic a voice. Supports multiple speakers, English and Chinese, and emotion/style control.",
+"want": "feast-testing",
+"feature": "feast-dev/feast",
+"summary": "The Open Source Feature Store for AI/ML",
 "commands": [
-"npx skills add second-state/qwen3_tts_rs -g"
+"npx skills add feast-dev/feast@feast-testing -g"
 ],
-"install": "npx skills add second-state/qwen3_tts_rs -g",
-"stars": 226,
-"repoUrl": "https://github.com/second-state/qwen3_tts_rs",
+"install": "npx skills add feast-dev/feast@feast-testing -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"skills",
-"second-state",
+"feast-testing",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-y49-tlive-tlive",
+"id": "skill-feast-dev-feast-skills-feast-testing",
 "priority": 491,
 "category": "community",
 "type": "skill",
-"want": "tlive",
-"feature": "y49/tlive",
-"summary": "IM bridge for AI coding tools — chat with Claude Code / Codex from\nTelegram, Discord, or Feishu. Approve permissions, get streaming responses,\nmanage sessions from your phone.\nUse for: starting IM bridge, configuring IM platforms, checking status,\ndiagnosing issues.\nTrigger phrases: \"tlive\", \"IM bridge\", \"消息桥接\", \"手机交互\", \"启动桥接\",\n\"连接飞书\", \"连接Telegram\", \"诊断\", \"查看日志\", \"配置\".\nDo NOT use for: building bots, webhook integrations, or general coding tasks.",
+"want": "feast-testing",
+"feature": "feast-dev/feast",
+"summary": "How to test and debug Feast — running targeted tests, writing unit tests for new components, debugging registry and online store issues, and inspecting live feature store state. Use when writing tests for a new feature, debugging a failing test, investigating a runtime error, or verifying that a change works correctly end-to-end.",
 "commands": [
-"npx skills add y49/tlive -g"
+"npx skills add feast-dev/feast@feast-testing -g"
 ],
-"install": "npx skills add y49/tlive -g",
-"stars": 204,
-"repoUrl": "https://github.com/y49/tlive",
+"install": "npx skills add feast-dev/feast@feast-testing -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"tlive",
-"y49",
+"feast-testing",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-dageno-agents-geo-content-writer-geo-content-writer",
+"id": "skill-feast-dev-feast-.claude-skills-feast-user-guide",
 "priority": 492,
 "category": "community",
 "type": "skill",
-"want": "content-writer",
-"feature": "dageno-agents/geo-content-writer",
-"summary": "Use when the user wants to turn [Dageno](https://dageno.ai/?utm_source=github&utm_medium=social&utm_campaign=official) GEO opportunities into a real-fanout backlog and then write one publish-ready article from one selected fanout item. Produces a backlog-row-first GEO workflow with fanout extraction, editorial brief generation, draft and review contracts, and publish-ready article output. For broad SEO article generation from keywords without [Dageno](https://dageno.ai/?utm_source=github&utm_medium=social&utm_campaign=official) opportunity data, see a keyword-first SEO content workflow instead.",
+"want": "feast-user-guide",
+"feature": "feast-dev/feast",
+"summary": "The Open Source Feature Store for AI/ML",
 "commands": [
-"npx skills add dageno-agents/geo-content-writer -g"
+"npx skills add feast-dev/feast@feast-user-guide -g"
 ],
-"install": "npx skills add dageno-agents/geo-content-writer -g",
-"stars": 198,
-"repoUrl": "https://github.com/dageno-agents/geo-content-writer",
+"install": "npx skills add feast-dev/feast@feast-user-guide -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"geo-content-writer",
-"dageno-agents",
+"feast-user-guide",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-accessibility",
+"id": "skill-feast-dev-feast-skills",
 "priority": 493,
 "category": "community",
 "type": "skill",
-"want": "accessibility",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when building or reviewing UI components for keyboard and screen reader compatibility, adding ARIA to custom widgets, auditing a page for WCAG AA conformance, or preparing for a formal accessibility review.",
+"want": "feast-user-guide",
+"feature": "feast-dev/feast",
+"summary": "Guide for working with Feast (Feature Store) — defining features, configuring feature_store.yaml, retrieving features online/offline, using the CLI, and building RAG retrieval pipelines. Use when the user asks about creating entities, feature views, on-demand feature views, stream feature views, feature services, data sources, feature_store.yaml configuration, feast apply/materialize commands, online or historical feature retrieval, or vector-based document retrieval with Feast.",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@accessibility -g"
+"npx skills add feast-dev/feast@skills -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@accessibility -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add feast-dev/feast@skills -g",
+"stars": 7127,
+"repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
-"accessibility",
-"kid-sid",
+"skills",
+"feast-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-agentex",
+"id": "skill-builderz-labs-mission-control-mission-control",
 "priority": 494,
 "category": "community",
 "type": "skill",
-"want": "agentex",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when building, wiring, or debugging an Agentex agent — choosing agent type, configuring acp.py and manifest.yaml, using adk.messages or adk.state, or resolving Windows-specific setup issues.",
+"want": "mission-control",
+"feature": "builderz-labs/mission-control",
+"summary": "Interact with Mission Control — AI agent orchestration dashboard. Use when registering agents, managing tasks, syncing skills, or querying agent/task status via MC APIs.",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@agentex -g"
+"npx skills add builderz-labs/mission-control -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@agentex -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add builderz-labs/mission-control -g",
+"stars": 5703,
+"repoUrl": "https://github.com/builderz-labs/mission-control",
 "aliases": [
-"agentex",
-"kid-sid",
+"mission-control",
+"builderz-labs",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-ai-engineer",
+"id": "skill-vyperlang-vyper-skills",
 "priority": 495,
 "category": "community",
 "type": "skill",
-"want": "ai-engineer",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when building production LLM applications — designing RAG pipelines, choosing vector databases, implementing agent orchestration, optimizing cost, or adding AI safety guardrails.",
+"want": "vyper-compiler",
+"feature": "vyperlang/vyper",
+"summary": "Vyper smart contract compiler internals. Use when working on the Vyper compiler codebase — compilation pipeline, Venom IR, semantic analysis, code generation, testing, or contributing. Triggers on vyper compiler development, Venom passes, AST/semantics changes, codegen work, or test writing.",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@ai-engineer -g"
+"npx skills add vyperlang/vyper -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@ai-engineer -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add vyperlang/vyper -g",
+"stars": 5176,
+"repoUrl": "https://github.com/vyperlang/vyper",
 "aliases": [
-"ai-engineer",
-"kid-sid",
+"skills",
+"vyperlang",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-angular",
+"id": "skill-github-gh-aw-gh-aw",
 "priority": 496,
 "category": "community",
 "type": "skill",
-"want": "angular",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when building or refactoring Angular applications — choosing between signals, RxJS, and NgRx for state, configuring routing with guards and lazy loading, optimizing change detection, or writing TestBed component tests.",
+"want": "gh-aw",
+"feature": "github/gh-aw",
+"summary": "GitHub Agentic Workflows",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@angular -g"
+"npx skills add github/gh-aw@gh-aw -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@angular -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add github/gh-aw@gh-aw -g",
+"stars": 4746,
+"repoUrl": "https://github.com/github/gh-aw",
 "aliases": [
-"angular",
-"kid-sid",
+"gh-aw",
+"github",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-api-design",
+"id": "skill-github-gh-aw-.claude-skills-playwright-cli",
 "priority": 497,
 "category": "community",
 "type": "skill",
-"want": "api-design",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when designing new REST endpoints, reviewing an existing API contract, adding pagination or filtering, planning a versioning strategy, or building a public or partner-facing API.",
+"want": "playwright-cli",
+"feature": "github/gh-aw",
+"summary": "Automate browser interactions, test web pages and work with Playwright tests.",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@api-design -g"
+"npx skills add github/gh-aw@playwright-cli -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@api-design -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add github/gh-aw@playwright-cli -g",
+"stars": 4746,
+"repoUrl": "https://github.com/github/gh-aw",
 "aliases": [
-"api-design",
-"kid-sid",
+"playwright-cli",
+"github",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-auth",
+"id": "skill-antvis-l7-skills-l7-single",
 "priority": 498,
 "category": "community",
 "type": "skill",
-"want": "auth",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when implementing login flows, issuing or validating JWTs, setting up OAuth2/OIDC with a provider, designing role-based or attribute-based access control, securing API endpoints, or handling token refresh and revocation.",
+"want": "antv-l7",
+"feature": "antvis/L7",
+"summary": "基于 WebGL 的大规模地理空间数据可视化引擎。适用于：\n(1) 创建交互式 WebGL 地图应用\n(2) 可视化地理空间数据（点、线、面、热力图）\n(3) 构建位置数据驾驶舱\n(4) 添加地图图层、交互和动画效果\n(5) 处理并展示 GeoJSON、CSV 等空间数据",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@auth -g"
+"npx skills add antvis/L7@l7-single -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@auth -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add antvis/L7@l7-single -g",
+"stars": 4030,
+"repoUrl": "https://github.com/antvis/L7",
 "aliases": [
-"auth",
-"kid-sid",
+"l7-single",
+"antvis",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-aws",
+"id": "skill-antvis-l7-skills-l7",
 "priority": 499,
 "category": "community",
 "type": "skill",
-"want": "aws",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when writing boto3 or AWS SDK v3 code — configuring IAM auth, reading/writing S3, designing DynamoDB access patterns, writing Lambda handlers, processing SQS batches, or troubleshooting credential and throttling errors.",
+"want": "antv-l7",
+"feature": "antvis/L7",
+"summary": "Comprehensive guide for AntV L7 geospatial visualization library. Use when users need to:\n(1) Create interactive maps with WebGL rendering\n(2) Visualize geographic data (points, lines, polygons, heatmaps)\n(3) Build location-based data dashboards\n(4) Add map layers, interactions, or animations\n(5) Process and display GeoJSON, CSV, or other spatial data\n(6) Integrate maps with AMap (GaodeMap), Mapbox, Maplibre, or standalone L7 Map\n(7) Optimize performance for large-scale geographic datasets",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@aws -g"
+"npx skills add antvis/L7@l7 -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@aws -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add antvis/L7@l7 -g",
+"stars": 4030,
+"repoUrl": "https://github.com/antvis/L7",
 "aliases": [
-"aws",
-"kid-sid",
+"l7",
+"antvis",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kid-sid-claude-spellbook-azure-service-bus",
+"id": "skill-paper2poster-paper2poster-skills",
 "priority": 500,
 "category": "community",
 "type": "skill",
-"want": "azure-service-bus",
-"feature": "kid-sid/claude-spellbook",
-"summary": "Use when implementing reliable message processing with Azure Service Bus — choosing between queues and topics, configuring peek-lock settlement, handling dead-lettered messages, or enforcing ordered processing with sessions.",
+"want": "paper2poster-poster",
+"feature": "Paper2Poster/Paper2Poster",
+"summary": "Use when the user wants to turn an academic paper into a conference poster, poster outline, poster copy deck, poster layout brief, poster.yaml style draft, or Paper2Poster-ready generation package. Trigger for paper-to-poster requests involving PDF papers, arXiv links, manuscripts, PPTX posters, conference submissions, research summaries, or the Paper2Poster workflow.",
 "commands": [
-"npx skills add kid-sid/claude-spellbook@azure-service-bus -g"
+"npx skills add Paper2Poster/Paper2Poster -g"
 ],
-"install": "npx skills add kid-sid/claude-spellbook@azure-service-bus -g",
-"stars": 180,
-"repoUrl": "https://github.com/kid-sid/claude-spellbook",
+"install": "npx skills add Paper2Poster/Paper2Poster -g",
+"stars": 3852,
+"repoUrl": "https://github.com/Paper2Poster/Paper2Poster",
 "aliases": [
-"azure-service-bus",
-"kid-sid",
+"skills",
+"Paper2Poster",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-leeguooooo-cross-request-master-skill-template",
+"id": "skill-op7418-claude-to-im-skill-claude-to-im-skill",
 "priority": 501,
 "category": "community",
 "type": "skill",
-"want": "yapi",
-"feature": "leeguooooo/cross-request-master",
-"summary": "Query and sync YApi interface documentation. Use when user mentions \"yapi 接口文档\", YAPI docs, asks for request/response details, or needs docs sync. Also triggers when user pastes a YApi URL that matches the configured base_url.",
+"want": "claude-to-im",
+"feature": "op7418/Claude-to-IM-skill",
+"summary": "Bridge THIS Claude Code or Codex session to Telegram, Discord, Feishu/Lark, QQ, or WeChat so the\nuser can chat with Claude from their phone. Use for: setting up, starting, stopping,\nor diagnosing the claude-to-im bridge daemon; forwarding Claude replies to a messaging\napp; any phrase like \"claude-to-im\", \"bridge\", \"消息推送\", \"消息转发\", \"桥接\",\n\"连上飞书\", \"手机上看claude\", \"启动后台服务\", \"诊断\", \"查看日志\", \"配置\".\nSubcommands: setup, start, stop, status, logs, reconfigure, doctor.\nDo NOT use for: building standalone bots, webhook integrations, or coding with IM\nplatform SDKs — those are regular programming tasks.",
 "commands": [
-"npx skills add leeguooooo/cross-request-master@skill-template -g"
+"npx skills add op7418/Claude-to-IM-skill -g"
 ],
-"install": "npx skills add leeguooooo/cross-request-master@skill-template -g",
-"stars": 163,
-"repoUrl": "https://github.com/leeguooooo/cross-request-master",
+"install": "npx skills add op7418/Claude-to-IM-skill -g",
+"stars": 2809,
+"repoUrl": "https://github.com/op7418/Claude-to-IM-skill",
 "aliases": [
-"skill-template",
-"leeguooooo",
+"Claude-to-IM-skill",
+"op7418",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-leeguooooo-cross-request-master-yapi",
+"id": "skill-norman-bury-research-writing-skill-skills-brainstorming-research",
 "priority": 502,
 "category": "community",
 "type": "skill",
-"want": "yapi",
-"feature": "leeguooooo/cross-request-master",
-"summary": "Query and sync YApi interface documentation. Use when user mentions \"yapi 接口文档\", YAPI docs, asks for request/response details, or needs docs sync. Also triggers when user pastes a YApi URL that matches the configured base_url.",
+"want": "brainstorming-research",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use before writing any paper - clarifies paper type, discipline, topic, methodology, and chapter structure through natural dialogue",
 "commands": [
-"npx skills add leeguooooo/cross-request-master@yapi -g"
+"npx skills add Norman-bury/research-writing-skill@brainstorming-research -g"
 ],
-"install": "npx skills add leeguooooo/cross-request-master@yapi -g",
-"stars": 163,
-"repoUrl": "https://github.com/leeguooooo/cross-request-master",
+"install": "npx skills add Norman-bury/research-writing-skill@brainstorming-research -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"yapi",
-"leeguooooo",
+"brainstorming-research",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-opendatalab-mineru-ecosystem-skills",
+"id": "skill-norman-bury-research-writing-skill-skills-environment-setup",
 "priority": 503,
 "category": "community",
 "type": "skill",
-"want": "MinerU Document Extractor",
-"feature": "opendatalab/MinerU-Ecosystem",
-"summary": "MinerU document extraction — convert PDFs, scanned documents, images, Word (DOC/DOCX), PowerPoint (PPT/PPTX), Excel (XLS/XLSX), and web pages into clean Markdown, HTML, LaTeX, or DOCX. MinerU is an all-in-one CLI tool and agent skill for reliable, high-fidelity document parsing. Struggling with unreadable PDFs, messy table formatting, or garbled formulas after conversion? MinerU solves these with two extraction modes: MinerU flash-extract for instant zero-setup conversion with table recognition, formula recognition, and OCR (no token, no login, no configuration — just run and get results), and MinerU precision extract with VLM-based layout analysis, multiple output formats, and batch processing of hundreds of files. Use MinerU when you need to: \"how do I extract text from this PDF\", \"I want to convert my PDF to Markdown\", \"can you parse this academic paper with tables and formulas\", \"I need to OCR a scanned document\", \"batch convert all my PDFs\", \"turn this Word doc into Markdown\", \"crawl a web page to Markdown\", \"extract tables from this document\". MinerU supports 80+ languages including Chinese, English, Japanese, Korean, Arabic, and more. Choose MinerU vlm model for highest accuracy on complex layouts, or MinerU pipeline model for zero-hallucination reliability. Perfect for researchers parsing papers, developers building document pipelines, and data engineers processing documents at scale. MinerU文档提取工具，PDF转Markdown、扫描件OCR、表格识别、公式识别、批量PDF处理、Word转Markdown、Excel转Markdown、网页爬取、图片OCR、学术论文解析。MinerU支持PDF、Word、PPT、Excel（XLS/XLSX）、图片等多格式文档智能转换，命令行一键提取，免登录快速模式或高精度专业模式。",
+"want": "environment-setup",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use when Python environment setup is needed for data visualization or conda installation is required",
 "commands": [
-"npx skills add opendatalab/MinerU-Ecosystem -g"
+"npx skills add Norman-bury/research-writing-skill@environment-setup -g"
 ],
-"install": "npx skills add opendatalab/MinerU-Ecosystem -g",
-"stars": 152,
-"repoUrl": "https://github.com/opendatalab/MinerU-Ecosystem",
+"install": "npx skills add Norman-bury/research-writing-skill@environment-setup -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"skills",
-"opendatalab",
+"environment-setup",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-hyaxia-blogwatcher-skills",
+"id": "skill-norman-bury-research-writing-skill-skills-evidence-driven-writing",
 "priority": 504,
 "category": "community",
 "type": "skill",
-"want": "blogwatcher",
-"feature": "Hyaxia/blogwatcher",
-"summary": "Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI.",
+"want": "evidence-driven-writing",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use when writing or revising Introduction, Related Work, background, literature synthesis, or any section where references must drive claims",
 "commands": [
-"npx skills add Hyaxia/blogwatcher@skills -g"
+"npx skills add Norman-bury/research-writing-skill@evidence-driven-writing -g"
 ],
-"install": "npx skills add Hyaxia/blogwatcher@skills -g",
-"stars": 142,
-"repoUrl": "https://github.com/Hyaxia/blogwatcher",
+"install": "npx skills add Norman-bury/research-writing-skill@evidence-driven-writing -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"skills",
-"Hyaxia",
+"evidence-driven-writing",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-hyaxia-blogwatcher-blogwatcher",
+"id": "skill-norman-bury-research-writing-skill-skills-experiment-results-planning",
 "priority": 505,
 "category": "community",
 "type": "skill",
-"want": "blogwatcher-cli",
-"feature": "Hyaxia/blogwatcher",
-"summary": "Use when managing or interacting with favorite blogs via the BlogWatcher CLI—adding/removing blogs, scanning for new posts, listing articles, marking read/unread, or modifying related CLI behavior, scanning, storage, and tests.",
+"want": "experiment-results-planning",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use when designing experiments, result tables, mock planning data, evaluation protocols, or results sections before real data are final",
 "commands": [
-"npx skills add Hyaxia/blogwatcher@blogwatcher -g"
+"npx skills add Norman-bury/research-writing-skill@experiment-results-planning -g"
 ],
-"install": "npx skills add Hyaxia/blogwatcher@blogwatcher -g",
-"stars": 142,
-"repoUrl": "https://github.com/Hyaxia/blogwatcher",
+"install": "npx skills add Norman-bury/research-writing-skill@experiment-results-planning -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"blogwatcher",
-"Hyaxia",
+"experiment-results-planning",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-analytics-tracking-automation",
+"id": "skill-norman-bury-research-writing-skill-skills-figures-diagram",
 "priority": 506,
 "category": "community",
 "type": "skill",
-"want": "analytics-tracking-automation",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when you need GA4 + GTM tracking delivery from site discovery through publish, or when the right phase entry point is still unclear.",
+"want": "figures-diagram",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use when creating flowcharts, architecture diagrams, or conceptual diagrams - generates prompts for image AI",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@analytics-tracking-automation -g"
+"npx skills add Norman-bury/research-writing-skill@figures-diagram -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@analytics-tracking-automation -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add Norman-bury/research-writing-skill@figures-diagram -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"analytics-tracking-automation",
-"jtrackingai",
+"figures-diagram",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-tracking-discover",
+"id": "skill-norman-bury-research-writing-skill-skills-figures-python",
 "priority": 507,
 "category": "community",
 "type": "skill",
-"want": "tracking-discover",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when the user wants crawl coverage, platform detection, dataLayer discovery, or a fresh artifact directory before grouping and schema work.",
+"want": "figures-python",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use when creating data visualizations for papers - generates publication-quality plots with top-journal color schemes",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@tracking-discover -g"
+"npx skills add Norman-bury/research-writing-skill@figures-python -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@tracking-discover -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add Norman-bury/research-writing-skill@figures-python -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"tracking-discover",
-"jtrackingai",
+"figures-python",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-tracking-group",
+"id": "skill-norman-bury-research-writing-skill-skills-latex-output",
 "priority": 508,
 "category": "community",
 "type": "skill",
-"want": "tracking-group",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when the work starts from `site-analysis.json` and the user wants page-group authoring, grouping adjustments, or page-group approval.",
+"want": "latex-output",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use when user requests LaTeX format output or has provided school/journal LaTeX templates",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@tracking-group -g"
+"npx skills add Norman-bury/research-writing-skill@latex-output -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@tracking-group -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add Norman-bury/research-writing-skill@latex-output -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"tracking-group",
-"jtrackingai",
+"latex-output",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-tracking-live-gtm",
+"id": "skill-norman-bury-research-writing-skill-research-writing-skill",
 "priority": 509,
 "category": "community",
 "type": "skill",
-"want": "tracking-live-gtm",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when the user wants to inspect the real live GTM runtime before schema generation or compare multiple live GTM containers.",
+"want": "research-writing-assistant",
+"feature": "Norman-bury/research-writing-skill",
+"summary": "Use when writing academic papers, theses, or research articles - supports brainstorming, chapter writing, literature review, and LaTeX output",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@tracking-live-gtm -g"
+"npx skills add Norman-bury/research-writing-skill@research-writing-skill -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@tracking-live-gtm -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add Norman-bury/research-writing-skill@research-writing-skill -g",
+"stars": 2741,
+"repoUrl": "https://github.com/Norman-bury/research-writing-skill",
 "aliases": [
-"tracking-live-gtm",
-"jtrackingai",
+"research-writing-skill",
+"Norman-bury",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-tracking-schema",
+"id": "skill-stellarlinkco-myclaude-skills-browser",
 "priority": 510,
 "category": "community",
 "type": "skill",
-"want": "tracking-schema",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when the user wants schema preparation, event design, selector validation, schema review, or event-spec generation.",
+"want": "browser",
+"feature": "stellarlinkco/myclaude",
+"summary": "This skill should be used for browser automation tasks using Chrome DevTools Protocol (CDP). Triggers when users need to launch Chrome with remote debugging, navigate pages, execute JavaScript in browser context, capture screenshots, or interactively select DOM elements. No MCP server required.",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@tracking-schema -g"
+"npx skills add stellarlinkco/myclaude@browser -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@tracking-schema -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add stellarlinkco/myclaude@browser -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"tracking-schema",
-"jtrackingai",
+"browser",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-tracking-shopify",
+"id": "skill-stellarlinkco-myclaude-skills-codeagent",
 "priority": 511,
 "category": "community",
 "type": "skill",
-"want": "tracking-shopify",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when the platform is Shopify or the run needs the Shopify-specific schema, sync, install, or verification branch.",
+"want": "codeagent",
+"feature": "stellarlinkco/myclaude",
+"summary": "Execute codeagent-wrapper for multi-backend AI code tasks. Supports Codex, Claude, Gemini, and OpenCode backends with agent presets, skill injection, file references (@syntax), worktree isolation, parallel execution, and structured output.",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@tracking-shopify -g"
+"npx skills add stellarlinkco/myclaude@codeagent -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@tracking-shopify -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add stellarlinkco/myclaude@codeagent -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"tracking-shopify",
-"jtrackingai",
+"codeagent",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-tracking-sync",
+"id": "skill-stellarlinkco-myclaude-skills-dev",
 "priority": 512,
 "category": "community",
 "type": "skill",
-"want": "tracking-sync",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when the user wants GTM-ready config generation, GTM workspace sync, or container selection from an approved schema.",
+"want": "dev",
+"feature": "stellarlinkco/myclaude",
+"summary": "Extreme lightweight end-to-end development workflow with requirements clarification, intelligent backend selection, parallel codeagent execution, and mandatory 90% test coverage",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@tracking-sync -g"
+"npx skills add stellarlinkco/myclaude@dev -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@tracking-sync -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add stellarlinkco/myclaude@dev -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"tracking-sync",
-"jtrackingai",
+"dev",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-jtrackingai-analytics-tracking-automation-tracking-verify",
+"id": "skill-stellarlinkco-myclaude-skills-do",
 "priority": 513,
 "category": "community",
 "type": "skill",
-"want": "tracking-verify",
-"feature": "jtrackingai/analytics-tracking-automation",
-"summary": "Use when the user wants preview QA, failure interpretation, release readiness, or an explicit publish handoff.",
+"want": "do",
+"feature": "stellarlinkco/myclaude",
+"summary": "This skill should be used for structured feature development with codebase understanding. Triggers on /do command. Provides a 5-phase workflow (Understand, Clarify, Design, Implement, Complete) using codeagent-wrapper to orchestrate code-explorer, code-architect, code-reviewer, and develop agents in parallel.",
 "commands": [
-"npx skills add jtrackingai/analytics-tracking-automation@tracking-verify -g"
+"npx skills add stellarlinkco/myclaude@do -g"
 ],
-"install": "npx skills add jtrackingai/analytics-tracking-automation@tracking-verify -g",
-"stars": 132,
-"repoUrl": "https://github.com/jtrackingai/analytics-tracking-automation",
+"install": "npx skills add stellarlinkco/myclaude@do -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"tracking-verify",
-"jtrackingai",
+"do",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-nullptrx-pangle_flutter-skills",
+"id": "skill-stellarlinkco-myclaude-skills-harness",
 "priority": 514,
 "category": "community",
 "type": "skill",
-"want": "pangle-ad-integration",
-"feature": "nullptrx/pangle_flutter",
-"summary": "Natural language guided assistant for integrating ByteDance Pangle ads into a Flutter app. Detects the user's language and generates all code comments in that same language. Covers all ad types supported by pangle_flutter.",
+"want": "harness",
+"feature": "stellarlinkco/myclaude",
+"summary": "This skill should be used for multi-session autonomous agent work requiring progress checkpointing, failure recovery, and task dependency management. Triggers on '/harness' command, or when a task involves many subtasks needing progress persistence, sleep/resume cycles across context windows, recovery from mid-task failures with partial state, or distributed work across multiple agent sessions. Synthesized from Anthropic and OpenAI engineering practices for long-running agents.",
 "commands": [
-"npx skills add nullptrx/pangle_flutter -g"
+"npx skills add stellarlinkco/myclaude@harness -g"
 ],
-"install": "npx skills add nullptrx/pangle_flutter -g",
-"stars": 128,
-"repoUrl": "https://github.com/nullptrx/pangle_flutter",
+"install": "npx skills add stellarlinkco/myclaude@harness -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"skills",
-"nullptrx",
+"harness",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-agentsope-skillalchemy-agentsop-agent-topology-selection",
+"id": "skill-stellarlinkco-myclaude-skills-omo",
 "priority": 515,
 "category": "community",
 "type": "skill",
-"want": "agentsop-agent-topology-selection",
-"feature": "agentsope/SkillAlchemy",
-"summary": "Cross-framework enhancement overlay for choosing a multi-agent topology BEFORE writing any agent. A binary-question rubric — is single-agent + tools enough? do agents need to know about each other? does the output need one voice? — maps the answer to single-agent / supervisor / swarm / sequential / hierarchical. Activates when a coder agent is tempted to \"split the work into roles\" or reaches for a multi-agent framework. Encodes the *selection rubric* that the per-framework skills assume but never surface. Search keywords: when to use multi-agent, single vs multi agent, do I need multiple agents, supervisor vs swarm, multi-agent vs single agent, agent team design.",
+"want": "omo",
+"feature": "stellarlinkco/myclaude",
+"summary": "Use this skill when you see `/omo`. Multi-agent orchestration for \"code analysis / bug investigation / fix planning / implementation\". Choose the minimal agent set and order based on task type + risk; recipes below show common patterns.",
 "commands": [
-"npx skills add agentsope/SkillAlchemy@agentsop-agent-topology-selection -g"
+"npx skills add stellarlinkco/myclaude@omo -g"
 ],
-"install": "npx skills add agentsope/SkillAlchemy@agentsop-agent-topology-selection -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
+"install": "npx skills add stellarlinkco/myclaude@omo -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"agentsop-agent-topology-selection",
-"agentsope",
+"omo",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-agentsope-skillalchemy-agentsop-aider",
+"id": "skill-stellarlinkco-myclaude-skills-product-requirements",
 "priority": 516,
 "category": "community",
 "type": "skill",
-"want": "agentsop-aider",
-"feature": "agentsope/SkillAlchemy",
-"summary": "SOP for terminal-based, git-native AI pair programming with Aider (git work-tree + tree-sitter repo-map + edit-format + human-in-loop REPL). Use when editing code in an existing git repo via an LLM, when you need to converge a change to 2-5 files, pick an edit format that fits the model, run architect+editor mode, or wire an auto-test loop.",
+"want": "product-requirements",
+"feature": "stellarlinkco/myclaude",
+"summary": "Interactive Product Owner skill for requirements gathering, analysis, and PRD generation. Triggers when users request product requirements, feature specification, PRD creation, or need help understanding and documenting project requirements. Uses quality scoring and iterative dialogue to ensure comprehensive requirements before generating professional PRD documents.",
 "commands": [
-"npx skills add agentsope/SkillAlchemy@agentsop-aider -g"
+"npx skills add stellarlinkco/myclaude@product-requirements -g"
 ],
-"install": "npx skills add agentsope/SkillAlchemy@agentsop-aider -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
+"install": "npx skills add stellarlinkco/myclaude@product-requirements -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"agentsop-aider",
-"agentsope",
+"product-requirements",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-agentsope-skillalchemy-agentsop-bio-fraud-forensics",
+"id": "skill-stellarlinkco-myclaude-skills-prototype-prompt-generator",
 "priority": 517,
 "category": "community",
 "type": "skill",
-"want": "agentsop-bio-fraud-forensics",
-"feature": "agentsope/SkillAlchemy",
-"summary": "Screens biomedical / life-science papers for signs of data fabrication, image manipulation, and statistical anomalies, using the detection techniques distilled from the field's canonical exposure platforms (PubPeer, Data Colada, Science Integrity Digest, For Better Science) and tools (ImageTwin/Proofig, statcheck, GRIM/GRIMMER, Problematic Paper Screener, Seek & Blastn). Use when asked to check a paper/figure for image duplication, blot splicing, impossible statistics, paper-mill or tortured-phrase signals, research integrity, or \"is this data faked\"; or when a user shares a figure, Western blot, supplementary dataset, or DOI and asks whether it looks manipulated. Reports observable anomalies as questions for clarification — it never accuses anyone of fraud.",
+"want": "prototype-prompt-generator",
+"feature": "stellarlinkco/myclaude",
+"summary": "This skill should be used when users need to generate detailed, structured prompts for creating UI/UX prototypes. Trigger when users request help with \"create a prototype prompt\", \"design a mobile app\", \"generate UI specifications\", or need comprehensive design documentation for web/mobile applications. Works with multiple design systems including WeChat Work, iOS Native, Material Design, and Ant Design Mobile.",
 "commands": [
-"npx skills add agentsope/SkillAlchemy@agentsop-bio-fraud-forensics -g"
+"npx skills add stellarlinkco/myclaude@prototype-prompt-generator -g"
 ],
-"install": "npx skills add agentsope/SkillAlchemy@agentsop-bio-fraud-forensics -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
+"install": "npx skills add stellarlinkco/myclaude@prototype-prompt-generator -g",
+"stars": 2727,
+"repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
-"agentsop-bio-fraud-forensics",
-"agentsope",
+"prototype-prompt-generator",
+"stellarlinkco",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-agentsope-skillalchemy-agentsop-bounded-loop",
+"id": "skill-leilei926524-tech-anti-distill-anti-distill",
 "priority": 518,
 "category": "community",
 "type": "skill",
-"want": "agentsop-bounded-loop",
-"feature": "agentsope/SkillAlchemy",
-"summary": "Universal discipline for any LM-driven loop — agent retries, plan-act-observe, multi-agent handoffs, optimiser passes, test-fix cycles. Encodes the one rule every framework documents quietly and every team relearns expensively: the LM in the loop is NEVER a reliable terminator. Termination must be provided by an explicit counter + exit predicate + stagnation signal + escalation path that live OUTSIDE the LM's control. This is a tool- level, framework-agnostic skill. It maps onto LangGraph (recursion_limit + state counter + interrupt), CrewAI (max_iter + max_rpm + human_input), Claude / OpenAI SDKs (max_iterations + tool_use_budget), DSPy (declared evaluation budget), Aider (REPL + explicit retry cap), and AutoGen (max_consecutive_auto_reply). Search keywords: infinite loop, recursion limit, recursion_limit, GraphRecursionError, max iterations, max_iter, agent stuck, agent won't stop, runaway agent, ReAct loop not terminating, agent repeating itself.",
+"want": "anti-distill",
+"feature": "leilei926524-tech/anti-distill",
+"summary": "Anti-distillation for employee Skills. Clean your skill files — looks complete, but core knowledge removed. | 反蒸馏：清洗你被迫写的 Skill 文件，看起来完整，但核心知识已被抽掉。",
 "commands": [
-"npx skills add agentsope/SkillAlchemy@agentsop-bounded-loop -g"
+"npx skills add leilei926524-tech/anti-distill -g"
 ],
-"install": "npx skills add agentsope/SkillAlchemy@agentsop-bounded-loop -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
+"install": "npx skills add leilei926524-tech/anti-distill -g",
+"stars": 2314,
+"repoUrl": "https://github.com/leilei926524-tech/anti-distill",
 "aliases": [
-"agentsop-bounded-loop",
-"agentsope",
+"anti-distill",
+"leilei926524-tech",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-agentsope-skillalchemy-agentsop-code-execution-decision",
+"id": "skill-conorbronsdon-avoid-ai-writing-avoid-ai-writing",
 "priority": 519,
 "category": "community",
 "type": "skill",
-"want": "agentsop-code-execution-decision",
-"feature": "agentsope/SkillAlchemy",
-"summary": "Decision rubric for when an LM agent should write-and-run code (Program-of-Thought / code interpreter) versus reason in natural language: classify each step as deterministic- computable (emit + execute code, feed the result back) vs judgment (stay in prose). Use when designing or debugging an agent step that does arithmetic/parsing/data transforms, when prose reasoning hallucinates a computation (under-coding), or when a sandbox round- trip is wasted on a judgment task (over-coding). Search keywords: code interpreter, agent does math wrong, calculator hallucination, when to run code vs reason, program of thought, PoT, tool vs reasoning.",
+"want": "avoid-ai-writing",
+"feature": "conorbronsdon/avoid-ai-writing",
+"summary": "Audit and rewrite content to remove AI writing patterns (\"AI-isms\"). Use this skill when asked to \"remove AI-isms,\" \"clean up AI writing,\" \"edit writing for AI patterns,\" \"audit writing for AI tells,\" or \"make this sound less like AI.\" Supports a detect-only mode, an edit-in-place mode for files, an optional voice profile (casual / professional / technical / warm / blunt), and an iterate-to-convergence pass.",
 "commands": [
-"npx skills add agentsope/SkillAlchemy@agentsop-code-execution-decision -g"
+"npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g"
 ],
-"install": "npx skills add agentsope/SkillAlchemy@agentsop-code-execution-decision -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
+"install": "npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g",
+"stars": 2281,
+"repoUrl": "https://github.com/conorbronsdon/avoid-ai-writing",
 "aliases": [
-"agentsop-code-execution-decision",
-"agentsope",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-agentsope-skillalchemy-leap",
-"priority": 520,
-"category": "community",
-"type": "skill",
-"want": "LEAP",
-"feature": "agentsope/SkillAlchemy",
-"summary": "LEAP — 落地执行引擎。内含两条管线：A 分支蒸馏（从 raw data 提取 skill）、\nB 分支融合（多 skill 编织为一个）。被 SkillAlchemy 编排器调用。\nUse when 编排器判断需要蒸馏或融合时。",
-"commands": [
-"npx skills add agentsope/SkillAlchemy@LEAP -g"
-],
-"install": "npx skills add agentsope/SkillAlchemy@LEAP -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
-"aliases": [
-"LEAP",
-"agentsope",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-agentsope-skillalchemy-lens",
-"priority": 521,
-"category": "community",
-"type": "skill",
-"want": "Lens",
-"feature": "agentsope/SkillAlchemy",
-"summary": "Lens — 给你的问题加一层认知镜片。输入任意任务描述，输出增强版 description，\n发现「你不知道自己不知道」的隐性维度、前置条件和认知路线。\nUse when 用户说「帮我想想」「分析一下」「生成 skill」「蒸馏」「融合」\n或输入看起来太简单需要展开。",
-"commands": [
-"npx skills add agentsope/SkillAlchemy@Lens -g"
-],
-"install": "npx skills add agentsope/SkillAlchemy@Lens -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
-"aliases": [
-"Lens",
-"agentsope",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-agentsope-skillalchemy-skillalchemy",
-"priority": 522,
-"category": "community",
-"type": "skill",
-"want": "SkillAlchemy",
-"feature": "agentsope/SkillAlchemy",
-"summary": "SkillAlchemy — 一念落地，万象成形。输入任意想法或蒸馏目标，输出可安装的 SKILL.md。\n内部编排 Lens（看清问题）和 LEAP（执行蒸馏/融合）。用户唯一入口。\nUse when 用户说「蒸馏」「生成 skill」「融合」「我想做 X 但不知道从哪下手」。",
-"commands": [
-"npx skills add agentsope/SkillAlchemy@SkillAlchemy -g"
-],
-"install": "npx skills add agentsope/SkillAlchemy@SkillAlchemy -g",
-"stars": 120,
-"repoUrl": "https://github.com/agentsope/SkillAlchemy",
-"aliases": [
-"SkillAlchemy",
-"agentsope",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-espennilsen-pi-agents-md-manager",
-"priority": 523,
-"category": "community",
-"type": "skill",
-"want": "agents-md-manager",
-"feature": "espennilsen/pi",
-"summary": "Audit, generate, update, and lint AGENTS.md files across all projects. Use when asked to check project context files, scaffold AGENTS.md for new projects, update stale ones, or run a cross-project audit.",
-"commands": [
-"npx skills add espennilsen/pi@agents-md-manager -g"
-],
-"install": "npx skills add espennilsen/pi@agents-md-manager -g",
-"stars": 111,
-"repoUrl": "https://github.com/espennilsen/pi",
-"aliases": [
-"agents-md-manager",
-"espennilsen",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-espennilsen-pi-pi-cmux",
-"priority": 524,
-"category": "community",
-"type": "skill",
-"want": "cmux",
-"feature": "espennilsen/pi",
-"summary": "Orchestrate cmux terminal panes — split terminals, run parallel processes, read output from other panes, and use the built-in browser. Use when working inside cmux and you need to run a dev server, watch tests, spawn sub-agents, or preview web pages.",
-"commands": [
-"npx skills add espennilsen/pi@pi-cmux -g"
-],
-"install": "npx skills add espennilsen/pi@pi-cmux -g",
-"stars": 111,
-"repoUrl": "https://github.com/espennilsen/pi",
-"aliases": [
-"pi-cmux",
-"espennilsen",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-espennilsen-pi-pi-heartbeat",
-"priority": 525,
-"category": "community",
-"type": "skill",
-"want": "pi-heartbeat",
-"feature": "espennilsen/pi",
-"summary": "Configure periodic health checks via HEARTBEAT.md and the /heartbeat command.",
-"commands": [
-"npx skills add espennilsen/pi@pi-heartbeat -g"
-],
-"install": "npx skills add espennilsen/pi@pi-heartbeat -g",
-"stars": 111,
-"repoUrl": "https://github.com/espennilsen/pi",
-"aliases": [
-"pi-heartbeat",
-"espennilsen",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-espennilsen-pi-pi-memory",
-"priority": 526,
-"category": "community",
-"type": "skill",
-"want": "pi-memory",
-"feature": "espennilsen/pi",
-"summary": "Manage persistent memory across sessions. Use when asked to remember, recall, forget, or review what was stored. Covers long-term facts (MEMORY.md), daily session logs, search, and memory housekeeping.",
-"commands": [
-"npx skills add espennilsen/pi@pi-memory -g"
-],
-"install": "npx skills add espennilsen/pi@pi-memory -g",
-"stars": 111,
-"repoUrl": "https://github.com/espennilsen/pi",
-"aliases": [
-"pi-memory",
-"espennilsen",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-espennilsen-pi-pi-projects",
-"priority": 527,
-"category": "community",
-"type": "skill",
-"want": "pi-projects",
-"feature": "espennilsen/pi",
-"summary": "Track and manage projects with git status via dashboard and tool.",
-"commands": [
-"npx skills add espennilsen/pi@pi-projects -g"
-],
-"install": "npx skills add espennilsen/pi@pi-projects -g",
-"stars": 111,
-"repoUrl": "https://github.com/espennilsen/pi",
-"aliases": [
-"pi-projects",
-"espennilsen",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-espennilsen-pi-pi-subagent",
-"priority": 528,
-"category": "community",
-"type": "skill",
-"want": "pi-subagent",
-"feature": "espennilsen/pi",
-"summary": "Delegate tasks to specialized subagents for parallel or sequential execution.",
-"commands": [
-"npx skills add espennilsen/pi@pi-subagent -g"
-],
-"install": "npx skills add espennilsen/pi@pi-subagent -g",
-"stars": 111,
-"repoUrl": "https://github.com/espennilsen/pi",
-"aliases": [
-"pi-subagent",
-"espennilsen",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-espennilsen-pi-workon",
-"priority": 529,
-"category": "community",
-"type": "skill",
-"want": "workon",
-"feature": "espennilsen/pi",
-"summary": "Switch working context to a project. Loads AGENTS.md, git status, and td issues.",
-"commands": [
-"npx skills add espennilsen/pi@workon -g"
-],
-"install": "npx skills add espennilsen/pi@workon -g",
-"stars": 111,
-"repoUrl": "https://github.com/espennilsen/pi",
-"aliases": [
-"workon",
-"espennilsen",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-agent-browser",
-"priority": 530,
-"category": "community",
-"type": "skill",
-"want": "agent-browser",
-"feature": "archibate/dotfiles-opencode",
-"summary": "Browser automation CLI for AI agents. Use when needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. TRIGGER when user requests to \"open a website\", \"fill out a form\", \"click a button\", \"take a screenshot\", \"debug this in browser\", \"scrape data from a page\", \"test this web app\", \"login to a site\", \"frontend UI/UX aesthetics\", \"automate browser actions\", or any task requiring programmatic web interaction.",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@agent-browser -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@agent-browser -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"agent-browser",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-anti-defensive",
-"priority": 531,
-"category": "community",
-"type": "skill",
-"want": "anti-defensive",
-"feature": "archibate/dotfiles-opencode",
-"summary": "Review common AI slops of defensive programming patterns, avoid silent errors. TRIGGER when reviewing code for defensive anti-patterns, writing fail-fast code, or auditing error handling quality.",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@anti-defensive -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@anti-defensive -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"anti-defensive",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-ast-grep",
-"priority": 532,
-"category": "community",
-"type": "skill",
-"want": "ast-grep",
-"feature": "archibate/dotfiles-opencode",
-"summary": "Guide for writing ast-grep rules to perform structural code search and analysis. This skill should be used when users need to search codebases using Abstract Syntax Tree (AST) patterns, find specific code structures, or perform complex code queries that go beyond simple text search, or when a simple grep/glob search is insufficient for structural code pattern matching.",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@ast-grep -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@ast-grep -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"ast-grep",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-better-translate",
-"priority": 533,
-"category": "community",
-"type": "skill",
-"want": "better-translate",
-"feature": "archibate/dotfiles-opencode",
-"summary": "Best practices for AI-driven English-to-Chinese translation. This skill should be used when the user asks to \"translate to Chinese\", \"update the Chinese translation\", \"improve Chinese translation\", \"fix translation quality\", \"review Chinese translation\", or when translating any English text into Chinese. Also applies when polishing an existing Chinese translation of English content.",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@better-translate -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@better-translate -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"better-translate",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-cc-connect",
-"priority": 534,
-"category": "community",
-"type": "skill",
-"want": "cc-connect",
-"feature": "archibate/dotfiles-opencode",
-"summary": "This skill should be used when sending images, files, or notifications back to the user via messaging platforms (Discord, Feishu, Telegram, etc.) through cc-connect. TRIGGER when agent generates a plot/chart/screenshot and wants to show the user; agent creates a report/PDF/file the user should receive; agent needs to proactively notify the user (e.g. task completed, alert, reminder); user asks to \"send image\", \"show me the chart\", \"notify me\", \"send the file\", \"send to Telegram\", \"show plot in Discord\".",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@cc-connect -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@cc-connect -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"cc-connect",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-extract-repo",
-"priority": 535,
-"category": "community",
-"type": "skill",
-"want": "extract-repo",
-"feature": "archibate/dotfiles-opencode",
-"summary": "Download GitHub repos as clean source code (no .git history) to WORKDIR. Use when cloning repos for analysis or modification. Not for monorepos.",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@extract-repo -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@extract-repo -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"extract-repo",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-send-notify",
-"priority": 536,
-"category": "community",
-"type": "skill",
-"want": "send-notify",
-"feature": "archibate/dotfiles-opencode",
-"summary": "Send notifications to the user. TRIGGER when user says \"notify me\", \"send notification\", \"alert me\".",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@send-notify -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@send-notify -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"send-notify",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-archibate-dotfiles-opencode-show-image",
-"priority": 537,
-"category": "community",
-"type": "skill",
-"want": "show-image",
-"feature": "archibate/dotfiles-opencode",
-"summary": "Show images in terminal using the Kitty image protocol. TRIGGER when show/view images in terminal, display plot results.",
-"commands": [
-"npx skills add archibate/dotfiles-opencode@show-image -g"
-],
-"install": "npx skills add archibate/dotfiles-opencode@show-image -g",
-"stars": 102,
-"repoUrl": "https://github.com/archibate/dotfiles-opencode",
-"aliases": [
-"show-image",
-"archibate",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-nirholas-pai-example-tool",
-"priority": 538,
-"category": "community",
-"type": "skill",
-"want": "example-tool",
-"feature": "nirholas/PAI",
-"summary": "A template skill demonstrating the PAI SKILL.md format.",
-"commands": [
-"npx skills add nirholas/PAI@example-tool -g"
-],
-"install": "npx skills add nirholas/PAI@example-tool -g",
-"stars": 99,
-"repoUrl": "https://github.com/nirholas/PAI",
-"aliases": [
-"example-tool",
-"nirholas",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-nirholas-pai-skills",
-"priority": 539,
-"category": "community",
-"type": "skill",
-"want": "pai-skills-root",
-"feature": "nirholas/PAI",
-"summary": "Index of all PAI skills.",
-"commands": [
-"npx skills add nirholas/PAI@skills -g"
-],
-"install": "npx skills add nirholas/PAI@skills -g",
-"stars": 99,
-"repoUrl": "https://github.com/nirholas/PAI",
-"aliases": [
-"skills",
-"nirholas",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-nirholas-pai-summarize-document",
-"priority": 540,
-"category": "community",
-"type": "skill",
-"want": "summarize-document",
-"feature": "nirholas/PAI",
-"summary": "Summarize a document at a requested length.",
-"commands": [
-"npx skills add nirholas/PAI@summarize-document -g"
-],
-"install": "npx skills add nirholas/PAI@summarize-document -g",
-"stars": 99,
-"repoUrl": "https://github.com/nirholas/PAI",
-"aliases": [
-"summarize-document",
-"nirholas",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-godothub-godot-minigame-skills",
-"priority": 541,
-"category": "community",
-"type": "skill",
-"want": "godot-wechat-minigame-adapter",
-"feature": "godothub/godot-minigame",
-"summary": "Apply the bundled self-contained Godot WeChat Mini Game adapter kit to an official Godot checkout. Use when the user wants to port official Godot to WeChat Mini Game, refresh a nearby 4.6-based port, or inspect the shipped patch/source bundle for WXMEMFS, `wx.request`, audio cleanup, `wx.getWindowInfo`, `wx.showKeyboard`, `.wasm.br`, and `wx.exitMiniProgram`. This skill is version-locked to the bundled upstream base and must not be described as a generic “Godot 4.x” patch dump.",
-"commands": [
-"npx skills add godothub/godot-minigame -g"
-],
-"install": "npx skills add godothub/godot-minigame -g",
-"stars": 96,
-"repoUrl": "https://github.com/godothub/godot-minigame",
-"aliases": [
-"skills",
-"godothub",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-spillwavesolutions-sdd-skill-sdd-skill",
-"priority": 542,
-"category": "community",
-"type": "skill",
-"want": "sdd",
-"feature": "SpillwaveSolutions/sdd-skill",
-"summary": "This skill should be used when users want guidance on Spec-Driven Development methodology using GitHub's Spec-Kit. Guide users through executable specification workflows for both new projects (greenfield) and existing codebases (brownfield). After any SDD command generates artifacts, automatically provide structured 10-point summaries with feature status tracking, enabling natural language feature management and keeping users engaged throughout the process.",
-"commands": [
-"npx skills add SpillwaveSolutions/sdd-skill -g"
-],
-"install": "npx skills add SpillwaveSolutions/sdd-skill -g",
-"stars": 84,
-"repoUrl": "https://github.com/SpillwaveSolutions/sdd-skill",
-"aliases": [
-"sdd-skill",
-"SpillwaveSolutions",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-mturac-everything-openai-codex-agent-introspection-debugging",
-"priority": 543,
-"category": "community",
-"type": "skill",
-"want": "agent-introspection-debugging",
-"feature": "mturac/everything-openai-codex",
-"summary": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
-"commands": [
-"npx skills add mturac/everything-openai-codex@agent-introspection-debugging -g"
-],
-"install": "npx skills add mturac/everything-openai-codex@agent-introspection-debugging -g",
-"stars": 83,
-"repoUrl": "https://github.com/mturac/everything-openai-codex",
-"aliases": [
-"agent-introspection-debugging",
-"mturac",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-mturac-everything-openai-codex-agent-sort",
-"priority": 544,
-"category": "community",
-"type": "skill",
-"want": "agent-sort",
-"feature": "mturac/everything-openai-codex",
-"summary": "Build an evidence-backed ecc install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ecc should be trimmed to what a project actually needs instead of loading the full bundle.",
-"commands": [
-"npx skills add mturac/everything-openai-codex@agent-sort -g"
-],
-"install": "npx skills add mturac/everything-openai-codex@agent-sort -g",
-"stars": 83,
-"repoUrl": "https://github.com/mturac/everything-openai-codex",
-"aliases": [
-"agent-sort",
-"mturac",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-mturac-everything-openai-codex-api-design",
-"priority": 545,
-"category": "community",
-"type": "skill",
-"want": "api-design",
-"feature": "mturac/everything-openai-codex",
-"summary": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
-"commands": [
-"npx skills add mturac/everything-openai-codex@api-design -g"
-],
-"install": "npx skills add mturac/everything-openai-codex@api-design -g",
-"stars": 83,
-"repoUrl": "https://github.com/mturac/everything-openai-codex",
-"aliases": [
-"api-design",
-"mturac",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-mturac-everything-openai-codex-article-writing",
-"priority": 546,
-"category": "community",
-"type": "skill",
-"want": "article-writing",
-"feature": "mturac/everything-openai-codex",
-"summary": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.",
-"commands": [
-"npx skills add mturac/everything-openai-codex@article-writing -g"
-],
-"install": "npx skills add mturac/everything-openai-codex@article-writing -g",
-"stars": 83,
-"repoUrl": "https://github.com/mturac/everything-openai-codex",
-"aliases": [
-"article-writing",
-"mturac",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-mturac-everything-openai-codex-backend-patterns",
-"priority": 547,
-"category": "community",
-"type": "skill",
-"want": "backend-patterns",
-"feature": "mturac/everything-openai-codex",
-"summary": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
-"commands": [
-"npx skills add mturac/everything-openai-codex@backend-patterns -g"
-],
-"install": "npx skills add mturac/everything-openai-codex@backend-patterns -g",
-"stars": 83,
-"repoUrl": "https://github.com/mturac/everything-openai-codex",
-"aliases": [
-"backend-patterns",
-"mturac",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-mturac-everything-openai-codex-brand-voice",
-"priority": 548,
-"category": "community",
-"type": "skill",
-"want": "brand-voice",
-"feature": "mturac/everything-openai-codex",
-"summary": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.",
-"commands": [
-"npx skills add mturac/everything-openai-codex@brand-voice -g"
-],
-"install": "npx skills add mturac/everything-openai-codex@brand-voice -g",
-"stars": 83,
-"repoUrl": "https://github.com/mturac/everything-openai-codex",
-"aliases": [
-"brand-voice",
-"mturac",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-mturac-everything-openai-codex-bun-runtime",
-"priority": 549,
-"category": "community",
-"type": "skill",
-"want": "bun-runtime",
-"feature": "mturac/everything-openai-codex",
-"summary": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.",
-"commands": [
-"npx skills add mturac/everything-openai-codex@bun-runtime -g"
-],
-"install": "npx skills add mturac/everything-openai-codex@bun-runtime -g",
-"stars": 83,
-"repoUrl": "https://github.com/mturac/everything-openai-codex",
-"aliases": [
-"bun-runtime",
-"mturac",
+"avoid-ai-writing",
+"conorbronsdon",
 "skill",
 "スキル"
 ]
