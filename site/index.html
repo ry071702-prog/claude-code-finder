@@ -20,6 +20,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="逆引き辞典">
 <meta name="theme-color" content="#f5f1ea" media="(prefers-color-scheme: light)">
@@ -29,6 +30,21 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Claude Code 逆引き辞典",
+  "url": "https://claude-code-finder.pages.dev/",
+  "description": "目的から Claude Code の機能・コマンド・設定・連携・Skill を逆引きできる日本語辞典",
+  "inLanguage": "ja",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": { "@type": "EntryPoint", "urlTemplate": "https://claude-code-finder.pages.dev/?q={search_term_string}" },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 <script>
   // フラッシュ回避: 描画前にテーマ確定
   (function(){try{var t=localStorage.getItem('ccf-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;}catch(e){}})();
