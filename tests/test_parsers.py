@@ -109,6 +109,35 @@ def test_install_cmd_shape():
     assert cmd.endswith("-g")
 
 
+# ---------- fetch_skills: plugin-lane / 誤検出フィルタ / id 一意性 ----------
+def test_is_skill_path_accepts_plugin_nested():
+    assert fs.is_skill_path("plugins/foo/skills/commit/SKILL.md")
+    assert fs.is_skill_path("skills/pdf/SKILL.md")
+    assert fs.is_skill_path("SKILL.md")
+
+
+def test_is_skill_path_rejects_non_skill_dirs():
+    assert not fs.is_skill_path("examples/demo/SKILL.md")
+    assert not fs.is_skill_path("test/fixtures/SKILL.md")
+    assert not fs.is_skill_path("node_modules/pkg/SKILL.md")
+    assert not fs.is_skill_path("templates/base/SKILL.md")
+    assert not fs.is_skill_path("docs/readme.md")
+
+
+def test_id_of_is_path_unique_no_leaf_collision():
+    # 同じ leaf 名 "commit" が別プラグイン配下にあっても id が衝突しない
+    a = fs.id_of("owner", "repo", "plugins/a/skills/commit/SKILL.md")
+    b = fs.id_of("owner", "repo", "plugins/b/skills/commit/SKILL.md")
+    assert a != b
+    assert a.startswith("skill-owner-repo-")
+    assert "/" not in a and " " not in a
+
+
+def test_slug_of_returns_leaf_dir():
+    assert fs.slug_of("plugins/a/skills/commit/SKILL.md", "repo") == "commit"
+    assert fs.slug_of("SKILL.md", "repo") == "repo"
+
+
 if __name__ == "__main__":
     import sys
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]

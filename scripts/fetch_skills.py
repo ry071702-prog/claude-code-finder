@@ -103,20 +103,44 @@ def repo_meta(owner: str, repo: str) -> dict | None:
     }
 
 
+# SKILL.md でも「実際の配布skillではない」ディレクトリは除外（誤検出防止）。
+# plugin レイアウト（plugins/<x>/skills/<name>/SKILL.md 等）は除外せず拾う。
+EXCLUDE_DIR_PARTS = {
+    "node_modules", "test", "tests", "__tests__", "fixtures", "fixture",
+    "example", "examples", "sample", "samples", "template", "templates",
+    ".github", "docs", "doc", "vendor", "dist", "build",
+}
+
+
+def is_skill_path(path: str) -> bool:
+    """SKILL.md の配布skill候補パスか（plugin配下は可・例/テスト/テンプレ等は除外）。"""
+    if path.split("/")[-1].lower() != "skill.md":
+        return False
+    parts = [p.lower() for p in path.split("/")[:-1]]  # ディレクトリ部分のみ
+    return not any(p in EXCLUDE_DIR_PARTS for p in parts)
+
+
 def find_skill_md(owner: str, repo: str, branch: str) -> list[str]:
-    """default branch の tree から SKILL.md のパスを列挙。"""
+    """default branch の tree から SKILL.md のパスを列挙（plugin 配下も含む・誤検出dirは除外）。"""
     d = gh_get(f"{GH_API}/repos/{owner}/{repo}/git/trees/{branch}?recursive=1")
     if not d or "tree" not in d:
         return []
     return [t["path"] for t in d["tree"]
-            if t.get("type") == "blob" and t["path"].split("/")[-1].lower() == "skill.md"]
+            if t.get("type") == "blob" and is_skill_path(t["path"])]
 
 
 def slug_of(path: str, repo: str) -> str:
     parts = path.split("/")
     if len(parts) >= 2:
-        return parts[-2]           # <dir>/SKILL.md
+        return parts[-2]           # <dir>/SKILL.md → skill 名（install 用）
     return repo                     # ルート直下
+
+
+def id_of(owner: str, repo: str, path: str) -> str:
+    """path 全体から一意な id を作る。plugin 配下で leaf 名が衝突しても潰れない。"""
+    dirpath = "/".join(path.split("/")[:-1]) or repo   # SKILL.md を除いたディレクトリ
+    raw = f"skill-{owner}-{repo}-{dirpath}"
+    return raw.lower().replace("/", "-").replace(" ", "-")
 
 
 def install_cmd(owner: str, repo: str, slug: str, single: bool) -> str:
@@ -146,8 +170,9 @@ def collect_repo(owner: str, repo: str, priority: int, cap: int) -> list[dict]:
             continue
         slug = slug_of(path, repo)
         rows.append({
-            "id": f"skill-{owner}-{repo}-{slug}".lower().replace("/", "-"),
+            "id": id_of(owner, repo, path),
             "owner": owner, "repo": repo, "slug": slug, "name": name,
+            "path": path,
             "description": desc, "stars": meta["stars"],
             "url": f"https://github.com/{owner}/{repo}",
             "install": install_cmd(owner, repo, slug, single),
