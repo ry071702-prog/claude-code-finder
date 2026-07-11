@@ -1,0 +1,24 @@
+# Claude Code 逆引き辞典
+
+> 目的（「〜したい」）から、Claude Code の機能・スラッシュコマンド・CLI・設定・連携・拡張を逆引きできる日本語の辞典サイト。開発者向け機能に加え、コードを書かない人向けの日常業務ユースケース（資料作成・議事録・翻訳・Excel集計・メール下書き等）も収録。本文はすべて公式ドキュメントを一次情報に独自執筆。
+
+主な使い方: トップの検索に「PR直したい」「議事録まとめたい」のように打つと、使うべき機能や導入できるコミュニティSkillが逆引きで出る。ガイド/講座/更新の各ページで体系的に学べる。
+
+## Pages
+
+- [逆引き検索（トップ）](https://claude-code-finder.pages.dev/): 目的から機能・コマンド・Skillを横断検索
+- [ガイド](https://claude-code-finder.pages.dev/guide): 基本・コマンド・設定・連携・拡張をテーマ別に通読
+- [講座](https://claude-code-finder.pages.dev/academy): はじめての Claude Code（入門）/ 実戦で使いこなす（中級）/ 拡張と自動化（上級）の3コース
+- [更新](https://claude-code-finder.pages.dev/updates): 主要な新機能ハイライトと公式 CHANGELOG（週次で自動取得）
+
+## Data (JSON/JS)
+
+- [逆引き本文データ](https://claude-code-finder.pages.dev/js/data.js): 機能・コマンドの逆引きエントリ（window.CCF_ENTRIES）
+- [コミュニティSkills](https://claude-code-finder.pages.dev/js/data-skills.js): GitHubの高星Claude Code Skillを週次取り込み（window.CCF_SKILLS）
+- [講座データ](https://claude-code-finder.pages.dev/js/data-academy.js): レッスン本文（window.CCF_ACADEMY）
+- [更新データ](https://claude-code-finder.pages.dev/js/data-changelog.js): 公式CHANGELOG（window.CCF_CHANGELOG）
+
+## Optional
+
+- [GitHub リポジトリ](https://github.com/ry071702-prog/claude-code-finder): ソース・プラグイン・取り込みスクリプト
+- Claude Code から使う: `npx skills add ry071702-prog/claude-code-finder -g`（MCP tool `lookup("〜したい")` で逆引きを常駐）

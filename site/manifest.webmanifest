@@ -1,0 +1,19 @@
+{
+  "name": "Claude Code 逆引き辞典",
+  "short_name": "逆引き辞典",
+  "description": "目的から Claude Code の機能・コマンド・設定・連携・Skill を逆引きできる日本語辞典",
+  "start_url": "/?src=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "ja",
+  "dir": "ltr",
+  "background_color": "#f5f1ea",
+  "theme_color": "#f5f1ea",
+  "categories": ["productivity", "developer", "education"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

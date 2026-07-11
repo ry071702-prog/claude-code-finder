@@ -12,7 +12,7 @@
   --ink:#191510;
   --text:#2c2620;
   --text2:#6b6154;
-  --text3:#978a78;
+  --text3:#6f6353;
   --accent:#c96442;        /* Claude clay/coral 寄せ */
   --accent2:#a84e30;
   --accent3:#e08a5a;       /* グラデ用ハイライト */
@@ -38,7 +38,7 @@
   --ink:#f3ece0;
   --text:#e9e0d2;
   --text2:#b3a793;
-  --text3:#8a7d68;
+  --text3:#a89c85;
   --accent:#e88a5e;        /* Claude coral (dark) */
   --accent2:#f2a985;
   --accent3:#c96442;
@@ -220,6 +220,9 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 /* ---------- footer ---------- */
 .site-footer{border-top:1px solid var(--border);padding:26px clamp(16px,4vw,40px)}
 .footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:9px;color:var(--text3);font-size:.86rem}
+/* 文中リンクは色だけに頼らず下線を付ける（a11y: link-in-text-block） */
+.footer-inner a,.page-sub a,.updates-note a,.upd-h2-sub a,.l-body a,.guide-sec-head p a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.footer-inner a:hover,.page-sub a:hover{text-decoration-thickness:2px}
 
 /* ---------- modal ---------- */
 .modal-overlay{position:fixed;inset:0;z-index:300;background:rgba(20,12,4,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;animation:fade .16s ease}
@@ -484,7 +487,7 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 /* ---- Changelog (auto) ---- */
 .changelog-list{display:grid;gap:10px}
 .cl-ver{background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
-.cl-ver>summary{display:flex;align-items:center;gap:12px;cursor:pointer;padding:14px 18px;list-style:none;font-family:var(--mono);user-select:none}
+.cl-ver>summary{display:flex;align-items:center;gap:12px;cursor:pointer;padding:14px 18px;list-style:none;font-family:var(--mono);-webkit-user-select:none;user-select:none}
 .cl-ver>summary::-webkit-details-marker{display:none}
 .cl-ver>summary::before{content:"▸";color:var(--accent);font-size:.9em;transition:transform .15s}
 .cl-ver[open]>summary::before{transform:rotate(90deg)}

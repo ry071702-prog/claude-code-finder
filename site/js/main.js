@@ -173,6 +173,31 @@
     state.category = id;
     els.categoryNav.querySelectorAll(".cat-link").forEach(b => b.classList.toggle("active", b.dataset.category === id));
     renderCards(true);
+    syncURL();
+  }
+  // 検索・カテゴリを URL に反映（共有・ブックマーク可能に）
+  function syncURL(){
+    try{
+      var p = new URLSearchParams();
+      var q = state.query.trim();
+      if(q) p.set("q", q);
+      if(state.category && state.category !== "all") p.set("cat", state.category);
+      var qs = p.toString();
+      history.replaceState(null, "", qs ? "?" + qs : location.pathname);
+    }catch(e){}
+  }
+  // ページ読み込み時に URL の ?q= / ?cat= を復元
+  function applyURLParams(){
+    try{
+      var p = new URLSearchParams(location.search);
+      var cat = p.get("cat");
+      if(cat && cat !== "all"){
+        state.category = cat;
+        els.categoryNav.querySelectorAll(".cat-link").forEach(b => b.classList.toggle("active", b.dataset.category === cat));
+      }
+      var q = p.get("q");
+      if(q){ state.query = q; els.searchInput.value = q; els.heroSearch.classList.toggle("has-value", q.length > 0); }
+    }catch(e){}
   }
 
   /* ---------- render: type filters ---------- */
@@ -358,6 +383,7 @@
     els.searchInput.value = v;
     els.heroSearch.classList.toggle("has-value", v.length > 0);
     renderCards();
+    syncURL();
   }
   els.searchInput.addEventListener("input", e => setQuery(e.target.value));
   els.clearButton.addEventListener("click", () => { setQuery(""); els.searchInput.focus(); });
@@ -603,6 +629,7 @@
   if(guideCountEl){ guideCountEl.textContent = (baseEntries.length + customEntries.length) + " 項目"; }
   renderCategoryNav();
   renderTypeFilters();
+  applyURLParams();
   renderCards(true);
   renderCoverage();
   renderSources();
