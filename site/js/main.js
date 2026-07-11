@@ -73,6 +73,37 @@
   // MCP lookup と同じあいまい一致: 英数字語=語境界一致 + CJK 2-gram(語尾除外)
   const SEARCH_STOP = new Set(["した","たい","する","して","せる","れる","され","この","その","こと","ため","よう","から","とき","たり","ない"]);
   const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+
+  // 意図マップ: 口語・言い換えを、エントリ本文に実在する正規語へ展開して精度を上げる。
+  // 例「プルリク直したい」→ pr / pull request / レビュー が本文にヒット。特定キーでのみ発火＝過剰一般化しない。
+  const INTENT_MAP = [
+    {keys:["pr","プルリク","プルリクエスト","ぷるりく","プル リク"], add:["pr","pull request","review","レビュー","git"]},
+    {keys:["続き","つづき","再開","さいかい","レジューム","途中から"], add:["resume","continue","--continue","再開","-c"]},
+    {keys:["権限","けんげん","許可","パーミッション","安全"], add:["permission","permissions","allow","権限"]},
+    {keys:["スマホ","すまほ","携帯","モバイル","出先","外出"], add:["mobile","web","モバイル"]},
+    {keys:["並列","へいれつ","同時","パラレル","並行"], add:["parallel","worktree","subagent","並列"]},
+    {keys:["テスト","てすと"], add:["test","tests","テスト"]},
+    {keys:["自動化","じどうか","フック","自動で"], add:["hook","hooks","automation","フック"]},
+    {keys:["記憶","きおく","覚え","メモリ","忘れ"], add:["claude.md","memory","記憶"]},
+    {keys:["計画","けいかく","プラン","段取り"], add:["plan","計画"]},
+    {keys:["元に戻","もとに戻","巻き戻","取り消","やり直","undo","ロールバック","戻したい"], add:["rewind","undo","revert","巻き戻"]},
+    {keys:["外部","連携","つなぐ","繋ぐ","接続","ツール追加"], add:["mcp","連携","接続"]},
+    {keys:["調べ","理解","把握","読ん","説明して","解説"], add:["explain","onboard","理解","調べ"]},
+    {keys:["直し","修正","バグ","なおし","デバッグ"], add:["debug","fix","修正","バグ"]},
+  ];
+  function expandTerms(query){
+    const q = normalize(query), extra = [], seen = new Set();
+    for(const m of INTENT_MAP){
+      if(!m.keys.some(k => q.includes(normalize(k)))) continue;
+      for(const t of m.add){
+        const nt = normalize(t);
+        if(seen.has(nt)) continue; seen.add(nt);
+        if(/^[a-z0-9 ]+$/.test(nt)) extra.push({w:2,cjk:false,re:new RegExp(`\\b${escRe(nt.split(" ")[0])}\\b`)});
+        else extra.push({w:2,cjk:true,term:nt});
+      }
+    }
+    return extra;
+  }
   function queryTerms(query){
     const q = normalize(query);
     const latin = [...new Set(q.match(/[a-z0-9]{2,}/g) || [])].map(t => ({w:3,cjk:false,re:new RegExp(`\\b${escRe(t)}\\b`)}));
@@ -96,8 +127,16 @@
       if(inWant) s += term.w * 2; else if(inText) s += term.w;
       if(inWant || inText){ if(term.cjk) cjkHits++; else latinHit = true; }
     }
-    // strong: 完全一致 / 英数字語一致 / 別々の2-gramが2つ以上（=偶発でない）
-    const strong = fullHit || latinHit || cjkHits >= 2;
+    // 意図マップ展開語（口語→正規語）。関連エントリを押し上げ strong に載せる。
+    let intentHit = false;
+    for(const term of expandTerms(query)){
+      const inWant = term.cjk ? want.includes(term.term) : term.re.test(want);
+      const inText = term.cjk ? text.includes(term.term) : term.re.test(text);
+      if(inWant) s += term.w * 2; else if(inText) s += term.w;
+      if(inWant || inText){ intentHit = true; if(term.cjk) cjkHits++; else latinHit = true; }
+    }
+    // strong: 完全一致 / 英数字語一致 / 別々の2-gramが2つ以上（=偶発でない） / 意図マップ一致
+    const strong = fullHit || latinHit || cjkHits >= 2 || intentHit;
     return { score: s, strong };
   }
   function countByCategory(id){ return entries.filter(e => e.category === id).length; }
