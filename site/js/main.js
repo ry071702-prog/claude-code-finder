@@ -127,15 +127,17 @@
       if(inWant) s += term.w * 2; else if(inText) s += term.w;
       if(inWant || inText){ if(term.cjk) cjkHits++; else latinHit = true; }
     }
-    // 意図マップ展開語（口語→正規語）。関連エントリを押し上げ strong に載せる。
+    // 意図マップ展開語（口語→正規語）。strong 化は見出し(want/feature)一致のみに絞り、
+    // 説明文だけの一致は軽い加点にとどめて過剰一般化を防ぐ。
     let intentHit = false;
     for(const term of expandTerms(query)){
       const inWant = term.cjk ? want.includes(term.term) : term.re.test(want);
+      const inFeat = term.cjk ? feat.includes(term.term) : term.re.test(feat);
       const inText = term.cjk ? text.includes(term.term) : term.re.test(text);
-      if(inWant) s += term.w * 2; else if(inText) s += term.w;
-      if(inWant || inText){ intentHit = true; if(term.cjk) cjkHits++; else latinHit = true; }
+      if(inWant) s += term.w * 2; else if(inFeat) s += term.w; else if(inText) s += 1;
+      if(inWant || inFeat) intentHit = true;   // strong は見出し一致のみ
     }
-    // strong: 完全一致 / 英数字語一致 / 別々の2-gramが2つ以上（=偶発でない） / 意図マップ一致
+    // strong: 完全一致 / 英数字語一致 / 別々の2-gramが2つ以上（=偶発でない） / 意図マップ見出し一致
     const strong = fullHit || latinHit || cjkHits >= 2 || intentHit;
     return { score: s, strong };
   }
