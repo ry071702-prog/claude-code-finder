@@ -42,10 +42,14 @@
 - [x] index に BENTO クロスページ導線「辞典の先へ」／ヒーローのタイプライター演出
 - [x] **Skill登録の常時導線**: 全ページヘッダに「＋Skill登録」CTA、他ページは `index.html#submit` で申請モーダル自動オープン
 
-## 残アイデア（Inbox/2026-07-11 にも記録）
-- [ ] PR系クエリの検索精度向上（語境界一致は導入済み・次は同義語/意図マップ）
-- [ ] marketplace系(plugin配下 skills/*/SKILL.md)の取り込みレーンを fetch_skills に追加
-- [x] ~~掲載skillのstar自動再計測~~ → **既に実現**（fetch_skills は毎回 jsonl を全書き換え＋starをGitHubから再取得）
-- [ ] パーサ(fetch_updates/fetch_skills)のテスト → `tests/` に pytest 追加（2026-07-11 着手）
-- [ ] SEO: sitemap.xml / robots.txt（2026-07-11 追加）
-- 運用: 週次ingest cron(火07:00 JST)の健全性を時々確認（CHANGELOG取得追加後の初回scheduled runが緑か）
+## Phase 6 — 品質・運用の締め（2026-07-11）✅ 完了
+- [x] PR系クエリの検索精度向上 → **意図マップ**（口語→正規語展開）を site(main.js)/MCP(server.mjs)両方に。strong化は見出し一致のみ
+- [x] marketplace系(plugin配下 skills/*/SKILL.md)の取り込みレーン → `is_skill_path`(誤検出dir除外)＋`id_of`(path一意・leaf衝突解消)
+- [x] 掲載skillのstar自動再計測 → **既に実現**（fetch_skills は毎回 jsonl を全書き換え＋starをGitHubから再取得）
+- [x] パーサ(fetch_updates/fetch_skills)の pytest（`tests/test_parsers.py` 13件・ingest 工程でも実行）
+- [x] SEO: sitemap.xml / robots.txt
+- [x] **ingest→deploy 断線の修正**: `GITHUB_TOKEN` push は deploy.yml の on:push を発火させない仕様のため、週次データ更新が本番に反映されていなかった。ingest ワークフロー自身が変更時に `wrangler pages deploy` するよう修正（`changed` 出力で分岐）
+
+## 運用メモ
+- 週次ingest(火07:00 JST)は tests→fetch_skills→fetch_updates→build→commit→deploy まで自己完結
+- data-skills 件数は `ingest` の `--limit`（既定120）でキャップ。増やすなら workflow_dispatch の limit か cron の値を変更
