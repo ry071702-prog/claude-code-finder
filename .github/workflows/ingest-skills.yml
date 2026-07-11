@@ -28,6 +28,10 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      # パーサ(CHANGELOG/SKILL.md frontmatter)の回帰を fetch 前に検知。壊れていれば取り込みを止める。
+      - name: Test parsers
+        run: python -m pytest tests/ -q || python tests/test_parsers.py
+
       # 非LLM。GITHUB_TOKEN で GitHub API を叩く（star/SKILL.md 取得）。
       - name: Fetch skills (non-LLM)
         env:

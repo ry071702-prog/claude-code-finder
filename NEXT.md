@@ -33,4 +33,19 @@
 ---
 ## 🎉 P0–P4 全完了（2026-07-10）
 本番 https://claude-code-finder.pages.dev/ で全機能稼働。push→自動デプロイ / 週次で Skills+plugin data 自動更新 / 投稿→D1→人間モデレート / プラグインで lookup 常駐。
-残アイデア: PR系クエリの検索精度向上 / marketplace系(plugin内skill)の取り込みレーン / 掲載skillのstar自動再計測。
+
+## Phase 5 — コンテンツ層＆多ページ化（2026-07-10〜11）✅ 稼働
+- [x] KAWAI 痕跡を全除去し、本文データ(`data.js` 77件)を公式docs準拠で**オリジナル執筆**。git履歴も orphan squash で由来を消去
+- [x] 多ページ化: `guide.html`(通読ガイド) / `academy.html`(講座) / `updates.html`(更新)。共通ヘッダにサイト内タブ＋テーマトグル
+- [x] **Academy 3コース21レッスン**(入門/中級/上級)・進捗localStorage・コース切替チップ・中級/上級は実例つき本文
+- [x] **Updates 非LLM自動更新**: `scripts/fetch_updates.py` が公式 `anthropics/claude-code` の CHANGELOG.md を純パース→ `site/js/data-changelog.js`(週次 ingest に組込・色分けアコーディオン)
+- [x] index に BENTO クロスページ導線「辞典の先へ」／ヒーローのタイプライター演出
+- [x] **Skill登録の常時導線**: 全ページヘッダに「＋Skill登録」CTA、他ページは `index.html#submit` で申請モーダル自動オープン
+
+## 残アイデア（Inbox/2026-07-11 にも記録）
+- [ ] PR系クエリの検索精度向上（語境界一致は導入済み・次は同義語/意図マップ）
+- [ ] marketplace系(plugin配下 skills/*/SKILL.md)の取り込みレーンを fetch_skills に追加
+- [x] ~~掲載skillのstar自動再計測~~ → **既に実現**（fetch_skills は毎回 jsonl を全書き換え＋starをGitHubから再取得）
+- [ ] パーサ(fetch_updates/fetch_skills)のテスト → `tests/` に pytest 追加（2026-07-11 着手）
+- [ ] SEO: sitemap.xml / robots.txt（2026-07-11 追加）
+- 運用: 週次ingest cron(火07:00 JST)の健全性を時々確認（CHANGELOG取得追加後の初回scheduled runが緑か）
