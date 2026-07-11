@@ -93,6 +93,15 @@ function search(query, limit) {
       if (inWant) s += term.w * 2;          // want での一致を重く
       else if (inText) s += term.w;
     }
+    // 意図マップ展開（口語→正規語）。見出し一致は強め・本文一致は軽く加点。
+    for (const term of expandTerms(query)) {
+      const inWant = term.cjk ? want.includes(term.term) : term.re.test(want);
+      const inFeat = term.cjk ? feat.includes(term.term) : term.re.test(feat);
+      const inText = term.cjk ? t.includes(term.term) : term.re.test(t);
+      if (inWant) s += term.w * 2;
+      else if (inFeat) s += term.w;
+      else if (inText) s += 1;
+    }
     if (s > 0) scored.push({ e, s });
   }
   scored.sort((a, b) => b.s - a.s || (b.e.stars || 0) - (a.e.stars || 0));
