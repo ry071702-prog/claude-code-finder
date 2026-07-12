@@ -351,11 +351,18 @@
       .slice(0,3)
       .map(x => x.e);
   }
+  // 全く掠りもしない語でも行き止まりにしない。掠らなければ定番の項目を出す。
+  function popularEntries(){
+    return entries.filter(e => e.origin === "base")
+      .slice().sort((a,b) => a.priority - b.priority).slice(0,3);
+  }
   function renderSuggest(query){
     if(!suggestBox) return;
-    const list = suggestFor(query);
+    let list = suggestFor(query);
+    const label = list.length ? "もしかして" : "よく使われている項目";
+    if(!list.length) list = popularEntries();
     if(!list.length){ suggestBox.innerHTML = ""; return; }
-    suggestBox.innerHTML = '<p class="suggest-label">もしかして</p>' + list.map(e =>
+    suggestBox.innerHTML = '<p class="suggest-label">'+label+'</p>' + list.map(e =>
       '<button type="button" class="suggest-item" data-id="'+escapeHtml(e.id)+'">'+
         '<span class="material-icons-outlined" aria-hidden="true">'+(catIcon[e.category] || "help_outline")+'</span>'+
         '<span class="suggest-text"><b>'+escapeHtml(e.want)+'</b><em>'+escapeHtml(e.feature)+'</em></span>'+
