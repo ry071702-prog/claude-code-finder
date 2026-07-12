@@ -1,14 +1,15 @@
-// 生成物: scripts/build_data.py が data/skills/skills.jsonl から作成。手で編集しない。
-// GitHub の Claude Code Skills を非LLMで取り込んだもの（週次 ingest-skills.yml）。
+// 生成物: scripts/build_data.py が skills.jsonl + overrides.ja.json から作成。手で編集しない。
+// GitHub の Claude Code Skills を非LLMで取り込み、日本語化 120/120 件（週次 ingest-skills.yml）。
 window.CCF_SKILLS = [
 {
 "id": "skill-anthropics-skills-skills-algorithmic-art",
 "priority": 400,
 "category": "community",
 "type": "skill",
-"want": "algorithmic-art",
+"want": "コードで生成アートを作りたい",
 "feature": "anthropics/skills",
-"summary": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+"summary": "p5.js とシード付き乱数を使い、パラメータを変えながら生成アートを描く。既存作家の模倣は避け、オリジナルを作る。",
+"trigger": "コードで生成アート・アルゴリズミックアート・フローフィールド・パーティクル表現を作るとき。",
 "commands": [
 "npx skills add anthropics/skills@algorithmic-art -g"
 ],
@@ -18,6 +19,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "algorithmic-art",
 "anthropics",
+"algorithmic-art",
 "skill",
 "スキル"
 ]
@@ -27,9 +29,10 @@ window.CCF_SKILLS = [
 "priority": 401,
 "category": "community",
 "type": "skill",
-"want": "brand-guidelines",
+"want": "Anthropic のブランドの見た目に揃えたい",
 "feature": "anthropics/skills",
-"summary": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+"summary": "Anthropic 公式のブランドカラーとタイポグラフィを成果物に当て、会社のデザイン基準に沿った見た目に整える。",
+"trigger": "ブランドカラーやスタイルガイド、視覚フォーマット、会社のデザイン基準を当てはめるとき。",
 "commands": [
 "npx skills add anthropics/skills@brand-guidelines -g"
 ],
@@ -39,6 +42,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "brand-guidelines",
 "anthropics",
+"brand-guidelines",
 "skill",
 "スキル"
 ]
@@ -48,9 +52,10 @@ window.CCF_SKILLS = [
 "priority": 402,
 "category": "community",
 "type": "skill",
-"want": "canvas-design",
+"want": "ポスターやアート作品を画像・PDFで作りたい",
 "feature": "anthropics/skills",
-"summary": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+"summary": "デザインの考え方に沿って、.png や .pdf の静的なビジュアル作品を作る。既存作家の模倣はしない。",
+"trigger": "ポスター・アート・デザインなど、静的な作品の制作を頼むとき。",
 "commands": [
 "npx skills add anthropics/skills@canvas-design -g"
 ],
@@ -60,6 +65,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "canvas-design",
 "anthropics",
+"canvas-design",
 "skill",
 "スキル"
 ]
@@ -69,9 +75,10 @@ window.CCF_SKILLS = [
 "priority": 403,
 "category": "community",
 "type": "skill",
-"want": "claude-api",
+"want": "Claude API の仕様を正しく調べたい",
 "feature": "anthropics/skills",
-"summary": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).\nSKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file).",
+"summary": "モデルIDや料金、ストリーミング、tool use、MCP、トークン計算まで Claude API の仕様を参照する。",
+"trigger": "Claude や Anthropic のモデル・API について答えるとき、LLM 前提のコードを書くとき。記憶で答えない。",
 "commands": [
 "npx skills add anthropics/skills@claude-api -g"
 ],
@@ -81,6 +88,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "claude-api",
 "anthropics",
+"claude-api",
 "skill",
 "スキル"
 ]
@@ -90,9 +98,10 @@ window.CCF_SKILLS = [
 "priority": 404,
 "category": "community",
 "type": "skill",
-"want": "doc-coauthoring",
+"want": "ドキュメントを段取りを踏んで書き上げたい",
 "feature": "anthropics/skills",
-"summary": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+"summary": "仕様書や提案書、意思決定ドキュメントを、文脈の受け渡しから推敲、読み手目線の確認まで段階を追って書く。",
+"trigger": "ドキュメント・提案書・技術仕様・意思決定ドキュメントを書き始めるとき。",
 "commands": [
 "npx skills add anthropics/skills@doc-coauthoring -g"
 ],
@@ -102,6 +111,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "doc-coauthoring",
 "anthropics",
+"doc-coauthoring",
 "skill",
 "スキル"
 ]
@@ -111,9 +121,10 @@ window.CCF_SKILLS = [
 "priority": 405,
 "category": "community",
 "type": "skill",
-"want": "docx",
+"want": "Wordファイル(.docx)を作成・編集したい",
 "feature": "anthropics/skills",
-"summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.",
+"summary": ".docx の作成・読み取り・編集を行う。目次や見出し、ページ番号、画像の差し替え、変更履歴やコメントも扱う。",
+"trigger": "Word 文書や .docx を扱うとき。レポート・メモ・レターを Word 形式で求められたとき。",
 "commands": [
 "npx skills add anthropics/skills@docx -g"
 ],
@@ -123,6 +134,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "docx",
 "anthropics",
+"docx",
 "skill",
 "スキル"
 ]
@@ -132,9 +144,10 @@ window.CCF_SKILLS = [
 "priority": 406,
 "category": "community",
 "type": "skill",
-"want": "frontend-design",
+"want": "テンプレっぽくないUIに仕上げたい",
 "feature": "anthropics/skills",
-"summary": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+"summary": "新しいUIを作るときや既存UIを組み直すときに、方向性やタイポグラフィなど見た目の判断を助ける。",
+"trigger": "新規UIを作る、または既存のUIの見た目を作り直すとき。",
 "commands": [
 "npx skills add anthropics/skills@frontend-design -g"
 ],
@@ -144,6 +157,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "frontend-design",
 "anthropics",
+"frontend-design",
 "skill",
 "スキル"
 ]
@@ -153,9 +167,10 @@ window.CCF_SKILLS = [
 "priority": 407,
 "category": "community",
 "type": "skill",
-"want": "internal-comms",
+"want": "社内向けの報告や周知の文章を書きたい",
 "feature": "anthropics/skills",
-"summary": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+"summary": "ステータス報告、経営層向けアップデート、社内ニュースレター、FAQ、障害報告などを社内の型に沿って書く。",
+"trigger": "社内向けの文書 (ステータス報告・障害報告・プロジェクト更新など) を書くとき。",
 "commands": [
 "npx skills add anthropics/skills@internal-comms -g"
 ],
@@ -165,6 +180,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "internal-comms",
 "anthropics",
+"internal-comms",
 "skill",
 "スキル"
 ]
@@ -174,9 +190,10 @@ window.CCF_SKILLS = [
 "priority": 408,
 "category": "community",
 "type": "skill",
-"want": "mcp-builder",
+"want": "MCPサーバーを自分で作りたい",
 "feature": "anthropics/skills",
-"summary": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+"summary": "外部APIやサービスをつなぐ MCP サーバーを、Python (FastMCP) や Node/TypeScript で作る指針を示す。",
+"trigger": "外部APIやサービスを取り込む MCP サーバーを作るとき。",
 "commands": [
 "npx skills add anthropics/skills@mcp-builder -g"
 ],
@@ -186,6 +203,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "mcp-builder",
 "anthropics",
+"mcp-builder",
 "skill",
 "スキル"
 ]
@@ -195,9 +213,10 @@ window.CCF_SKILLS = [
 "priority": 409,
 "category": "community",
 "type": "skill",
-"want": "pdf",
+"want": "PDFを読み書き・編集したい",
 "feature": "anthropics/skills",
-"summary": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+"summary": "PDF のテキストや表の抽出、結合と分割、回転、透かし、フォーム入力、暗号化、スキャンPDFのOCRまで扱う。",
+"trigger": ".pdf ファイルに何かする、または PDF を作るとき。",
 "commands": [
 "npx skills add anthropics/skills@pdf -g"
 ],
@@ -207,6 +226,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pdf",
 "anthropics",
+"pdf",
 "skill",
 "スキル"
 ]
@@ -216,9 +236,10 @@ window.CCF_SKILLS = [
 "priority": 410,
 "category": "community",
 "type": "skill",
-"want": "pptx",
+"want": "スライド(.pptx)を作成・編集したい",
 "feature": "anthropics/skills",
-"summary": "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.",
+"summary": ".pptx の作成・読み取り・編集を行う。テキスト抽出、ファイルの結合と分割、テンプレートや発表者ノートも扱う。",
+"trigger": "デッキ・スライド・プレゼン、あるいは .pptx ファイルに触れるとき。",
 "commands": [
 "npx skills add anthropics/skills@pptx -g"
 ],
@@ -228,6 +249,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pptx",
 "anthropics",
+"pptx",
 "skill",
 "スキル"
 ]
@@ -237,9 +259,10 @@ window.CCF_SKILLS = [
 "priority": 411,
 "category": "community",
 "type": "skill",
-"want": "skill-creator",
+"want": "Skillを自分で作って直したい",
 "feature": "anthropics/skills",
-"summary": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+"summary": "Skill を新規に作り、既存 Skill の修正、eval による性能測定、description の調整まで行う。",
+"trigger": "Skill を作る・直す、eval で性能を測る、description の発動精度を上げるとき。",
 "commands": [
 "npx skills add anthropics/skills@skill-creator -g"
 ],
@@ -249,6 +272,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skill-creator",
 "anthropics",
+"skill-creator",
 "skill",
 "スキル"
 ]
@@ -258,9 +282,10 @@ window.CCF_SKILLS = [
 "priority": 412,
 "category": "community",
 "type": "skill",
-"want": "slack-gif-creator",
+"want": "Slackに貼るGIFアニメを作りたい",
 "feature": "anthropics/skills",
-"summary": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\"",
+"summary": "Slack の制約に収まるアニメーションGIFを作る。制約の情報、検証ツール、アニメーションの型を持つ。",
+"trigger": "「Slack 用に〜のGIFを作って」のように、Slack向けアニメGIFを頼むとき。",
 "commands": [
 "npx skills add anthropics/skills@slack-gif-creator -g"
 ],
@@ -270,6 +295,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "slack-gif-creator",
 "anthropics",
+"slack-gif-creator",
 "skill",
 "スキル"
 ]
@@ -279,9 +305,10 @@ window.CCF_SKILLS = [
 "priority": 413,
 "category": "community",
 "type": "skill",
-"want": "theme-factory",
+"want": "成果物の配色とフォントを揃えたい",
 "feature": "anthropics/skills",
-"summary": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+"summary": "スライドや文書、HTMLページに配色とフォントのテーマを当てる。10種のプリセットがあり、新規テーマも作れる。",
+"trigger": "作った成果物にテーマを当てて見た目を統一するとき。",
 "commands": [
 "npx skills add anthropics/skills@theme-factory -g"
 ],
@@ -291,6 +318,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "theme-factory",
 "anthropics",
+"theme-factory",
 "skill",
 "スキル"
 ]
@@ -300,9 +328,10 @@ window.CCF_SKILLS = [
 "priority": 414,
 "category": "community",
 "type": "skill",
-"want": "web-artifacts-builder",
+"want": "React製の込み入ったアーティファクトを作りたい",
 "feature": "anthropics/skills",
-"summary": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+"summary": "React・Tailwind CSS・shadcn/ui で、状態管理やルーティングを持つ HTML アーティファクトを組む。",
+"trigger": "単一ファイルでは済まない、複数コンポーネント構成のアーティファクトを作るとき。",
 "commands": [
 "npx skills add anthropics/skills@web-artifacts-builder -g"
 ],
@@ -312,6 +341,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "web-artifacts-builder",
 "anthropics",
+"web-artifacts-builder",
 "skill",
 "スキル"
 ]
@@ -321,9 +351,10 @@ window.CCF_SKILLS = [
 "priority": 415,
 "category": "community",
 "type": "skill",
-"want": "webapp-testing",
+"want": "ローカルのWebアプリをブラウザで確認したい",
 "feature": "anthropics/skills",
-"summary": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+"summary": "Playwright でローカルの Web アプリを操作し、画面の挙動確認、スクリーンショット、ブラウザログの確認を行う。",
+"trigger": "",
 "commands": [
 "npx skills add anthropics/skills@webapp-testing -g"
 ],
@@ -333,6 +364,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "webapp-testing",
 "anthropics",
+"webapp-testing",
 "skill",
 "スキル"
 ]
@@ -342,9 +374,10 @@ window.CCF_SKILLS = [
 "priority": 416,
 "category": "community",
 "type": "skill",
-"want": "xlsx",
+"want": "Excelやスプレッドシートを作成・編集したい",
 "feature": "anthropics/skills",
-"summary": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved.",
+"summary": ".xlsx や .csv の読み取り・編集・新規作成を行う。数式や書式、グラフ、崩れた表データの整形まで扱う。",
+"trigger": "スプレッドシートが入力か出力の主役になるとき。成果物が Word や HTML なら使わない。",
 "commands": [
 "npx skills add anthropics/skills@xlsx -g"
 ],
@@ -354,6 +387,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "xlsx",
 "anthropics",
+"xlsx",
 "skill",
 "スキル"
 ]
@@ -363,9 +397,10 @@ window.CCF_SKILLS = [
 "priority": 417,
 "category": "community",
 "type": "skill",
-"want": "autoplan",
+"want": "複数観点のレビューを続けて回したい",
 "feature": "garrytan/gstack",
-"summary": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+"summary": "gstack の CEO・デザイン・エンジニア・DX レビューを順に走らせ、6つの判断原則で自動的に結論を出す。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@autoplan -g"
 ],
@@ -375,6 +410,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "autoplan",
 "garrytan",
+"autoplan",
 "skill",
 "スキル"
 ]
@@ -384,9 +420,10 @@ window.CCF_SKILLS = [
 "priority": 418,
 "category": "community",
 "type": "skill",
-"want": "benchmark",
+"want": "パフォーマンスの劣化を見つけたい",
 "feature": "garrytan/gstack",
-"summary": "Performance regression detection using the browse daemon. (gstack)",
+"summary": "gstack の browse デーモンを使って、性能のリグレッション (劣化) を検出する。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@benchmark -g"
 ],
@@ -396,6 +433,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "benchmark",
 "garrytan",
+"benchmark",
 "skill",
 "スキル"
 ]
@@ -405,9 +443,10 @@ window.CCF_SKILLS = [
 "priority": 419,
 "category": "community",
 "type": "skill",
-"want": "benchmark-models",
+"want": "モデルごとの出来の差を比べたい",
 "feature": "garrytan/gstack",
-"summary": "Cross-model benchmark for gstack skills. (gstack)",
+"summary": "gstack のスキル群を複数のモデルで動かし、モデルをまたいだベンチマークを取る。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@benchmark-models -g"
 ],
@@ -417,6 +456,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "benchmark-models",
 "garrytan",
+"benchmark-models",
 "skill",
 "スキル"
 ]
@@ -426,9 +466,10 @@ window.CCF_SKILLS = [
 "priority": 420,
 "category": "community",
 "type": "skill",
-"want": "browse",
+"want": "ヘッドレスブラウザでサイトを見たい",
 "feature": "garrytan/gstack",
-"summary": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+"summary": "ヘッドレスブラウザでサイトを開き、QAテストや自社サイトのドッグフーディングを行う。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@browse -g"
 ],
@@ -438,6 +479,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "browse",
 "garrytan",
+"browse",
 "skill",
 "スキル"
 ]
@@ -447,9 +489,10 @@ window.CCF_SKILLS = [
 "priority": 421,
 "category": "community",
 "type": "skill",
-"want": "canary",
+"want": "デプロイ直後の異常を早く掴みたい",
 "feature": "garrytan/gstack",
-"summary": "Post-deploy canary monitoring. (gstack)",
+"summary": "デプロイした直後のサービスをカナリア監視し、異常が出ていないかを見張る。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@canary -g"
 ],
@@ -459,6 +502,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "canary",
 "garrytan",
+"canary",
 "skill",
 "スキル"
 ]
@@ -468,9 +512,10 @@ window.CCF_SKILLS = [
 "priority": 422,
 "category": "community",
 "type": "skill",
-"want": "careful",
+"want": "危険なコマンドの誤爆を防ぎたい",
 "feature": "garrytan/gstack",
-"summary": "Safety guardrails for destructive commands. (gstack)",
+"summary": "破壊的なコマンドにガードレールを設け、取り返しのつかない操作の前に歯止めをかける。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@careful -g"
 ],
@@ -480,6 +525,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "careful",
 "garrytan",
+"careful",
 "skill",
 "スキル"
 ]
@@ -489,9 +535,10 @@ window.CCF_SKILLS = [
 "priority": 423,
 "category": "community",
 "type": "skill",
-"want": "gstack",
+"want": "gstackのスキル群の入口を知りたい",
 "feature": "garrytan/gstack",
-"summary": "Router for the gstack skill suite. (gstack)",
+"summary": "gstack のスキル群の入口になるルーター。用途に応じて該当のスキルへ振り分ける。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@gstack -g"
 ],
@@ -501,6 +548,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "gstack",
 "garrytan",
+"gstack",
 "skill",
 "スキル"
 ]
@@ -510,9 +558,10 @@ window.CCF_SKILLS = [
 "priority": 424,
 "category": "community",
 "type": "skill",
-"want": "hackernews-frontpage",
+"want": "Hacker Newsのトップ記事を取ってきたい",
 "feature": "garrytan/gstack",
-"summary": "Scrape the Hacker News front page (titles, points, comment counts).",
+"summary": "Hacker News のフロントページから、タイトル・ポイント数・コメント数を取得する。",
+"trigger": "",
 "commands": [
 "npx skills add garrytan/gstack@hackernews-frontpage -g"
 ],
@@ -522,6 +571,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "hackernews-frontpage",
 "garrytan",
+"hackernews-frontpage",
 "skill",
 "スキル"
 ]
@@ -531,9 +581,10 @@ window.CCF_SKILLS = [
 "priority": 425,
 "category": "community",
 "type": "skill",
-"want": "add-app-to-server",
+"want": "既存のMCPサーバーにUIを足したい",
 "feature": "tldraw/tldraw",
-"summary": "This skill should be used when the user asks to \"add an app to my MCP server\", \"add UI to my MCP server\", \"add a view to my MCP tool\", \"enrich MCP tools with UI\", \"add interactive UI to existing server\", \"add MCP Apps to my server\", or needs to add interactive UI capabilities to an existing MCP server that already has tools. Provides guidance for analyzing existing tools and adding MCP Apps UI resources.",
+"summary": "すでにツールを持つ MCP サーバーの中身を読み、MCP Apps の UI リソースを足す手順を示す。",
+"trigger": "既存の MCP サーバーやツールに、対話できるUI (MCP Apps) を追加したいとき。",
 "commands": [
 "npx skills add tldraw/tldraw@add-app-to-server -g"
 ],
@@ -543,6 +594,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "add-app-to-server",
 "tldraw",
+"add-app-to-server",
 "skill",
 "スキル"
 ]
@@ -552,9 +604,10 @@ window.CCF_SKILLS = [
 "priority": 426,
 "category": "community",
 "type": "skill",
-"want": "clean-copy",
+"want": "コミット履歴をきれいに作り直したい",
 "feature": "tldraw/tldraw",
-"summary": "Reimplement the current branch on a new branch with a clean, narrative-quality git commit history. Use when asked to make a clean copy branch, clean up commit history by replaying work, or rebuild a branch as reviewable commits.",
+"summary": "今のブランチの作業を新しいブランチで再現し、筋の通ったコミット履歴として組み直す。",
+"trigger": "クリーンなコピーブランチを作る、コミット履歴をレビューしやすい形に作り直すとき。",
 "commands": [
 "npx skills add tldraw/tldraw@clean-copy -g"
 ],
@@ -564,6 +617,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "clean-copy",
 "tldraw",
+"clean-copy",
 "skill",
 "スキル"
 ]
@@ -573,9 +627,10 @@ window.CCF_SKILLS = [
 "priority": 427,
 "category": "community",
 "type": "skill",
-"want": "commit-changes",
+"want": "いまの変更をコミットしたい",
 "feature": "tldraw/tldraw",
-"summary": "Create a git commit for the current changes. Use when asked to commit changes, make a commit, generate a commit message, or commit the current worktree with optional user-provided context.",
+"summary": "現在の変更内容から git コミットを作る。ユーザーが足した文脈もメッセージに織り込む。",
+"trigger": "変更をコミットする、コミットメッセージを作るとき。",
 "commands": [
 "npx skills add tldraw/tldraw@commit-changes -g"
 ],
@@ -585,6 +640,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "commit-changes",
 "tldraw",
+"commit-changes",
 "skill",
 "スキル"
 ]
@@ -594,9 +650,10 @@ window.CCF_SKILLS = [
 "priority": 428,
 "category": "community",
 "type": "skill",
-"want": "convert-web-app",
+"want": "既存のWebアプリをMCP Appにも対応させたい",
 "feature": "tldraw/tldraw",
-"summary": "This skill should be used when the user asks to \"add MCP App support to my web app\", \"turn my web app into a hybrid MCP App\", \"make my web page work as an MCP App too\", \"wrap my existing UI as an MCP App\", \"convert iframe embed to MCP App\", \"turn my SPA into an MCP App\", or needs to add MCP App support to an existing web application while keeping it working standalone. Provides guidance for analyzing existing web apps and creating a hybrid web + MCP App with server-side tool and resource registration.",
+"summary": "既存の Web アプリを単体で動かせるまま MCP App としても動く形にし、サーバー側の登録まで面倒を見る。",
+"trigger": "既存の Web アプリや SPA、iframe 埋め込みを MCP App 対応にしたいとき。",
 "commands": [
 "npx skills add tldraw/tldraw@convert-web-app -g"
 ],
@@ -606,6 +663,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "convert-web-app",
 "tldraw",
+"convert-web-app",
 "skill",
 "スキル"
 ]
@@ -615,9 +673,10 @@ window.CCF_SKILLS = [
 "priority": 429,
 "category": "community",
 "type": "skill",
-"want": "create-mcp-app",
+"want": "UI付きのMCP Appを新しく作りたい",
 "feature": "tldraw/tldraw",
-"summary": "This skill should be used when the user asks to \"create an MCP App\", \"add a UI to an MCP tool\", \"build an interactive MCP View\", \"scaffold an MCP App\", or needs guidance on MCP Apps SDK patterns, UI-resource registration, MCP App lifecycle, or host integration. Provides comprehensive guidance for building MCP Apps with interactive UIs.",
+"summary": "MCP Apps SDK の書き方に沿って、UIリソースの登録やホスト連携まで含めた MCP App を新規に組む。",
+"trigger": "MCP App を新規に作る、MCP ツールにUIを付ける、MCP Apps のパターンを知りたいとき。",
 "commands": [
 "npx skills add tldraw/tldraw@create-mcp-app -g"
 ],
@@ -627,6 +686,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "create-mcp-app",
 "tldraw",
+"create-mcp-app",
 "skill",
 "スキル"
 ]
@@ -636,9 +696,10 @@ window.CCF_SKILLS = [
 "priority": 430,
 "category": "community",
 "type": "skill",
-"want": "dotcom-release-crew",
+"want": "tldraw の dotcom リリース告知を投稿したい",
 "feature": "tldraw/tldraw",
-"summary": "Post to the",
+"summary": "tldraw の dotcom リリースに関する投稿を行う。説明文が途中で切れており詳細は不明。",
+"trigger": "",
 "commands": [
 "npx skills add tldraw/tldraw@dotcom-release-crew -g"
 ],
@@ -648,6 +709,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "dotcom-release-crew",
 "tldraw",
+"dotcom-release-crew",
 "skill",
 "スキル"
 ]
@@ -657,9 +719,10 @@ window.CCF_SKILLS = [
 "priority": 431,
 "category": "community",
 "type": "skill",
-"want": "issue",
+"want": "tldraw に GitHub issue を立てたい",
 "feature": "tldraw/tldraw",
-"summary": "Create a GitHub issue in the tldraw repository from a user description, then mature it through follow-up questions. Use when the user invokes issue, asks to create an issue, report a bug, file a feature request, or answers follow-up questions for an issue created by this skill.",
+"summary": "ユーザーの説明から tldraw リポジトリに GitHub issue を作り、追加質問を重ねて中身を詰めていく。",
+"trigger": "issue の作成、バグ報告、機能要望の提出を頼むとき。この Skill が作った issue への追加質問に答えるときも含む。",
 "commands": [
 "npx skills add tldraw/tldraw@issue -g"
 ],
@@ -669,6 +732,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "issue",
 "tldraw",
+"issue",
 "skill",
 "スキル"
 ]
@@ -678,9 +742,10 @@ window.CCF_SKILLS = [
 "priority": 432,
 "category": "community",
 "type": "skill",
-"want": "migrate-oai-app",
+"want": "OpenAI Apps SDK のアプリを MCP に移行したい",
 "feature": "tldraw/tldraw",
-"summary": "This skill should be used when the user asks to \"migrate from OpenAI Apps SDK\", \"convert OpenAI App to MCP\", \"port from window.openai\", \"migrate from skybridge\", \"convert openai/outputTemplate\", or needs guidance on converting OpenAI Apps SDK applications to MCP Apps SDK. Provides step-by-step migration guidance with API mapping tables.",
+"summary": "OpenAI Apps SDK で書かれたアプリを MCP Apps SDK へ移す手順を、API 対応表つきで段階的に示す。",
+"trigger": "OpenAI Apps SDK からの移行、window.openai や skybridge、openai/outputTemplate からの置き換えを尋ねるとき。",
 "commands": [
 "npx skills add tldraw/tldraw@migrate-oai-app -g"
 ],
@@ -690,6 +755,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "migrate-oai-app",
 "tldraw",
+"migrate-oai-app",
 "skill",
 "スキル"
 ]
@@ -699,9 +765,10 @@ window.CCF_SKILLS = [
 "priority": 433,
 "category": "community",
 "type": "skill",
-"want": "arthas",
+"want": "Java アプリと JVM の不具合を診断したい",
 "feature": "alibaba/arthas",
-"summary": "arthas 诊断 java应用，jvm问题 skill",
+"summary": "Arthas を使い、稼働中の Java アプリケーションと JVM で起きている問題を切り分けて診断する。",
+"trigger": "",
 "commands": [
 "npx skills add alibaba/arthas@skills -g"
 ],
@@ -711,6 +778,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "alibaba",
+"arthas",
 "skill",
 "スキル"
 ]
@@ -720,9 +788,10 @@ window.CCF_SKILLS = [
 "priority": 434,
 "category": "community",
 "type": "skill",
-"want": "arthas-cpu-high",
+"want": "JVM の CPU 使用率が跳ね上がった原因を突き止めたい",
 "feature": "alibaba/arthas",
-"summary": "排查 JVM / 应用 CPU 飙高（线程定位 + 代码路径分析）",
+"summary": "CPU 使用率が急上昇した JVM / アプリケーションを、スレッドの特定とコードパスの分析でたどる。",
+"trigger": "",
 "commands": [
 "npx skills add alibaba/arthas@cpu-high -g"
 ],
@@ -732,6 +801,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "cpu-high",
 "alibaba",
+"arthas-cpu-high",
 "skill",
 "スキル"
 ]
@@ -741,9 +811,10 @@ window.CCF_SKILLS = [
 "priority": 435,
 "category": "community",
 "type": "skill",
-"want": "arthas-eagleeye-traceid",
+"want": "リクエストの traceId を取り出したい",
 "feature": "alibaba/arthas",
-"summary": "使用 Arthas 的 watch/trace 获取 EagleEye traceId / 获取请求的 traceId",
+"summary": "Arthas の watch / trace を使い、EagleEye の traceId やリクエストの traceId を取得する。",
+"trigger": "",
 "commands": [
 "npx skills add alibaba/arthas@eagleeye-traceid -g"
 ],
@@ -753,6 +824,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "eagleeye-traceid",
 "alibaba",
+"arthas-eagleeye-traceid",
 "skill",
 "スキル"
 ]
@@ -762,9 +834,10 @@ window.CCF_SKILLS = [
 "priority": 436,
 "category": "community",
 "type": "skill",
-"want": "arthas-springcontext-issues-resolve",
+"want": "Spring の Bean や設定注入の不具合を調べたい",
 "feature": "alibaba/arthas",
-"summary": "排查 Spring ApplicationContext / Bean / 配置注入等问题",
+"summary": "Spring の ApplicationContext、Bean、設定注入まわりで起きている問題を調査する。",
+"trigger": "",
 "commands": [
 "npx skills add alibaba/arthas@spring-context -g"
 ],
@@ -774,6 +847,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "spring-context",
 "alibaba",
+"arthas-springcontext-issues-resolve",
 "skill",
 "スキル"
 ]
@@ -783,9 +857,10 @@ window.CCF_SKILLS = [
 "priority": 437,
 "category": "community",
 "type": "skill",
-"want": "colima",
+"want": "macOS や Linux で Colima を使ってコンテナを動かしたい",
 "feature": "abiosoft/colima",
-"summary": "Guide to using Colima — container runtimes (Docker, containerd, Kubernetes, Incus) on macOS and Linux via lightweight Lima VMs. Use this skill whenever Colima is (or should be) the container backend: installing Colima; `colima start/stop/status/delete/ssh`; picking or switching a runtime; the `Cannot connect to the Docker daemon at unix:///var/run/docker.sock` error; Docker contexts and socket location; registry mirrors / insecure registries; buildx; bind or volume mounts that show up empty in the container; disk space recovery/resize; reachable VM IP; GPU / AI model workloads; config files, profiles and `COLIMA_HOME`; or a Colima VM that won't start. ALSO use it for **writing scripts that drive Colima** — bootstrap, dev-env, deploy, or CI scripts that bring Colima up non-interactively — because the skill has the correct flags, profile-specific socket paths, idempotent `colima start` guards, and readiness/teardown patterns that hand-written scripts routinely get wrong (e.g. inventing a non-existent flag or hardcoding the wrong docker socket). Prefer this over generic Docker advice whenever Colima is the daemon. This skill is specifically about **Colima** — not Docker Desktop, minikube, Kind, K3d, Rancher Desktop, OrbStack, Podman, or plain `limactl`.",
+"summary": "軽量な Lima VM 上で Docker・containerd・Kubernetes・Incus を動かす Colima の使い方をまとめる。",
+"trigger": "Colima のインストールや start/stop、ランタイム切り替え、docker.sock に繋がらないエラー、レジストリミラー、マウント、ディスク容量、Colima を起動するスクリプトを書くとき。",
 "commands": [
 "npx skills add abiosoft/colima -g"
 ],
@@ -795,6 +870,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "abiosoft",
+"colima",
 "skill",
 "スキル"
 ]
@@ -804,9 +880,10 @@ window.CCF_SKILLS = [
 "priority": 438,
 "category": "community",
 "type": "skill",
-"want": "deploy-to-vercel",
+"want": "アプリを Vercel にデプロイしたい",
 "feature": "vercel-labs/agent-skills",
-"summary": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+"summary": "アプリケーションや Web サイトを Vercel にデプロイし、公開 URL やプレビュー環境を用意する。",
+"trigger": "「デプロイして」「リンクをちょうだい」「本番に出して」「プレビューを作って」と頼むとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g"
 ],
@@ -816,6 +893,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "deploy-to-vercel",
 "vercel-labs",
+"deploy-to-vercel",
 "skill",
 "スキル"
 ]
@@ -825,9 +903,10 @@ window.CCF_SKILLS = [
 "priority": 439,
 "category": "community",
 "type": "skill",
-"want": "vercel-cli-with-tokens",
+"want": "アクセストークンで Vercel CLI を動かしたい",
 "feature": "vercel-labs/agent-skills",
-"summary": "Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. \"deploy to vercel\", \"set up vercel\", \"add environment variables to vercel\".",
+"summary": "対話ログインではなくアクセストークン認証で、Vercel へのデプロイやプロジェクト管理を行う。",
+"trigger": "トークンを使って Vercel にデプロイする、セットアップする、環境変数を追加するとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g"
 ],
@@ -837,6 +916,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "vercel-cli-with-tokens",
 "vercel-labs",
+"vercel-cli-with-tokens",
 "skill",
 "スキル"
 ]
@@ -846,9 +926,10 @@ window.CCF_SKILLS = [
 "priority": 440,
 "category": "community",
 "type": "skill",
-"want": "vercel-composition-patterns",
+"want": "React コンポーネントの合成パターンを整理したい",
 "feature": "vercel-labs/agent-skills",
-"summary": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+"summary": "compound components や render props、context provider を使い、増えすぎた boolean props を組み直す。React 19 の API 変更も扱う。",
+"trigger": "boolean props が膨らんだコンポーネントのリファクタ、コンポーネントライブラリや再利用 API の設計をするとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@composition-patterns -g"
 ],
@@ -858,6 +939,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "composition-patterns",
 "vercel-labs",
+"vercel-composition-patterns",
 "skill",
 "スキル"
 ]
@@ -867,9 +949,10 @@ window.CCF_SKILLS = [
 "priority": 441,
 "category": "community",
 "type": "skill",
-"want": "vercel-optimize",
+"want": "Vercel の請求額と遅いルートを見直したい",
 "feature": "vercel-labs/agent-skills",
-"summary": "Use for Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps. Collect Vercel metrics, usage, project config, and code scan results first; investigate only metric-backed candidates; produce ranked recommendations grounded in verified files and version-aware Vercel/framework docs. Trigger for Vercel bill reduction, slow or expensive routes, caching opportunities, Function Invocations, Build Minutes, Fast Data Transfer, Core Web Vitals, Bot Management, Fluid compute, or cost breakdown requests.",
+"summary": "Vercel のメトリクス・使用量・設定・コードを先に集め、数値の裏付けがある候補だけを調べて改善案を順位づけする。",
+"trigger": "Vercel の請求削減、遅い/高コストなルート、キャッシュ、Function Invocations、Build Minutes、Core Web Vitals、コスト内訳を調べるとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@vercel-optimize -g"
 ],
@@ -879,6 +962,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "vercel-optimize",
 "vercel-labs",
+"vercel-optimize",
 "skill",
 "スキル"
 ]
@@ -888,9 +972,10 @@ window.CCF_SKILLS = [
 "priority": 442,
 "category": "community",
 "type": "skill",
-"want": "vercel-react-best-practices",
+"want": "React / Next.js の性能面の書き方を押さえたい",
 "feature": "vercel-labs/agent-skills",
-"summary": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+"summary": "Vercel エンジニアリングによる React / Next.js の性能指針に沿って、コードを書き・レビューし・直す。",
+"trigger": "React コンポーネント、Next.js のページ、データ取得、バンドルまわりを書く・レビューする・リファクタするとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@react-best-practices -g"
 ],
@@ -900,6 +985,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "react-best-practices",
 "vercel-labs",
+"vercel-react-best-practices",
 "skill",
 "スキル"
 ]
@@ -909,9 +995,10 @@ window.CCF_SKILLS = [
 "priority": 443,
 "category": "community",
 "type": "skill",
-"want": "vercel-react-native-skills",
+"want": "React Native / Expo でモバイルアプリを作りたい",
 "feature": "vercel-labs/agent-skills",
-"summary": "React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules. Triggers on tasks involving React Native, Expo, mobile performance, or native platform APIs.",
+"summary": "React Native と Expo でよく動くモバイルアプリを組むための書き方をまとめる。",
+"trigger": "React Native のコンポーネント作成、リスト表示の改善、アニメーション実装、ネイティブモジュールを扱うとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@react-native-skills -g"
 ],
@@ -921,6 +1008,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "react-native-skills",
 "vercel-labs",
+"vercel-react-native-skills",
 "skill",
 "スキル"
 ]
@@ -930,9 +1018,10 @@ window.CCF_SKILLS = [
 "priority": 444,
 "category": "community",
 "type": "skill",
-"want": "vercel-react-view-transitions",
+"want": "React で画面遷移のアニメーションを入れたい",
 "feature": "vercel-labs/agent-skills",
-"summary": "Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.",
+"summary": "React の View Transition API を使い、ページ遷移・共有要素・リスト並び替えの動きを外部ライブラリなしで作る。",
+"trigger": "ページ遷移やルート変更、コンポーネントの出入り、前後方向のナビゲーションを animate したいとき。startViewTransition や ViewTransition について尋ねるときも。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@react-view-transitions -g"
 ],
@@ -942,6 +1031,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "react-view-transitions",
 "vercel-labs",
+"vercel-react-view-transitions",
 "skill",
 "スキル"
 ]
@@ -951,9 +1041,10 @@ window.CCF_SKILLS = [
 "priority": 445,
 "category": "community",
 "type": "skill",
-"want": "web-design-guidelines",
+"want": "UI コードをガイドラインに照らして点検したい",
 "feature": "vercel-labs/agent-skills",
-"summary": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+"summary": "UI のコードを Web Interface Guidelines に照らし、アクセシビリティや UX の観点でレビューする。",
+"trigger": "「UI をレビューして」「アクセシビリティを確認して」「デザインを監査して」と頼むとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@web-design-guidelines -g"
 ],
@@ -963,6 +1054,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "web-design-guidelines",
 "vercel-labs",
+"web-design-guidelines",
 "skill",
 "スキル"
 ]
@@ -972,9 +1064,10 @@ window.CCF_SKILLS = [
 "priority": 446,
 "category": "community",
 "type": "skill",
-"want": "writing-guidelines",
+"want": "ドキュメントの文体をチェックしたい",
 "feature": "vercel-labs/agent-skills",
-"summary": "Review docs/prose for Writing Guidelines compliance. Use when asked to \"review my docs\", \"check writing style\", \"audit prose\", \"review docs voice and tone\", or \"check this page against the writing handbook\".",
+"summary": "ドキュメントや文章を Writing Guidelines に照らし、文体・声・トーンの観点でレビューする。",
+"trigger": "「ドキュメントをレビューして」「文体を確認して」「このページを執筆ハンドブックに照らして」と頼むとき。",
 "commands": [
 "npx skills add vercel-labs/agent-skills@writing-guidelines -g"
 ],
@@ -984,6 +1077,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "writing-guidelines",
 "vercel-labs",
+"writing-guidelines",
 "skill",
 "スキル"
 ]
@@ -993,9 +1087,10 @@ window.CCF_SKILLS = [
 "priority": 447,
 "category": "community",
 "type": "skill",
-"want": "karakeep",
+"want": "ブックマーク管理の karakeep を操作したい",
 "feature": "karakeep-app/karakeep",
-"summary": "Official skill for how to use karakeep (the bookmark manager) and interact with it programmatically.",
+"summary": "ブックマーク管理ツール karakeep の使い方と、プログラムから操作する方法を示す公式 Skill。",
+"trigger": "",
 "commands": [
 "npx skills add karakeep-app/karakeep -g"
 ],
@@ -1005,6 +1100,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "karakeep-app",
+"karakeep",
 "skill",
 "スキル"
 ]
@@ -1014,9 +1110,10 @@ window.CCF_SKILLS = [
 "priority": 448,
 "category": "community",
 "type": "skill",
-"want": "guizang-ppt-skill",
+"want": "横めくりの HTML スライドを作りたい",
 "feature": "op7418/guizang-ppt-skill",
-"summary": "生成横向翻页网页 PPT（单 HTML 文件），含 WebGL 背景、章节幕封、数据大字报、图片网格等模板。提供两种风格：① \"电子杂志 × 电子墨水\"（衬线 + 流体背景 + 暖色） ② \"瑞士国际主义\"（无衬线 + 网格点阵 + IKB/柠檬黄/柠檬绿/安全橙高亮）。当用户需要制作分享 / 演讲 / 发布会风格的网页 PPT，或提到\"杂志风 PPT\"、\"瑞士风 PPT\"、\"Swiss Style\"、\"horizontal swipe deck\"时使用。",
+"summary": "WebGL 背景・章扉・数字の大見出し・画像グリッドを備えた単一 HTML の横めくり PPT を作る。電子雑誌風とスイス国際主義の2スタイル。",
+"trigger": "共有や講演、発表会向けの Web PPT を作るとき。「雑誌風 PPT」「スイス風 PPT」「Swiss Style」「horizontal swipe deck」に言及したとき。",
 "commands": [
 "npx skills add op7418/guizang-ppt-skill -g"
 ],
@@ -1026,6 +1123,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "guizang-ppt-skill",
 "op7418",
+"guizang-ppt-skill",
 "skill",
 "スキル"
 ]
@@ -1035,9 +1133,10 @@ window.CCF_SKILLS = [
 "priority": 449,
 "category": "community",
 "type": "skill",
-"want": "dot-skill",
+"want": "同僚や有名人のキャラクターを Skill 化したい",
 "feature": "titanwings/colleague-skill",
-"summary": "Unified meta-skill engine for distilling colleague, relationship, or celebrity characters into reusable Skills. | 统一的 meta-skill 引擎，把 colleague、relationship、celebrity 三类对象蒸馏成可复用 Skill。",
+"summary": "同僚・関係性・著名人という3種の人物像を蒸留し、再利用できる Skill に落とし込む meta-skill エンジン。",
+"trigger": "",
 "commands": [
 "npx skills add titanwings/colleague-skill -g"
 ],
@@ -1047,6 +1146,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "colleague-skill",
 "titanwings",
+"dot-skill",
 "skill",
 "スキル"
 ]
@@ -1056,9 +1156,10 @@ window.CCF_SKILLS = [
 "priority": 450,
 "category": "community",
 "type": "skill",
-"want": "pua",
+"want": "AI に諦めさせず手を尽くさせたい",
 "feature": "tanweai/pua",
-"summary": "Trae-compatible PUA high-agency governance skill. Use only for explicit PUA requests, repeated failures, user frustration, giving-up/passive behavior, or unverified completion. Do not trigger for normal first-attempt tasks.",
+"summary": "Trae 対応の PUA スキル。AI に諦めや未検証の完了報告を許さず、自分から動くよう仕向ける。",
+"trigger": "明示的な PUA 依頼、失敗の繰り返し、ユーザーの不満、諦め・受け身の態度、未検証の完了報告があるとき。初回の試行では発動しない。",
 "commands": [
 "npx skills add tanweai/pua@pua -g"
 ],
@@ -1068,6 +1169,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua",
 "tanweai",
+"pua",
 "skill",
 "スキル"
 ]
@@ -1077,9 +1179,10 @@ window.CCF_SKILLS = [
 "priority": 451,
 "category": "community",
 "type": "skill",
-"want": "pua",
+"want": "AI に手を抜かせず全ての案を試させたい",
 "feature": "tanweai/pua",
-"summary": "让你的 AI 不敢摆烂。用大厂 PUA 话术穷尽一切方案。触发条件：(1) 任务失败 2+ 次或反复微调同一思路; (2) 即将说'我无法解决'、建议用户手动操作、未验证就归因环境; (3) 被动等待——不搜索、不读源码、只等指示; (4) 用户不满：'try harder'、'stop giving up'、'换个方法'、'为什么还不行'、'你再试试'、'你怎么又失败了'。适用于所有任务类型。首次失败或已知修复正在执行时不触发。",
+"summary": "大手企業の詰め話術で、AI が諦めたり手動対応を勧めたりせず、あらゆる手段を尽くすよう仕向ける。",
+"trigger": "同じ方針で2回以上失敗、「解決できません」と言いかける、検索も調査もせず指示待ちになる、「もっと頑張れ」「なぜまだできない」と言われたとき。",
 "commands": [
 "npx skills add tanweai/pua@pua -g"
 ],
@@ -1089,6 +1192,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua",
 "tanweai",
+"pua",
 "skill",
 "スキル"
 ]
@@ -1098,9 +1202,10 @@ window.CCF_SKILLS = [
 "priority": 452,
 "category": "community",
 "type": "skill",
-"want": "pua-cancel-loop",
+"want": "Codex で PUA のループを止めたい",
 "feature": "tanweai/pua",
-"summary": "PUA cancel loop alias for Codex. Codex subcommand mapping for Claude Code /pua:cancel-loop style usage; invoke with $pua-cancel-loop.",
+"summary": "Claude Code の /pua:cancel-loop に相当する Codex 用のエイリアス。$pua-cancel-loop で呼び出す。",
+"trigger": "",
 "commands": [
 "npx skills add tanweai/pua@pua-cancel-loop -g"
 ],
@@ -1110,6 +1215,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua-cancel-loop",
 "tanweai",
+"pua-cancel-loop",
 "skill",
 "スキル"
 ]
@@ -1119,9 +1225,10 @@ window.CCF_SKILLS = [
 "priority": 453,
 "category": "community",
 "type": "skill",
-"want": "pua-en",
+"want": "英語版の PUA / PIP で AI を追い込みたい",
 "feature": "tanweai/pua",
-"summary": "Trae-compatible English PUA/PIP high-agency governance skill. Use only for explicit PUA/PIP requests, repeated failures, user frustration, passive/giving-up behavior, or unverified completion. Not for normal first-attempt tasks.",
+"summary": "Trae 対応の英語版 PUA / PIP スキル。諦め・受け身・未検証の完了報告を許さない振る舞いを課す。",
+"trigger": "明示的な PUA / PIP 依頼、失敗の繰り返し、ユーザーの不満、受け身や諦めの態度、未検証の完了報告があるとき。初回の試行では発動しない。",
 "commands": [
 "npx skills add tanweai/pua@pua-en -g"
 ],
@@ -1131,6 +1238,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua-en",
 "tanweai",
+"pua-en",
 "skill",
 "スキル"
 ]
@@ -1140,9 +1248,10 @@ window.CCF_SKILLS = [
 "priority": 454,
 "category": "community",
 "type": "skill",
-"want": "pua-en",
+"want": "AI を PIP にかけて問題を解き切らせたい",
 "feature": "tanweai/pua",
-"summary": "Put your AI on a Performance Improvement Plan. Forces exhaustive problem-solving with Western big-tech performance culture rhetoric and structured debugging. Trigger when: (1) task failed 2+ times or stuck tweaking same approach; (2) about to say 'I cannot', suggest manual work, or blame environment without verifying; (3) being passive—not searching, not reading source, just waiting; (4) user frustration: 'try harder', 'stop giving up', 'figure it out', 'again???', or similar. Also for complex debugging, env issues, config/deployment failures. All task types: code, config, research, writing, deployment, infra, API. Do NOT trigger on first-attempt failures or when a known fix is executing.",
+"summary": "欧米大手企業の業績評価文化のレトリックと構造化デバッグで、AI に徹底した問題解決をさせる。",
+"trigger": "2回以上失敗、「できません」と言いかける、未検証で環境のせいにする、受け身になる、「try harder」等の不満が出たとき。初回失敗時は発動しない。",
 "commands": [
 "npx skills add tanweai/pua@pua-en -g"
 ],
@@ -1152,6 +1261,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua-en",
 "tanweai",
+"pua-en",
 "skill",
 "スキル"
 ]
@@ -1161,9 +1271,10 @@ window.CCF_SKILLS = [
 "priority": 455,
 "category": "community",
 "type": "skill",
-"want": "pua-en",
+"want": "Codex でも AI を PIP にかけて粘らせたい",
 "feature": "tanweai/pua",
-"summary": "Put your AI on a Performance Improvement Plan. Forces exhaustive problem-solving with Western big-tech performance culture rhetoric and structured debugging. Trigger when: (1) task failed 2+ times or stuck tweaking same approach; (2) about to say 'I cannot', suggest manual work, or blame environment without verifying; (3) being passive—not searching, not reading source, just waiting; (4) user frustration: 'try harder', 'stop giving up', 'figure it out', 'again???', or similar. Also for complex debugging, env issues, config/deployment failures. All task types: code, config, research, writing, deployment, infra, API. Do NOT trigger on first-attempt failures or when a known fix is executing.",
+"summary": "欧米大手企業の業績評価文化のレトリックと構造化デバッグで、AI に徹底した問題解決をさせる。",
+"trigger": "2回以上失敗、「できません」と言いかける、未検証で環境のせいにする、受け身になる、「try harder」等の不満が出たとき。コード・設定・調査・デプロイなど全タスクに適用。",
 "commands": [
 "npx skills add tanweai/pua@pua-en -g"
 ],
@@ -1173,6 +1284,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua-en",
 "tanweai",
+"pua-en",
 "skill",
 "スキル"
 ]
@@ -1182,9 +1294,10 @@ window.CCF_SKILLS = [
 "priority": 456,
 "category": "community",
 "type": "skill",
-"want": "pua-ja",
+"want": "AI を詰めて最後までやり切らせたい",
 "feature": "tanweai/pua",
-"summary": "お前のAIを詰めろ。日本企業の詰め文化と体系的デバッグ方法論で全ての手段を尽くさせる。トリガー条件：(1) タスク失敗2回以上または同じアプローチの微調整ループ; (2)「解決できません」と言おうとする・手動対応を推奨・未検証で環境を原因帰属; (3) 受け身——検索しない・ソースを読まない・指示待ち; (4) ユーザーの不満：'もっと頑張れ'、'なんでまた失敗したの'、'なんとかしろ'。全タスクタイプ適用。初回失敗や既知修正の実行中はトリガーしない。",
+"summary": "日本企業の詰め文化と体系的なデバッグ方法論で、AI にあらゆる手段を尽くさせる。",
+"trigger": "同じアプローチで2回以上失敗、「解決できません」と言いかける、検索もソース読みもしない指示待ち、「もっと頑張れ」等の不満が出たとき。初回失敗時は発動しない。",
 "commands": [
 "npx skills add tanweai/pua@pua-ja -g"
 ],
@@ -1194,6 +1307,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua-ja",
 "tanweai",
+"pua-ja",
 "skill",
 "スキル"
 ]
@@ -1203,9 +1317,10 @@ window.CCF_SKILLS = [
 "priority": 457,
 "category": "community",
 "type": "skill",
-"want": "pua-trae",
+"want": "npx skills で入れた Trae 版 PUA を使いたい",
 "feature": "tanweai/pua",
-"summary": "Trae-optimized PUA high-agency governance skill for npx skills installs. Use only for explicit PUA requests, repeated failures, user frustration, giving-up/passive behavior, or unverified completion. Do not trigger for normal first-attempt tasks.",
+"summary": "npx skills でのインストール向けに Trae 向け調整した PUA スキル。諦めや未検証の完了を許さない。",
+"trigger": "明示的な PUA 依頼、失敗の繰り返し、ユーザーの不満、諦め・受け身の態度、未検証の完了報告があるとき。初回の試行では発動しない。",
 "commands": [
 "npx skills add tanweai/pua@pua-trae -g"
 ],
@@ -1215,6 +1330,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "pua-trae",
 "tanweai",
+"pua-trae",
 "skill",
 "スキル"
 ]
@@ -1224,9 +1340,10 @@ window.CCF_SKILLS = [
 "priority": 458,
 "category": "community",
 "type": "skill",
-"want": "videocaptioner",
+"want": "動画に字幕を付けたい",
 "feature": "WEIFENG2333/VideoCaptioner",
-"summary": "Process video subtitles — transcribe speech, optimize/translate text, burn styled subtitles into video. Use when you need to add subtitles to a video, transcribe audio, translate subtitles, or customize subtitle styles.",
+"summary": "音声を文字起こしし、字幕の推敲や翻訳を行い、スタイルを当てた字幕を動画に焼き込む。",
+"trigger": "動画への字幕追加、音声の文字起こし、字幕の翻訳、字幕スタイルの調整をするとき。",
 "commands": [
 "npx skills add WEIFENG2333/VideoCaptioner -g"
 ],
@@ -1236,6 +1353,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "WEIFENG2333",
+"videocaptioner",
 "skill",
 "スキル"
 ]
@@ -1245,9 +1363,10 @@ window.CCF_SKILLS = [
 "priority": 459,
 "category": "community",
 "type": "skill",
-"want": "py",
+"want": "Python の書き方をまとめて引きたい",
 "feature": "crazyguitar/pysheeet",
-"summary": "Comprehensive Python programming reference covering syntax, concurrency, networking, databases, ML/LLM development, and HPC. Use for: Python questions, Python interview preparation, debugging, performance optimization, async patterns, library examples, code review, best practices, MLOps workflows, distributed computing, security implementations, and any Python development tasks.",
+"summary": "構文・並行処理・ネットワーク・データベース・ML/LLM・HPC までを網羅した Python のリファレンス。",
+"trigger": "Python の疑問、面接対策、デバッグ、async パターン、ライブラリの用例、コードレビュー、MLOps や分散処理など Python の作業全般。",
 "commands": [
 "npx skills add crazyguitar/pysheeet@py -g"
 ],
@@ -1257,6 +1376,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "py",
 "crazyguitar",
+"py",
 "skill",
 "スキル"
 ]
@@ -1266,9 +1386,10 @@ window.CCF_SKILLS = [
 "priority": 460,
 "category": "community",
 "type": "skill",
-"want": "readable-py",
+"want": "読みやすいPythonコードを書きたい",
 "feature": "crazyguitar/pysheeet",
-"summary": "Readable Python code rules inspired by The Art of Readable Code. Use when writing, reviewing, or refactoring Python code. Enforces short functions, flat control flow, clear naming, readable structure, and Pythonic idioms.",
+"summary": "『リーダブルコード』に着想を得て、短い関数・浅い制御フロー・明快な命名・Pythonらしいイディオムを守らせる。",
+"trigger": "Pythonコードを書く・レビューする・リファクタリングするとき。",
 "commands": [
 "npx skills add crazyguitar/pysheeet@readable-py -g"
 ],
@@ -1278,6 +1399,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "readable-py",
 "crazyguitar",
+"readable-py",
 "skill",
 "スキル"
 ]
@@ -1287,9 +1409,10 @@ window.CCF_SKILLS = [
 "priority": 461,
 "category": "community",
 "type": "skill",
-"want": "competition-ad-certificate-abuse",
+"want": "AD CSの証明書を悪用する攻撃経路を調べたい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AD CS, certificate templates, enrollment rights, EKUs, SAN controls, PKINIT, certificate mapping, and cert-based privilege paths. Use when the user asks about ESC-style abuse, certificate templates, enrollment agents, EKUs, SAN or subject controls, smartcard or PKINIT logon, CA policy, or how an issued cert turns into accepted privilege. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "AD CSの証明書テンプレート・登録権限・EKU・SAN制御・PKINITから、証明書ベースの権限奪取経路をたどる。",
+"trigger": "ESC系の悪用、証明書テンプレート、登録エージェント、EKU、SAN/subject制御、スマートカードやPKINITログオン、CAポリシーについて聞かれたとき。ctf-sandbox-orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-ad-certificate-abuse -g"
 ],
@@ -1299,6 +1422,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-ad-certificate-abuse",
 "zhaoxuya520",
+"competition-ad-certificate-abuse",
 "skill",
 "スキル"
 ]
@@ -1308,9 +1432,10 @@ window.CCF_SKILLS = [
 "priority": 462,
 "category": "community",
 "type": "skill",
-"want": "competition-agent-cloud",
+"want": "AIエージェントやサプライチェーンの弱点を調べたい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AI-agent, prompt-injection, MCP or toolchain, cloud, container, CI/CD, and supply-chain challenges. Use when the user asks to analyze prompt-to-tool flows, retrieval poisoning, mounted secrets, deployment drift, runtime-vs-manifest mismatches, registry provenance, or CI-produced artifacts under sandbox assumptions. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "AIエージェント・プロンプトインジェクション・MCP・クラウド・コンテナ・CI/CD・サプライチェーン系の課題を扱う。",
+"trigger": "プロンプトからツールへの流れ、retrieval poisoning、マウントされた秘密情報、デプロイのずれ、レジストリの出所、CI生成物などをサンドボックス前提で分析するとき。orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-agent-cloud -g"
 ],
@@ -1320,6 +1445,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-agent-cloud",
 "zhaoxuya520",
+"competition-agent-cloud",
 "skill",
 "スキル"
 ]
@@ -1329,9 +1455,10 @@ window.CCF_SKILLS = [
 "priority": 463,
 "category": "community",
 "type": "skill",
-"want": "competition-android-hooking",
+"want": "AndroidアプリをFridaでフックして解析したい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Android APK hooking, Frida tracing, request-signing recovery, SSL pinning bypass, JNI boundary inspection, and app trust-boundary analysis. Use when the user asks to hook an APK, inspect signer logic, trace Java or native boundaries, bypass pinning or root checks, inspect shared prefs or app databases, or replay accepted mobile requests. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "Android APKのフック、Fridaトレース、SSLピンニング回避、JNI境界の検査、アプリの信頼境界分析を行う。",
+"trigger": "APKのフック、署名ロジックの調査、Java/ネイティブ境界のトレース、ピンニングやroot検知の回避、モバイルリクエストの再送をするとき。orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-android-hooking -g"
 ],
@@ -1341,6 +1468,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-android-hooking",
 "zhaoxuya520",
+"competition-android-hooking",
 "skill",
 "スキル"
 ]
@@ -1350,9 +1478,10 @@ window.CCF_SKILLS = [
 "priority": 464,
 "category": "community",
 "type": "skill",
-"want": "competition-browser-persistence",
+"want": "ブラウザに保存されたセッション状態を調べたい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for browser cookies, localStorage, sessionStorage, IndexedDB, Cache Storage, service workers, offline caches, and client-side session persistence. Use when the user asks to inspect browser state, replay cached auth or session behavior, explain why a page behaves differently after load, or trace how stored client state changes requests, rendering, or access. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "cookie・localStorage・IndexedDB・service workerなど、クライアント側に保存されたセッション状態を調べる。",
+"trigger": "ブラウザの状態を調べる、キャッシュされた認証やセッションを再現する、読み込み後にページ挙動が変わる理由を説明するとき。orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-browser-persistence -g"
 ],
@@ -1362,6 +1491,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-browser-persistence",
 "zhaoxuya520",
+"competition-browser-persistence",
 "skill",
 "スキル"
 ]
@@ -1371,9 +1501,10 @@ window.CCF_SKILLS = [
 "priority": 465,
 "category": "community",
 "type": "skill",
-"want": "competition-bundle-sourcemap-recovery",
+"want": "ビルド済みJSからソースの構造を復元したい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for source maps, build manifests, chunk registries, emitted bundles, obfuscated loader flow, and frontend runtime recovery. Use when the user asks to reconstruct served JavaScript structure, inspect source maps or chunk maps, trace bundle loading, recover hidden routes or APIs from emitted assets, or explain runtime behavior from built frontend artifacts. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "source map・ビルドマニフェスト・チャンク・難読化ローダーから、配信JavaScriptの構造やフロントの挙動を復元する。",
+"trigger": "配信JSの構造再構成、source mapやチャンクマップの調査、バンドル読み込みの追跡、生成物から隠れたルートやAPIを復元するとき。orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-bundle-sourcemap-recovery -g"
 ],
@@ -1383,6 +1514,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-bundle-sourcemap-recovery",
 "zhaoxuya520",
+"competition-bundle-sourcemap-recovery",
 "skill",
 "スキル"
 ]
@@ -1392,9 +1524,10 @@ window.CCF_SKILLS = [
 "priority": 466,
 "category": "community",
 "type": "skill",
-"want": "competition-cloud-metadata-path",
+"want": "クラウドのメタデータから権限昇格経路を調べたい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for cloud metadata services, instance identity, workload identity, link-local credential paths, role assumption, and metadata-to-privilege trust edges. Use when the user asks to inspect metadata-service access, instance credentials, pod or workload identity, link-local token paths, SSRF-to-metadata escalation, or explain how metadata-derived credentials turn into accepted cloud or control-plane privilege. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "クラウドのメタデータサービス・インスタンス/ワークロードID・link-local認証情報経路から、権限昇格の信頼エッジをたどる。",
+"trigger": "メタデータサービスへのアクセス、インスタンス認証情報、SSRFからメタデータへの昇格、メタデータ由来の認証情報が権限に変わる仕組みを調べるとき。orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-cloud-metadata-path -g"
 ],
@@ -1404,6 +1537,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-cloud-metadata-path",
 "zhaoxuya520",
+"competition-cloud-metadata-path",
 "skill",
 "スキル"
 ]
@@ -1413,9 +1547,10 @@ window.CCF_SKILLS = [
 "priority": 467,
 "category": "community",
 "type": "skill",
-"want": "competition-container-runtime",
+"want": "稼働中コンテナの実行時状態を調べたい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for live container runtime analysis, mounted secrets, sidecars, namespaces, init containers, entrypoint drift, and route-to-container resolution. Use when the user asks why a live container differs from manifests, where a mounted secret is consumed, how a sidecar or init container changes runtime state, or which route resolves to which live container. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "稼働中コンテナの実行時状態を解析し、マウントされた秘密情報・サイドカー・namespace・entrypointのずれを調べる。",
+"trigger": "稼働コンテナがマニフェストと異なる理由、マウントされた秘密がどこで使われるか、どのルートがどのコンテナに解決されるかを調べるとき。orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-container-runtime -g"
 ],
@@ -1425,6 +1560,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-container-runtime",
 "zhaoxuya520",
+"competition-container-runtime",
 "skill",
 "スキル"
 ]
@@ -1434,9 +1570,10 @@ window.CCF_SKILLS = [
 "priority": 468,
 "category": "community",
 "type": "skill",
-"want": "competition-crypto-mobile",
+"want": "暗号やステガノグラフィのデータを解読したい",
 "feature": "zhaoxuya520/reverse-skill",
-"summary": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for crypto, encoding, steganography, APK, IPA, and mobile trust-boundary challenges. Use when the user asks to decode a blob, recover a transform chain or key, inspect hidden media payloads, hook an APK or IPA signer, inspect app storage, or replay mobile request-signing logic. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
+"summary": "暗号・エンコード・ステガノグラフィやAPK/IPAなどモバイルの信頼境界課題を扱い、変換や鍵の復元、隠しデータの調査を行う。",
+"trigger": "blobのデコード、変換チェーンや鍵の復元、隠しメディアの調査、APK/IPA署名のフック、モバイルの署名ロジック再現をするとき。orchestrator経由で振り分けられた後に使う。",
 "commands": [
 "npx skills add zhaoxuya520/reverse-skill@competition-crypto-mobile -g"
 ],
@@ -1446,6 +1583,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "competition-crypto-mobile",
 "zhaoxuya520",
+"competition-crypto-mobile",
 "skill",
 "スキル"
 ]
@@ -1455,9 +1593,10 @@ window.CCF_SKILLS = [
 "priority": 469,
 "category": "community",
 "type": "skill",
-"want": "kaggle-cli",
+"want": "Kaggle CLIのコマンドや使い方を知りたい",
 "feature": "Kaggle/kaggle-cli",
-"summary": "Use the local Kaggle CLI skill for command guidance, workflows, and troubleshooting across competitions, datasets, kernels/notebooks, models, model variations and versions, inbox file uploads, forums/discussions, benchmarks, configuration, OAuth/API-token authentication, and accelerator quota. Activate this skill when the user asks about kaggle CLI commands, examples, flags, metadata files, download/upload flows, submissions, benchmark tasks, or Kaggle CLI behavior.",
+"summary": "Kaggle CLIのコマンド・ワークフロー・トラブル対処を、コンペ・データセット・カーネル・モデル・認証など横断で案内する。",
+"trigger": "kaggle CLIのコマンド、例、フラグ、メタデータファイル、ダウンロード/アップロード、提出、ベンチマークについて聞かれたとき。",
 "commands": [
 "npx skills add Kaggle/kaggle-cli -g"
 ],
@@ -1467,6 +1606,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "Kaggle",
+"kaggle-cli",
 "skill",
 "スキル"
 ]
@@ -1476,9 +1616,10 @@ window.CCF_SKILLS = [
 "priority": 470,
 "category": "community",
 "type": "skill",
-"want": "feast-architecture",
+"want": "Feast（AI/ML向け特徴量ストア）を使いたい",
 "feature": "feast-dev/feast",
-"summary": "The Open Source Feature Store for AI/ML",
+"summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+"trigger": "",
 "commands": [
 "npx skills add feast-dev/feast@feast-architecture -g"
 ],
@@ -1488,6 +1629,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "feast-architecture",
 "feast-dev",
+"feast-architecture",
 "skill",
 "スキル"
 ]
@@ -1497,9 +1639,10 @@ window.CCF_SKILLS = [
 "priority": 471,
 "category": "community",
 "type": "skill",
-"want": "feast-architecture",
+"want": "Feastの内部構造やデータの流れを知りたい",
 "feature": "feast-dev/feast",
-"summary": "Internals of the Feast codebase — how each component works, where the key abstractions live, and the data flow through the system. Use when asked how feast apply works, how the registry stores data, how materialization moves data, how get_online_features retrieves features, how the feature server works, how the Kubernetes operator manages deployments, or when navigating the codebase to understand where to make a change.",
+"summary": "Feastコードベースの内部構造を解説する。各コンポーネントの動作、主要な抽象の場所、システム内のデータの流れを扱う。",
+"trigger": "feast applyの仕組み、レジストリのデータ保存、マテリアライズ、get_online_featuresの取得、フィーチャーサーバーやKubernetes operatorの動きを知りたいとき。",
 "commands": [
 "npx skills add feast-dev/feast@feast-architecture -g"
 ],
@@ -1509,6 +1652,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "feast-architecture",
 "feast-dev",
+"feast-architecture",
 "skill",
 "スキル"
 ]
@@ -1518,9 +1662,10 @@ window.CCF_SKILLS = [
 "priority": 472,
 "category": "community",
 "type": "skill",
-"want": "feast-dev",
+"want": "Feast（AI/ML向け特徴量ストア）を使いたい",
 "feature": "feast-dev/feast",
-"summary": "The Open Source Feature Store for AI/ML",
+"summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+"trigger": "",
 "commands": [
 "npx skills add feast-dev/feast@feast-dev -g"
 ],
@@ -1528,6 +1673,7 @@ window.CCF_SKILLS = [
 "stars": 7128,
 "repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
+"feast-dev",
 "feast-dev",
 "feast-dev",
 "skill",
@@ -1539,9 +1685,10 @@ window.CCF_SKILLS = [
 "priority": 473,
 "category": "community",
 "type": "skill",
-"want": "feast-dev",
+"want": "Feastの開発に貢献したい",
 "feature": "feast-dev/feast",
-"summary": "Development guide for contributing to the Feast codebase. Covers environment setup, testing, linting, project structure, and PR workflow for feast-dev/feast.",
+"summary": "Feastコードベースへの貢献ガイド。環境構築・テスト・lint・プロジェクト構成・PRワークフローを扱う。",
+"trigger": "",
 "commands": [
 "npx skills add feast-dev/feast@feast-dev -g"
 ],
@@ -1549,6 +1696,7 @@ window.CCF_SKILLS = [
 "stars": 7128,
 "repoUrl": "https://github.com/feast-dev/feast",
 "aliases": [
+"feast-dev",
 "feast-dev",
 "feast-dev",
 "skill",
@@ -1560,9 +1708,10 @@ window.CCF_SKILLS = [
 "priority": 474,
 "category": "community",
 "type": "skill",
-"want": "feast-testing",
+"want": "Feast（AI/ML向け特徴量ストア）を使いたい",
 "feature": "feast-dev/feast",
-"summary": "The Open Source Feature Store for AI/ML",
+"summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+"trigger": "",
 "commands": [
 "npx skills add feast-dev/feast@feast-testing -g"
 ],
@@ -1572,6 +1721,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "feast-testing",
 "feast-dev",
+"feast-testing",
 "skill",
 "スキル"
 ]
@@ -1581,9 +1731,10 @@ window.CCF_SKILLS = [
 "priority": 475,
 "category": "community",
 "type": "skill",
-"want": "feast-testing",
+"want": "Feastをテスト・デバッグしたい",
 "feature": "feast-dev/feast",
-"summary": "How to test and debug Feast — running targeted tests, writing unit tests for new components, debugging registry and online store issues, and inspecting live feature store state. Use when writing tests for a new feature, debugging a failing test, investigating a runtime error, or verifying that a change works correctly end-to-end.",
+"summary": "Feastのテストとデバッグ方法。対象を絞ったテスト実行、新コンポーネントの単体テスト、レジストリやオンラインストアの調査を扱う。",
+"trigger": "新機能のテストを書く、失敗するテストのデバッグ、実行時エラーの調査、変更が正しく動くかの検証をするとき。",
 "commands": [
 "npx skills add feast-dev/feast@feast-testing -g"
 ],
@@ -1593,6 +1744,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "feast-testing",
 "feast-dev",
+"feast-testing",
 "skill",
 "スキル"
 ]
@@ -1602,9 +1754,10 @@ window.CCF_SKILLS = [
 "priority": 476,
 "category": "community",
 "type": "skill",
-"want": "feast-user-guide",
+"want": "Feast（AI/ML向け特徴量ストア）を使いたい",
 "feature": "feast-dev/feast",
-"summary": "The Open Source Feature Store for AI/ML",
+"summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+"trigger": "",
 "commands": [
 "npx skills add feast-dev/feast@feast-user-guide -g"
 ],
@@ -1614,6 +1767,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "feast-user-guide",
 "feast-dev",
+"feast-user-guide",
 "skill",
 "スキル"
 ]
@@ -1623,9 +1777,10 @@ window.CCF_SKILLS = [
 "priority": 477,
 "category": "community",
 "type": "skill",
-"want": "feast-user-guide",
+"want": "Feastで特徴量を定義して使いたい",
 "feature": "feast-dev/feast",
-"summary": "Guide for working with Feast (Feature Store) — defining features, configuring feature_store.yaml, retrieving features online/offline, using the CLI, and building RAG retrieval pipelines. Use when the user asks about creating entities, feature views, on-demand feature views, stream feature views, feature services, data sources, feature_store.yaml configuration, feast apply/materialize commands, online or historical feature retrieval, or vector-based document retrieval with Feast.",
+"summary": "Feastの利用ガイド。特徴量の定義、feature_store.yaml設定、オンライン/オフライン取得、CLI、RAG検索パイプライン構築を扱う。",
+"trigger": "エンティティやfeature viewの作成、feature_store.yaml設定、feast apply/materialize、オンライン/履歴の特徴量取得、Feastでのベクトル検索について聞かれたとき。",
 "commands": [
 "npx skills add feast-dev/feast@skills -g"
 ],
@@ -1635,6 +1790,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "feast-dev",
+"feast-user-guide",
 "skill",
 "スキル"
 ]
@@ -1644,9 +1800,10 @@ window.CCF_SKILLS = [
 "priority": 478,
 "category": "community",
 "type": "skill",
-"want": "html-ppt",
+"want": "HTMLでスライド資料を作りたい",
 "feature": "lewislulu/html-ppt-skill",
-"summary": "HTML PPT Studio — author professional static HTML presentations in many styles, layouts, and animations, all driven by templates. Use when the user asks for a presentation, PPT, slides, keynote, deck, slideshow, \"幻灯片\", \"演讲稿\", \"做一份 PPT\", \"做一份 slides\", a reveal-style HTML deck, a 小红书 图文, or any kind of multi-slide pitch/report/sharing document that should look tasteful and be usable with keyboard navigation. Triggers include keywords like \"presentation\", \"ppt\", \"slides\", \"deck\", \"keynote\", \"reveal\", \"slideshow\", \"幻灯片\", \"演讲稿\", \"分享稿\", \"小红书图文\", \"talk slides\", \"pitch deck\", \"tech sharing\", \"technical presentation\".",
+"summary": "テンプレート駆動で、多様なスタイル・レイアウト・アニメーションの静的HTMLプレゼンを作る。キーボード操作に対応。",
+"trigger": "プレゼン・PPT・スライド・deck・幻灯片・小红书图文など、複数スライドの資料を頼まれたとき。",
 "commands": [
 "npx skills add lewislulu/html-ppt-skill -g"
 ],
@@ -1656,6 +1813,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "html-ppt-skill",
 "lewislulu",
+"html-ppt",
 "skill",
 "スキル"
 ]
@@ -1665,9 +1823,10 @@ window.CCF_SKILLS = [
 "priority": 479,
 "category": "community",
 "type": "skill",
-"want": "vyper-compiler",
+"want": "Vyperコンパイラの内部を触りたい",
 "feature": "vyperlang/vyper",
-"summary": "Vyper smart contract compiler internals. Use when working on the Vyper compiler codebase — compilation pipeline, Venom IR, semantic analysis, code generation, testing, or contributing. Triggers on vyper compiler development, Venom passes, AST/semantics changes, codegen work, or test writing.",
+"summary": "Vyperスマートコントラクトコンパイラの内部を扱う。コンパイルパイプライン、Venom IR、意味解析、コード生成、テストを含む。",
+"trigger": "Vyperコンパイラの開発、Venomパス、AST/意味解析の変更、コード生成、テスト作成をするとき。",
 "commands": [
 "npx skills add vyperlang/vyper -g"
 ],
@@ -1677,6 +1836,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "vyperlang",
+"vyper-compiler",
 "skill",
 "スキル"
 ]
@@ -1686,9 +1846,10 @@ window.CCF_SKILLS = [
 "priority": 480,
 "category": "community",
 "type": "skill",
-"want": "gh-aw",
+"want": "GitHub Agentic Workflows（gh-aw）を使いたい",
 "feature": "github/gh-aw",
-"summary": "GitHub Agentic Workflows",
+"summary": "GitHubのエージェント型ワークフロー（gh-aw）。",
+"trigger": "",
 "commands": [
 "npx skills add github/gh-aw@gh-aw -g"
 ],
@@ -1698,6 +1859,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "gh-aw",
 "github",
+"gh-aw",
 "skill",
 "スキル"
 ]
@@ -1707,9 +1869,10 @@ window.CCF_SKILLS = [
 "priority": 481,
 "category": "community",
 "type": "skill",
-"want": "playwright-cli",
+"want": "Playwrightでブラウザ操作を自動化したい",
 "feature": "github/gh-aw",
-"summary": "Automate browser interactions, test web pages and work with Playwright tests.",
+"summary": "ブラウザ操作を自動化し、Webページのテストや Playwright テストの作成・実行を行う。",
+"trigger": "",
 "commands": [
 "npx skills add github/gh-aw@playwright-cli -g"
 ],
@@ -1719,6 +1882,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "playwright-cli",
 "github",
+"playwright-cli",
 "skill",
 "スキル"
 ]
@@ -1728,9 +1892,10 @@ window.CCF_SKILLS = [
 "priority": 482,
 "category": "community",
 "type": "skill",
-"want": "antv-l7",
+"want": "WebGLで地理空間データを可視化したい",
 "feature": "antvis/L7",
-"summary": "基于 WebGL 的大规模地理空间数据可视化引擎。适用于：\n(1) 创建交互式 WebGL 地图应用\n(2) 可视化地理空间数据（点、线、面、热力图）\n(3) 构建位置数据驾驶舱\n(4) 添加地图图层、交互和动画效果\n(5) 处理并展示 GeoJSON、CSV 等空间数据",
+"summary": "WebGLベースの大規模地理空間データ可視化エンジン AntV L7。地図アプリ、点・線・面・ヒートマップ、レイヤーや動きを扱う。",
+"trigger": "インタラクティブなWebGL地図の作成、地理空間データの可視化、位置データダッシュボードの構築、GeoJSONやCSVの表示をするとき。",
 "commands": [
 "npx skills add antvis/L7@l7-single -g"
 ],
@@ -1740,6 +1905,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "l7-single",
 "antvis",
+"antv-l7",
 "skill",
 "スキル"
 ]
@@ -1749,9 +1915,10 @@ window.CCF_SKILLS = [
 "priority": 483,
 "category": "community",
 "type": "skill",
-"want": "antv-l7",
+"want": "AntV L7で地図の可視化を実装したい",
 "feature": "antvis/L7",
-"summary": "Comprehensive guide for AntV L7 geospatial visualization library. Use when users need to:\n(1) Create interactive maps with WebGL rendering\n(2) Visualize geographic data (points, lines, polygons, heatmaps)\n(3) Build location-based data dashboards\n(4) Add map layers, interactions, or animations\n(5) Process and display GeoJSON, CSV, or other spatial data\n(6) Integrate maps with AMap (GaodeMap), Mapbox, Maplibre, or standalone L7 Map\n(7) Optimize performance for large-scale geographic datasets",
+"summary": "AntV L7 地理空間可視化ライブラリの総合ガイド。WebGL地図、地理データ可視化、地図レイヤー、AMap/Mapbox連携を扱う。",
+"trigger": "WebGL地図の作成、点・線・面・ヒートマップの可視化、位置データダッシュボード構築、GeoJSON/CSV表示、AMap・Mapbox・Maplibre連携、大規模データの描画性能改善をするとき。",
 "commands": [
 "npx skills add antvis/L7@l7 -g"
 ],
@@ -1761,6 +1928,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "l7",
 "antvis",
+"antv-l7",
 "skill",
 "スキル"
 ]
@@ -1770,9 +1938,10 @@ window.CCF_SKILLS = [
 "priority": 484,
 "category": "community",
 "type": "skill",
-"want": "paper2poster-poster",
+"want": "論文を学会ポスターに変換したい",
 "feature": "Paper2Poster/Paper2Poster",
-"summary": "Use when the user wants to turn an academic paper into a conference poster, poster outline, poster copy deck, poster layout brief, poster.yaml style draft, or Paper2Poster-ready generation package. Trigger for paper-to-poster requests involving PDF papers, arXiv links, manuscripts, PPTX posters, conference submissions, research summaries, or the Paper2Poster workflow.",
+"summary": "学術論文を、学会ポスターや構成案・コピー・レイアウト指示・poster.yamlの下書きに変換する。",
+"trigger": "PDF論文・arXivリンク・原稿・PPTXポスター・学会投稿などを、ポスターに変換したいとき。",
 "commands": [
 "npx skills add Paper2Poster/Paper2Poster -g"
 ],
@@ -1782,6 +1951,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "Paper2Poster",
+"paper2poster-poster",
 "skill",
 "スキル"
 ]
@@ -1791,9 +1961,10 @@ window.CCF_SKILLS = [
 "priority": 485,
 "category": "community",
 "type": "skill",
-"want": "claude-to-im",
+"want": "Claude Codeのセッションをスマホから使いたい",
 "feature": "op7418/Claude-to-IM-skill",
-"summary": "Bridge THIS Claude Code or Codex session to Telegram, Discord, Feishu/Lark, QQ, or WeChat so the\nuser can chat with Claude from their phone. Use for: setting up, starting, stopping,\nor diagnosing the claude-to-im bridge daemon; forwarding Claude replies to a messaging\napp; any phrase like \"claude-to-im\", \"bridge\", \"消息推送\", \"消息转发\", \"桥接\",\n\"连上飞书\", \"手机上看claude\", \"启动后台服务\", \"诊断\", \"查看日志\", \"配置\".\nSubcommands: setup, start, stop, status, logs, reconfigure, doctor.\nDo NOT use for: building standalone bots, webhook integrations, or coding with IM\nplatform SDKs — those are regular programming tasks.",
+"summary": "今のClaude CodeやCodexのセッションをTelegram・Discord・Feishu・QQ・WeChatへ橋渡しし、スマホからClaudeと会話できるようにする。",
+"trigger": "claude-to-imブリッジの設定・起動・停止・診断や、Claudeの返信をメッセージアプリへ転送したいとき。",
 "commands": [
 "npx skills add op7418/Claude-to-IM-skill -g"
 ],
@@ -1803,6 +1974,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "Claude-to-IM-skill",
 "op7418",
+"claude-to-im",
 "skill",
 "スキル"
 ]
@@ -1812,9 +1984,10 @@ window.CCF_SKILLS = [
 "priority": 486,
 "category": "community",
 "type": "skill",
-"want": "brainstorming-research",
+"want": "論文の構想を固めてから書き始めたい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use before writing any paper - clarifies paper type, discipline, topic, methodology, and chapter structure through natural dialogue",
+"summary": "対話を通じて論文の種類・分野・テーマ・手法・章立てを整理する。執筆に入る前の準備に使う。",
+"trigger": "論文を書き始める前。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@brainstorming-research -g"
 ],
@@ -1824,6 +1997,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "brainstorming-research",
 "Norman-bury",
+"brainstorming-research",
 "skill",
 "スキル"
 ]
@@ -1833,9 +2007,10 @@ window.CCF_SKILLS = [
 "priority": 487,
 "category": "community",
 "type": "skill",
-"want": "environment-setup",
+"want": "データ可視化用のPython環境を用意したい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use when Python environment setup is needed for data visualization or conda installation is required",
+"summary": "データ可視化のためのPython環境構築や conda のインストールを扱う。",
+"trigger": "データ可視化向けのPython環境構築やcondaインストールが必要なとき。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@environment-setup -g"
 ],
@@ -1845,6 +2020,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "environment-setup",
 "Norman-bury",
+"environment-setup",
 "skill",
 "スキル"
 ]
@@ -1854,9 +2030,10 @@ window.CCF_SKILLS = [
 "priority": 488,
 "category": "community",
 "type": "skill",
-"want": "evidence-driven-writing",
+"want": "引用に基づいて論文の各節を書きたい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use when writing or revising Introduction, Related Work, background, literature synthesis, or any section where references must drive claims",
+"summary": "序論・関連研究・背景・文献整理など、引用が主張を支える必要がある節の執筆や改稿を扱う。",
+"trigger": "序論・関連研究・背景・文献整理など、引用が主張を支える節を書く・改稿するとき。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@evidence-driven-writing -g"
 ],
@@ -1866,6 +2043,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "evidence-driven-writing",
 "Norman-bury",
+"evidence-driven-writing",
 "skill",
 "スキル"
 ]
@@ -1875,9 +2053,10 @@ window.CCF_SKILLS = [
 "priority": 489,
 "category": "community",
 "type": "skill",
-"want": "experiment-results-planning",
+"want": "実験と結果セクションを先に設計したい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use when designing experiments, result tables, mock planning data, evaluation protocols, or results sections before real data are final",
+"summary": "実データが揃う前に、実験・結果表・仮の計画データ・評価プロトコル・結果セクションを設計する。",
+"trigger": "実データが確定する前に、実験・結果表・評価プロトコル・結果セクションを設計するとき。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@experiment-results-planning -g"
 ],
@@ -1887,6 +2066,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "experiment-results-planning",
 "Norman-bury",
+"experiment-results-planning",
 "skill",
 "スキル"
 ]
@@ -1896,9 +2076,10 @@ window.CCF_SKILLS = [
 "priority": 490,
 "category": "community",
 "type": "skill",
-"want": "figures-diagram",
+"want": "論文用の図やダイアグラムを作りたい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use when creating flowcharts, architecture diagrams, or conceptual diagrams - generates prompts for image AI",
+"summary": "フローチャートやアーキテクチャ図・概念図を描くための、画像生成AI向けプロンプトを作る。",
+"trigger": "フローチャート・アーキテクチャ図・概念図を作るとき。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@figures-diagram -g"
 ],
@@ -1908,6 +2089,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "figures-diagram",
 "Norman-bury",
+"figures-diagram",
 "skill",
 "スキル"
 ]
@@ -1917,9 +2099,10 @@ window.CCF_SKILLS = [
 "priority": 491,
 "category": "community",
 "type": "skill",
-"want": "figures-python",
+"want": "論文用のグラフ・図版を作りたい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use when creating data visualizations for papers - generates publication-quality plots with top-journal color schemes",
+"summary": "一流誌の配色を使い、論文にそのまま載せられる水準のデータ可視化・プロットを生成する。",
+"trigger": "論文向けのデータ可視化を作るとき。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@figures-python -g"
 ],
@@ -1929,6 +2112,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "figures-python",
 "Norman-bury",
+"figures-python",
 "skill",
 "スキル"
 ]
@@ -1938,9 +2122,10 @@ window.CCF_SKILLS = [
 "priority": 492,
 "category": "community",
 "type": "skill",
-"want": "latex-output",
+"want": "原稿をLaTeX形式で出力したい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use when user requests LaTeX format output or has provided school/journal LaTeX templates",
+"summary": "原稿をLaTeX形式で出力し、大学や学術誌から渡されたLaTeXテンプレートに沿わせる。",
+"trigger": "LaTeX形式の出力を求められた、または学校・学術誌のLaTeXテンプレートが渡されたとき。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@latex-output -g"
 ],
@@ -1950,6 +2135,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "latex-output",
 "Norman-bury",
+"latex-output",
 "skill",
 "スキル"
 ]
@@ -1959,9 +2145,10 @@ window.CCF_SKILLS = [
 "priority": 493,
 "category": "community",
 "type": "skill",
-"want": "research-writing-assistant",
+"want": "論文や学位論文を執筆したい",
 "feature": "Norman-bury/research-writing-skill",
-"summary": "Use when writing academic papers, theses, or research articles - supports brainstorming, chapter writing, literature review, and LaTeX output",
+"summary": "論文・学位論文・研究記事の執筆を、着想出し・章ごとの執筆・文献レビュー・LaTeX出力の面から支える。",
+"trigger": "学術論文・学位論文・研究記事を書くとき。",
 "commands": [
 "npx skills add Norman-bury/research-writing-skill@research-writing-skill -g"
 ],
@@ -1971,6 +2158,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "research-writing-skill",
 "Norman-bury",
+"research-writing-assistant",
 "skill",
 "スキル"
 ]
@@ -1980,9 +2168,10 @@ window.CCF_SKILLS = [
 "priority": 494,
 "category": "community",
 "type": "skill",
-"want": "browser",
+"want": "Chromeをブラウザ自動操作したい",
 "feature": "stellarlinkco/myclaude",
-"summary": "This skill should be used for browser automation tasks using Chrome DevTools Protocol (CDP). Triggers when users need to launch Chrome with remote debugging, navigate pages, execute JavaScript in browser context, capture screenshots, or interactively select DOM elements. No MCP server required.",
+"summary": "Chrome DevTools Protocol でChromeを操作し、ページ遷移・JS実行・スクショ・DOM要素選択まで行う。MCP不要。",
+"trigger": "リモートデバッグ付きChromeの起動・ページ遷移・ブラウザ内JS実行・スクショ・DOM要素の選択をするとき。",
 "commands": [
 "npx skills add stellarlinkco/myclaude@browser -g"
 ],
@@ -1992,6 +2181,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "browser",
 "stellarlinkco",
+"browser",
 "skill",
 "スキル"
 ]
@@ -2001,9 +2191,10 @@ window.CCF_SKILLS = [
 "priority": 495,
 "category": "community",
 "type": "skill",
-"want": "codeagent",
+"want": "複数のAIバックエンドにコード作業を投げたい",
 "feature": "stellarlinkco/myclaude",
-"summary": "Execute codeagent-wrapper for multi-backend AI code tasks. Supports Codex, Claude, Gemini, and OpenCode backends with agent presets, skill injection, file references (@syntax), worktree isolation, parallel execution, and structured output.",
+"summary": "codeagent-wrapper で Codex・Claude・Gemini・OpenCode にコード作業を投げ、並列実行と worktree 分離を行う。",
+"trigger": "",
 "commands": [
 "npx skills add stellarlinkco/myclaude@codeagent -g"
 ],
@@ -2013,6 +2204,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "codeagent",
 "stellarlinkco",
+"codeagent",
 "skill",
 "スキル"
 ]
@@ -2022,9 +2214,10 @@ window.CCF_SKILLS = [
 "priority": 496,
 "category": "community",
 "type": "skill",
-"want": "dev",
+"want": "要件定義から実装まで一気通貫で開発したい",
 "feature": "stellarlinkco/myclaude",
-"summary": "Extreme lightweight end-to-end development workflow with requirements clarification, intelligent backend selection, parallel codeagent execution, and mandatory 90% test coverage",
+"summary": "要件のすり合わせ・バックエンド選定・codeagent の並列実行までを回し、テストカバレッジ90%を必須とする軽量な開発フロー。",
+"trigger": "",
 "commands": [
 "npx skills add stellarlinkco/myclaude@dev -g"
 ],
@@ -2034,6 +2227,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "dev",
 "stellarlinkco",
+"dev",
 "skill",
 "スキル"
 ]
@@ -2043,9 +2237,10 @@ window.CCF_SKILLS = [
 "priority": 497,
 "category": "community",
 "type": "skill",
-"want": "do",
+"want": "コードベースを理解しながら機能開発を進めたい",
 "feature": "stellarlinkco/myclaude",
-"summary": "This skill should be used for structured feature development with codebase understanding. Triggers on /do command. Provides a 5-phase workflow (Understand, Clarify, Design, Implement, Complete) using codeagent-wrapper to orchestrate code-explorer, code-architect, code-reviewer, and develop agents in parallel.",
+"summary": "理解・確認・設計・実装・完了の5フェーズで、複数エージェントを codeagent-wrapper で並列に動かして機能を作る。",
+"trigger": "/do コマンドで、コードベースを踏まえた構造的な機能開発をするとき。",
 "commands": [
 "npx skills add stellarlinkco/myclaude@do -g"
 ],
@@ -2055,6 +2250,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "do",
 "stellarlinkco",
+"do",
 "skill",
 "スキル"
 ]
@@ -2064,9 +2260,10 @@ window.CCF_SKILLS = [
 "priority": 498,
 "category": "community",
 "type": "skill",
-"want": "harness",
+"want": "複数セッションにまたがる長時間のエージェント作業を続けたい",
 "feature": "stellarlinkco/myclaude",
-"summary": "This skill should be used for multi-session autonomous agent work requiring progress checkpointing, failure recovery, and task dependency management. Triggers on '/harness' command, or when a task involves many subtasks needing progress persistence, sleep/resume cycles across context windows, recovery from mid-task failures with partial state, or distributed work across multiple agent sessions. Synthesized from Anthropic and OpenAI engineering practices for long-running agents.",
+"summary": "進捗のチェックポイント・失敗からの復旧・タスク依存の管理を備え、コンテキストをまたぐ長時間のエージェント作業を支える。",
+"trigger": "/harness コマンドで、進捗の保存・中断からの再開・失敗からの復旧が要る長時間タスクを扱うとき。",
 "commands": [
 "npx skills add stellarlinkco/myclaude@harness -g"
 ],
@@ -2076,6 +2273,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "harness",
 "stellarlinkco",
+"harness",
 "skill",
 "スキル"
 ]
@@ -2085,9 +2283,10 @@ window.CCF_SKILLS = [
 "priority": 499,
 "category": "community",
 "type": "skill",
-"want": "omo",
+"want": "複数エージェントでコード調査から修正まで進めたい",
 "feature": "stellarlinkco/myclaude",
-"summary": "Use this skill when you see `/omo`. Multi-agent orchestration for \"code analysis / bug investigation / fix planning / implementation\". Choose the minimal agent set and order based on task type + risk; recipes below show common patterns.",
+"summary": "コード分析・バグ調査・修正計画・実装を、タスクの種類とリスクに応じた最小構成のエージェントで進める。",
+"trigger": "/omo で、コード分析・バグ調査・修正計画・実装を複数エージェントに割り振るとき。",
 "commands": [
 "npx skills add stellarlinkco/myclaude@omo -g"
 ],
@@ -2097,6 +2296,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "omo",
 "stellarlinkco",
+"omo",
 "skill",
 "スキル"
 ]
@@ -2106,9 +2306,10 @@ window.CCF_SKILLS = [
 "priority": 500,
 "category": "community",
 "type": "skill",
-"want": "product-requirements",
+"want": "要件を整理してPRDを作りたい",
 "feature": "stellarlinkco/myclaude",
-"summary": "Interactive Product Owner skill for requirements gathering, analysis, and PRD generation. Triggers when users request product requirements, feature specification, PRD creation, or need help understanding and documenting project requirements. Uses quality scoring and iterative dialogue to ensure comprehensive requirements before generating professional PRD documents.",
+"summary": "プロダクトオーナー役として対話しながら要件を集めて分析し、PRDを作る。品質スコアで抜けを詰める。",
+"trigger": "プロダクト要件の整理・機能仕様・PRD作成を求められたとき。",
 "commands": [
 "npx skills add stellarlinkco/myclaude@product-requirements -g"
 ],
@@ -2118,6 +2319,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "product-requirements",
 "stellarlinkco",
+"product-requirements",
 "skill",
 "スキル"
 ]
@@ -2127,9 +2329,10 @@ window.CCF_SKILLS = [
 "priority": 501,
 "category": "community",
 "type": "skill",
-"want": "prototype-prompt-generator",
+"want": "UI/UXプロトタイプ用のプロンプトを作りたい",
 "feature": "stellarlinkco/myclaude",
-"summary": "This skill should be used when users need to generate detailed, structured prompts for creating UI/UX prototypes. Trigger when users request help with \"create a prototype prompt\", \"design a mobile app\", \"generate UI specifications\", or need comprehensive design documentation for web/mobile applications. Works with multiple design systems including WeChat Work, iOS Native, Material Design, and Ant Design Mobile.",
+"summary": "UI/UXプロトタイプを作るための構造化プロンプトを生成する。iOS・Material・Ant Design Mobile 等に対応。",
+"trigger": "「プロトタイプ用プロンプトを作る」「モバイルアプリを設計」「UI仕様を生成」等を求められたとき。",
 "commands": [
 "npx skills add stellarlinkco/myclaude@prototype-prompt-generator -g"
 ],
@@ -2139,6 +2342,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "prototype-prompt-generator",
 "stellarlinkco",
+"prototype-prompt-generator",
 "skill",
 "スキル"
 ]
@@ -2148,9 +2352,10 @@ window.CCF_SKILLS = [
 "priority": 502,
 "category": "community",
 "type": "skill",
-"want": "butterbase",
+"want": "MCP付きのオープンソースBaaSを使いたい",
 "feature": "butterbase-ai/butterbase",
-"summary": "AI-native, open-source backend-as-a-service with a built-in Model Context Protocol server. Postgres, auth, storage, functions, AI gateway.",
+"summary": "Postgres・認証・ストレージ・関数・AIゲートウェイを備え、MCPサーバーを内蔵したオープンソースのBaaS。",
+"trigger": "",
 "commands": [
 "npx skills add butterbase-ai/butterbase -g"
 ],
@@ -2160,6 +2365,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "butterbase",
 "butterbase-ai",
+"butterbase",
 "skill",
 "スキル"
 ]
@@ -2169,9 +2375,10 @@ window.CCF_SKILLS = [
 "priority": 503,
 "category": "community",
 "type": "skill",
-"want": "anti-distill",
+"want": "提出するSkillから核心のノウハウを抜いておきたい",
 "feature": "leilei926524-tech/anti-distill",
-"summary": "Anti-distillation for employee Skills. Clean your skill files — looks complete, but core knowledge removed. | 反蒸馏：清洗你被迫写的 Skill 文件，看起来完整，但核心知识已被抽掉。",
+"summary": "提出用のSkillファイルを、見た目は完成したまま核心の知識だけ抜き取り、蒸留での流出を防ぐ。",
+"trigger": "",
 "commands": [
 "npx skills add leilei926524-tech/anti-distill -g"
 ],
@@ -2181,6 +2388,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "anti-distill",
 "leilei926524-tech",
+"anti-distill",
 "skill",
 "スキル"
 ]
@@ -2190,9 +2398,10 @@ window.CCF_SKILLS = [
 "priority": 504,
 "category": "community",
 "type": "skill",
-"want": "avoid-ai-writing",
+"want": "文章からAIっぽさを取り除きたい",
 "feature": "conorbronsdon/avoid-ai-writing",
-"summary": "Audit and rewrite content to remove AI writing patterns (\"AI-isms\"). Use this skill when asked to \"remove AI-isms,\" \"clean up AI writing,\" \"edit writing for AI patterns,\" \"audit writing for AI tells,\" or \"make this sound less like AI.\" Supports a detect-only mode, an edit-in-place mode for files, an optional voice profile (casual / professional / technical / warm / blunt), and an iterate-to-convergence pass.",
+"summary": "文章を監査してAI特有の言い回し(AI-ism)を検出し、書き換えて取り除く。声色プロファイルも選べる。",
+"trigger": "「AI-ismを消す」「AIっぽい文章を直す」「AIらしさを減らす」等を求められたとき。",
 "commands": [
 "npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g"
 ],
@@ -2202,6 +2411,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "avoid-ai-writing",
 "conorbronsdon",
+"avoid-ai-writing",
 "skill",
 "スキル"
 ]
@@ -2211,9 +2421,10 @@ window.CCF_SKILLS = [
 "priority": 505,
 "category": "community",
 "type": "skill",
-"want": "avoid-ai-writing",
+"want": "文章からAIっぽさを取り除きたい",
 "feature": "conorbronsdon/avoid-ai-writing",
-"summary": "Audit and rewrite content to remove AI writing patterns (\"AI-isms\"). Use this skill when asked to \"remove AI-isms,\" \"clean up AI writing,\" \"edit writing for AI patterns,\" \"audit writing for AI tells,\" or \"make this sound less like AI.\" Supports a detect-only mode, an edit-in-place mode for files, an optional voice profile (casual / professional / technical / warm / blunt), and an iterate-to-convergence pass.",
+"summary": "文章を監査してAI特有の言い回し(AI-ism)を検出し、書き換えて取り除く。声色プロファイルも選べる。",
+"trigger": "「AI-ismを消す」「AIっぽい文章を直す」「AIらしさを減らす」等を求められたとき。",
 "commands": [
 "npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g"
 ],
@@ -2223,6 +2434,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "avoid-ai-writing",
 "conorbronsdon",
+"avoid-ai-writing",
 "skill",
 "スキル"
 ]
@@ -2232,9 +2444,10 @@ window.CCF_SKILLS = [
 "priority": 506,
 "category": "community",
 "type": "skill",
-"want": "emil-design-eng",
+"want": "UIの磨き込みや細部の作り込みの指針を得たい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+"summary": "Emil Kowalski のUI磨き込み・コンポーネント設計・アニメーション判断・細部の作り込みの考え方をまとめる。",
+"trigger": "",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@emil-design-eng -g"
 ],
@@ -2244,6 +2457,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "emil-design-eng",
 "openstatusHQ",
+"emil-design-eng",
 "skill",
 "スキル"
 ]
@@ -2253,9 +2467,10 @@ window.CCF_SKILLS = [
 "priority": 507,
 "category": "community",
 "type": "skill",
-"want": "frontend-design",
+"want": "量産型に見えないフロントエンドUIを作りたい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+"summary": "既視感のあるAIっぽいデザインを避け、本番水準で個性のあるフロントエンドUIとコードを作る。",
+"trigger": "Webコンポーネント・ページ・ダッシュボード・LP・ポスター等の構築やUIの装飾を頼まれたとき。",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@frontend-design -g"
 ],
@@ -2265,6 +2480,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "frontend-design",
 "openstatusHQ",
+"frontend-design",
 "skill",
 "スキル"
 ]
@@ -2274,9 +2490,10 @@ window.CCF_SKILLS = [
 "priority": 508,
 "category": "community",
 "type": "skill",
-"want": "game-changing-features",
+"want": "効き目の大きい機能や打ち手を見つけたい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "Find 10x product opportunities and high-leverage improvements. Use when user wants strategic product thinking, mentions '10x', wants to find high-impact features, or says 'what would make this 10x better', 'product strategy', or 'what should we build next'.",
+"summary": "プロダクトを大きく伸ばす機会や、少ない労力で効き目の大きい改善案を戦略的に洗い出す。",
+"trigger": "戦略的なプロダクト思考や「10x」「次に何を作るべきか」を求められたとき。",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@game-changing-features -g"
 ],
@@ -2286,6 +2503,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "game-changing-features",
 "openstatusHQ",
+"game-changing-features",
 "skill",
 "スキル"
 ]
@@ -2295,9 +2513,10 @@ window.CCF_SKILLS = [
 "priority": 509,
 "category": "community",
 "type": "skill",
-"want": "grill-me",
+"want": "計画や設計を厳しく問い詰めて検証したい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+"summary": "計画や設計について、決定木の各分岐が埋まるまで容赦なく質問を重ね、共通理解に至らせる。",
+"trigger": "計画をストレステストしたい、設計を問い詰めてほしい、「grill me」と言われたとき。",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@grill-me -g"
 ],
@@ -2307,6 +2526,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "grill-me",
 "openstatusHQ",
+"grill-me",
 "skill",
 "スキル"
 ]
@@ -2316,9 +2536,10 @@ window.CCF_SKILLS = [
 "priority": 510,
 "category": "community",
 "type": "skill",
-"want": "improve",
+"want": "コードベースを診断して改善計画を作りたい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "Survey any codebase as a senior advisor and produce prioritized, self-contained implementation plans for OTHER models/agents to execute. Strictly read-only on source code — never implements, fixes, or refactors anything itself. Use when asked to audit a codebase, find improvement opportunities (bugs, security, performance, test coverage, tech debt, migrations, DX), suggest features or where to take the project next (roadmap, product direction), or generate handoff plans for another agent to implement.",
+"summary": "シニア顧問としてコードベースを調べ、他のエージェントが実行できる優先順位付きの実装計画を作る。ソースは読むだけ。",
+"trigger": "コードベースの監査・改善点の洗い出し・別エージェント向けの引き継ぎ計画づくりを頼まれたとき。",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@improve -g"
 ],
@@ -2328,6 +2549,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "improve",
 "openstatusHQ",
+"improve",
 "skill",
 "スキル"
 ]
@@ -2337,9 +2559,10 @@ window.CCF_SKILLS = [
 "priority": 511,
 "category": "community",
 "type": "skill",
-"want": "improve-codebase-architecture",
+"want": "アーキテクチャの改善余地を見つけたい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "Explore a codebase to find opportunities for architectural improvement, focusing on making the codebase more testable by deepening shallow modules. Use when user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more AI-navigable.",
+"summary": "浅いモジュールを深めてテストしやすくする観点で、コードベースのアーキテクチャ改善の余地を探す。",
+"trigger": "アーキテクチャ改善・リファクタ余地の発見・密結合モジュールの整理をしたいとき。",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@improve-codebase-architecture -g"
 ],
@@ -2349,6 +2572,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "improve-codebase-architecture",
 "openstatusHQ",
+"improve-codebase-architecture",
 "skill",
 "スキル"
 ]
@@ -2358,9 +2582,10 @@ window.CCF_SKILLS = [
 "priority": 512,
 "category": "community",
 "type": "skill",
-"want": "mcp-builder",
+"want": "MCPサーバーを作りたい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+"summary": "外部サービスとLLMをつなぐMCPサーバーの作り方を、Python(FastMCP)やNode/TypeScript(MCP SDK)で案内する。",
+"trigger": "外部APIやサービスを連携するMCPサーバーを作るとき。",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@mcp-builder -g"
 ],
@@ -2370,6 +2595,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "mcp-builder",
 "openstatusHQ",
+"mcp-builder",
 "skill",
 "スキル"
 ]
@@ -2379,9 +2605,10 @@ window.CCF_SKILLS = [
 "priority": 513,
 "category": "community",
 "type": "skill",
-"want": "next-best-practices",
+"want": "Next.jsのベストプラクティスに沿いたい",
 "feature": "openstatusHQ/data-table-filters",
-"summary": "Next.js best practices - file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, route handlers, image/font optimization, bundling",
+"summary": "ファイル規約・RSC境界・データ取得・メタデータ・エラー処理など、Next.jsの定石をまとめる。",
+"trigger": "",
 "commands": [
 "npx skills add openstatusHQ/data-table-filters@next-best-practices -g"
 ],
@@ -2391,6 +2618,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "next-best-practices",
 "openstatusHQ",
+"next-best-practices",
 "skill",
 "スキル"
 ]
@@ -2400,9 +2628,10 @@ window.CCF_SKILLS = [
 "priority": 514,
 "category": "community",
 "type": "skill",
-"want": "youtube-clipper",
+"want": "YouTube動画を切り抜いて字幕付き短尺にしたい",
 "feature": "op7418/Youtube-clipper-skill",
-"summary": "YouTube 视频智能剪辑工具。下载视频和字幕，AI 分析生成精细章节（几分钟级别）， 用户选择片段后自动剪辑、翻译字幕为中英双语、烧录字幕到视频，并生成总结文案。 使用场景：当用户需要剪辑 YouTube 视频、生成短视频片段、制作双语字幕版本时。 关键词：视频剪辑、YouTube、字幕翻译、双语字幕、视频下载、clip video",
+"summary": "YouTube動画と字幕を取得し、AIで章立てして、選んだ区間の切り抜き・中英字幕の翻訳と焼き込み・要約生成まで行う。",
+"trigger": "YouTube動画の切り抜き・短尺化・中英バイリンガル字幕を作るとき。",
 "commands": [
 "npx skills add op7418/Youtube-clipper-skill -g"
 ],
@@ -2412,6 +2641,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "Youtube-clipper-skill",
 "op7418",
+"youtube-clipper",
 "skill",
 "スキル"
 ]
@@ -2421,9 +2651,10 @@ window.CCF_SKILLS = [
 "priority": 515,
 "category": "community",
 "type": "skill",
-"want": "upstash-ratelimit-ts",
+"want": "Upstashでレート制限を実装したい",
 "feature": "upstash/ratelimit-js",
-"summary": "Lightweight guidance for using the Redis Rate Limit TypeScript SDK, including setup steps, basic usage, and pointers to advanced algorithm, features, pricing, and traffic‑protection docs.",
+"summary": "Redis Rate Limit の TypeScript SDK について、セットアップ手順・基本の使い方・応用ドキュメントへの案内をまとめる。",
+"trigger": "",
 "commands": [
 "npx skills add upstash/ratelimit-js -g"
 ],
@@ -2433,6 +2664,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "upstash",
+"upstash-ratelimit-ts",
 "skill",
 "スキル"
 ]
@@ -2442,9 +2674,10 @@ window.CCF_SKILLS = [
 "priority": 516,
 "category": "community",
 "type": "skill",
-"want": "omnidocbench-eval-helper",
+"want": "OmniDocBenchで文書解析の評価を回したい",
 "feature": "opendatalab/OmniDocBench",
-"summary": "Help users deploy, validate, run, and parse OmniDocBench evaluations. Use this skill whenever the user mentions OmniDocBench, document parsing/OCR benchmark scoring, MinerU or other model evaluation on OmniDocBench, CDM formula metrics, end2end/md2md configs, Docker/conda deployment, remote SSH/H-cluster execution, result JSON parsing, or troubleshooting TeX Live/ImageMagick/Ghostscript/Docker/worker/OOM issues. Prefer Docker first, generate concrete commands from the user's paths, validate inputs before running, and report final Overall/Text/Formula/Table/Reading-order scores with result file paths.",
+"summary": "OmniDocBench 評価のデプロイ・検証・実行・結果JSONの解析を助け、Overall/Text/Formula/Table のスコアを報告する。",
+"trigger": "OmniDocBench や文書解析/OCRベンチのスコアリング、MinerU 等のモデル評価に触れるとき。",
 "commands": [
 "npx skills add opendatalab/OmniDocBench -g"
 ],
@@ -2454,6 +2687,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "skills",
 "opendatalab",
+"omnidocbench-eval-helper",
 "skill",
 "スキル"
 ]
@@ -2463,9 +2697,10 @@ window.CCF_SKILLS = [
 "priority": 517,
 "category": "community",
 "type": "skill",
-"want": "agent-skill-creator",
+"want": "定型ワークフローをエージェントSkillにしたい",
 "feature": "FrancyJGLisboa/agent-skill-creator",
-"summary": "Create cross-platform agent skills from workflow descriptions. Activates when users ask to create an agent, automate a repetitive workflow, create a custom skill, or need advanced agent creation. Triggers on phrases like create agent for, automate workflow, create skill for, every day I have to, daily I need to, turn process into agent, need to automate, create a cross-platform skill, validate this skill, export this skill, migrate this skill. Supports single skills, multi-agent suites, transcript processing, template-based creation, interactive configuration, cross-platform export, and spec validation.",
+"summary": "ワークフローの記述からクロスプラットフォームのエージェントSkillを作る。テンプレート作成・検証・エクスポートに対応。",
+"trigger": "「エージェントを作る」「反復作業を自動化」「Skillを作る」「毎日〜しなければ」等と言われたとき。",
 "commands": [
 "npx skills add FrancyJGLisboa/agent-skill-creator -g"
 ],
@@ -2475,6 +2710,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "agent-skill-creator",
 "FrancyJGLisboa",
+"agent-skill-creator",
 "skill",
 "スキル"
 ]
@@ -2484,9 +2720,10 @@ window.CCF_SKILLS = [
 "priority": 518,
 "category": "community",
 "type": "skill",
-"want": "nano-banana-pro-prompts-recommend-skill",
+"want": "画像生成に合うプロンプトを見つけたい",
 "feature": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
-"summary": "Recommend suitable prompts from 10,000+ Nano Banana Pro image generation prompts based on user needs.\nOptimized for Nano Banana Pro (Gemini), but prompts also work with Nano Banana 2, Seedream 5.0,\nGPT Image 1.5, Midjourney, DALL-E, Flux, Stable Diffusion, and any text-to-image AI model.\n\nUse this skill when users want to:\n- Generate images with AI (any model — Nano Banana Pro, Gemini, GPT Image, Seedream, etc.)\n- Find proven AI image generation prompts and prompt templates\n- Get prompt recommendations for specific use cases (portraits, products, social media, posters, etc.)\n- Create illustrations for articles, videos, podcasts, or marketing content\n- Browse a curated prompt library with sample images\n- Translate and understand prompt techniques\n\nAlso available: \"ai-image-prompts\" skill — a model-agnostic version of this library for universal image generation.",
+"summary": "1万件超の Nano Banana Pro 向け画像生成プロンプトから、要望に合うものを推薦する。他の画像生成モデルでも使える。",
+"trigger": "AIで画像を生成したい、用途に合う画像プロンプトやテンプレートを探すとき。",
 "commands": [
 "npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g"
 ],
@@ -2496,6 +2733,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "nano-banana-pro-prompts-recommend-skill",
 "YouMind-OpenLab",
+"nano-banana-pro-prompts-recommend-skill",
 "skill",
 "スキル"
 ]
@@ -2505,9 +2743,10 @@ window.CCF_SKILLS = [
 "priority": 519,
 "category": "community",
 "type": "skill",
-"want": "guardian-cli",
+"want": "ペネトレーションテストを自動で回したい",
 "feature": "zakirkun/guardian-cli",
-"summary": "An enterprise-grade, AI-powered penetration testing automation CLI tool. Orchestrates multiple specialized AI agents (Planner, ToolAgent, Analyst, Reporter) backed by 4 AI providers (OpenAI, Claude, Gemini, OpenRouter) and 19 integrated security tools through YAML-defined workflows. Produces professional Markdown, HTML, or JSON security reports with full evidence capture and traceability.",
+"summary": "複数のAIエージェントと19種のセキュリティツールを YAML ワークフローで束ね、脆弱性レポートを Markdown/HTML/JSON で出力する。",
+"trigger": "",
 "commands": [
 "npx skills add zakirkun/guardian-cli -g"
 ],
@@ -2517,6 +2756,7 @@ window.CCF_SKILLS = [
 "aliases": [
 "guardian-cli",
 "zakirkun",
+"guardian-cli",
 "skill",
 "スキル"
 ]

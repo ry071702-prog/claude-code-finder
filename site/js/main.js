@@ -153,7 +153,12 @@
   function sourceName(id){ const s = sourceOf(id); return s ? s.name : "Official docs"; }
   function chipLabel(entry){
     if(entry.origin === "custom") return entry.author ? entry.author : "社内ナレッジ";
-    if(entry.origin === "skill") return "GitHub · " + (entry.feature || "").split("/")[0];
+    if(entry.origin === "skill"){
+      // star は skill 単体の評価ではなく配布元リポジトリの star。owner と並べて repo 帰属を明示する。
+      const owner = (entry.feature || "").split("/")[0];
+      const star = entry.stars ? " · ★" + fmtStars(entry.stars) : "";
+      return "GitHub · " + owner + star;
+    }
     return sourceName(entry.source);
   }
   function sourceUrl(id){ const s = sourceOf(id); return s ? s.url : "https://code.claude.com/docs/"; }
@@ -285,7 +290,7 @@
     const custom = entry.origin === "custom";
     const skill = entry.origin === "skill";
     const badge = skill
-      ? '<span class="badge is-skill" title="コミュニティSkill (GitHub star)">★ '+fmtStars(entry.stars||0)+'</span>'
+      ? '<span class="badge is-skill" title="GitHub で配布されているコミュニティ Skill">Skill</span>'
       : custom
       ? '<span class="badge is-custom" title="独自エントリ">◆ 独自</span>'
       : '<span class="badge'+(removed?" is-removed":"")+'">'+escapeHtml(typeLabels[entry.type] || entry.type)+'</span>';
@@ -465,10 +470,14 @@
     if(entry.origin === "skill"){
       els.modalTitle.textContent = entry.want;
       const repo = escapeHtml(entry.feature||"");
+      const triggerBlock = entry.trigger
+        ? block("when","bolt","こんなときに","<p>"+escapeHtml(entry.trigger)+"</p>")
+        : "";
       els.modalBody.innerHTML = '<div class="detail-grid">'+
         block("what","extension","このSkillは","<p>"+escapeHtml(entry.summary)+"</p>")+
+        triggerBlock+
         block("install","download","各自のClaude Codeに導入","<p>下記をコピーして実行（<code>-g</code> はユーザー全体・外すとプロジェクト単位）</p>"+installRow(entry.install))+
-        block("src","link","出所（GitHub）",'<p><a class="source-link" href="'+escapeHtml(entry.repoUrl||"#")+'" target="_blank" rel="noopener noreferrer">'+repo+' ★ '+fmtStars(entry.stars||0)+'</a></p><p class="src-url">導入前に必ず中身を確認（skill は任意コード実行）</p>')+
+        block("src","link","出所（GitHub）",'<p><a class="source-link" href="'+escapeHtml(entry.repoUrl||"#")+'" target="_blank" rel="noopener noreferrer">'+repo+'</a><span class="repo-star" title="配布元リポジトリの GitHub star（skill 単体の評価ではない）">リポジトリ ★'+fmtStars(entry.stars||0)+'</span></p><p class="src-url">導入前に必ず中身を確認（skill は任意コード実行）</p>')+
       '</div>';
       els.modalOverlay.hidden = false;
       document.body.style.overflow = "hidden";
@@ -756,17 +765,6 @@
     document.querySelectorAll(".reveal").forEach(el => io.observe(el));
   }
 
-  /* ---------- dynamic: cursor spotlight on cards ---------- */
-  function initSpotlight(){
-    if(reduceMotion) return;
-    els.cards.addEventListener("pointermove", e => {
-      const card = e.target.closest(".feature-card");
-      if(!card) return;
-      const r = card.getBoundingClientRect();
-      card.style.setProperty("--mx", (e.clientX - r.left) + "px");
-      card.style.setProperty("--my", (e.clientY - r.top) + "px");
-    });
-  }
 
   /* ---------- dynamic: header shrink ---------- */
   function initHeaderScroll(){
@@ -795,6 +793,5 @@
   renderSources();
   startRotator();
   initReveal();
-  initSpotlight();
   initHeaderScroll();
 })();

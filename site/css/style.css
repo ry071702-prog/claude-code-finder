@@ -93,12 +93,11 @@ b,strong{font-weight:700}
 .hero{position:relative;padding:clamp(38px,7vw,84px) clamp(16px,4vw,40px) clamp(28px,4vw,48px);overflow:hidden;isolation:isolate}
 /* 動く grid レイヤ */
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(var(--border) 1px,transparent 1px) 0 0/100% 46px,linear-gradient(90deg,var(--border) 1px,transparent 1px) 0 0/46px 100%;opacity:.35;-webkit-mask-image:radial-gradient(120% 96% at 30% -20%,#000,transparent 72%);mask-image:radial-gradient(120% 96% at 30% -20%,#000,transparent 72%);pointer-events:none}
-/* 動く aurora レイヤ */
-.hero::after{content:"";position:absolute;inset:-30% -10% auto -10%;height:150%;z-index:-1;pointer-events:none;background:
-  radial-gradient(38% 44% at 78% 8%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%),
-  radial-gradient(32% 40% at 12% 22%,color-mix(in srgb,var(--accent3) 26%,transparent),transparent 72%);
-  filter:blur(10px);opacity:.55;animation:aurora 18s ease-in-out infinite alternate}
-@keyframes aurora{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(3%,2%,0) scale(1.08)}100%{transform:translate3d(-3%,-1%,0) scale(1.04)}}
+/* 静的な warm wash レイヤ（以前は blur+18s の aurora アニメだったが、動く発光は AI 生成 UI の
+   定番で「AI っぽさ」の一因だったため静止・低彩度化。ヒーローが真っ黒に沈むのだけ防ぐ） */
+.hero::after{content:"";position:absolute;inset:-20% -10% auto -10%;height:130%;z-index:-1;pointer-events:none;background:
+  radial-gradient(40% 46% at 82% 4%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 72%);
+  opacity:.5}
 .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto}
 .hero-kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .kicker-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--ring);animation:pulse 2s ease-out infinite}
@@ -192,7 +191,7 @@ b,strong{font-weight:700}
 /* ---------- cards ---------- */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;list-style:none;margin:0;padding:0}
 .feature-card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 16px;min-height:238px;cursor:pointer;transition:border-color .16s,transform .16s,box-shadow .16s;box-shadow:var(--shadow)}
-.feature-card:hover,.feature-card:focus-visible{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-lg);outline:none}
+.feature-card:hover,.feature-card:focus-visible{border-color:var(--accent);box-shadow:var(--shadow-lg);outline:none}
 .feature-card:focus-visible{box-shadow:0 0 0 3px var(--ring),var(--shadow-lg)}
 .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .card-top-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
@@ -305,8 +304,6 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 .card-grid.anim .feature-card{animation:cardIn .5s cubic-bezier(.2,.75,.3,1) backwards;animation-delay:calc(var(--i,0) * 26ms)}
 @keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
 
-/* ---------- dynamic: cursor spotlight ---------- */
-.feature-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(340px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 62%)}
 .feature-card:hover::after{opacity:1}
 
 /* ---------- dynamic: scroll reveal ---------- */
@@ -356,6 +353,8 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 .prompt-lead{font-size:.82rem;color:var(--text2);margin-bottom:8px}
 .prompt-text{margin:0;padding:12px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface2);color:var(--text);font-family:var(--sans);font-size:.85rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;max-height:260px;overflow-y:auto}
 .detail-block.install .install-row{margin-top:10px}
+/* 出所ブロック: リポジトリ star は skill 単体の評価ではないと分かるよう owner 名の隣に小さく添える */
+.repo-star{display:inline-block;margin-left:10px;font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--text3);vertical-align:baseline}
 
 /* 使い方ヘルプ（Skills表示時のみ） */
 .skills-help[hidden]{display:none}

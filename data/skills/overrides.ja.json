@@ -1,0 +1,602 @@
+{
+  "skill-anthropics-skills-skills-algorithmic-art": {
+    "want": "コードで生成アートを作りたい",
+    "summary": "p5.js とシード付き乱数を使い、パラメータを変えながら生成アートを描く。既存作家の模倣は避け、オリジナルを作る。",
+    "trigger": "コードで生成アート・アルゴリズミックアート・フローフィールド・パーティクル表現を作るとき。"
+  },
+  "skill-anthropics-skills-skills-brand-guidelines": {
+    "want": "Anthropic のブランドの見た目に揃えたい",
+    "summary": "Anthropic 公式のブランドカラーとタイポグラフィを成果物に当て、会社のデザイン基準に沿った見た目に整える。",
+    "trigger": "ブランドカラーやスタイルガイド、視覚フォーマット、会社のデザイン基準を当てはめるとき。"
+  },
+  "skill-anthropics-skills-skills-canvas-design": {
+    "want": "ポスターやアート作品を画像・PDFで作りたい",
+    "summary": "デザインの考え方に沿って、.png や .pdf の静的なビジュアル作品を作る。既存作家の模倣はしない。",
+    "trigger": "ポスター・アート・デザインなど、静的な作品の制作を頼むとき。"
+  },
+  "skill-anthropics-skills-skills-claude-api": {
+    "want": "Claude API の仕様を正しく調べたい",
+    "summary": "モデルIDや料金、ストリーミング、tool use、MCP、トークン計算まで Claude API の仕様を参照する。",
+    "trigger": "Claude や Anthropic のモデル・API について答えるとき、LLM 前提のコードを書くとき。記憶で答えない。"
+  },
+  "skill-anthropics-skills-skills-doc-coauthoring": {
+    "want": "ドキュメントを段取りを踏んで書き上げたい",
+    "summary": "仕様書や提案書、意思決定ドキュメントを、文脈の受け渡しから推敲、読み手目線の確認まで段階を追って書く。",
+    "trigger": "ドキュメント・提案書・技術仕様・意思決定ドキュメントを書き始めるとき。"
+  },
+  "skill-anthropics-skills-skills-docx": {
+    "want": "Wordファイル(.docx)を作成・編集したい",
+    "summary": ".docx の作成・読み取り・編集を行う。目次や見出し、ページ番号、画像の差し替え、変更履歴やコメントも扱う。",
+    "trigger": "Word 文書や .docx を扱うとき。レポート・メモ・レターを Word 形式で求められたとき。"
+  },
+  "skill-anthropics-skills-skills-frontend-design": {
+    "want": "テンプレっぽくないUIに仕上げたい",
+    "summary": "新しいUIを作るときや既存UIを組み直すときに、方向性やタイポグラフィなど見た目の判断を助ける。",
+    "trigger": "新規UIを作る、または既存のUIの見た目を作り直すとき。"
+  },
+  "skill-anthropics-skills-skills-internal-comms": {
+    "want": "社内向けの報告や周知の文章を書きたい",
+    "summary": "ステータス報告、経営層向けアップデート、社内ニュースレター、FAQ、障害報告などを社内の型に沿って書く。",
+    "trigger": "社内向けの文書 (ステータス報告・障害報告・プロジェクト更新など) を書くとき。"
+  },
+  "skill-anthropics-skills-skills-mcp-builder": {
+    "want": "MCPサーバーを自分で作りたい",
+    "summary": "外部APIやサービスをつなぐ MCP サーバーを、Python (FastMCP) や Node/TypeScript で作る指針を示す。",
+    "trigger": "外部APIやサービスを取り込む MCP サーバーを作るとき。"
+  },
+  "skill-anthropics-skills-skills-pdf": {
+    "want": "PDFを読み書き・編集したい",
+    "summary": "PDF のテキストや表の抽出、結合と分割、回転、透かし、フォーム入力、暗号化、スキャンPDFのOCRまで扱う。",
+    "trigger": ".pdf ファイルに何かする、または PDF を作るとき。"
+  },
+  "skill-anthropics-skills-skills-pptx": {
+    "want": "スライド(.pptx)を作成・編集したい",
+    "summary": ".pptx の作成・読み取り・編集を行う。テキスト抽出、ファイルの結合と分割、テンプレートや発表者ノートも扱う。",
+    "trigger": "デッキ・スライド・プレゼン、あるいは .pptx ファイルに触れるとき。"
+  },
+  "skill-anthropics-skills-skills-skill-creator": {
+    "want": "Skillを自分で作って直したい",
+    "summary": "Skill を新規に作り、既存 Skill の修正、eval による性能測定、description の調整まで行う。",
+    "trigger": "Skill を作る・直す、eval で性能を測る、description の発動精度を上げるとき。"
+  },
+  "skill-anthropics-skills-skills-slack-gif-creator": {
+    "want": "Slackに貼るGIFアニメを作りたい",
+    "summary": "Slack の制約に収まるアニメーションGIFを作る。制約の情報、検証ツール、アニメーションの型を持つ。",
+    "trigger": "「Slack 用に〜のGIFを作って」のように、Slack向けアニメGIFを頼むとき。"
+  },
+  "skill-anthropics-skills-skills-theme-factory": {
+    "want": "成果物の配色とフォントを揃えたい",
+    "summary": "スライドや文書、HTMLページに配色とフォントのテーマを当てる。10種のプリセットがあり、新規テーマも作れる。",
+    "trigger": "作った成果物にテーマを当てて見た目を統一するとき。"
+  },
+  "skill-anthropics-skills-skills-web-artifacts-builder": {
+    "want": "React製の込み入ったアーティファクトを作りたい",
+    "summary": "React・Tailwind CSS・shadcn/ui で、状態管理やルーティングを持つ HTML アーティファクトを組む。",
+    "trigger": "単一ファイルでは済まない、複数コンポーネント構成のアーティファクトを作るとき。"
+  },
+  "skill-anthropics-skills-skills-webapp-testing": {
+    "want": "ローカルのWebアプリをブラウザで確認したい",
+    "summary": "Playwright でローカルの Web アプリを操作し、画面の挙動確認、スクリーンショット、ブラウザログの確認を行う。",
+    "trigger": ""
+  },
+  "skill-anthropics-skills-skills-xlsx": {
+    "want": "Excelやスプレッドシートを作成・編集したい",
+    "summary": ".xlsx や .csv の読み取り・編集・新規作成を行う。数式や書式、グラフ、崩れた表データの整形まで扱う。",
+    "trigger": "スプレッドシートが入力か出力の主役になるとき。成果物が Word や HTML なら使わない。"
+  },
+  "skill-garrytan-gstack-autoplan": {
+    "want": "複数観点のレビューを続けて回したい",
+    "summary": "gstack の CEO・デザイン・エンジニア・DX レビューを順に走らせ、6つの判断原則で自動的に結論を出す。",
+    "trigger": ""
+  },
+  "skill-garrytan-gstack-benchmark": {
+    "want": "パフォーマンスの劣化を見つけたい",
+    "summary": "gstack の browse デーモンを使って、性能のリグレッション (劣化) を検出する。",
+    "trigger": ""
+  },
+  "skill-garrytan-gstack-benchmark-models": {
+    "want": "モデルごとの出来の差を比べたい",
+    "summary": "gstack のスキル群を複数のモデルで動かし、モデルをまたいだベンチマークを取る。",
+    "trigger": ""
+  },
+  "skill-garrytan-gstack-browse": {
+    "want": "ヘッドレスブラウザでサイトを見たい",
+    "summary": "ヘッドレスブラウザでサイトを開き、QAテストや自社サイトのドッグフーディングを行う。",
+    "trigger": ""
+  },
+  "skill-garrytan-gstack-canary": {
+    "want": "デプロイ直後の異常を早く掴みたい",
+    "summary": "デプロイした直後のサービスをカナリア監視し、異常が出ていないかを見張る。",
+    "trigger": ""
+  },
+  "skill-garrytan-gstack-careful": {
+    "want": "危険なコマンドの誤爆を防ぎたい",
+    "summary": "破壊的なコマンドにガードレールを設け、取り返しのつかない操作の前に歯止めをかける。",
+    "trigger": ""
+  },
+  "skill-garrytan-gstack-gstack": {
+    "want": "gstackのスキル群の入口を知りたい",
+    "summary": "gstack のスキル群の入口になるルーター。用途に応じて該当のスキルへ振り分ける。",
+    "trigger": ""
+  },
+  "skill-garrytan-gstack-browser-skills-hackernews-frontpage": {
+    "want": "Hacker Newsのトップ記事を取ってきたい",
+    "summary": "Hacker News のフロントページから、タイトル・ポイント数・コメント数を取得する。",
+    "trigger": ""
+  },
+  "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-add-app-to-server": {
+    "want": "既存のMCPサーバーにUIを足したい",
+    "summary": "すでにツールを持つ MCP サーバーの中身を読み、MCP Apps の UI リソースを足す手順を示す。",
+    "trigger": "既存の MCP サーバーやツールに、対話できるUI (MCP Apps) を追加したいとき。"
+  },
+  "skill-tldraw-tldraw-skills-clean-copy": {
+    "want": "コミット履歴をきれいに作り直したい",
+    "summary": "今のブランチの作業を新しいブランチで再現し、筋の通ったコミット履歴として組み直す。",
+    "trigger": "クリーンなコピーブランチを作る、コミット履歴をレビューしやすい形に作り直すとき。"
+  },
+  "skill-tldraw-tldraw-skills-commit-changes": {
+    "want": "いまの変更をコミットしたい",
+    "summary": "現在の変更内容から git コミットを作る。ユーザーが足した文脈もメッセージに織り込む。",
+    "trigger": "変更をコミットする、コミットメッセージを作るとき。"
+  },
+  "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-convert-web-app": {
+    "want": "既存のWebアプリをMCP Appにも対応させたい",
+    "summary": "既存の Web アプリを単体で動かせるまま MCP App としても動く形にし、サーバー側の登録まで面倒を見る。",
+    "trigger": "既存の Web アプリや SPA、iframe 埋め込みを MCP App 対応にしたいとき。"
+  },
+  "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-create-mcp-app": {
+    "want": "UI付きのMCP Appを新しく作りたい",
+    "summary": "MCP Apps SDK の書き方に沿って、UIリソースの登録やホスト連携まで含めた MCP App を新規に組む。",
+    "trigger": "MCP App を新規に作る、MCP ツールにUIを付ける、MCP Apps のパターンを知りたいとき。"
+  },
+  "skill-tldraw-tldraw-skills-dotcom-release-crew": {
+    "want": "tldraw の dotcom リリース告知を投稿したい",
+    "summary": "tldraw の dotcom リリースに関する投稿を行う。説明文が途中で切れており詳細は不明。",
+    "trigger": ""
+  },
+  "skill-tldraw-tldraw-skills-issue": {
+    "want": "tldraw に GitHub issue を立てたい",
+    "summary": "ユーザーの説明から tldraw リポジトリに GitHub issue を作り、追加質問を重ねて中身を詰めていく。",
+    "trigger": "issue の作成、バグ報告、機能要望の提出を頼むとき。この Skill が作った issue への追加質問に答えるときも含む。"
+  },
+  "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-migrate-oai-app": {
+    "want": "OpenAI Apps SDK のアプリを MCP に移行したい",
+    "summary": "OpenAI Apps SDK で書かれたアプリを MCP Apps SDK へ移す手順を、API 対応表つきで段階的に示す。",
+    "trigger": "OpenAI Apps SDK からの移行、window.openai や skybridge、openai/outputTemplate からの置き換えを尋ねるとき。"
+  },
+  "skill-alibaba-arthas-skills": {
+    "want": "Java アプリと JVM の不具合を診断したい",
+    "summary": "Arthas を使い、稼働中の Java アプリケーションと JVM で起きている問題を切り分けて診断する。",
+    "trigger": ""
+  },
+  "skill-alibaba-arthas-skills-cpu-high": {
+    "want": "JVM の CPU 使用率が跳ね上がった原因を突き止めたい",
+    "summary": "CPU 使用率が急上昇した JVM / アプリケーションを、スレッドの特定とコードパスの分析でたどる。",
+    "trigger": ""
+  },
+  "skill-alibaba-arthas-skills-eagleeye-traceid": {
+    "want": "リクエストの traceId を取り出したい",
+    "summary": "Arthas の watch / trace を使い、EagleEye の traceId やリクエストの traceId を取得する。",
+    "trigger": ""
+  },
+  "skill-alibaba-arthas-skills-spring-context": {
+    "want": "Spring の Bean や設定注入の不具合を調べたい",
+    "summary": "Spring の ApplicationContext、Bean、設定注入まわりで起きている問題を調査する。",
+    "trigger": ""
+  },
+  "skill-abiosoft-colima-skills": {
+    "want": "macOS や Linux で Colima を使ってコンテナを動かしたい",
+    "summary": "軽量な Lima VM 上で Docker・containerd・Kubernetes・Incus を動かす Colima の使い方をまとめる。",
+    "trigger": "Colima のインストールや start/stop、ランタイム切り替え、docker.sock に繋がらないエラー、レジストリミラー、マウント、ディスク容量、Colima を起動するスクリプトを書くとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-deploy-to-vercel": {
+    "want": "アプリを Vercel にデプロイしたい",
+    "summary": "アプリケーションや Web サイトを Vercel にデプロイし、公開 URL やプレビュー環境を用意する。",
+    "trigger": "「デプロイして」「リンクをちょうだい」「本番に出して」「プレビューを作って」と頼むとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-vercel-cli-with-tokens": {
+    "want": "アクセストークンで Vercel CLI を動かしたい",
+    "summary": "対話ログインではなくアクセストークン認証で、Vercel へのデプロイやプロジェクト管理を行う。",
+    "trigger": "トークンを使って Vercel にデプロイする、セットアップする、環境変数を追加するとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-composition-patterns": {
+    "want": "React コンポーネントの合成パターンを整理したい",
+    "summary": "compound components や render props、context provider を使い、増えすぎた boolean props を組み直す。React 19 の API 変更も扱う。",
+    "trigger": "boolean props が膨らんだコンポーネントのリファクタ、コンポーネントライブラリや再利用 API の設計をするとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-vercel-optimize": {
+    "want": "Vercel の請求額と遅いルートを見直したい",
+    "summary": "Vercel のメトリクス・使用量・設定・コードを先に集め、数値の裏付けがある候補だけを調べて改善案を順位づけする。",
+    "trigger": "Vercel の請求削減、遅い/高コストなルート、キャッシュ、Function Invocations、Build Minutes、Core Web Vitals、コスト内訳を調べるとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-react-best-practices": {
+    "want": "React / Next.js の性能面の書き方を押さえたい",
+    "summary": "Vercel エンジニアリングによる React / Next.js の性能指針に沿って、コードを書き・レビューし・直す。",
+    "trigger": "React コンポーネント、Next.js のページ、データ取得、バンドルまわりを書く・レビューする・リファクタするとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-react-native-skills": {
+    "want": "React Native / Expo でモバイルアプリを作りたい",
+    "summary": "React Native と Expo でよく動くモバイルアプリを組むための書き方をまとめる。",
+    "trigger": "React Native のコンポーネント作成、リスト表示の改善、アニメーション実装、ネイティブモジュールを扱うとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-react-view-transitions": {
+    "want": "React で画面遷移のアニメーションを入れたい",
+    "summary": "React の View Transition API を使い、ページ遷移・共有要素・リスト並び替えの動きを外部ライブラリなしで作る。",
+    "trigger": "ページ遷移やルート変更、コンポーネントの出入り、前後方向のナビゲーションを animate したいとき。startViewTransition や ViewTransition について尋ねるときも。"
+  },
+  "skill-vercel-labs-agent-skills-skills-web-design-guidelines": {
+    "want": "UI コードをガイドラインに照らして点検したい",
+    "summary": "UI のコードを Web Interface Guidelines に照らし、アクセシビリティや UX の観点でレビューする。",
+    "trigger": "「UI をレビューして」「アクセシビリティを確認して」「デザインを監査して」と頼むとき。"
+  },
+  "skill-vercel-labs-agent-skills-skills-writing-guidelines": {
+    "want": "ドキュメントの文体をチェックしたい",
+    "summary": "ドキュメントや文章を Writing Guidelines に照らし、文体・声・トーンの観点でレビューする。",
+    "trigger": "「ドキュメントをレビューして」「文体を確認して」「このページを執筆ハンドブックに照らして」と頼むとき。"
+  },
+  "skill-karakeep-app-karakeep-skills": {
+    "want": "ブックマーク管理の karakeep を操作したい",
+    "summary": "ブックマーク管理ツール karakeep の使い方と、プログラムから操作する方法を示す公式 Skill。",
+    "trigger": ""
+  },
+  "skill-op7418-guizang-ppt-skill-guizang-ppt-skill": {
+    "want": "横めくりの HTML スライドを作りたい",
+    "summary": "WebGL 背景・章扉・数字の大見出し・画像グリッドを備えた単一 HTML の横めくり PPT を作る。電子雑誌風とスイス国際主義の2スタイル。",
+    "trigger": "共有や講演、発表会向けの Web PPT を作るとき。「雑誌風 PPT」「スイス風 PPT」「Swiss Style」「horizontal swipe deck」に言及したとき。"
+  },
+  "skill-titanwings-colleague-skill-colleague-skill": {
+    "want": "同僚や有名人のキャラクターを Skill 化したい",
+    "summary": "同僚・関係性・著名人という3種の人物像を蒸留し、再利用できる Skill に落とし込む meta-skill エンジン。",
+    "trigger": ""
+  },
+  "skill-tanweai-pua-.trae-skills-pua": {
+    "want": "AI に諦めさせず手を尽くさせたい",
+    "summary": "Trae 対応の PUA スキル。AI に諦めや未検証の完了報告を許さず、自分から動くよう仕向ける。",
+    "trigger": "明示的な PUA 依頼、失敗の繰り返し、ユーザーの不満、諦め・受け身の態度、未検証の完了報告があるとき。初回の試行では発動しない。"
+  },
+  "skill-tanweai-pua-codebuddy-pua": {
+    "want": "AI に手を抜かせず全ての案を試させたい",
+    "summary": "大手企業の詰め話術で、AI が諦めたり手動対応を勧めたりせず、あらゆる手段を尽くすよう仕向ける。",
+    "trigger": "同じ方針で2回以上失敗、「解決できません」と言いかける、検索も調査もせず指示待ちになる、「もっと頑張れ」「なぜまだできない」と言われたとき。"
+  },
+  "skill-tanweai-pua-codex-pua-cancel-loop": {
+    "want": "Codex で PUA のループを止めたい",
+    "summary": "Claude Code の /pua:cancel-loop に相当する Codex 用のエイリアス。$pua-cancel-loop で呼び出す。",
+    "trigger": ""
+  },
+  "skill-tanweai-pua-.trae-skills-pua-en": {
+    "want": "英語版の PUA / PIP で AI を追い込みたい",
+    "summary": "Trae 対応の英語版 PUA / PIP スキル。諦め・受け身・未検証の完了報告を許さない振る舞いを課す。",
+    "trigger": "明示的な PUA / PIP 依頼、失敗の繰り返し、ユーザーの不満、受け身や諦めの態度、未検証の完了報告があるとき。初回の試行では発動しない。"
+  },
+  "skill-tanweai-pua-codebuddy-pua-en": {
+    "want": "AI を PIP にかけて問題を解き切らせたい",
+    "summary": "欧米大手企業の業績評価文化のレトリックと構造化デバッグで、AI に徹底した問題解決をさせる。",
+    "trigger": "2回以上失敗、「できません」と言いかける、未検証で環境のせいにする、受け身になる、「try harder」等の不満が出たとき。初回失敗時は発動しない。"
+  },
+  "skill-tanweai-pua-codex-pua-en": {
+    "want": "Codex でも AI を PIP にかけて粘らせたい",
+    "summary": "欧米大手企業の業績評価文化のレトリックと構造化デバッグで、AI に徹底した問題解決をさせる。",
+    "trigger": "2回以上失敗、「できません」と言いかける、未検証で環境のせいにする、受け身になる、「try harder」等の不満が出たとき。コード・設定・調査・デプロイなど全タスクに適用。"
+  },
+  "skill-tanweai-pua-codebuddy-pua-ja": {
+    "want": "AI を詰めて最後までやり切らせたい",
+    "summary": "日本企業の詰め文化と体系的なデバッグ方法論で、AI にあらゆる手段を尽くさせる。",
+    "trigger": "同じアプローチで2回以上失敗、「解決できません」と言いかける、検索もソース読みもしない指示待ち、「もっと頑張れ」等の不満が出たとき。初回失敗時は発動しない。"
+  },
+  "skill-tanweai-pua-.trae-skills-pua-trae": {
+    "want": "npx skills で入れた Trae 版 PUA を使いたい",
+    "summary": "npx skills でのインストール向けに Trae 向け調整した PUA スキル。諦めや未検証の完了を許さない。",
+    "trigger": "明示的な PUA 依頼、失敗の繰り返し、ユーザーの不満、諦め・受け身の態度、未検証の完了報告があるとき。初回の試行では発動しない。"
+  },
+  "skill-weifeng2333-videocaptioner-skills": {
+    "want": "動画に字幕を付けたい",
+    "summary": "音声を文字起こしし、字幕の推敲や翻訳を行い、スタイルを当てた字幕を動画に焼き込む。",
+    "trigger": "動画への字幕追加、音声の文字起こし、字幕の翻訳、字幕スタイルの調整をするとき。"
+  },
+  "skill-crazyguitar-pysheeet-skills-py": {
+    "want": "Python の書き方をまとめて引きたい",
+    "summary": "構文・並行処理・ネットワーク・データベース・ML/LLM・HPC までを網羅した Python のリファレンス。",
+    "trigger": "Python の疑問、面接対策、デバッグ、async パターン、ライブラリの用例、コードレビュー、MLOps や分散処理など Python の作業全般。"
+  },
+  "skill-crazyguitar-pysheeet-skills-readable-py": {
+    "want": "読みやすいPythonコードを書きたい",
+    "summary": "『リーダブルコード』に着想を得て、短い関数・浅い制御フロー・明快な命名・Pythonらしいイディオムを守らせる。",
+    "trigger": "Pythonコードを書く・レビューする・リファクタリングするとき。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-ad-certificate-abuse": {
+    "want": "AD CSの証明書を悪用する攻撃経路を調べたい",
+    "summary": "AD CSの証明書テンプレート・登録権限・EKU・SAN制御・PKINITから、証明書ベースの権限奪取経路をたどる。",
+    "trigger": "ESC系の悪用、証明書テンプレート、登録エージェント、EKU、SAN/subject制御、スマートカードやPKINITログオン、CAポリシーについて聞かれたとき。ctf-sandbox-orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-agent-cloud": {
+    "want": "AIエージェントやサプライチェーンの弱点を調べたい",
+    "summary": "AIエージェント・プロンプトインジェクション・MCP・クラウド・コンテナ・CI/CD・サプライチェーン系の課題を扱う。",
+    "trigger": "プロンプトからツールへの流れ、retrieval poisoning、マウントされた秘密情報、デプロイのずれ、レジストリの出所、CI生成物などをサンドボックス前提で分析するとき。orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-android-hooking": {
+    "want": "AndroidアプリをFridaでフックして解析したい",
+    "summary": "Android APKのフック、Fridaトレース、SSLピンニング回避、JNI境界の検査、アプリの信頼境界分析を行う。",
+    "trigger": "APKのフック、署名ロジックの調査、Java/ネイティブ境界のトレース、ピンニングやroot検知の回避、モバイルリクエストの再送をするとき。orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-browser-persistence": {
+    "want": "ブラウザに保存されたセッション状態を調べたい",
+    "summary": "cookie・localStorage・IndexedDB・service workerなど、クライアント側に保存されたセッション状態を調べる。",
+    "trigger": "ブラウザの状態を調べる、キャッシュされた認証やセッションを再現する、読み込み後にページ挙動が変わる理由を説明するとき。orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-bundle-sourcemap-recovery": {
+    "want": "ビルド済みJSからソースの構造を復元したい",
+    "summary": "source map・ビルドマニフェスト・チャンク・難読化ローダーから、配信JavaScriptの構造やフロントの挙動を復元する。",
+    "trigger": "配信JSの構造再構成、source mapやチャンクマップの調査、バンドル読み込みの追跡、生成物から隠れたルートやAPIを復元するとき。orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-cloud-metadata-path": {
+    "want": "クラウドのメタデータから権限昇格経路を調べたい",
+    "summary": "クラウドのメタデータサービス・インスタンス/ワークロードID・link-local認証情報経路から、権限昇格の信頼エッジをたどる。",
+    "trigger": "メタデータサービスへのアクセス、インスタンス認証情報、SSRFからメタデータへの昇格、メタデータ由来の認証情報が権限に変わる仕組みを調べるとき。orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-container-runtime": {
+    "want": "稼働中コンテナの実行時状態を調べたい",
+    "summary": "稼働中コンテナの実行時状態を解析し、マウントされた秘密情報・サイドカー・namespace・entrypointのずれを調べる。",
+    "trigger": "稼働コンテナがマニフェストと異なる理由、マウントされた秘密がどこで使われるか、どのルートがどのコンテナに解決されるかを調べるとき。orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator-competition-crypto-mobile": {
+    "want": "暗号やステガノグラフィのデータを解読したい",
+    "summary": "暗号・エンコード・ステガノグラフィやAPK/IPAなどモバイルの信頼境界課題を扱い、変換や鍵の復元、隠しデータの調査を行う。",
+    "trigger": "blobのデコード、変換チェーンや鍵の復元、隠しメディアの調査、APK/IPA署名のフック、モバイルの署名ロジック再現をするとき。orchestrator経由で振り分けられた後に使う。"
+  },
+  "skill-kaggle-kaggle-cli-skills": {
+    "want": "Kaggle CLIのコマンドや使い方を知りたい",
+    "summary": "Kaggle CLIのコマンド・ワークフロー・トラブル対処を、コンペ・データセット・カーネル・モデル・認証など横断で案内する。",
+    "trigger": "kaggle CLIのコマンド、例、フラグ、メタデータファイル、ダウンロード/アップロード、提出、ベンチマークについて聞かれたとき。"
+  },
+  "skill-feast-dev-feast-.claude-skills-feast-architecture": {
+    "want": "Feast（AI/ML向け特徴量ストア）を使いたい",
+    "summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+    "trigger": ""
+  },
+  "skill-feast-dev-feast-skills-feast-architecture": {
+    "want": "Feastの内部構造やデータの流れを知りたい",
+    "summary": "Feastコードベースの内部構造を解説する。各コンポーネントの動作、主要な抽象の場所、システム内のデータの流れを扱う。",
+    "trigger": "feast applyの仕組み、レジストリのデータ保存、マテリアライズ、get_online_featuresの取得、フィーチャーサーバーやKubernetes operatorの動きを知りたいとき。"
+  },
+  "skill-feast-dev-feast-.claude-skills-feast-dev": {
+    "want": "Feast（AI/ML向け特徴量ストア）を使いたい",
+    "summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+    "trigger": ""
+  },
+  "skill-feast-dev-feast-skills-feast-dev": {
+    "want": "Feastの開発に貢献したい",
+    "summary": "Feastコードベースへの貢献ガイド。環境構築・テスト・lint・プロジェクト構成・PRワークフローを扱う。",
+    "trigger": ""
+  },
+  "skill-feast-dev-feast-.claude-skills-feast-testing": {
+    "want": "Feast（AI/ML向け特徴量ストア）を使いたい",
+    "summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+    "trigger": ""
+  },
+  "skill-feast-dev-feast-skills-feast-testing": {
+    "want": "Feastをテスト・デバッグしたい",
+    "summary": "Feastのテストとデバッグ方法。対象を絞ったテスト実行、新コンポーネントの単体テスト、レジストリやオンラインストアの調査を扱う。",
+    "trigger": "新機能のテストを書く、失敗するテストのデバッグ、実行時エラーの調査、変更が正しく動くかの検証をするとき。"
+  },
+  "skill-feast-dev-feast-.claude-skills-feast-user-guide": {
+    "want": "Feast（AI/ML向け特徴量ストア）を使いたい",
+    "summary": "AI/ML向けのオープンソース特徴量ストア Feast。",
+    "trigger": ""
+  },
+  "skill-feast-dev-feast-skills": {
+    "want": "Feastで特徴量を定義して使いたい",
+    "summary": "Feastの利用ガイド。特徴量の定義、feature_store.yaml設定、オンライン/オフライン取得、CLI、RAG検索パイプライン構築を扱う。",
+    "trigger": "エンティティやfeature viewの作成、feature_store.yaml設定、feast apply/materialize、オンライン/履歴の特徴量取得、Feastでのベクトル検索について聞かれたとき。"
+  },
+  "skill-lewislulu-html-ppt-skill-html-ppt-skill": {
+    "want": "HTMLでスライド資料を作りたい",
+    "summary": "テンプレート駆動で、多様なスタイル・レイアウト・アニメーションの静的HTMLプレゼンを作る。キーボード操作に対応。",
+    "trigger": "プレゼン・PPT・スライド・deck・幻灯片・小红书图文など、複数スライドの資料を頼まれたとき。"
+  },
+  "skill-vyperlang-vyper-skills": {
+    "want": "Vyperコンパイラの内部を触りたい",
+    "summary": "Vyperスマートコントラクトコンパイラの内部を扱う。コンパイルパイプライン、Venom IR、意味解析、コード生成、テストを含む。",
+    "trigger": "Vyperコンパイラの開発、Venomパス、AST/意味解析の変更、コード生成、テスト作成をするとき。"
+  },
+  "skill-github-gh-aw-gh-aw": {
+    "want": "GitHub Agentic Workflows（gh-aw）を使いたい",
+    "summary": "GitHubのエージェント型ワークフロー（gh-aw）。",
+    "trigger": ""
+  },
+  "skill-github-gh-aw-.claude-skills-playwright-cli": {
+    "want": "Playwrightでブラウザ操作を自動化したい",
+    "summary": "ブラウザ操作を自動化し、Webページのテストや Playwright テストの作成・実行を行う。",
+    "trigger": ""
+  },
+  "skill-antvis-l7-skills-l7-single": {
+    "want": "WebGLで地理空間データを可視化したい",
+    "summary": "WebGLベースの大規模地理空間データ可視化エンジン AntV L7。地図アプリ、点・線・面・ヒートマップ、レイヤーや動きを扱う。",
+    "trigger": "インタラクティブなWebGL地図の作成、地理空間データの可視化、位置データダッシュボードの構築、GeoJSONやCSVの表示をするとき。"
+  },
+  "skill-antvis-l7-skills-l7": {
+    "want": "AntV L7で地図の可視化を実装したい",
+    "summary": "AntV L7 地理空間可視化ライブラリの総合ガイド。WebGL地図、地理データ可視化、地図レイヤー、AMap/Mapbox連携を扱う。",
+    "trigger": "WebGL地図の作成、点・線・面・ヒートマップの可視化、位置データダッシュボード構築、GeoJSON/CSV表示、AMap・Mapbox・Maplibre連携、大規模データの描画性能改善をするとき。"
+  },
+  "skill-paper2poster-paper2poster-skills": {
+    "want": "論文を学会ポスターに変換したい",
+    "summary": "学術論文を、学会ポスターや構成案・コピー・レイアウト指示・poster.yamlの下書きに変換する。",
+    "trigger": "PDF論文・arXivリンク・原稿・PPTXポスター・学会投稿などを、ポスターに変換したいとき。"
+  },
+  "skill-op7418-claude-to-im-skill-claude-to-im-skill": {
+    "want": "Claude Codeのセッションをスマホから使いたい",
+    "summary": "今のClaude CodeやCodexのセッションをTelegram・Discord・Feishu・QQ・WeChatへ橋渡しし、スマホからClaudeと会話できるようにする。",
+    "trigger": "claude-to-imブリッジの設定・起動・停止・診断や、Claudeの返信をメッセージアプリへ転送したいとき。"
+  },
+  "skill-norman-bury-research-writing-skill-skills-brainstorming-research": {
+    "want": "論文の構想を固めてから書き始めたい",
+    "summary": "対話を通じて論文の種類・分野・テーマ・手法・章立てを整理する。執筆に入る前の準備に使う。",
+    "trigger": "論文を書き始める前。"
+  },
+  "skill-norman-bury-research-writing-skill-skills-environment-setup": {
+    "want": "データ可視化用のPython環境を用意したい",
+    "summary": "データ可視化のためのPython環境構築や conda のインストールを扱う。",
+    "trigger": "データ可視化向けのPython環境構築やcondaインストールが必要なとき。"
+  },
+  "skill-norman-bury-research-writing-skill-skills-evidence-driven-writing": {
+    "want": "引用に基づいて論文の各節を書きたい",
+    "summary": "序論・関連研究・背景・文献整理など、引用が主張を支える必要がある節の執筆や改稿を扱う。",
+    "trigger": "序論・関連研究・背景・文献整理など、引用が主張を支える節を書く・改稿するとき。"
+  },
+  "skill-norman-bury-research-writing-skill-skills-experiment-results-planning": {
+    "want": "実験と結果セクションを先に設計したい",
+    "summary": "実データが揃う前に、実験・結果表・仮の計画データ・評価プロトコル・結果セクションを設計する。",
+    "trigger": "実データが確定する前に、実験・結果表・評価プロトコル・結果セクションを設計するとき。"
+  },
+  "skill-norman-bury-research-writing-skill-skills-figures-diagram": {
+    "want": "論文用の図やダイアグラムを作りたい",
+    "summary": "フローチャートやアーキテクチャ図・概念図を描くための、画像生成AI向けプロンプトを作る。",
+    "trigger": "フローチャート・アーキテクチャ図・概念図を作るとき。"
+  },
+  "skill-norman-bury-research-writing-skill-skills-figures-python": {
+    "want": "論文用のグラフ・図版を作りたい",
+    "summary": "一流誌の配色を使い、論文にそのまま載せられる水準のデータ可視化・プロットを生成する。",
+    "trigger": "論文向けのデータ可視化を作るとき。"
+  },
+  "skill-norman-bury-research-writing-skill-skills-latex-output": {
+    "want": "原稿をLaTeX形式で出力したい",
+    "summary": "原稿をLaTeX形式で出力し、大学や学術誌から渡されたLaTeXテンプレートに沿わせる。",
+    "trigger": "LaTeX形式の出力を求められた、または学校・学術誌のLaTeXテンプレートが渡されたとき。"
+  },
+  "skill-norman-bury-research-writing-skill-research-writing-skill": {
+    "want": "論文や学位論文を執筆したい",
+    "summary": "論文・学位論文・研究記事の執筆を、着想出し・章ごとの執筆・文献レビュー・LaTeX出力の面から支える。",
+    "trigger": "学術論文・学位論文・研究記事を書くとき。"
+  },
+  "skill-stellarlinkco-myclaude-skills-browser": {
+    "want": "Chromeをブラウザ自動操作したい",
+    "summary": "Chrome DevTools Protocol でChromeを操作し、ページ遷移・JS実行・スクショ・DOM要素選択まで行う。MCP不要。",
+    "trigger": "リモートデバッグ付きChromeの起動・ページ遷移・ブラウザ内JS実行・スクショ・DOM要素の選択をするとき。"
+  },
+  "skill-stellarlinkco-myclaude-skills-codeagent": {
+    "want": "複数のAIバックエンドにコード作業を投げたい",
+    "summary": "codeagent-wrapper で Codex・Claude・Gemini・OpenCode にコード作業を投げ、並列実行と worktree 分離を行う。",
+    "trigger": ""
+  },
+  "skill-stellarlinkco-myclaude-skills-dev": {
+    "want": "要件定義から実装まで一気通貫で開発したい",
+    "summary": "要件のすり合わせ・バックエンド選定・codeagent の並列実行までを回し、テストカバレッジ90%を必須とする軽量な開発フロー。",
+    "trigger": ""
+  },
+  "skill-stellarlinkco-myclaude-skills-do": {
+    "want": "コードベースを理解しながら機能開発を進めたい",
+    "summary": "理解・確認・設計・実装・完了の5フェーズで、複数エージェントを codeagent-wrapper で並列に動かして機能を作る。",
+    "trigger": "/do コマンドで、コードベースを踏まえた構造的な機能開発をするとき。"
+  },
+  "skill-stellarlinkco-myclaude-skills-harness": {
+    "want": "複数セッションにまたがる長時間のエージェント作業を続けたい",
+    "summary": "進捗のチェックポイント・失敗からの復旧・タスク依存の管理を備え、コンテキストをまたぐ長時間のエージェント作業を支える。",
+    "trigger": "/harness コマンドで、進捗の保存・中断からの再開・失敗からの復旧が要る長時間タスクを扱うとき。"
+  },
+  "skill-stellarlinkco-myclaude-skills-omo": {
+    "want": "複数エージェントでコード調査から修正まで進めたい",
+    "summary": "コード分析・バグ調査・修正計画・実装を、タスクの種類とリスクに応じた最小構成のエージェントで進める。",
+    "trigger": "/omo で、コード分析・バグ調査・修正計画・実装を複数エージェントに割り振るとき。"
+  },
+  "skill-stellarlinkco-myclaude-skills-product-requirements": {
+    "want": "要件を整理してPRDを作りたい",
+    "summary": "プロダクトオーナー役として対話しながら要件を集めて分析し、PRDを作る。品質スコアで抜けを詰める。",
+    "trigger": "プロダクト要件の整理・機能仕様・PRD作成を求められたとき。"
+  },
+  "skill-stellarlinkco-myclaude-skills-prototype-prompt-generator": {
+    "want": "UI/UXプロトタイプ用のプロンプトを作りたい",
+    "summary": "UI/UXプロトタイプを作るための構造化プロンプトを生成する。iOS・Material・Ant Design Mobile 等に対応。",
+    "trigger": "「プロトタイプ用プロンプトを作る」「モバイルアプリを設計」「UI仕様を生成」等を求められたとき。"
+  },
+  "skill-butterbase-ai-butterbase-butterbase": {
+    "want": "MCP付きのオープンソースBaaSを使いたい",
+    "summary": "Postgres・認証・ストレージ・関数・AIゲートウェイを備え、MCPサーバーを内蔵したオープンソースのBaaS。",
+    "trigger": ""
+  },
+  "skill-leilei926524-tech-anti-distill-anti-distill": {
+    "want": "提出するSkillから核心のノウハウを抜いておきたい",
+    "summary": "提出用のSkillファイルを、見た目は完成したまま核心の知識だけ抜き取り、蒸留での流出を防ぐ。",
+    "trigger": ""
+  },
+  "skill-conorbronsdon-avoid-ai-writing-avoid-ai-writing": {
+    "want": "文章からAIっぽさを取り除きたい",
+    "summary": "文章を監査してAI特有の言い回し(AI-ism)を検出し、書き換えて取り除く。声色プロファイルも選べる。",
+    "trigger": "「AI-ismを消す」「AIっぽい文章を直す」「AIらしさを減らす」等を求められたとき。"
+  },
+  "skill-conorbronsdon-avoid-ai-writing-plugins-avoid-ai-writing-skills-avoid-ai-writing": {
+    "want": "文章からAIっぽさを取り除きたい",
+    "summary": "文章を監査してAI特有の言い回し(AI-ism)を検出し、書き換えて取り除く。声色プロファイルも選べる。",
+    "trigger": "「AI-ismを消す」「AIっぽい文章を直す」「AIらしさを減らす」等を求められたとき。"
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-emil-design-eng": {
+    "want": "UIの磨き込みや細部の作り込みの指針を得たい",
+    "summary": "Emil Kowalski のUI磨き込み・コンポーネント設計・アニメーション判断・細部の作り込みの考え方をまとめる。",
+    "trigger": ""
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-frontend-design": {
+    "want": "量産型に見えないフロントエンドUIを作りたい",
+    "summary": "既視感のあるAIっぽいデザインを避け、本番水準で個性のあるフロントエンドUIとコードを作る。",
+    "trigger": "Webコンポーネント・ページ・ダッシュボード・LP・ポスター等の構築やUIの装飾を頼まれたとき。"
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-game-changing-features": {
+    "want": "効き目の大きい機能や打ち手を見つけたい",
+    "summary": "プロダクトを大きく伸ばす機会や、少ない労力で効き目の大きい改善案を戦略的に洗い出す。",
+    "trigger": "戦略的なプロダクト思考や「10x」「次に何を作るべきか」を求められたとき。"
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-grill-me": {
+    "want": "計画や設計を厳しく問い詰めて検証したい",
+    "summary": "計画や設計について、決定木の各分岐が埋まるまで容赦なく質問を重ね、共通理解に至らせる。",
+    "trigger": "計画をストレステストしたい、設計を問い詰めてほしい、「grill me」と言われたとき。"
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-improve": {
+    "want": "コードベースを診断して改善計画を作りたい",
+    "summary": "シニア顧問としてコードベースを調べ、他のエージェントが実行できる優先順位付きの実装計画を作る。ソースは読むだけ。",
+    "trigger": "コードベースの監査・改善点の洗い出し・別エージェント向けの引き継ぎ計画づくりを頼まれたとき。"
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-improve-codebase-architecture": {
+    "want": "アーキテクチャの改善余地を見つけたい",
+    "summary": "浅いモジュールを深めてテストしやすくする観点で、コードベースのアーキテクチャ改善の余地を探す。",
+    "trigger": "アーキテクチャ改善・リファクタ余地の発見・密結合モジュールの整理をしたいとき。"
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-mcp-builder": {
+    "want": "MCPサーバーを作りたい",
+    "summary": "外部サービスとLLMをつなぐMCPサーバーの作り方を、Python(FastMCP)やNode/TypeScript(MCP SDK)で案内する。",
+    "trigger": "外部APIやサービスを連携するMCPサーバーを作るとき。"
+  },
+  "skill-openstatushq-data-table-filters-.agents-skills-next-best-practices": {
+    "want": "Next.jsのベストプラクティスに沿いたい",
+    "summary": "ファイル規約・RSC境界・データ取得・メタデータ・エラー処理など、Next.jsの定石をまとめる。",
+    "trigger": ""
+  },
+  "skill-op7418-youtube-clipper-skill-youtube-clipper-skill": {
+    "want": "YouTube動画を切り抜いて字幕付き短尺にしたい",
+    "summary": "YouTube動画と字幕を取得し、AIで章立てして、選んだ区間の切り抜き・中英字幕の翻訳と焼き込み・要約生成まで行う。",
+    "trigger": "YouTube動画の切り抜き・短尺化・中英バイリンガル字幕を作るとき。"
+  },
+  "skill-upstash-ratelimit-js-skills": {
+    "want": "Upstashでレート制限を実装したい",
+    "summary": "Redis Rate Limit の TypeScript SDK について、セットアップ手順・基本の使い方・応用ドキュメントへの案内をまとめる。",
+    "trigger": ""
+  },
+  "skill-opendatalab-omnidocbench-skills": {
+    "want": "OmniDocBenchで文書解析の評価を回したい",
+    "summary": "OmniDocBench 評価のデプロイ・検証・実行・結果JSONの解析を助け、Overall/Text/Formula/Table のスコアを報告する。",
+    "trigger": "OmniDocBench や文書解析/OCRベンチのスコアリング、MinerU 等のモデル評価に触れるとき。"
+  },
+  "skill-francyjglisboa-agent-skill-creator-agent-skill-creator": {
+    "want": "定型ワークフローをエージェントSkillにしたい",
+    "summary": "ワークフローの記述からクロスプラットフォームのエージェントSkillを作る。テンプレート作成・検証・エクスポートに対応。",
+    "trigger": "「エージェントを作る」「反復作業を自動化」「Skillを作る」「毎日〜しなければ」等と言われたとき。"
+  },
+  "skill-youmind-openlab-nano-banana-pro-prompts-recommend-skill-nano-banana-pro-prompts-recommend-skill": {
+    "want": "画像生成に合うプロンプトを見つけたい",
+    "summary": "1万件超の Nano Banana Pro 向け画像生成プロンプトから、要望に合うものを推薦する。他の画像生成モデルでも使える。",
+    "trigger": "AIで画像を生成したい、用途に合う画像プロンプトやテンプレートを探すとき。"
+  },
+  "skill-zakirkun-guardian-cli-guardian-cli": {
+    "want": "ペネトレーションテストを自動で回したい",
+    "summary": "複数のAIエージェントと19種のセキュリティツールを YAML ワークフローで束ね、脆弱性レポートを Markdown/HTML/JSON で出力する。",
+    "trigger": ""
+  }
+}
