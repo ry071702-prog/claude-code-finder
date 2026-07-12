@@ -19,7 +19,7 @@
   const catIcon = {};
   categories.forEach(c => { catIcon[c.id] = c.icon; });
 
-  const state = { query:"", category:"all", type:"all", origin:"all", fav:false, sort:"priority" };
+  const state = { query:"", category:"all", type:"all", origin:"all", fav:false, sort:"priority", openId:null };
   // お気に入り（localStorage 永続化）
   let favs = new Set();
   try { favs = new Set(JSON.parse(localStorage.getItem("ccf-favs") || "[]")); } catch(e){}
@@ -53,7 +53,11 @@
   });
 
   /* ---------- helpers ---------- */
-  function normalize(text){ return String(text || "").toLowerCase().replace(/\s+/g," "); }
+  // カタカナ→ひらがなに寄せる。「こみっと」で「コミット」に、「ぷるりく」で「プルリク」に当てるため。
+  function toHira(s){
+    return s.replace(/[ァ-ヶ]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0x60));
+  }
+  function normalize(text){ return toHira(String(text || "").toLowerCase().replace(/\s+/g," ")); }
   function escapeHtml(value){
     return String(value || "").replace(/[&<>"']/g, ch => (
       {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]
@@ -178,18 +182,19 @@
     renderCards(true);
     syncURL();
   }
-  // 検索・カテゴリを URL に反映（共有・ブックマーク可能に）
+  // 検索・カテゴリ・開いている項目を URL に反映（共有・ブックマーク可能に）
   function syncURL(){
     try{
       var p = new URLSearchParams();
       var q = state.query.trim();
       if(q) p.set("q", q);
       if(state.category && state.category !== "all") p.set("cat", state.category);
+      if(state.openId) p.set("id", state.openId);   // 個別項目への直リンク
       var qs = p.toString();
       history.replaceState(null, "", qs ? "?" + qs : location.pathname);
     }catch(e){}
   }
-  // ページ読み込み時に URL の ?q= / ?cat= を復元
+  // ページ読み込み時に URL の ?q= / ?cat= / ?id= を復元
   function applyURLParams(){
     try{
       var p = new URLSearchParams(location.search);
@@ -200,6 +205,8 @@
       }
       var q = p.get("q");
       if(q){ state.query = q; els.searchInput.value = q; els.heroSearch.classList.toggle("has-value", q.length > 0); }
+      var id = p.get("id");
+      if(id && entries.some(e => e.id === id)) state.openId = id;   // 実在する項目のみ
     }catch(e){}
   }
 
@@ -332,12 +339,66 @@
       '<button type="button" class="copy-btn" data-copy="'+safe+'" aria-label="導入コマンドをコピー" title="コピー">'+
       '<span class="material-icons-outlined" aria-hidden="true">content_copy</span></button></div>';
   }
+  /* ---------- 0件時: もしかして候補 + 空振りの記録 ---------- */
+  const suggestBox = document.getElementById("suggestList");
+
+  // 通常の検索は strong 判定で偶発一致を切るが、0件の時はその門を外して近い順に拾う
+  function suggestFor(query){
+    return entries
+      .map(e => ({e, s: scoreEntry(e, query).score}))
+      .filter(x => x.s > 0)
+      .sort((a,b) => b.s - a.s || a.e.priority - b.e.priority)
+      .slice(0,3)
+      .map(x => x.e);
+  }
+  function renderSuggest(query){
+    if(!suggestBox) return;
+    const list = suggestFor(query);
+    if(!list.length){ suggestBox.innerHTML = ""; return; }
+    suggestBox.innerHTML = '<p class="suggest-label">もしかして</p>' + list.map(e =>
+      '<button type="button" class="suggest-item" data-id="'+escapeHtml(e.id)+'">'+
+        '<span class="material-icons-outlined" aria-hidden="true">'+(catIcon[e.category] || "help_outline")+'</span>'+
+        '<span class="suggest-text"><b>'+escapeHtml(e.want)+'</b><em>'+escapeHtml(e.feature)+'</em></span>'+
+        '<span class="material-icons-outlined suggest-go" aria-hidden="true">arrow_forward</span>'+
+      '</button>').join("");
+  }
+
+  // ヒット0件だった語だけを送る。次に辞典へ足す項目をデータで決めるための唯一の入口。
+  // 送るのは検索語のみ（識別子・IPは送らない）。打鍵の途中を拾わないよう入力が落ち着いてから1度だけ。
+  const loggedMisses = new Set();
+  let missTimer = null;
+  function scheduleMissLog(query){
+    clearTimeout(missTimer);
+    const q = query.trim();
+    if(q.length < 2 || loggedMisses.has(q.toLowerCase())) return;
+    missTimer = setTimeout(() => {
+      loggedMisses.add(q.toLowerCase());
+      try{
+        const body = JSON.stringify({q});
+        if(navigator.sendBeacon){
+          navigator.sendBeacon("/api/miss", new Blob([body], {type:"application/json"}));
+        } else {
+          fetch("/api/miss", {method:"POST", headers:{"Content-Type":"application/json"},
+            body, keepalive:true}).catch(() => {});
+        }
+      }catch(e){}
+    }, 1500);
+  }
+
   const skillsHelp = document.getElementById("skillsHelp");
   function renderCards(animate){
     const list = filteredEntries();
     animateCount(els.resultCount, list.length, "件");
     els.cards.innerHTML = list.map(cardTemplate).join("");
     els.emptyState.hidden = list.length !== 0;
+    // 0件は行き止まりにせず、近い候補を出しつつ「無かった語」を記録する
+    if(list.length === 0 && state.query.trim()){
+      renderSuggest(state.query);
+      scheduleMissLog(state.query);
+    } else {
+      clearTimeout(missTimer);
+      if(suggestBox) suggestBox.innerHTML = "";
+    }
     // コミュニティSkillが結果に含まれる時だけ「入れ方」ヘルプを出す
     if(skillsHelp) skillsHelp.hidden = !list.some(e => e.origin === "skill");
     els.cards.classList.remove("anim");
@@ -378,8 +439,10 @@
   }
   function openModal(id){
     const entry = entries.find(e => e.id === id);
-    if(!entry) return;
+    if(!entry){ state.openId = null; syncURL(); return; }
     lastFocused = document.activeElement;
+    state.openId = id;          // 開いている項目を URL に残す（Slack等でピンポイント共有できる）
+    syncURL();
     const cat = categories.find(c => c.id === entry.category);
     els.modalCategory.textContent = cat ? cat.name : entry.category;
 
@@ -416,6 +479,8 @@
   function closeModal(){
     els.modalOverlay.hidden = true;
     document.body.style.overflow = "";
+    state.openId = null;
+    syncURL();
     if(lastFocused && lastFocused.focus) lastFocused.focus();
   }
 
@@ -511,6 +576,14 @@
       if(next) next.focus();
     }
   });
+
+  // 「もしかして」候補から直接詳細を開く
+  if(suggestBox){
+    suggestBox.addEventListener("click", e => {
+      const btn = e.target.closest(".suggest-item");
+      if(btn) openModal(btn.dataset.id);
+    });
+  }
 
   /* ---------- modal + global keys ---------- */
   els.modalClose.addEventListener("click", closeModal);
@@ -685,6 +758,7 @@
   renderTypeFilters();
   applyURLParams();
   renderCards(true);
+  if(state.openId) openModal(state.openId);   // ?id= で共有されたリンクは該当項目を開いた状態で着地
   renderCoverage();
   renderSources();
   startRotator();

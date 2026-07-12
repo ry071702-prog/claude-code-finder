@@ -222,6 +222,21 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 .empty-state{display:grid;place-items:center;gap:10px;min-height:240px;background:var(--surface);border:1.5px dashed var(--border2);border-radius:var(--radius);color:var(--text3);font-weight:700;text-align:center;padding:24px}
 .empty-state .material-icons-outlined{font-size:40px;color:var(--accent);opacity:.6}
 
+/* 0件を行き止まりにしない「もしかして」候補 */
+.suggest-list{display:flex;flex-direction:column;gap:8px;width:100%;max-width:520px;margin-top:6px}
+.suggest-list:empty{display:none}
+.suggest-label{font-size:.78rem;font-weight:800;color:var(--text3);letter-spacing:.04em;text-align:left}
+.suggest-item{display:flex;align-items:center;gap:10px;width:100%;padding:11px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface2);text-align:left;cursor:pointer;transition:border-color .16s,background .16s,transform .16s}
+.suggest-item:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateX(2px)}
+.suggest-item:focus-visible{outline:none;box-shadow:0 0 0 3px var(--ring)}
+/* 上の .empty-state .material-icons-outlined(40px) を打ち消す */
+.suggest-item .material-icons-outlined{font-size:19px;opacity:1;flex-shrink:0}
+.suggest-text{display:flex;flex-direction:column;line-height:1.35;min-width:0;flex:1}
+.suggest-text b{font-size:.87rem;font-weight:800;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.suggest-text em{font-style:normal;font-size:.75rem;color:var(--text3);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.suggest-item .suggest-go{font-size:17px;color:var(--text3)}
+.suggest-item:hover .suggest-go{color:var(--accent)}
+
 /* ---------- coverage + sources ---------- */
 .finder,.map-section,.sources{margin-bottom:44px}
 .section-head{margin-bottom:18px}
