@@ -105,10 +105,16 @@ b,strong{font-weight:700}
 @keyframes pulse{0%{box-shadow:0 0 0 0 var(--ring)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
 .hero-title{margin-top:14px;font-weight:850;letter-spacing:-.035em;line-height:1.04;color:var(--ink);font-size:clamp(2.4rem,7.2vw,5.2rem)}
 .hero-line1{display:block}
+/* タイプライターで文字数が変わっても高さが動かないようにする（CLS の主因だった）。
+   最長フレーズを不可視のサイザーとして常に敷き、実際に打つ文字はその上に重ねる。
+   こうすると現在の文字数に関係なく行数＝サイザーの行数で固定される。 */
+.rotator{position:relative;display:block}
+.rotator-sizer{display:block;visibility:hidden}
+.rotator-live{position:absolute;left:0;top:0;right:0;display:block}
 .hero-line2{display:block}
 /* 回転する want スロット */
-.rotator{display:inline-flex;align-items:baseline;position:relative}
-.rotator-in{display:inline-block;background:linear-gradient(transparent 62%,var(--accent-line) 62%);color:var(--accent2);padding:0 .04em;will-change:transform,opacity}
+/* inline-block だと折り返せない塊になるため inline に。行をまたいでも下線が付くよう clone。 */
+.rotator-in{display:inline;background:linear-gradient(transparent 62%,var(--accent-line) 62%);color:var(--accent2);padding:0 .04em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .rotator-in.swap-out{animation:rotOut .26s ease forwards}
 .rotator-in.swap-in{animation:rotIn .36s cubic-bezier(.2,.8,.3,1)}
 @keyframes rotOut{to{opacity:0;transform:translateY(-.28em) rotateX(40deg)}}
@@ -184,7 +190,7 @@ b,strong{font-weight:700}
 .sort-wrap select{height:38px;border:none;background:none;color:var(--text2);font-weight:700;font-size:.84rem;padding-right:2px;cursor:pointer;outline:none}
 
 /* ---------- cards ---------- */
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;list-style:none;margin:0;padding:0}
 .feature-card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 16px;min-height:238px;cursor:pointer;transition:border-color .16s,transform .16s,box-shadow .16s;box-shadow:var(--shadow)}
 .feature-card:hover,.feature-card:focus-visible{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-lg);outline:none}
 .feature-card:focus-visible{box-shadow:0 0 0 3px var(--ring),var(--shadow-lg)}

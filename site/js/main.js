@@ -295,7 +295,9 @@
       : '<div class="commands">'+(entry.commands || []).slice(0,3)
           .map(c => '<span class="command-chip">'+escapeHtml(c)+'</span>').join("")+'</div>'
         + (entry.prompt ? promptBtn(entry.id) : "");
-    return '<article class="feature-card'+(custom?" is-custom-card":"")+(skill?" is-skill-card":"")+'" role="listitem" tabindex="0" style="--i:'+Math.min(i,24)+'" data-id="'+escapeHtml(entry.id)+'" aria-label="'+escapeHtml(entry.want)+'">'+
+    // ul > li の素の意味づけを使う（article に role="listitem" を被せるのは不正で、
+    // 支援技術・エージェントのアクセシビリティツリーが壊れる）
+    return '<li class="feature-card'+(custom?" is-custom-card":"")+(skill?" is-skill-card":"")+'" tabindex="0" style="--i:'+Math.min(i,24)+'" data-id="'+escapeHtml(entry.id)+'" aria-label="'+escapeHtml(entry.want)+'">'+
       '<div class="card-top"><h3 class="want">'+highlight(entry.want,q)+'</h3>'+
       '<div class="card-top-right">'+badge+favBtn(entry.id)+'</div></div>'+
       '<div class="feature"><div class="feature-label">'+(skill?"Install":"Use")+'</div>'+
@@ -304,7 +306,7 @@
       cmdArea+
       '<div class="card-footer"><span class="source-chip'+(custom?" is-custom":"")+(skill?" is-skill":"")+'">'+escapeHtml(chipLabel(entry))+'</span>'+
       '<span class="detail-cue">詳細<span class="material-icons-outlined" aria-hidden="true">arrow_forward</span></span></div>'+
-    '</article>';
+    '</li>';
   }
   function fmtStars(n){ return n >= 1000 ? (n/1000).toFixed(n >= 10000 ? 0 : 1) + "k" : String(n); }
   function favBtn(id){
