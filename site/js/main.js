@@ -438,6 +438,15 @@
     });
   });
 
+  // 「はじめて？」導線: 立場からカテゴリへ直行（非エンジニアの離脱を防ぐ入口）
+  document.querySelectorAll(".role-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      setQuery("");
+      setCategory(chip.dataset.roleCat);
+      document.getElementById("finderTitle").scrollIntoView({behavior:"smooth",block:"start"});
+    });
+  });
+
   /* ---------- copy-to-clipboard (install コマンド) ---------- */
   let toastEl = null, toastTimer = null;
   function showToast(html){
