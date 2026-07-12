@@ -19,7 +19,10 @@
   const catIcon = {};
   categories.forEach(c => { catIcon[c.id] = c.icon; });
 
-  const state = { query:"", category:"all", type:"all", origin:"all", sort:"priority" };
+  const state = { query:"", category:"all", type:"all", origin:"all", fav:false, sort:"priority" };
+  // お気に入り（localStorage 永続化）
+  let favs = new Set();
+  try { favs = new Set(JSON.parse(localStorage.getItem("ccf-favs") || "[]")); } catch(e){}
   const els = {
     themeToggle:document.getElementById("themeToggle"),
     categoryNav:document.getElementById("categoryNav"),
@@ -217,10 +220,20 @@
         '<button type="button" class="type-filter origin-filter" data-origin="'+o+'">'+label+
         ' <span class="mini-count">'+n+'</span></button>').join("");
     }
+    html += '<button type="button" class="type-filter fav-filter" data-favfilter="1"'+(favs.size?"":" hidden")+
+      ' aria-pressed="false"><span class="material-icons-outlined" aria-hidden="true">star</span>お気に入り'+
+      ' <span class="mini-count fav-count">'+favs.size+'</span></button>';
     els.quickFilters.innerHTML = html;
     els.quickFilters.addEventListener("click", e => {
       const btn = e.target.closest(".type-filter");
       if(!btn) return;
+      if(btn.dataset.favfilter){
+        state.fav = !state.fav;
+        btn.classList.toggle("active", state.fav);
+        btn.setAttribute("aria-pressed", state.fav);
+        renderCards(true);
+        return;
+      }
       if(btn.dataset.origin){
         const o = btn.dataset.origin;
         state.origin = state.origin === o ? "all" : o;
@@ -242,7 +255,8 @@
       const catOk = state.category === "all" || e.category === state.category;
       const typeOk = state.type === "all" || e.type === state.type;
       const originOk = state.origin === "all" || e.origin === state.origin;
-      if(!(catOk && typeOk && originOk)) return false;
+      const favOk = !state.fav || favs.has(e.id);
+      if(!(catOk && typeOk && originOk && favOk)) return false;
       if(!hasQuery) return true;
       const res = scoreEntry(e, query);
       if(!res.strong || res.score <= 0) return false;
@@ -274,7 +288,8 @@
       : '<div class="commands">'+(entry.commands || []).slice(0,3)
           .map(c => '<span class="command-chip">'+escapeHtml(c)+'</span>').join("")+'</div>';
     return '<article class="feature-card'+(custom?" is-custom-card":"")+(skill?" is-skill-card":"")+'" role="listitem" tabindex="0" style="--i:'+Math.min(i,24)+'" data-id="'+escapeHtml(entry.id)+'" aria-label="'+escapeHtml(entry.want)+'">'+
-      '<div class="card-top"><h3 class="want">'+highlight(entry.want,q)+'</h3>'+badge+'</div>'+
+      '<div class="card-top"><h3 class="want">'+highlight(entry.want,q)+'</h3>'+
+      '<div class="card-top-right">'+badge+favBtn(entry.id)+'</div></div>'+
       '<div class="feature"><div class="feature-label">'+(skill?"Install":"Use")+'</div>'+
       '<div class="feature-name">'+highlight(entry.feature,q)+'</div></div>'+
       '<p class="summary">'+highlight(entry.summary,q)+'</p>'+
@@ -284,6 +299,33 @@
     '</article>';
   }
   function fmtStars(n){ return n >= 1000 ? (n/1000).toFixed(n >= 10000 ? 0 : 1) + "k" : String(n); }
+  function favBtn(id){
+    const on = favs.has(id);
+    return '<button type="button" class="fav-btn'+(on?" on":"")+'" data-fav="'+escapeHtml(id)+'" aria-pressed="'+on+'" aria-label="お気に入りに追加" title="お気に入り">'+
+      '<span class="material-icons-outlined" aria-hidden="true">'+(on?"star":"star_border")+'</span></button>';
+  }
+  function toggleFav(id, btn){
+    const on = !favs.has(id);
+    if(on) favs.add(id); else favs.delete(id);
+    try { localStorage.setItem("ccf-favs", JSON.stringify([...favs])); } catch(e){}
+    if(btn){
+      btn.classList.toggle("on", on);
+      btn.setAttribute("aria-pressed", on);
+      const ic = btn.querySelector(".material-icons-outlined");
+      if(ic) ic.textContent = on ? "star" : "star_border";
+    }
+    const wasFavView = state.fav;
+    updateFavFilter();                    // 空になったら state.fav を false に戻す
+    if(wasFavView) renderCards();         // お気に入り表示中の増減は一覧に即反映
+  }
+  function updateFavFilter(){
+    const chip = els.quickFilters.querySelector(".fav-filter");
+    if(!chip) return;
+    const c = chip.querySelector(".fav-count");
+    if(c) c.textContent = favs.size;
+    chip.hidden = favs.size === 0;
+    if(favs.size === 0 && state.fav){ state.fav = false; chip.classList.remove("active"); chip.setAttribute("aria-pressed","false"); }
+  }
   function installRow(cmd){
     const safe = escapeHtml(cmd || "");
     return '<div class="install-row"><code class="install-cmd">'+safe+'</code>'+
@@ -435,16 +477,19 @@
   // カード内・モーダル内どちらの copy-btn も拾う
   document.addEventListener("click", e => {
     const cp = e.target.closest(".copy-btn");
-    if(cp){ e.stopPropagation(); copyText(cp.dataset.copy || "", cp); }
+    if(cp){ e.stopPropagation(); copyText(cp.dataset.copy || "", cp); return; }
+    const fv = e.target.closest(".fav-btn");
+    if(fv){ e.stopPropagation(); e.preventDefault(); toggleFav(fv.dataset.fav || "", fv); }
   }, true);
 
   /* ---------- card interaction ---------- */
   els.cards.addEventListener("click", e => {
-    if(e.target.closest(".copy-btn")) return;   // コピーはモーダルを開かない
+    if(e.target.closest(".copy-btn,.fav-btn")) return;   // コピー・お気に入りはモーダルを開かない
     const card = e.target.closest(".feature-card");
     if(card) openModal(card.dataset.id);
   });
   els.cards.addEventListener("keydown", e => {
+    if(e.target.closest(".fav-btn,.copy-btn")) return;   // カード内ボタンは自前の挙動に任せる
     const card = e.target.closest(".feature-card");
     if(!card) return;
     if(e.key === "Enter" || e.key === " "){ e.preventDefault(); openModal(card.dataset.id); return; }

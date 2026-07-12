@@ -174,6 +174,16 @@ b,strong{font-weight:700}
 .feature-card:hover,.feature-card:focus-visible{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-lg);outline:none}
 .feature-card:focus-visible{box-shadow:0 0 0 3px var(--ring),var(--shadow-lg)}
 .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.card-top-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.fav-btn{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;color:var(--text3);cursor:pointer;transition:background .14s,color .14s,transform .14s}
+.fav-btn:hover{background:var(--surface3);color:#e0a92e}
+.fav-btn:active{transform:scale(.86)}
+.fav-btn:focus-visible{outline:none;box-shadow:0 0 0 3px var(--ring)}
+.fav-btn .material-icons-outlined{font-size:19px}
+.fav-btn.on{color:#e0a92e}
+.fav-btn.on .material-icons-outlined{animation:favPop .32s cubic-bezier(.2,.8,.3,1.4)}
+@keyframes favPop{0%{transform:scale(.6)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.fav-btn.on .material-icons-outlined{animation:none}}
 .want{font-size:1.06rem;line-height:1.5;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
 .badge{flex-shrink:0;display:inline-flex;align-items:center;min-height:24px;padding:3px 9px;border-radius:999px;background:var(--surface3);color:var(--text2);font-size:.7rem;font-weight:800;letter-spacing:.02em;white-space:nowrap}
 .badge.is-removed{background:var(--accent-soft);color:var(--accent)}
@@ -273,6 +283,12 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 .origin-filter:hover{background:var(--accent-soft)}
 .origin-filter.active{background:var(--accent);border-color:var(--accent);border-style:solid;color:#fff}
 .origin-filter .mini-count{font-family:var(--mono);font-size:.72rem;opacity:.8}
+.fav-filter{display:inline-flex;align-items:center;gap:5px;border-style:dashed;border-color:#e0a92e;color:#b9821c}
+.fav-filter .material-icons-outlined{font-size:16px}
+.fav-filter .mini-count{font-family:var(--mono);font-size:.72rem;opacity:.85}
+.fav-filter:hover{background:color-mix(in srgb,#e0a92e 14%,transparent)}
+.fav-filter.active{background:#e0a92e;border-color:#e0a92e;border-style:solid;color:#3a2c07}
+:root[data-theme="dark"] .fav-filter{color:#e8bf6a}
 .badge.is-custom{background:var(--accent-soft);color:var(--accent);border:1px dashed var(--accent-line)}
 .source-chip.is-custom::before{background:var(--accent);opacity:1}
 .is-custom-card{border-color:var(--accent-line)}
