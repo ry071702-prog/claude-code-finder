@@ -20,6 +20,7 @@ def _load(name):
 
 fu = _load("fetch_updates")
 fs = _load("fetch_skills")
+ns = _load("notify_slack")
 
 
 # ---------- fetch_updates.parse ----------
@@ -136,6 +137,41 @@ def test_id_of_is_path_unique_no_leaf_collision():
 def test_slug_of_returns_leaf_dir():
     assert fs.slug_of("plugins/a/skills/commit/SKILL.md", "repo") == "commit"
     assert fs.slug_of("SKILL.md", "repo") == "repo"
+
+
+# --- notify_slack: 差分計算（毎週おなじ内容を流さないための要） ---
+
+VERSIONS = [
+    {"version": "2.1.9", "items": [{"kind": "追加", "text": "A"}]},
+    {"version": "2.1.8", "items": [{"kind": "修正", "text": "B"}]},
+    {"version": "2.1.7", "items": [{"kind": "修正", "text": "C"}]},
+]
+
+
+def test_new_versions_returns_only_those_above_last():
+    fresh = ns.new_versions(VERSIONS, "2.1.7")
+    assert [v["version"] for v in fresh] == ["2.1.9", "2.1.8"]
+
+
+def test_new_versions_empty_when_already_latest():
+    assert ns.new_versions(VERSIONS, "2.1.9") == []
+
+
+def test_new_versions_returns_all_when_last_unknown():
+    # 未知の版が入っていたら取りこぼさず全件（MAX_VERSIONS で投稿側が上限を掛ける）
+    assert len(ns.new_versions(VERSIONS, "0.0.0")) == 3
+
+
+def test_build_blocks_has_header_and_context():
+    blocks = ns.build_blocks(VERSIONS[:1], [])
+    assert blocks[0]["type"] == "header"
+    assert blocks[-1]["type"] == "context"
+
+
+def test_build_blocks_includes_skill_link_and_stars():
+    skills = [{"id": "x", "name": "pdf", "stars": 42, "url": "https://example.com/r", "description": "d"}]
+    text = ns.build_blocks([], skills)[1]["text"]["text"]
+    assert "pdf" in text and "★42" in text and "https://example.com/r" in text
 
 
 if __name__ == "__main__":

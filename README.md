@@ -55,7 +55,19 @@ scripts/              fetch_skills.py / fetch_updates.py / build_data.py / build
 - 更新ページの CHANGELOG は `anthropics/claude-code` の CHANGELOG.md を純パースして生成（`fetch_updates.py`）
 - 他者からの投稿を捌く: `python scripts/review_submissions.py --list` → `--approve owner/repo`（`skill-sources.csv` へ昇格）
 
+## Slack 週次通知（非LLM・任意）
+週次インジェストで **新しい CHANGELOG バージョン / 新規 Skill が入った時だけ** Slack に投稿する。差分が無ければ何も流さない。
+
+- 有効化: Slack の Incoming Webhook を作り、GitHub Secrets に `SLACK_WEBHOOK_URL` を登録するだけ（未設定なら投稿はスキップされ、状態も進まないので後から有効化しても取りこぼさない）
+- 動作確認: `python scripts/notify_slack.py --dry-run`（投稿せず内容を表示）
+- 通知済みの位置は `data/notify_state.json` に記録（git-as-DB）。初回は記録のみで投稿しない
+- LLM は使わない。純粋な差分計算のみ
+
+> 補足: 個人ルールでは Slack 連携は日報アプリに集約する方針だが、サイトと通知を同一リポジトリで完結させる判断により、本リポジトリに置く明示的な例外としている（2026-07-12）。
+
 ## デプロイ
 - **自動（推奨）**: `main` に push すると `.github/workflows/deploy.yml` が `site/` を Cloudflare Pages へデプロイ。
   - 必要な GitHub Secrets: `CLOUDFLARE_API_TOKEN`（Pages:Edit）, `CLOUDFLARE_ACCOUNT_ID`
+  - 任意: `SLACK_WEBHOOK_URL`（週次通知を使う場合）
 - **手動**: `npx wrangler pages deploy site --project-name claude-code-finder --branch main`
+- 週次インジェストは `GITHUB_TOKEN` で push するため `deploy.yml` の `on:push` が発火しない（GitHub仕様）。そのため ingest 側が自分でデプロイまで行う。

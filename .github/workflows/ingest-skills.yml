@@ -86,3 +86,24 @@ jobs:
             --branch=main
             --commit-hash=${{ github.sha }}
             --commit-message=ci-ingest
+
+      # 非LLM。新しいバージョン/Skillが有る時だけ投稿する（毎週おなじ内容は流さない）。
+      # 本番へ反映した後に通知するため、必ず deploy の後ろに置く。
+      # SLACK_WEBHOOK_URL 未設定なら投稿せず終了する（state も進めないので後から設定しても取りこぼさない）。
+      - name: Notify Slack (non-LLM)
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python scripts/notify_slack.py
+
+      - name: Persist notify state
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          git add data/notify_state.json
+          if git diff --cached --quiet; then
+            echo "通知状態に変更なし"
+          else
+            git commit -m "data: notify state ($(date -u +%Y-%m-%d))"
+            git pull --rebase --autostash origin main || true
+            git push || { git pull --rebase --autostash origin main && git push; }
+          fi
