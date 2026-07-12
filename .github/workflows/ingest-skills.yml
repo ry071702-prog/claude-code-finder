@@ -55,17 +55,26 @@ jobs:
       - name: Build plugin/MCP data
         run: node scripts/build_plugin_data.mjs
 
+      # MeetS (ca-sites) の AI ページが読む公開エクスポート
+      # install 導線と自作プラグイン導線は build_ccf_export.mjs 側で除外している
+      - name: Build MeetS export (site/data/ccf-export.json)
+        run: node scripts/build_ccf_export.mjs
+
       # サイトと MCP は正規化・意図マップを二重に持つ。片方だけ直して食い違う事故を防ぐ。
       # ここで落ちれば commit も deploy もされない。
       - name: Test search (site/MCP パリティ)
         run: node tests/test_search.mjs
+
+      # 外部配信する export に install 導線が混入していないかを機械的に担保する
+      - name: Test export (MeetS 向け公開データ)
+        run: node tests/test_export.mjs
 
       - name: Commit if changed
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/skills/skills.jsonl site/js/data-skills.js site/js/data-changelog.js plugin/mcp/data.json
+          git add data/skills/skills.jsonl site/js/data-skills.js site/js/data-changelog.js plugin/mcp/data.json site/data/ccf-export.json
           if git diff --cached --quiet; then
             echo "変更なし（スキップ）"
             echo "changed=false" >> "$GITHUB_OUTPUT"

@@ -1,0 +1,1158 @@
+{
+ "schemaVersion": 1,
+ "source": {
+  "name": "claude-code-finder",
+  "url": "https://claude-code-finder.pages.dev",
+  "disclaimer": "非公式のまとめ  一次情報は Anthropic 公式ドキュメントを参照"
+ },
+ "counts": {
+  "qa": 40,
+  "cowork": 10,
+  "prompts": 4,
+  "updates": 14
+ },
+ "sections": [
+  {
+   "key": "qa",
+   "meetsCategory": "Q&A",
+   "label": "やりたいこと逆引き",
+   "note": "「◯◯したい」から機能を引く  一次情報は公式 docs",
+   "items": [
+    {
+     "id": "start-basic",
+     "title": "ターミナルでClaude Codeを起動したい",
+     "feature": "claude",
+     "summary": "プロジェクトのフォルダに入って claude と打つと、その場所を起点に対話セッションが始まる。",
+     "category": "start",
+     "commands": [
+      "claude"
+     ],
+     "steps": [
+      "作業したいプロジェクトのディレクトリへ移動する。",
+      "claude を実行する。",
+      "初回はブラウザまたはコンソールでログインを済ませる。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-basic"
+    },
+    {
+     "id": "start-inline",
+     "title": "最初のお願いを付けて起動したい",
+     "feature": "claude \"依頼文\"",
+     "summary": "起動と同時に最初の指示を渡せる。短い質問や下調べにそのまま入れる。",
+     "category": "start",
+     "commands": [
+      "claude \"このプロジェクトの構成を教えて\""
+     ],
+     "steps": [
+      "対象フォルダでコマンドに依頼文を添えて実行する。",
+      "返答を見てそのまま会話を続ける。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-inline"
+    },
+    {
+     "id": "start-print",
+     "title": "対話せず1回だけ実行して結果を受け取りたい",
+     "feature": "claude -p",
+     "summary": "非対話モード。標準入力やパイプと組み合わせてスクリプトやCIから呼べる。",
+     "category": "automation",
+     "commands": [
+      "claude -p \"要約して\"",
+      "cat error.log | claude -p \"原因を推測して\"",
+      "claude -p \"...\" --output-format json"
+     ],
+     "steps": [
+      "-p の後ろに指示を書く。",
+      "必要ならログや差分を標準入力で渡す。",
+      "出力を次のコマンドや処理につなぐ。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-print"
+    },
+    {
+     "id": "start-continue",
+     "title": "さっきの続きをすぐ再開したい",
+     "feature": "claude -c / /resume",
+     "summary": "直近の会話、または一覧から選んだ会話を復元して続きから作業できる。",
+     "category": "start",
+     "commands": [
+      "claude -c",
+      "claude --continue",
+      "/resume"
+     ],
+     "steps": [
+      "同じプロジェクトで claude -c を実行する。",
+      "候補が複数なら /resume で選ぶ。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-continue"
+    },
+    {
+     "id": "start-resume-named",
+     "title": "特定の会話を名前で指定して戻りたい",
+     "feature": "claude -r / /resume [名前]",
+     "summary": "名前やIDを指定して過去の会話へ直接戻る。案件ごとに名前を付けておくと復帰が速い。",
+     "category": "start",
+     "commands": [
+      "claude -r \"決済リファクタ\"",
+      "/resume 決済リファクタ"
+     ],
+     "steps": [
+      "区切りで /rename して会話に名前を付ける。",
+      "claude -r か /resume で名前を指定する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-resume-named"
+    },
+    {
+     "id": "start-rename",
+     "title": "今の会話に名前を付けて後で探しやすくしたい",
+     "feature": "/rename",
+     "summary": "現在のセッションに分かりやすい名前を付ける。長い案件の頭で付けておくと後が楽。",
+     "category": "start",
+     "commands": [
+      "/rename 認証まわり調査"
+     ],
+     "steps": [
+      "作業の区切りで /rename を実行する。",
+      "後日 /resume で名前から探す。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-rename"
+    },
+    {
+     "id": "start-clear",
+     "title": "別の作業を新しい会話で始めたい",
+     "feature": "/clear",
+     "summary": "今の会話を残したまま、まっさらなコンテキストで次のタスクへ切り替える。",
+     "category": "start",
+     "commands": [
+      "/clear"
+     ],
+     "steps": [
+      "ひとつの作業が一段落したら /clear。",
+      "必要なら先に名前を付けて保存する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-clear"
+    },
+    {
+     "id": "start-adddir",
+     "title": "作業フォルダの外のディレクトリも読ませたい",
+     "feature": "/add-dir",
+     "summary": "今の作業範囲に別のパスを追加して、複数フォルダ（モノレポなど）をまたいで扱う。",
+     "category": "start",
+     "commands": [
+      "/add-dir ../shared",
+      "/add-dir ../packages/ui"
+     ],
+     "steps": [
+      "参照が必要なフォルダを指定する。",
+      "何をしてほしいかを具体的に伝える。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#start-adddir"
+    },
+    {
+     "id": "und-explore",
+     "title": "初めて触るコードの全体像を把握したい",
+     "feature": "自然言語で調査 + /init",
+     "summary": "構成・依存・起動方法・要所のファイルを説明させ、作業の前提を整える。",
+     "category": "understand",
+     "commands": [
+      "claude \"このリポジトリの全体像を説明して\"",
+      "/init"
+     ],
+     "steps": [
+      "まず構成と役割を質問する。",
+      "起動コマンドと重要ファイルを確認する。",
+      "/init で分かったことを CLAUDE.md に残す。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#und-explore"
+    },
+    {
+     "id": "und-plan",
+     "title": "変更する前に方針だけ先に出させたい",
+     "feature": "Plan mode（/plan・Shift+Tab）",
+     "summary": "読み取り中心で計画を作り、実装に入る前にレビューできる状態にする。",
+     "category": "understand",
+     "commands": [
+      "/plan 認証のリダイレクトを直す"
+     ],
+     "steps": [
+      "計画したい目的を渡す。",
+      "影響範囲・手順・確認方法をレビューする。",
+      "納得したら実装へ進める。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#und-plan"
+    },
+    {
+     "id": "und-context",
+     "title": "会話が重くなった原因を見たい",
+     "feature": "/context",
+     "summary": "今どれだけコンテキストを使っていて、何が枠を消費しているかを可視化する。",
+     "category": "understand",
+     "commands": [
+      "/context"
+     ],
+     "steps": [
+      "/context を実行する。",
+      "重いファイル・ツール結果・メモリを確認する。",
+      "必要なら /compact や不要な参照の削減を行う。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#und-context"
+    },
+    {
+     "id": "und-compact",
+     "title": "長くなった会話を軽くして続けたい",
+     "feature": "/compact",
+     "summary": "これまでの会話を要約して枠を空け、同じ作業を続けられるようにする。",
+     "category": "understand",
+     "commands": [
+      "/compact",
+      "/compact 失敗中のテストに集中して"
+     ],
+     "steps": [
+      "区切りで /compact を実行する。",
+      "残したい観点があれば指示を添える。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#und-compact"
+    },
+    {
+     "id": "und-mention",
+     "title": "特定のファイルや行を指定して読ませたい",
+     "feature": "@ファイル参照",
+     "summary": "@ でファイルを指し示して、その中身を前提に質問・修正させる。",
+     "category": "understand",
+     "commands": [
+      "@src/auth.ts この関数の役割は?",
+      "@package.json"
+     ],
+     "steps": [
+      "@ に続けてパスを打つ（補完が効く）。",
+      "そのファイル前提で依頼する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#und-mention"
+    },
+    {
+     "id": "und-copy",
+     "title": "直前の回答やコードブロックをコピーしたい",
+     "feature": "/copy",
+     "summary": "最後の回答や過去の回答、コードブロックを選んでクリップボードへ。",
+     "category": "understand",
+     "commands": [
+      "/copy"
+     ],
+     "steps": [
+      "/copy を実行する。",
+      "コードブロックがあれば選ぶ。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#und-copy"
+    },
+    {
+     "id": "und-export",
+     "title": "会話のログを残したい",
+     "feature": "/export",
+     "summary": "今の会話をテキストとしてコピー、またはファイルに保存する。",
+     "category": "understand",
+     "commands": [
+      "/export",
+      "/export notes.md"
+     ],
+     "steps": [
+      "/export を実行する。",
+      "コピーか保存先を選ぶ。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#und-export"
+    },
+    {
+     "id": "chg-edit",
+     "title": "ファイルを編集・新規作成させたい",
+     "feature": "Edit / Write",
+     "summary": "既存ファイルの書き換えや新規作成を、内蔵の編集ツールで行う。",
+     "category": "change",
+     "commands": [
+      "\"この関数のバグを直して\"",
+      "\"READMEに使い方を追記して\""
+     ],
+     "steps": [
+      "変更の目的と完了条件を伝える。",
+      "提案された差分を確認する。",
+      "テストや /verify で動作を確かめる。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#chg-edit"
+    },
+    {
+     "id": "chg-bash",
+     "title": "コマンドを実行して結果を見ながら進めたい",
+     "feature": "Bash 実行",
+     "summary": "ビルド・テスト・スクリプトなどのコマンドを実行し、出力をもとに次の手を決めさせる。",
+     "category": "change",
+     "commands": [
+      "\"ビルドを通して\"",
+      "\"lint を直して\""
+     ],
+     "steps": [
+      "やりたいことを伝える（コマンドは任せてよい）。",
+      "実行結果を見て修正を続けさせる。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#chg-bash"
+    },
+    {
+     "id": "chg-tests",
+     "title": "テストを書いて失敗を直すところまで任せたい",
+     "feature": "テスト作成→実行→修正",
+     "summary": "対象と期待する挙動を伝えると、テスト追加・実行・失敗の修正まで一連で進む。",
+     "category": "change",
+     "commands": [
+      "\"このモジュールのテストを書いて、走らせて、落ちたら直して\""
+     ],
+     "steps": [
+      "対象と期待挙動を具体的に伝える。",
+      "テストを追加させる。",
+      "実行ログを見て修正させる。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#chg-tests"
+    },
+    {
+     "id": "chg-rewind",
+     "title": "うまくいかない変更を前の状態に戻したい",
+     "feature": "/rewind",
+     "summary": "会話またはコードを、少し前のチェックポイントへ巻き戻す。行き過ぎた変更のやり直しに。",
+     "category": "change",
+     "commands": [
+      "/rewind"
+     ],
+     "steps": [
+      "/rewind で戻す地点を選ぶ。",
+      "会話を戻すのかコードを戻すのかを確認する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#chg-rewind"
+    },
+    {
+     "id": "chg-artifact",
+     "title": "作ったHTMLやMarkdownを共有できるページにしたい",
+     "feature": "Artifact",
+     "summary": "HTML/Markdown の成果物を、共有可能なインタラクティブページとして公開する。",
+     "category": "change",
+     "commands": [
+      "\"このデータをダッシュボードにして共有ページにして\""
+     ],
+     "steps": [
+      "中身（HTML/Markdown）を作る。",
+      "Artifact として公開させる。",
+      "共有範囲を確認する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#chg-artifact"
+    },
+    {
+     "id": "chg-notebook",
+     "title": "Jupyterノートブックを編集したい",
+     "feature": "NotebookEdit",
+     "summary": "ノートブックをセル単位で編集する。分析や教材の修正に向く。",
+     "category": "change",
+     "commands": [
+      "\"このノートの前処理セルを直して\""
+     ],
+     "steps": [
+      "対象ノートと変更の目的を指定する。",
+      "セル単位の差分を確認する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#chg-notebook"
+    },
+    {
+     "id": "git-diff",
+     "title": "Claudeが何を変えたのか差分で見たい",
+     "feature": "/diff",
+     "summary": "未コミットの差分を確認する。レビュー前に必ず目を通す。",
+     "category": "git",
+     "commands": [
+      "/diff"
+     ],
+     "steps": [
+      "変更後に /diff を実行する。",
+      "ファイルごとの差分を確認する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#git-diff"
+    },
+    {
+     "id": "git-commit",
+     "title": "コミットまでやってほしい",
+     "feature": "Git操作を依頼",
+     "summary": "ステージング、コミットメッセージ作成、コミット実行までを頼める。",
+     "category": "git",
+     "commands": [
+      "\"変更を分かりやすいメッセージでコミットして\""
+     ],
+     "steps": [
+      "差分を確認する。",
+      "対象と方針を伝える。",
+      "生成されたメッセージを確認する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#git-commit"
+    },
+    {
+     "id": "git-review",
+     "title": "変更のバグをレビューしてほしい",
+     "feature": "/code-review",
+     "summary": "今の差分や指定PRを、正しさ・簡潔さの観点でレビューする。",
+     "category": "git",
+     "commands": [
+      "/code-review",
+      "/code-review high --fix"
+     ],
+     "steps": [
+      "レビュー対象を明確にする。",
+      "必要な深さ（努力レベル）を選ぶ。",
+      "--fix は内容を確認してから使う。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#git-review"
+    },
+    {
+     "id": "git-review-pr",
+     "title": "GitHubのPRを軽くレビューしたい",
+     "feature": "/review",
+     "summary": "GitHub の Pull Request を単発・読み取り中心でレビューする。",
+     "category": "git",
+     "commands": [
+      "/review",
+      "/review 123"
+     ],
+     "steps": [
+      "PR番号かURLを指定する。",
+      "追加で見てほしい観点を書く。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#git-review-pr"
+    },
+    {
+     "id": "git-security",
+     "title": "セキュリティ上の問題を洗い出したい",
+     "feature": "/security-review",
+     "summary": "保留中の差分を、注入・認可・データ露出などの観点で点検する。",
+     "category": "git",
+     "commands": [
+      "/security-review"
+     ],
+     "steps": [
+      "差分がある状態で実行する。",
+      "指摘が出たら対応方針を確認する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#git-security"
+    },
+    {
+     "id": "git-app",
+     "title": "GitHubと連携してPRに自動で関わらせたい",
+     "feature": "GitHub連携（/install-github-app）",
+     "summary": "Claude の GitHub App を入れ、PR やイシューでの自動レビュー・修正の土台を作る。",
+     "category": "git",
+     "commands": [
+      "/install-github-app"
+     ],
+     "steps": [
+      "対象リポジトリを選ぶ。",
+      "必要な workflow / secrets を設定する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#git-app"
+    },
+    {
+     "id": "par-bg",
+     "title": "長い作業をターミナルから切り離して裏で進めたい",
+     "feature": "バックグラウンド実行",
+     "summary": "今のセッションを裏に回してターミナルを解放し、作業は継続させる。",
+     "category": "parallel",
+     "commands": [
+      "Ctrl-b でバックグラウンド化",
+      "claude agents"
+     ],
+     "steps": [
+      "追加の指示を渡してから裏に回す。",
+      "一覧で状態を確認する。",
+      "必要なら復帰する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#par-bg"
+    },
+    {
+     "id": "par-agents",
+     "title": "複数の実行中セッションをまとめて管理したい",
+     "feature": "claude agents",
+     "summary": "裏で動いているセッションを一覧・監視・操作できる管理ビュー。",
+     "category": "parallel",
+     "commands": [
+      "claude agents"
+     ],
+     "steps": [
+      "claude agents を開く。",
+      "必要に応じて接続・停止・ログ確認をする。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#par-agents"
+    },
+    {
+     "id": "par-subagent",
+     "title": "本筋を止めずに別作業を並行で任せたい",
+     "feature": "サブエージェント（Task/Agent）",
+     "summary": "独立した調べ物や作業を別コンテキストのエージェントに任せ、結果だけ受け取る。",
+     "category": "parallel",
+     "commands": [
+      "\"このテストがなぜ不安定か別で調べておいて\""
+     ],
+     "steps": [
+      "独立して進められる指示を渡す。",
+      "本筋の作業を続ける。",
+      "戻ってきた結果を統合する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#par-subagent"
+    },
+    {
+     "id": "par-batch",
+     "title": "大規模な変更を分割して並列で実装したい",
+     "feature": "一括変更（分割→並列）",
+     "summary": "大きな変更を小さな単位に分け、それぞれを分離環境で並行実装させる。",
+     "category": "parallel",
+     "commands": [
+      "\"src を段階的に移行して。分割案を先に出して\""
+     ],
+     "steps": [
+      "大きな目的を渡す。",
+      "分割計画をレビューする。",
+      "承認後に各結果を確認する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#par-batch"
+    },
+    {
+     "id": "par-tasks",
+     "title": "今動いているタスクやコマンドを確認したい",
+     "feature": "/tasks",
+     "summary": "セッション内で走っているバックグラウンド処理やサブエージェントを表示・管理する。",
+     "category": "parallel",
+     "commands": [
+      "/tasks"
+     ],
+     "steps": [
+      "/tasks を開く。",
+      "必要なものを確認・停止する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#par-tasks"
+    },
+    {
+     "id": "mem-init",
+     "title": "プロジェクトのルールを毎回読ませたい",
+     "feature": "CLAUDE.md（/init）",
+     "summary": "プロジェクト直下の CLAUDE.md に方針・コマンド・禁止事項を書くと、毎セッション読み込まれる。",
+     "category": "memory",
+     "commands": [
+      "/init"
+     ],
+     "steps": [
+      "/init でひな形を作る。",
+      "実行コマンド・設計方針・やらないことを追記する。",
+      "長すぎる内容は整理する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-init"
+    },
+    {
+     "id": "mem-hierarchy",
+     "title": "個人用と共有用でルールを分けたい",
+     "feature": "CLAUDE.md の階層",
+     "summary": "ユーザー全体（~/.claude）・プロジェクト・ローカルの3層で指示を分けられる。共有はプロジェクト、個人はユーザーやローカル。",
+     "category": "memory",
+     "commands": [
+      "~/.claude/CLAUDE.md",
+      "./CLAUDE.md",
+      "./CLAUDE.local.md"
+     ],
+     "steps": [
+      "全プロジェクト共通は ~/.claude に書く。",
+      "チーム共有はリポジトリの CLAUDE.md に書く。",
+      "自分だけの上書きは local に置く。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-hierarchy"
+    },
+    {
+     "id": "mem-memory",
+     "title": "メモリや学習内容を管理したい",
+     "feature": "/memory",
+     "summary": "CLAUDE.md や自動メモリを表示・編集する。古い学習の削除にも使う。",
+     "category": "memory",
+     "commands": [
+      "/memory",
+      "# これは覚えておいて"
+     ],
+     "steps": [
+      "/memory を開く。",
+      "スコープごとに内容を確認する。",
+      "不要な学習を削る。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-memory"
+    },
+    {
+     "id": "mem-config",
+     "title": "テーマやモデルなどの設定を変えたい",
+     "feature": "/config",
+     "summary": "設定画面から表示・モデル・出力スタイルなどをまとめて変更する。",
+     "category": "memory",
+     "commands": [
+      "/config"
+     ],
+     "steps": [
+      "/config を開く。",
+      "変えたい項目を選ぶ。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-config"
+    },
+    {
+     "id": "mem-settings",
+     "title": "設定をファイルで管理・共有したい",
+     "feature": "settings.json",
+     "summary": "権限・環境変数・フック・モデルなどを settings.json で宣言的に管理する。ユーザー/プロジェクト/ローカルのスコープがある。",
+     "category": "memory",
+     "commands": [
+      "~/.claude/settings.json",
+      ".claude/settings.json",
+      ".claude/settings.local.json"
+     ],
+     "steps": [
+      "共有したい設定は .claude/settings.json に置く。",
+      "個人・秘密寄りは local か user に置く。",
+      "権限やフックはここで管理する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-settings"
+    },
+    {
+     "id": "mem-model",
+     "title": "使うモデルを切り替えたい",
+     "feature": "/model",
+     "summary": "現在または今後のセッションで使うモデルを選ぶ。",
+     "category": "memory",
+     "commands": [
+      "/model",
+      "/model opus"
+     ],
+     "steps": [
+      "/model を開く。",
+      "モデルを選ぶ。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-model"
+    },
+    {
+     "id": "mem-output",
+     "title": "開発以外の用途に応答スタイルを合わせたい",
+     "feature": "Output styles",
+     "summary": "用途に合わせて応答のスタイルを切り替える。",
+     "category": "memory",
+     "commands": [
+      "/config → Output style"
+     ],
+     "steps": [
+      "設定から Output style を選ぶ。",
+      "目的に合わせて使い分ける。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-output"
+    },
+    {
+     "id": "mem-statusline",
+     "title": "コストやgit状態をステータス行に出したい",
+     "feature": "/statusline",
+     "summary": "コンテキスト・コスト・git 状態などを表示するカスタムステータス行を設定する。",
+     "category": "memory",
+     "commands": [
+      "/statusline"
+     ],
+     "steps": [
+      "/statusline を実行する。",
+      "出したい情報を伝える。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#mem-statusline"
+    }
+   ]
+  },
+  {
+   "key": "cowork",
+   "meetsCategory": "ツール活用",
+   "label": "コード不要・仕事で使える",
+   "note": "エンジニア以外でもそのまま使える活用例",
+   "items": [
+    {
+     "id": "work-start-noterminal",
+     "title": "コードを書かない・ターミナルを使わずに始めたい",
+     "feature": "Claude アプリ（Web / デスクトップ / モバイル）",
+     "summary": "エンジニアでなくても、ブラウザ（claude.ai）やデスクトップ/モバイルアプリから普通のチャットで頼むだけで使えます。以下の仕事はコードの知識ゼロでOKです。",
+     "category": "cowork",
+     "commands": [
+      "claude.ai を開いて日本語で頼むだけ"
+     ],
+     "steps": [
+      "claude.ai かデスクトップ/モバイルアプリを開く。",
+      "やりたいことを普通の日本語で書く（例: 『この資料を3行で要約して』）。",
+      "結果を確認して、直したい所を追加で頼む。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-start-noterminal"
+    },
+    {
+     "id": "work-slides",
+     "title": "プレゼン資料・スライドのたたき台を作りたい",
+     "feature": "資料ドラフト（構成→本文）",
+     "summary": "テーマ・目的・伝えたい相手を伝えると、スライドの構成案から各ページの見出し・本文まで作ってくれます。PowerPoint 生成に対応した Skill を入れれば .pptx で書き出すこともできます。",
+     "category": "cowork",
+     "commands": [
+      "\"新入社員向けにセキュリティ研修のスライド構成を10枚で\"",
+      "\"この内容をスライドの箇条書きに整えて\""
+     ],
+     "steps": [
+      "テーマ・目的・対象者・枚数を伝える。",
+      "まず構成案（目次）を出させて方向を決める。",
+      "各ページの本文・箇条書きに展開させる。",
+      "必要なら pptx 生成 Skill で書き出す。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-slides"
+    },
+    {
+     "id": "work-doc",
+     "title": "報告書・提案書・お知らせなどの文書を書きたい",
+     "feature": "文書ドラフト（Word 等）",
+     "summary": "要点や箇条書きのメモを渡すと、体裁の整った文章に仕上げてくれます。Word 生成 Skill を入れれば .docx でも出力できます。",
+     "category": "cowork",
+     "commands": [
+      "\"この箇条書きから週報を書いて\"",
+      "\"提案書の骨子を作って（背景・課題・提案・効果）\""
+     ],
+     "steps": [
+      "伝えたい要点・読み手・トーンを渡す。",
+      "構成（見出し）を先に決める。",
+      "本文を書かせて、固い/柔らかいを調整する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-doc"
+    },
+    {
+     "id": "work-sheet",
+     "title": "Excel・スプレッドシートの表や集計を作りたい",
+     "feature": "表・集計・関数の相談",
+     "summary": "「こういう集計がしたい」を伝えると、表の作り方・必要な関数（SUMIF/VLOOKUP 等）・手順を教えてくれます。Excel 生成 Skill を入れれば .xlsx を直接作ることもできます。",
+     "category": "cowork",
+     "commands": [
+      "\"日付ごとの売上を月別に集計する関数は？\"",
+      "\"この表を見やすく整形して合計列を足して\""
+     ],
+     "steps": [
+      "元データの形と、出したい集計を伝える。",
+      "関数か手順を教えてもらう。",
+      "うまくいかない時はエラー内容を貼って相談する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-sheet"
+    },
+    {
+     "id": "work-pdf",
+     "title": "長いPDFや資料を読んで要点だけ知りたい",
+     "feature": "PDF・資料の要約と質問",
+     "summary": "PDF や長文を渡すと、要点の要約・重要ポイントの抽出・「ここどういう意味？」への回答をしてくれます。契約書・仕様書・論文などの下読みに便利です。",
+     "category": "cowork",
+     "commands": [
+      "\"このPDFを3つのポイントに要約して\"",
+      "\"この資料でリスクに触れている箇所を教えて\""
+     ],
+     "steps": [
+      "PDF/文書を添付するか本文を貼る。",
+      "『要点3つ』『ToDoだけ』など出力の形を指定する。",
+      "気になる箇所を追加で質問する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-pdf"
+    },
+    {
+     "id": "work-minutes",
+     "title": "会議の文字起こしから議事録を作りたい",
+     "feature": "議事録・ToDo 抽出",
+     "summary": "文字起こしや長いメモを渡すと、決定事項・宿題（担当と期限）・論点を整理した議事録にまとめてくれます。",
+     "category": "cowork",
+     "commands": [
+      "\"この文字起こしを議事録に（決定事項/ToDo/保留）\"",
+      "\"担当と期限つきでToDoだけ抜き出して\""
+     ],
+     "steps": [
+      "文字起こし/メモを貼る。",
+      "出力の型（決定事項・ToDo・論点）を指定する。",
+      "担当・期限が抜けていれば補ってもらう。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-minutes"
+    },
+    {
+     "id": "work-translate",
+     "title": "翻訳・敬語・言い回しの調整をしたい",
+     "feature": "翻訳・リライト・トーン調整",
+     "summary": "英訳・和訳はもちろん、「もっと丁寧に」「やわらかく」「短く」などトーンの調整や言い換えも得意です。海外向けメールや社外文の推敲に。",
+     "category": "cowork",
+     "commands": [
+      "\"この文章を自然な英語に翻訳して\"",
+      "\"この返信をもう少し丁寧なトーンにして\""
+     ],
+     "steps": [
+      "原文と『誰向け・どんなトーンか』を伝える。",
+      "訳文/言い換えを出させる。",
+      "硬さ・長さを微調整する。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-translate"
+    },
+    {
+     "id": "work-message",
+     "title": "メールやチャットの返信を下書きしたい",
+     "feature": "メール・Slack 文面ドラフト",
+     "summary": "状況と伝えたいことを渡すと、角の立たない文面を下書きしてくれます。お礼・お詫び・催促・日程調整など、書き出しに迷う場面に。",
+     "category": "cowork",
+     "commands": [
+      "\"納期遅延のお詫びメールを丁寧に下書きして\"",
+      "\"この予定調整の返信を3案作って\""
+     ],
+     "steps": [
+      "相手・状況・伝えたい要点を渡す。",
+      "1案またはトーン違いで複数案を出させる。",
+      "自分の言葉に少し直して送る。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-message"
+    },
+    {
+     "id": "work-research",
+     "title": "あるテーマを調べて比較・整理したい",
+     "feature": "リサーチ整理・比較表づくり",
+     "summary": "「〇〇について調べて」「A社とB社を比較して」のように頼むと、要点を整理したり比較表にまとめてくれます。企画の下調べや情報収集の叩き台に。",
+     "category": "cowork",
+     "commands": [
+      "\"この3つのツールを料金と機能で比較表にして\"",
+      "\"このテーマの基本と最近の動向を整理して\""
+     ],
+     "steps": [
+      "調べたいテーマと『何を知りたいか』を明確にする。",
+      "比較なら軸（料金/機能 等）を指定する。",
+      "出典が要る場合はWeb検索対応の環境で頼む。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-research"
+    },
+    {
+     "id": "work-brainstorm",
+     "title": "アイデア出し・ネーミングの壁打ちをしたい",
+     "feature": "ブレスト相手・企画の壁打ち",
+     "summary": "企画の切り口、キャッチコピー、ネーミング、イベント案などを一緒に発散・整理してくれます。一人で煮詰まった時の相談相手に。",
+     "category": "cowork",
+     "commands": [
+      "\"社内イベントの企画を10案、狙い付きで\"",
+      "\"この商品のキャッチコピーを5案\""
+     ],
+     "steps": [
+      "テーマ・制約・狙いを伝える。",
+      "まず数を出させる（10案など）。",
+      "良さそうな案を選んで深掘りさせる。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#work-brainstorm"
+    }
+   ]
+  },
+  {
+   "key": "prompts",
+   "meetsCategory": "プロンプト",
+   "label": "頼み方のパターン",
+   "note": "うまくいく頼み方の型 (バグ調査 / リファクタ / テスト生成 / 解説)",
+   "items": [
+    {
+     "id": "pat-debug",
+     "title": "バグを推測で直さず体系的に調べたい",
+     "feature": "体系的デバッグ（再現→仮説→検証→修正→報告）",
+     "summary": "いきなり直さず、最小再現を固め→仮説を2〜3個立て→値で検証→根本原因を修正→再発防止テスト、の順で進める作業フロー。",
+     "category": "change",
+     "commands": [
+      "/debug 相当の手順を指示に含める"
+     ],
+     "steps": [
+      "最小再現手順を確定（再現できないバグは推測で直さない）。",
+      "原因仮説を2〜3個、検証しやすい順に潰す。",
+      "print/breakpointで予想値と実測を照合。",
+      "根本原因を直し、grepで同種バグを再発防止＋失敗テスト追加。",
+      "原因/経緯/修正/再発防止を報告。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#pat-debug"
+    },
+    {
+     "id": "pat-refactor",
+     "title": "動作を変えずに安全に小さくリファクタしたい",
+     "feature": "テスト保護下の小刻みリファクタ",
+     "summary": "動作不変を前提に、テストで守りながら小さな単位で整理する。振る舞いを変える変更と混ぜない。",
+     "category": "change",
+     "commands": [
+      "/refactor 相当を指示に含める"
+     ],
+     "steps": [
+      "対象と『動作は変えない』ことを明示。",
+      "テストが緑なのを確認してから着手。",
+      "小さな単位でコミット可能に刻む。",
+      "各ステップ後にテストで退行がないか確認。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#pat-refactor"
+    },
+    {
+     "id": "pat-tests-gen",
+     "title": "既存スタイルに合わせてテストを生成したい",
+     "feature": "スタイル追従テスト生成",
+     "summary": "リポジトリのテストフレームワーク（pytest/Vitest/Jest 等）と既存の書き方を踏襲してテストを足す。",
+     "category": "change",
+     "commands": [
+      "/tests-gen 相当を指示に含める"
+     ],
+     "steps": [
+      "対象ファイル/関数と期待挙動を渡す。",
+      "既存テストの命名・構造に合わせる。",
+      "境界値・異常系も入れる。",
+      "実行して緑を確認。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#pat-tests-gen"
+    },
+    {
+     "id": "pat-explain",
+     "title": "コードを平易な日本語で解説してほしい",
+     "feature": "アーキ→詳細の順で解説",
+     "summary": "指定ファイル/ディレクトリ/関数を、全体像→責務→詳細の順に噛み砕いて説明する。初見理解に使う。",
+     "category": "understand",
+     "commands": [
+      "/explain 相当を指示に含める"
+     ],
+     "steps": [
+      "対象と『何を知りたいか』を伝える。",
+      "まず全体構成と責務を説明させる。",
+      "要所だけ詳細に掘る。"
+     ],
+     "url": "https://claude-code-finder.pages.dev/#pat-explain"
+    }
+   ]
+  },
+  {
+   "key": "updates",
+   "meetsCategory": "AIニュース窓",
+   "label": "Claude Code の更新",
+   "note": "公式 CHANGELOG の機械パース + 編集者まとめ (LLM 生成ではない)",
+   "items": [
+    {
+     "id": "update-並列",
+     "title": "エージェントの並列・チーム実行が充実",
+     "summary": "バックグラウンド実行、複数セッションの一覧管理、サブエージェントへの委譲、大規模変更の分割並列（一括変更）など、長時間・並列のワークフローが強化されている。",
+     "tag": "並列",
+     "url": "https://code.claude.com/docs/en/sub-agents"
+    },
+    {
+     "id": "update-拡張",
+     "title": "Plugins とマーケットプレイスで拡張を配布",
+     "summary": "Skills・subagents・hooks・MCP をまとめて配布・導入できる Plugins が整い、marketplace 経由で共有できるようになった。",
+     "tag": "拡張",
+     "url": "https://code.claude.com/docs/en/plugins"
+    },
+    {
+     "id": "update-拡張",
+     "title": "Agent Skills で手順・知識を再利用",
+     "summary": "よく使う手順や知識を SKILL.md にまとめ、必要な時に自動で読み込ませたり、npx skills で配布・導入したりできる。",
+     "tag": "拡張",
+     "url": "https://code.claude.com/docs/en/skills"
+    },
+    {
+     "id": "update-連携",
+     "title": "MCP 接続の追加・認証が扱いやすく",
+     "summary": "claude mcp add で stdio / HTTP / SSE サーバを登録でき、スコープ（user/project/local）や OAuth 認証まわりも整理された。",
+     "tag": "連携",
+     "url": "https://code.claude.com/docs/en/mcp"
+    },
+    {
+     "id": "update-使う場所",
+     "title": "Web / Desktop / モバイルで使える幅が拡大",
+     "summary": "ブラウザ上のクラウド環境（Claude Code on the web）、Desktop アプリ、モバイルからの操作など、ローカルターミナル以外の選択肢が増えた。",
+     "tag": "使う場所",
+     "url": "https://code.claude.com/docs/en/overview"
+    },
+    {
+     "id": "update-安全",
+     "title": "権限モードとサンドボックスの整理",
+     "summary": "確認優先・acceptEdits・plan・権限スキップなどのモードと、対応環境でのサンドボックス実行により、安全と効率のバランスを選べる。",
+     "tag": "安全",
+     "url": "https://code.claude.com/docs/en/iam"
+    },
+    {
+     "id": "changelog-2.1.207",
+     "title": "v2.1.207",
+     "summary": "Auto mode is now available without CLAUDE_CODE_ENABLE_AUTO_MODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings / Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks / Fixed remote managed settings from a non-interactive run (claude -p, the SDK) being permanently recorded as consented without ever showing the security consent dialog",
+     "highlights": [
+      {
+       "kind": "その他",
+       "text": "Auto mode is now available without CLAUDE_CODE_ENABLE_AUTO_MODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed remote managed settings from a non-interactive run (claude -p, the SDK) being permanently recorded as consented without ever showing the security consent dialog"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed spurious prompt-injection warnings triggered by benign system-generated conversation updates"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed the auto-updater overwriting a custom launcher script or symlink at ~/.local/bin/claude on every release; /doctor now reports an externally managed launcher"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.206",
+     "title": "v2.1.206",
+     "summary": "Added directory path suggestions to /cd, matching /add-dir behavior / Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase / /commit-push-pr now auto-allows git push to the repo's configured push remote (remote.pushDefault, or the sole remote when only one is configured) in addition to origin",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added directory path suggestions to /cd, matching /add-dir behavior"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase"
+      },
+      {
+       "kind": "その他",
+       "text": "/commit-push-pr now auto-allows git push to the repo's configured push remote (remote.pushDefault, or the sole remote when only one is configured) in addition to origin"
+      },
+      {
+       "kind": "追加",
+       "text": "Gateway: /login now supports Anthropic-operated public gateway endpoints"
+      },
+      {
+       "kind": "その他",
+       "text": "EnterWorktree now asks for confirmation before entering a git worktree outside the project's .claude/worktrees/ directory"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.205",
+     "title": "v2.1.205",
+     "summary": "Added an auto mode rule that blocks tampering with session transcript files / Fixed --json-schema silently producing unstructured output when the schema was invalid, and schemas using the format keyword being rejected / Fixed a message sent while Claude was working being silently lost when the turn ended at the --max-turns limit",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added an auto mode rule that blocks tampering with session transcript files"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed --json-schema silently producing unstructured output when the schema was invalid, and schemas using the format keyword being rejected"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a message sent while Claude was working being silently lost when the turn ended at the --max-turns limit"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Windows worktree removal deleting files outside the worktree when an NTFS junction or directory symlink existed inside it"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed background agents staying shown as \"failed\" or \"completed\" in the agent list after being resumed with SendMessage"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.204",
+     "title": "v2.1.204",
+     "summary": "Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.203",
+     "title": "v2.1.203",
+     "summary": "Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted / Added a grey ⏸ badge to the footer when in manual permission mode, making the active mode always visible / Added the session's additional working directories to MCP roots/list, with notifications/roots/list_changed sent when the set changes",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a grey ⏸ badge to the footer when in manual permission mode, making the active mode always visible"
+      },
+      {
+       "kind": "追加",
+       "text": "Added the session's additional working directories to MCP roots/list, with notifications/roots/list_changed sent when the set changes"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed opening or switching background agent sessions on macOS stalling for 15–20 seconds due to a false low-memory detection (regression in 2.1.196)"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed background sessions becoming permanently unresponsive to attach, replies, and stop when the daemon's session token went stale — the session now recovers automatically"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.202",
+     "title": "v2.1.202",
+     "summary": "Added a \"Dynamic workflow size\" setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap / Added workflow.run_id and workflow.name OpenTelemetry attributes to telemetry emitted by workflow-spawned agents, so a workflow run's activity can be reconstructed from OTel data / Fixed a crash in the inline Ctrl+R history search when accepting or cancelling while the search was still scanning the history file",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a \"Dynamic workflow size\" setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap"
+      },
+      {
+       "kind": "追加",
+       "text": "Added workflow.run_id and workflow.name OpenTelemetry attributes to telemetry emitted by workflow-spawned agents, so a workflow run's activity can be reconstructed from OTel data"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a crash in the inline Ctrl+R history search when accepting or cancelling while the search was still scanning the history file"
+      },
+      {
+       "kind": "追加",
+       "text": "Fixed /rename on background sessions being reverted when the job restarts, which broke addressing the session by its new name"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed transient mTLS handshake failures when settings were re-applied during an in-place client certificate rotation"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.201",
+     "title": "v2.1.201",
+     "summary": "Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders",
+     "highlights": [
+      {
+       "kind": "その他",
+       "text": "Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.200",
+     "title": "v2.1.200",
+     "summary": "Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config / Changed the \"default\" permission mode to \"Manual\" across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and \"defaultMode\": \"manual\" are accepted alongside default / Fixed a crash at startup when disabledMcpServers or enabledMcpServers in .claude.json is set to a non-array value",
+     "highlights": [
+      {
+       "kind": "変更",
+       "text": "Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config"
+      },
+      {
+       "kind": "変更",
+       "text": "Changed the \"default\" permission mode to \"Manual\" across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and \"defaultMode\": \"manual\" are accepted alongside default"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a crash at startup when disabledMcpServers or enabledMcpServers in .claude.json is set to a non-array value"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed background sessions silently stopping mid-turn after sleep/wake or when reopening a stalled session"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed background sessions re-running a turn cancelled with Esc after a stall respawn"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    }
+   ]
+  }
+ ]
+}
