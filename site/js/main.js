@@ -293,7 +293,8 @@
     const cmdArea = skill
       ? installRow(entry.install)
       : '<div class="commands">'+(entry.commands || []).slice(0,3)
-          .map(c => '<span class="command-chip">'+escapeHtml(c)+'</span>').join("")+'</div>';
+          .map(c => '<span class="command-chip">'+escapeHtml(c)+'</span>').join("")+'</div>'
+        + (entry.prompt ? promptBtn(entry.id) : "");
     return '<article class="feature-card'+(custom?" is-custom-card":"")+(skill?" is-skill-card":"")+'" role="listitem" tabindex="0" style="--i:'+Math.min(i,24)+'" data-id="'+escapeHtml(entry.id)+'" aria-label="'+escapeHtml(entry.want)+'">'+
       '<div class="card-top"><h3 class="want">'+highlight(entry.want,q)+'</h3>'+
       '<div class="card-top-right">'+badge+favBtn(entry.id)+'</div></div>'+
@@ -338,6 +339,12 @@
     return '<div class="install-row"><code class="install-cmd">'+safe+'</code>'+
       '<button type="button" class="copy-btn" data-copy="'+safe+'" aria-label="導入コマンドをコピー" title="コピー">'+
       '<span class="material-icons-outlined" aria-hidden="true">content_copy</span></button></div>';
+  }
+  // 改行を含む長文なので data 属性に埋めず、id から entry.prompt を引いてコピーする
+  function promptBtn(id){
+    return '<button type="button" class="pcopy-btn" data-prompt="'+escapeHtml(id)+'">'+
+      '<span class="material-icons-outlined" aria-hidden="true">content_paste</span>'+
+      'そのまま使えるプロンプトをコピー</button>';
   }
   /* ---------- 0件時: もしかして候補 + 空振りの記録 ---------- */
   const suggestBox = document.getElementById("suggestList");
@@ -473,8 +480,14 @@
     const notes = (entry.notes || []).map(n => '<li>'+escapeHtml(n)+'</li>').join("");
     const src = '<p>'+sourceLink(entry.source)+' '+(entry.extraSource ? sourceLink(entry.extraSource) : "")+'</p>'+
                 '<p class="src-url">'+escapeHtml(sourceUrl(entry.source))+'</p>';
+    const promptBlock = entry.prompt
+      ? block("prompt","content_paste","そのまま使えるプロンプト",
+          '<p class="prompt-lead">【】の部分を自分の内容に置き換えて、Claude にそのまま貼ってください</p>'+
+          '<pre class="prompt-text">'+escapeHtml(entry.prompt)+'</pre>'+ promptBtn(entry.id))
+      : "";
     els.modalBody.innerHTML = '<div class="detail-grid">'+
       block("what","terminal","何を使うか","<p>"+escapeHtml(entry.summary)+"</p><div>"+cmds+"</div>")+
+      promptBlock+
       (steps ? block("steps","format_list_numbered","進め方","<ul>"+steps+"</ul>") : "")+
       (notes ? block("notes","info","注意点","<ul>"+notes+"</ul>") : "")+
       block("src","link","公式根拠",src)+
@@ -533,10 +546,13 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toastEl.classList.remove("show"), 4200);
   }
-  function copyText(text, btn){
+  function copyText(text, btn, kind){
     const done = () => {
-      showToast('<b>コピーしました</b><span>ターミナルに貼って実行 → Claude Code で使えます</span>'+
-        '<code>'+escapeHtml(text)+'</code>');
+      const hint = kind === "prompt"
+        ? '<span>Claude にそのまま貼って、【】を自分の内容に置き換えてください</span>'
+        : '<span>ターミナルに貼って実行 → Claude Code で使えます</span>';
+      const preview = kind === "prompt" ? text.split("\n")[0] + " …" : text;
+      showToast('<b>コピーしました</b>'+hint+'<code>'+escapeHtml(preview)+'</code>');
       if(!btn) return;
       btn.classList.add("copied");
       const icon = btn.querySelector(".material-icons-outlined");
@@ -555,22 +571,29 @@
     try { document.execCommand("copy"); done(); } catch(e){}
     document.body.removeChild(ta);
   }
-  // カード内・モーダル内どちらの copy-btn も拾う
+  // カード内・モーダル内どちらの copy-btn / pcopy-btn / fav-btn も拾う
   document.addEventListener("click", e => {
     const cp = e.target.closest(".copy-btn");
     if(cp){ e.stopPropagation(); copyText(cp.dataset.copy || "", cp); return; }
+    const pc = e.target.closest(".pcopy-btn");
+    if(pc){
+      e.stopPropagation();
+      const entry = entries.find(x => x.id === pc.dataset.prompt);
+      if(entry && entry.prompt) copyText(entry.prompt, pc, "prompt");
+      return;
+    }
     const fv = e.target.closest(".fav-btn");
     if(fv){ e.stopPropagation(); e.preventDefault(); toggleFav(fv.dataset.fav || "", fv); }
   }, true);
 
   /* ---------- card interaction ---------- */
   els.cards.addEventListener("click", e => {
-    if(e.target.closest(".copy-btn,.fav-btn")) return;   // コピー・お気に入りはモーダルを開かない
+    if(e.target.closest(".copy-btn,.pcopy-btn,.fav-btn")) return;   // コピー・お気に入りはモーダルを開かない
     const card = e.target.closest(".feature-card");
     if(card) openModal(card.dataset.id);
   });
   els.cards.addEventListener("keydown", e => {
-    if(e.target.closest(".fav-btn,.copy-btn")) return;   // カード内ボタンは自前の挙動に任せる
+    if(e.target.closest(".fav-btn,.copy-btn,.pcopy-btn")) return;   // カード内ボタンは自前の挙動に任せる
     const card = e.target.closest(".feature-card");
     if(!card) return;
     if(e.key === "Enter" || e.key === " "){ e.preventDefault(); openModal(card.dataset.id); return; }
