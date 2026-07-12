@@ -14,7 +14,10 @@ try {
   process.stderr.write(`cc-finder: data.json load failed: ${e.message}\n`);
 }
 
-const norm = (s) => String(s || "").toLowerCase().replace(/\s+/g, " ");
+// カタカナ→ひらがなに寄せる（site/js/main.js の toHira と同期）。
+// これが無いと「こみっと」が「コミット」に当たらず、サイトと MCP で結果が食い違う。
+const toHira = (s) => s.replace(/[ァ-ヶ]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0x60));
+const norm = (s) => toHira(String(s || "").toLowerCase().replace(/\s+/g, " "));
 const textOf = (e) => norm([
   e.want, e.feature, e.summary, e.category, e.type,
   (e.commands || []).join(" "), (e.aliases || []).join(" "),
