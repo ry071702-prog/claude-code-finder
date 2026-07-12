@@ -119,6 +119,7 @@ function render(list, query) {
     else if ((e.commands || []).length) L.push("Commands: " + e.commands.map((c) => `\`${c}\``).join("  "));
     if (e.origin === "skill" && e.url) L.push(`Repo: ${e.url}${e.stars ? ` (★${e.stars})` : ""}`);
     if ((e.steps || []).length) L.push("進め方: " + e.steps.join(" / "));
+    if (e.prompt) L.push("そのまま使えるプロンプト:\n```\n" + e.prompt + "\n```");
     if ((e.notes || []).length) L.push("注意: " + e.notes.join(" / "));
     return L.join("\n");
   });

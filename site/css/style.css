@@ -340,6 +340,15 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 .copy-btn:hover{background:rgba(255,255,255,.24)}
 .copy-btn .material-icons-outlined{font-size:17px;color:#fff}
 .copy-btn.copied{background:#2f9e5f}
+
+/* そのまま使えるプロンプト（コードを書かない人の導線の要） */
+.pcopy-btn{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:8px 13px;border:1px solid var(--accent-line);border-radius:9px;background:var(--accent-soft);color:var(--accent2);font-size:.8rem;font-weight:800;cursor:pointer;transition:.15s;text-align:left}
+.pcopy-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.pcopy-btn:focus-visible{outline:none;box-shadow:0 0 0 3px var(--ring)}
+.pcopy-btn .material-icons-outlined{font-size:17px}
+.pcopy-btn.copied{background:#2f9e5f;border-color:#2f9e5f;color:#fff}
+.prompt-lead{font-size:.82rem;color:var(--text2);margin-bottom:8px}
+.prompt-text{margin:0;padding:12px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface2);color:var(--text);font-family:var(--sans);font-size:.85rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;max-height:260px;overflow-y:auto}
 .detail-block.install .install-row{margin-top:10px}
 
 /* 使い方ヘルプ（Skills表示時のみ） */

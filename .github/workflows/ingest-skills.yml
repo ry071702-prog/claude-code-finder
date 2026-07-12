@@ -55,6 +55,11 @@ jobs:
       - name: Build plugin/MCP data
         run: node scripts/build_plugin_data.mjs
 
+      # サイトと MCP は正規化・意図マップを二重に持つ。片方だけ直して食い違う事故を防ぐ。
+      # ここで落ちれば commit も deploy もされない。
+      - name: Test search (site/MCP パリティ)
+        run: node tests/test_search.mjs
+
       - name: Commit if changed
         id: commit
         run: |

@@ -26,6 +26,7 @@ const entries = merged.map((e) => ({
   category: e.category, type: e.type,
   commands: e.commands || [], install: e.install || null,
   steps: e.steps || [], notes: e.notes || [],
+  prompt: e.prompt || null,   // そのまま貼れるプロンプト（cowork 系）。サイトと MCP で同じものを出す
   stars: e.stars || null, url: e.repoUrl || null, origin: e.origin,
 }));
 const out = {
