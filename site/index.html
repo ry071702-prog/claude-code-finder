@@ -31,6 +31,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=block" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=optional" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=optional" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -49,7 +50,7 @@
 </script>
 <script>
   // フラッシュ回避: 描画前にテーマ確定
-  (function(){try{var t=localStorage.getItem('ccf-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;}catch(e){}})();
+  (function(){try{var t=localStorage.getItem('ccf-theme');if(!t)t='light';document.documentElement.dataset.theme=t;}catch(e){}})();
 </script>
 </head>
 <body>
@@ -114,7 +115,7 @@
     <div class="hero-roles">
       <span class="roles-label">はじめて？</span>
       <button type="button" class="role-chip" data-role-cat="start">
-        <span class="material-icons-outlined" aria-hidden="true">rocket_launch</span>
+        <span class="material-icons-outlined" aria-hidden="true">terminal</span>
         <span class="role-text"><b>コードを書く人</b><em>インストールと最初の一歩から</em></span>
       </button>
       <button type="button" class="role-chip is-cowork" data-role-cat="cowork">
