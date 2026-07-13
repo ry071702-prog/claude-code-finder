@@ -147,24 +147,64 @@ b,strong{font-weight:700}
 .hero-sub{margin-top:20px;font-size:clamp(1rem,1.6vw,1.18rem);color:var(--text2);max-width:46ch}
 .hero-sub b{color:var(--accent);font-family:var(--mono)}
 
-.hero-search{position:relative;display:flex;align-items:center;margin-top:26px;max-width:680px;background:var(--surface);border:1.5px solid var(--border2);border-radius:14px;box-shadow:var(--shadow);transition:border-color .15s,box-shadow .15s}
-.hero-search:focus-within{border-color:var(--accent);box-shadow:0 0 0 4px var(--ring),var(--shadow)}
-.hero-search .search-ic{position:absolute;left:16px;color:var(--text3);pointer-events:none}
-.hero-search .search-prompt{position:absolute;left:16px;font-family:var(--mono);font-weight:700;color:var(--accent);display:none}
-.hero-search:focus-within .search-ic{display:none}
-.hero-search:focus-within .search-prompt{display:block}
-.hero-search input{flex:1;min-width:0;height:62px;padding:0 96px 0 48px;background:none;border:none;outline:none;font-size:1.08rem;font-weight:500;color:var(--ink)}
-.hero-search input::placeholder{color:var(--text3);font-weight:400}
-.hero-search input::-webkit-search-cancel-button{display:none}
-.hero-search kbd{position:absolute;right:52px;border:1px solid var(--border2);border-bottom-width:2px;border-radius:6px;background:var(--surface2);padding:2px 9px;color:var(--text3);font-family:var(--mono);font-size:.8rem;font-weight:700}
-.hero-search .clear-btn{position:absolute;right:12px;display:none;place-items:center;width:32px;height:32px;border-radius:8px;color:var(--text3)}
-.hero-search.has-value .clear-btn{display:grid}
-.hero-search.has-value kbd{display:none}
-.hero-search .clear-btn:hover{background:var(--surface3);color:var(--accent)}
+/* ---------- terminal（Concept 1: Interactive Terminal） ---------- */
+/* ヒーローの検索を「本物の端末窓」に。command line＝実 #searchInput。出力(termOut)は高さを
+   固定予約し、idle デモが中身を差し替えても紙面がずれない(CLS を出さない)。 */
+.term{position:relative;margin-top:28px;max-width:960px;background:var(--surface);border:1px solid var(--border2);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;isolation:isolate}
+.term::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:6;background:repeating-linear-gradient(to bottom,rgba(25,21,16,.05) 0 1px,transparent 1px 3px);opacity:.5;animation:crt 5.5s steps(48) infinite}
+:root[data-theme="dark"] .term::after{background:repeating-linear-gradient(to bottom,rgba(243,236,224,.045) 0 1px,transparent 1px 3px)}
+@keyframes crt{0%,100%{opacity:.42}48%{opacity:.62}52%{opacity:.4}}
+.term-bar{display:flex;align-items:center;gap:10px;height:42px;padding:0 14px;background:var(--surface2);border-bottom:1px solid var(--border)}
+.term-dots{display:flex;gap:7px;flex:none}
+.term-dots span{width:11px;height:11px;border-radius:50%;background:var(--border2)}
+.term-dots span:first-child{background:var(--accent)}
+.term-name{font-family:var(--mono);font-size:.78rem;color:var(--text3);margin:0 auto 0 4px;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.term-name b{color:var(--accent);font-weight:700}
+.term-badge{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.05em;color:var(--accent);border:1px solid var(--accent-line);background:var(--accent-soft);border-radius:999px;padding:2px 9px;white-space:nowrap;flex:none}
 
-.hero-examples{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:18px}
-.ex-label{font-size:.82rem;color:var(--text3);font-weight:700;margin-right:2px}
-.ex-chip{padding:7px 13px;border:1px solid var(--border2);border-radius:999px;background:var(--surface);color:var(--text2);font-size:.86rem;font-weight:700;transition:.14s}
+.cmd{position:relative;display:flex;align-items:center;gap:10px;padding:15px 16px;border-bottom:1px solid var(--border);transition:box-shadow .18s}
+.cmd:focus-within{box-shadow:inset 0 0 0 2px var(--ring)}
+.cmd.exec{box-shadow:inset 0 0 0 2px var(--accent)}
+.cmd-prompt{font-family:var(--mono);font-weight:700;font-size:1.15rem;color:var(--accent);flex:none;line-height:1}
+.cmd-cc{font-family:var(--mono);font-size:.98rem;font-weight:500;color:var(--text3);flex:none;white-space:nowrap}
+.cmd-field{position:relative;flex:1;min-width:0;display:flex;align-items:center}
+.cmd-field input{flex:1;min-width:0;height:34px;background:none;border:none;outline:none;font-family:var(--mono);font-size:1.02rem;font-weight:500;color:var(--ink);letter-spacing:.005em}
+.cmd-field input::placeholder{color:var(--text3);font-weight:400}
+.cmd-field input::-webkit-search-cancel-button{display:none}
+.cmd-ghost{position:absolute;left:0;top:50%;transform:translateY(-50%);pointer-events:none;font-family:var(--mono);font-size:1.02rem;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;max-width:100%;display:none}
+.cmd-ghost::after{content:"";display:inline-block;width:.5ch;height:1.02em;background:var(--accent);vertical-align:-.16em;margin-left:1px;animation:blink 1.05s steps(1) infinite}
+.cmd.is-demo .cmd-field input::placeholder{color:transparent}
+.cmd.is-demo .cmd-ghost{display:block}
+.cmd kbd{flex:none;font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--text3);border:1px solid var(--border2);border-bottom-width:2px;border-radius:6px;background:var(--surface2);padding:2px 9px}
+.cmd .clear-btn{flex:none;display:none;place-items:center;width:32px;height:32px;border-radius:8px;color:var(--text3)}
+.cmd.has-value .clear-btn{display:grid}
+.cmd.has-value kbd{display:none}
+.cmd .clear-btn:hover{background:var(--surface3);color:var(--accent)}
+
+.cmd-meta{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:11px 16px;border-bottom:1px solid var(--border);background:var(--surface2)}
+.meta-label{font-family:var(--mono);font-size:.72rem;font-weight:700;color:var(--text3);margin-right:2px}
+.cmd-tip{margin-left:auto;font-family:var(--mono);font-size:.72rem;color:var(--text3)}
+.cmd-tip b{color:var(--text2)}
+
+.stdout-head{display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--bg-tint)}
+.so-label{font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3)}
+.so-label::before{content:"▾ ";color:var(--accent)}
+.so-time{font-family:var(--mono);font-size:.72rem;color:var(--text3)}
+.so-count{margin-left:auto;font-size:.82rem;font-weight:700;color:var(--accent)}
+.term-out{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:12px 16px;text-align:left;background:var(--surface);cursor:pointer;transition:background .14s;border-radius:0}
+.term-out:hover{background:var(--surface2)}
+.term-out:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--ring)}
+.term-out .to-arrow{font-family:var(--mono);font-weight:700;color:var(--accent);flex:none}
+.term-out .to-feature{font-family:var(--mono);font-size:.92rem;font-weight:700;color:var(--accent2);flex:none;white-space:nowrap;max-width:42%;overflow:hidden;text-overflow:ellipsis}
+.term-out .to-summary{color:var(--text2);font-size:.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.term-out .to-badge{flex:none;margin-left:auto}
+.term-out .to-hint,.term-out .to-empty{color:var(--text3);font-size:.86rem;font-weight:600}
+@media(max-width:640px){.cmd-tip{display:none}.cmd-cc{display:none}.term-out .to-summary{display:none}}
+@media(prefers-reduced-motion:reduce){.term::after{animation:none}.cmd-ghost::after{animation:none}}
+
+/* 検索例チップ（cmd-meta 内・端末トーンの mono＋❯） */
+.ex-chip{font-family:var(--mono);padding:5px 11px;border:1px solid var(--border2);border-radius:999px;background:var(--surface);color:var(--text2);font-size:.8rem;font-weight:700;transition:.14s}
+.ex-chip::before{content:"❯ ";color:var(--accent);opacity:.7}
 .ex-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);transform:translateY(-1px)}
 
 /* 「はじめて？」立場別の入口 — 非エンジニアがトップで迷子にならないための導線 */
@@ -230,6 +270,8 @@ b,strong{font-weight:700}
 @keyframes favPop{0%{transform:scale(.6)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.fav-btn.on .material-icons-outlined{animation:none}}
 .want{font-size:1.06rem;line-height:1.5;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+/* 端末の出力行メタファ: want の頭に淡い ❯ を置く（stdout の一行という読み） */
+.want::before{content:"❯";font-family:var(--mono);font-weight:700;color:var(--accent);opacity:.5;margin-right:7px;font-size:.86em}
 /* Web BENTO バッジ「角型(squareb)」を採用。監査の「ピル型 New/Beta は角型に」に沿って、
    カードの種別ラベルはピルをやめ角丸小＋字間広めに(mono の端末的トーンとも揃う)。 */
 .badge{flex-shrink:0;display:inline-flex;align-items:center;min-height:24px;padding:3px 9px;border-radius:5px;background:var(--surface3);color:var(--text2);font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.04em;white-space:nowrap}
@@ -501,8 +543,8 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
   .header-nav .nav-cta{width:100%;justify-content:center;padding:12px 14px;margin-top:2px}
   .header-nav .theme-toggle{width:100%;height:auto;padding:10px;justify-content:center;margin-top:2px}
   .header-title{font-size:.9rem}
-  .hero-search input{padding-right:52px}
-  .hero-search kbd{display:none}
+  .term{margin-top:22px}
+  .cmd kbd{display:none}
   .card-grid{grid-template-columns:1fr}
   .controls{align-items:flex-start;flex-direction:column-reverse}
   .controls-right{width:100%;justify-content:space-between}

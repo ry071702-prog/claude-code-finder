@@ -95,23 +95,43 @@
     </h1>
     <p class="hero-sub">Claude Code の全主要機能を、目的から一発で — 全 <b id="heroCount" data-count="0">0</b> 件を横断検索</p>
 
-    <div class="hero-search">
-      <span class="material-icons-outlined search-ic" aria-hidden="true">search</span>
-      <span class="search-prompt" aria-hidden="true">❯</span>
-      <input id="searchInput" type="search" placeholder="例: PR を直したい / 権限 / 続き / MCP / スマホ" autocomplete="off" aria-label="機能を検索" aria-describedby="resultCount">
-      <kbd aria-hidden="true">/</kbd>
-      <button id="clearButton" class="clear-btn" type="button" aria-label="検索をクリア"><span class="material-icons-outlined" aria-hidden="true">close</span></button>
-    </div>
+    <section class="term" id="term" aria-label="逆引きターミナル">
+      <div class="term-bar">
+        <span class="term-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="term-name mono"><b>❯_</b> claude-code-finder — ~/claude</span>
+        <span class="term-badge" aria-hidden="true">週次更新</span>
+      </div>
 
-    <div class="hero-examples" aria-label="検索例">
-      <span class="ex-label">よく使う:</span>
-      <button type="button" class="ex-chip" data-q="PR">PR を直す</button>
-      <button type="button" class="ex-chip" data-q="権限">権限・安全</button>
-      <button type="button" class="ex-chip" data-q="続き">続きから再開</button>
-      <button type="button" class="ex-chip" data-q="MCP">MCP 連携</button>
-      <button type="button" class="ex-chip" data-q="テスト">テスト</button>
-      <button type="button" class="ex-chip" data-q="並列">並列で回す</button>
-    </div>
+      <div class="cmd" id="cmdWrap">
+        <span class="cmd-prompt" aria-hidden="true">❯</span>
+        <span class="cmd-cc" aria-hidden="true">ccf find</span>
+        <span class="cmd-field">
+          <input id="searchInput" type="search" placeholder="やりたいことを入力  例: PR を直したい / 権限 / 続き / MCP / スマホ" autocomplete="off" spellcheck="false" aria-label="機能を検索" aria-describedby="resultCount">
+          <span class="cmd-ghost" id="cmdGhost" aria-hidden="true"></span>
+        </span>
+        <kbd aria-hidden="true">/</kbd>
+        <button id="clearButton" class="clear-btn" type="button" aria-label="検索をクリア"><span class="material-icons-outlined" aria-hidden="true">close</span></button>
+      </div>
+
+      <div class="cmd-meta" aria-label="検索例">
+        <span class="meta-label" aria-hidden="true">よく使う</span>
+        <button type="button" class="ex-chip" data-q="PR">PR を直す</button>
+        <button type="button" class="ex-chip" data-q="権限">権限・安全</button>
+        <button type="button" class="ex-chip" data-q="続き">続きから再開</button>
+        <button type="button" class="ex-chip" data-q="MCP">MCP 連携</button>
+        <button type="button" class="ex-chip" data-q="テスト">テスト</button>
+        <button type="button" class="ex-chip" data-q="並列">並列で回す</button>
+        <span class="cmd-tip" aria-hidden="true">そのまま打って絞り込む ・ <b>/</b> でフォーカス ・ <b>Esc</b> でクリア</span>
+      </div>
+
+      <div class="stdout-head" aria-hidden="true">
+        <span class="so-label">stdout</span>
+        <span class="so-time mono">0.02s</span>
+        <span class="so-count mono" id="termCount">全 0 件</span>
+      </div>
+
+      <button type="button" class="term-out" id="termOut" aria-label="トップの一致を開く"></button>
+    </section>
 
     <div class="hero-roles">
       <span class="roles-label">はじめて？</span>

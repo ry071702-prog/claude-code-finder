@@ -27,7 +27,10 @@
     themeToggle:document.getElementById("themeToggle"),
     categoryNav:document.getElementById("categoryNav"),
     searchInput:document.getElementById("searchInput"),
-    heroSearch:document.querySelector(".hero-search"),
+    heroSearch:document.getElementById("cmdWrap"),
+    cmdGhost:document.getElementById("cmdGhost"),
+    termOut:document.getElementById("termOut"),
+    termCount:document.getElementById("termCount"),
     heroCount:document.getElementById("heroCount"),
     resultCount:document.getElementById("resultCount"),
     clearButton:document.getElementById("clearButton"),
@@ -44,6 +47,10 @@
     modalBody:document.getElementById("modalBody")
   };
   let lastFocused = null;
+  // 端末デモの制御。demoRunning 中は termOut/termCount をデモが握る。
+  // demoTakeover はユーザー操作（入力/フォーカス/カテゴリ）で呼ばれ、デモを止めて実検索に明け渡す。
+  let demoRunning = false;
+  let demoTakeover = function(){};
 
   /* ---------- theme ---------- */
   els.themeToggle.addEventListener("click", () => {
@@ -164,6 +171,51 @@
   function sourceUrl(id){ const s = sourceOf(id); return s ? s.url : "https://code.claude.com/docs/"; }
   function sourceLink(id){ const s = sourceOf(id); return s ? '<a class="source-link" href="'+s.url+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(s.name)+'</a>' : ""; }
 
+  /* ---------- terminal stdout（端末の「出力行」） ---------- */
+  // デモの「答え」用。素の関連度で拾うが、正規機能を先に出すため base>custom>skill を優先し、
+  // 同origin内は score降順→priority昇順。デモ以外(実検索のトップ)はグリッド先頭(list[0])を使う。
+  function bestEntry(query){
+    const scored = [];
+    for(const e of entries){ const s = scoreEntry(e, query).score; if(s > 0) scored.push({e, s}); }
+    if(!scored.length) return null;
+    const rank = o => o === "base" ? 0 : (o === "custom" ? 1 : 2);
+    scored.sort((a, b) =>
+      rank(a.e.origin) - rank(b.e.origin) ||
+      b.s - a.s ||
+      (a.e.priority || 999) - (b.e.priority || 999)
+    );
+    return scored[0].e;
+  }
+  // termOut に一行の「答え」を描画。entry=null は該当なし。kind でヒント文を切替。
+  function renderTermOut(entry, kind){
+    if(!els.termOut) return;
+    if(!entry){
+      const msg = kind === "idle"
+        ? "やりたいことを入力 — 一致した機能がここに出ます"
+        : "該当なし — 言い換えて検索してみて";
+      els.termOut.innerHTML = '<span class="to-arrow" aria-hidden="true">❯</span><span class="to-'+(kind==="idle"?"hint":"empty")+'">'+escapeHtml(msg)+'</span>';
+      els.termOut.dataset.id = "";
+      return;
+    }
+    const label = entry.origin === "skill" ? "Skill" : (typeLabels[entry.type] || entry.type);
+    els.termOut.dataset.id = entry.id;
+    els.termOut.innerHTML =
+      '<span class="to-arrow" aria-hidden="true">→</span>'+
+      '<code class="to-feature">'+escapeHtml(entry.feature)+'</code>'+
+      '<span class="to-summary">'+escapeHtml(entry.summary)+'</span>'+
+      '<span class="badge to-badge">'+escapeHtml(label)+'</span>';
+  }
+  // termCount / termOut を実検索の状態に同期（デモ非稼働時のみ termOut を触る）
+  function syncTerminal(list){
+    if(els.termCount){
+      els.termCount.textContent = state.query.trim() ? (list.length + " 件が一致") : ("全 " + entries.length + " 件");
+    }
+    if(els.termOut && !demoRunning){
+      if(state.query.trim()) renderTermOut(list[0] || null, "empty");
+      else renderTermOut(null, "idle");
+    }
+  }
+
   /* ---------- render: sidebar ---------- */
   function renderCategoryNav(){
     let html = '<button type="button" class="cat-link active" data-category="all">'+
@@ -182,6 +234,7 @@
     });
   }
   function setCategory(id){
+    demoTakeover();
     state.category = id;
     els.categoryNav.querySelectorAll(".cat-link").forEach(b => b.classList.toggle("active", b.dataset.category === id));
     renderCards(true);
@@ -410,6 +463,7 @@
   function renderCards(animate){
     const list = filteredEntries();
     animateCount(els.resultCount, list.length, "件");
+    syncTerminal(list);
     els.cards.innerHTML = list.map(cardTemplate).join("");
     els.emptyState.hidden = list.length !== 0;
     // 0件は行き止まりにせず、近い候補を出しつつ「無かった語」を記録する
@@ -517,6 +571,7 @@
 
   /* ---------- search ---------- */
   function setQuery(v){
+    demoTakeover();
     state.query = v;
     els.searchInput.value = v;
     els.heroSearch.classList.toggle("has-value", v.length > 0);
@@ -524,6 +579,14 @@
     syncURL();
   }
   els.searchInput.addEventListener("input", e => setQuery(e.target.value));
+  els.searchInput.addEventListener("focus", () => demoTakeover());
+  // 端末の「出力行」をクリック → トップ一致の詳細を開く
+  if(els.termOut){
+    els.termOut.addEventListener("click", () => {
+      const id = els.termOut.dataset.id;
+      if(id) openModal(id);
+    });
+  }
   els.clearButton.addEventListener("click", () => { setQuery(""); els.searchInput.focus(); });
   els.sortSelect.addEventListener("change", e => { state.sort = e.target.value; renderCards(true); });
 
@@ -718,39 +781,97 @@
     requestAnimationFrame(tick);
   }
 
-  /* ---------- dynamic: hero rotator ---------- */
-  function startRotator(){
-    const el = document.getElementById("rotator");
-    if(!el) return;
+  /* ---------- dynamic: hero terminal demo ---------- */
+  // H1(want) とコマンド行(ghost)を同時に1文字ずつ打つ → 実行パルス → 端末が「答え(feature)」を出力。
+  // state.query は触らないので下の一覧は動かず、CLS は出ない。ユーザーが触れたら demoTakeover で明け渡す。
+  function startDemo(){
+    const rot = document.getElementById("rotator");
+    if(!rot) return;
+    // ?q= 付きで着地した時は実結果を出しているのでデモは回さない
+    if(state.query.trim()){ if(els.termCount && !els.termCount.textContent) els.termCount.textContent = "全 " + entries.length + " 件"; return; }
+    const ghost = els.cmdGhost, cmd = els.heroSearch;
     const words = ["PRを直したい","権限を安全に絞りたい","続きから再開したい","MCPで外部に繋ぎたい","並列で大きく変えたい","テストを書いて直したい","スマホから続けたい","計画だけ先に見たい"];
-    if(reduceMotion){ el.textContent = words[0]; return; }
-    // タイプライター演出: 1文字ずつ打つ→保持→1文字ずつ消す→次の語へ
-    const TYPE = 78, DEL = 38, HOLD = 1500, GAP = 380;
-    const caret = el.parentNode && el.parentNode.querySelector(".caret");
-    let wi = 0;
+    const caret = rot.parentNode && rot.parentNode.querySelector(".caret");
+    function matchCount(query){ let n = 0; for(const e of entries){ const r = scoreEntry(e, query); if(r.strong && r.score > 0) n++; } return n; }
+
+    if(reduceMotion){
+      rot.textContent = words[0];
+      renderTermOut(bestEntry(words[0]), "demo");
+      if(els.termCount) els.termCount.textContent = "全 " + entries.length + " 件";
+      return;
+    }
+
+    const TYPE = 80, DEL = 36, HOLD = 1650, GAP = 460;
+    let wi = 0, timers = [], resumeTimer = null;
+    function T(fn, ms){ const t = setTimeout(fn, ms); timers.push(t); return t; }
+    function stop(){ timers.forEach(clearTimeout); timers = []; }
     function setTyping(on){ if(caret) caret.classList.toggle("typing", on); }
+    function setGhost(s){ if(ghost) ghost.textContent = s; }
+
     function typeWord(){
       const chars = Array.from(words[wi]);
       let ci = 0;
       setTyping(true);
       (function type(){
-        el.textContent = chars.slice(0, ci).join("");
-        if(ci < chars.length){ ci++; setTimeout(type, TYPE); }
-        else { setTyping(false); setTimeout(delWord, HOLD); }
+        if(!demoRunning) return;
+        const s = chars.slice(0, ci).join("");
+        rot.textContent = s; setGhost(s);
+        if(ci < chars.length){ ci++; T(type, TYPE); }
+        else { setTyping(false); execWord(); }
       })();
     }
+    function execWord(){
+      if(!demoRunning) return;
+      const phrase = words[wi];
+      if(cmd){ cmd.classList.add("exec"); T(() => cmd.classList.remove("exec"), 340); }
+      renderTermOut(bestEntry(phrase), "demo");
+      if(els.termCount) els.termCount.textContent = matchCount(phrase) + " 件が一致";
+      T(delWord, HOLD);
+    }
     function delWord(){
-      const chars = Array.from(el.textContent);
+      if(!demoRunning) return;
+      const chars = Array.from(rot.textContent);
       let ci = chars.length;
       setTyping(true);
       (function del(){
-        el.textContent = chars.slice(0, ci).join("");
-        if(ci > 0){ ci--; setTimeout(del, DEL); }
-        else { wi = (wi + 1) % words.length; setTimeout(typeWord, GAP); }
+        if(!demoRunning) return;
+        const s = chars.slice(0, ci).join("");
+        rot.textContent = s; setGhost(s);
+        if(ci > 0){ ci--; T(del, DEL); }
+        else { setTyping(false); wi = (wi + 1) % words.length; T(typeWord, GAP); }
       })();
     }
-    el.textContent = "";
-    typeWord();
+    function begin(){
+      demoRunning = true;
+      if(cmd) cmd.classList.add("is-demo");
+      rot.textContent = ""; setGhost("");
+      typeWord();
+    }
+
+    demoTakeover = function(){
+      if(!demoRunning && !resumeTimer) return;
+      demoRunning = false;
+      stop();
+      if(resumeTimer){ clearTimeout(resumeTimer); resumeTimer = null; }
+      setTyping(false);
+      if(cmd) cmd.classList.remove("is-demo");
+      setGhost("");
+      if(!state.query.trim()){
+        if(els.termCount) els.termCount.textContent = "全 " + entries.length + " 件";
+        renderTermOut(null, "idle");
+      }
+    };
+    // 入力を空のまま離れて時間が経ったら、静かにデモを再開する
+    els.searchInput.addEventListener("blur", () => {
+      if(els.searchInput.value.trim() || state.query.trim()) return;
+      if(resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        resumeTimer = null;
+        if(document.activeElement !== els.searchInput && !state.query.trim() && !demoRunning){ wi = 0; begin(); }
+      }, 6000);
+    });
+
+    begin();
   }
 
   /* ---------- dynamic: scroll reveal ---------- */
@@ -791,7 +912,7 @@
   if(state.openId) openModal(state.openId);   // ?id= で共有されたリンクは該当項目を開いた状態で着地
   renderCoverage();
   renderSources();
-  startRotator();
+  startDemo();
   initReveal();
   initHeaderScroll();
 })();
