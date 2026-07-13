@@ -1,5 +1,18 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
+/* 見出し用の日本語表示フォント。Zen Kaku Gothic New Black を「見出しで使うグリフ＋全かな＋ASCII」に
+   自己サブセット化した単一 woff2(約78KB)を自己ホスト＋preload。Google Fonts の JP は多数の
+   unicode-range サブセットに分割配信され、巨大 hero(LCP)を逐次再フローさせ CLS を悪化させたが、
+   単一ファイルなら一度に描画されるので逐次リフローが消える。未収録の稀な漢字はグリフ単位で
+   システム源ゴシックにフォールバックする(tofu にならない)。生成: /tmp 側 subset.py 参照。 */
+@font-face{
+  font-family:"CCFDisplayJP";
+  src:url("/fonts/zenkaku-display.woff2") format("woff2");
+  font-weight:700 900;
+  font-style:normal;
+  font-display:optional;
+}
+
 /* ---------- theme tokens ---------- */
 :root{
   --bg:#f5f1ea;
@@ -26,10 +39,10 @@
   --radius-lg:20px;        /* 外側コンテナは大きめ・内側要素は tight（radius に強弱） */
   --mono:"JetBrains Mono","SF Mono","Fira Code","Cascadia Code",Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
-  /* 見出し用の表示フォント: Latin のみ Space Grotesk（技術的で mono と相性が良い・軽量）、日本語はシステム源ゴシックに委ねる。
-     日本語 webフォントは巨大 hero(LCP)を再フローさせ CLS を悪化＋サブセット多数でコスト増だったため意図的に不採用。
-     個性は Latin タイポ＋暖色パレット＋脱箱カード＋❯モチーフで出す。 */
-  --display:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  /* 見出し用の表示フォント: Latin=Space Grotesk（技術的で mono と相性が良い・軽量）、
+     日本語=CCFDisplayJP（Zen Kaku Gothic New Black を自己サブセット化した単一 woff2・上の @font-face 参照）。
+     未収録の稀な漢字はシステム源ゴシックにグリフ単位でフォールバック。 */
+  --display:"Space Grotesk","CCFDisplayJP",-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
   --maxw:1280px;
 }
 :root[data-theme="dark"]{
