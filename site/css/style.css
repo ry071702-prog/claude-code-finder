@@ -488,6 +488,14 @@ mark{background:linear-gradient(transparent 55%,var(--accent-line) 55%);color:in
 }
 @media(prefers-reduced-motion:reduce){.bento-tile,.bento-ic,.bento-arrow{transition:none}}
 
+/* ---------- Bookshelf（スポンサー枠: bento を3列で流用） ---------- */
+.shelf-section{margin-bottom:44px}
+.shelf-section .bento-explore{grid-template-columns:repeat(3,1fr)}
+.shelf-fine{margin-top:10px;font-size:.76rem;color:var(--text2)}
+.ad-slot{margin-top:16px;position:relative;min-height:110px;border:1px dashed var(--border);border-radius:14px;padding:10px;overflow:hidden}
+.ad-slot-label{position:absolute;top:6px;right:10px;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--text2)}
+@media(max-width:760px){.shelf-section .bento-explore{grid-template-columns:1fr}}
+
 /* ---------- submit CTA + form ---------- */
 .submit-cta{margin-bottom:44px}
 .submit-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;

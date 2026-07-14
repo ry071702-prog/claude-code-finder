@@ -7,11 +7,12 @@
  *  - アイコン・画像など実質不変のものは cache-first（裏で更新）。
  *  - VERSION を上げると古いキャッシュは activate 時に破棄される。
  */
-const VERSION = "ccf-v2";
+const VERSION = "ccf-v3";
 const CORE = [
   "/", "/guide", "/academy", "/updates",
   "/css/style.css",
   "/js/data.js", "/js/data-custom.js", "/js/data-skills.js", "/js/main.js",
+  "/js/data-sponsors.js", "/js/sponsors.js",
   "/js/guide.js", "/js/academy.js", "/js/updates.js", "/js/theme-toggle.js", "/js/pwa.js",
   "/js/data-academy.js", "/js/data-updates.js", "/js/data-changelog.js",
   "/favicon.svg", "/icon-192.png", "/manifest.webmanifest",
