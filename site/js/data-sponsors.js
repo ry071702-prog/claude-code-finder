@@ -6,9 +6,9 @@
  *  2. AdSense 承認後: ADSENSE.client / ADSENSE.slot を設定
  *     → 本棚セクション下に広告スロットが1枠だけ描画される (未設定時は DOM ごと非表示)
  *
- * SHELF_ITEMS の href は Amazon 検索リンク (実在保証のため)。
- * 具体的な商品を推したくなったら href を商品ページ URL に差し替えるだけでよい
- * (tag 付与は sponsors.js が URL を見て自動で行う)。
+ * SHELF_ITEMS は 2026-07-16 に Web 調査で実在確認済みの書籍 (出版社ページ等 複数ソース照合)。
+ * title は表示用に短縮している場合がある (正式名は desc やリンク先参照)。
+ * tag 付与は sponsors.js が amazon.co.jp の URL にだけ自動で行う。
  */
 const SPONSOR_CONFIG = {
   AMAZON_TAG: "",           // 例: "ry071702-22"  未設定 = リンクは素の Amazon リンク
@@ -21,20 +21,38 @@ const SPONSOR_CONFIG = {
 const SHELF_ITEMS = [
   {
     icon: "menu_book",
-    title: "Claude Code の本",
-    desc: "実践入門・活用テクニック系  逆引きと併読すると定着が速い",
-    href: "https://www.amazon.co.jp/s?k=Claude+Code+%E6%9C%AC",
+    title: "Claude Codeによる<br>AI駆動開発入門",
+    desc: "基礎からWebアプリ構築までハンズオンで学ぶ実践書 (技術評論社)",
+    href: "https://www.amazon.co.jp/dp/4297152754",
+  },
+  {
+    icon: "psychology",
+    title: "実践Claude Code入門",
+    desc: "スペック駆動開発でLLM時代のエンジニアリングを体系化 (技術評論社)",
+    href: "https://www.amazon.co.jp/dp/4297153548",
+  },
+  {
+    icon: "speed",
+    title: "Claude Code 実用入門",
+    desc: "初歩から迷わず始められる定番入門 (マイナビ出版)",
+    href: "https://www.amazon.co.jp/dp/4839990204",
   },
   {
     icon: "smart_toy",
-    title: "AIエージェント開発の本",
-    desc: "Subagents / MCP / Hooks の設計思想を体系的に押さえる",
-    href: "https://www.amazon.co.jp/s?k=AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88+%E9%96%8B%E7%99%BA",
+    title: "RAG・AIエージェント<br>実践入門",
+    desc: "LangChain/LangGraphでRAGからエージェント設計まで (技術評論社)",
+    href: "https://www.amazon.co.jp/dp/4297145308",
+  },
+  {
+    icon: "settings_suggest",
+    title: "AIエージェント<br>開発／運用入門",
+    desc: "LangGraphやMCP、運用 (LLMOps) まで現場目線で (SBクリエイティブ)",
+    href: "https://www.amazon.co.jp/dp/4815636605",
   },
   {
     icon: "edit_note",
-    title: "プロンプト設計の本",
-    desc: "CLAUDE.md や Skill の書き方の土台になる指示設計の基礎",
-    href: "https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0",
+    title: "プロンプト<br>エンジニアリング",
+    desc: "生成AIに通用し続ける普遍的な入力原則 (オライリー)",
+    href: "https://www.amazon.co.jp/dp/4814401248",
   },
 ];
