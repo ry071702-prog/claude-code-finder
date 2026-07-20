@@ -1,5 +1,5 @@
 // 生成物: scripts/build_data.py が skills.jsonl + overrides.ja.json から作成。手で編集しない。
-// GitHub の Claude Code Skills を非LLMで取り込み、日本語化 48/88 件（週次 ingest-skills.yml）。
+// GitHub の Claude Code Skills を非LLMで取り込み、日本語化 39/120 件（週次 ingest-skills.yml）。
 window.CCF_SKILLS = [
 {
 "id": "skill-anthropics-skills-skills-algorithmic-art",
@@ -14,7 +14,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@algorithmic-art -g"
 ],
 "install": "npx skills add anthropics/skills@algorithmic-art -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "algorithmic-art",
@@ -37,7 +37,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@brand-guidelines -g"
 ],
 "install": "npx skills add anthropics/skills@brand-guidelines -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "brand-guidelines",
@@ -60,7 +60,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@canvas-design -g"
 ],
 "install": "npx skills add anthropics/skills@canvas-design -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "canvas-design",
@@ -83,7 +83,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@claude-api -g"
 ],
 "install": "npx skills add anthropics/skills@claude-api -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "claude-api",
@@ -106,7 +106,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@doc-coauthoring -g"
 ],
 "install": "npx skills add anthropics/skills@doc-coauthoring -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "doc-coauthoring",
@@ -129,7 +129,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@docx -g"
 ],
 "install": "npx skills add anthropics/skills@docx -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "docx",
@@ -152,7 +152,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@frontend-design -g"
 ],
 "install": "npx skills add anthropics/skills@frontend-design -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "frontend-design",
@@ -175,7 +175,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@internal-comms -g"
 ],
 "install": "npx skills add anthropics/skills@internal-comms -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "internal-comms",
@@ -198,7 +198,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@mcp-builder -g"
 ],
 "install": "npx skills add anthropics/skills@mcp-builder -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "mcp-builder",
@@ -221,7 +221,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pdf -g"
 ],
 "install": "npx skills add anthropics/skills@pdf -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pdf",
@@ -244,7 +244,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pptx -g"
 ],
 "install": "npx skills add anthropics/skills@pptx -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pptx",
@@ -267,7 +267,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@skill-creator -g"
 ],
 "install": "npx skills add anthropics/skills@skill-creator -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "skill-creator",
@@ -290,7 +290,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@slack-gif-creator -g"
 ],
 "install": "npx skills add anthropics/skills@slack-gif-creator -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "slack-gif-creator",
@@ -313,7 +313,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@theme-factory -g"
 ],
 "install": "npx skills add anthropics/skills@theme-factory -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "theme-factory",
@@ -336,7 +336,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@web-artifacts-builder -g"
 ],
 "install": "npx skills add anthropics/skills@web-artifacts-builder -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "web-artifacts-builder",
@@ -359,7 +359,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@webapp-testing -g"
 ],
 "install": "npx skills add anthropics/skills@webapp-testing -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "webapp-testing",
@@ -382,7 +382,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@xlsx -g"
 ],
 "install": "npx skills add anthropics/skills@xlsx -g",
-"stars": 160862,
+"stars": 162944,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "xlsx",
@@ -393,185 +393,185 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-add-app-to-server",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-adaptive-coordinator",
 "priority": 417,
 "category": "community",
 "type": "skill",
-"want": "既存のMCPサーバーにUIを足したい",
-"feature": "tldraw/tldraw",
-"summary": "すでにツールを持つ MCP サーバーの中身を読み、MCP Apps の UI リソースを足す手順を示す。",
-"trigger": "既存の MCP サーバーやツールに、対話できるUI (MCP Apps) を追加したいとき。",
+"want": "agent-adaptive-coordinator",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for adaptive-coordinator - invoke with $agent-adaptive-coordinator",
+"trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@add-app-to-server -g"
+"npx skills add ruvnet/ruflo@agent-adaptive-coordinator -g"
 ],
-"install": "npx skills add tldraw/tldraw@add-app-to-server -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-adaptive-coordinator -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"add-app-to-server",
-"tldraw",
-"add-app-to-server",
+"agent-adaptive-coordinator",
+"ruvnet",
+"agent-adaptive-coordinator",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-tldraw-tldraw-skills-clean-copy",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-agent",
 "priority": 418,
 "category": "community",
 "type": "skill",
-"want": "コミット履歴をきれいに作り直したい",
-"feature": "tldraw/tldraw",
-"summary": "今のブランチの作業を新しいブランチで再現し、筋の通ったコミット履歴として組み直す。",
-"trigger": "クリーンなコピーブランチを作る、コミット履歴をレビューしやすい形に作り直すとき。",
+"want": "agent-agent",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for agent - invoke with $agent-agent",
+"trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@clean-copy -g"
+"npx skills add ruvnet/ruflo@agent-agent -g"
 ],
-"install": "npx skills add tldraw/tldraw@clean-copy -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-agent -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"clean-copy",
-"tldraw",
-"clean-copy",
+"agent-agent",
+"ruvnet",
+"agent-agent",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-tldraw-tldraw-skills-commit-changes",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-agentic-payments",
 "priority": 419,
 "category": "community",
 "type": "skill",
-"want": "いまの変更をコミットしたい",
-"feature": "tldraw/tldraw",
-"summary": "現在の変更内容から git コミットを作る。ユーザーが足した文脈もメッセージに織り込む。",
-"trigger": "変更をコミットする、コミットメッセージを作るとき。",
+"want": "agent-agentic-payments",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for agentic-payments - invoke with $agent-agentic-payments",
+"trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@commit-changes -g"
+"npx skills add ruvnet/ruflo@agent-agentic-payments -g"
 ],
-"install": "npx skills add tldraw/tldraw@commit-changes -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-agentic-payments -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"commit-changes",
-"tldraw",
-"commit-changes",
+"agent-agentic-payments",
+"ruvnet",
+"agent-agentic-payments",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-convert-web-app",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-analyze-code-quality",
 "priority": 420,
 "category": "community",
 "type": "skill",
-"want": "既存のWebアプリをMCP Appにも対応させたい",
-"feature": "tldraw/tldraw",
-"summary": "既存の Web アプリを単体で動かせるまま MCP App としても動く形にし、サーバー側の登録まで面倒を見る。",
-"trigger": "既存の Web アプリや SPA、iframe 埋め込みを MCP App 対応にしたいとき。",
+"want": "agent-analyze-code-quality",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for analyze-code-quality - invoke with $agent-analyze-code-quality",
+"trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@convert-web-app -g"
+"npx skills add ruvnet/ruflo@agent-analyze-code-quality -g"
 ],
-"install": "npx skills add tldraw/tldraw@convert-web-app -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-analyze-code-quality -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"convert-web-app",
-"tldraw",
-"convert-web-app",
+"agent-analyze-code-quality",
+"ruvnet",
+"agent-analyze-code-quality",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-create-mcp-app",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-app-store",
 "priority": 421,
 "category": "community",
 "type": "skill",
-"want": "UI付きのMCP Appを新しく作りたい",
-"feature": "tldraw/tldraw",
-"summary": "MCP Apps SDK の書き方に沿って、UIリソースの登録やホスト連携まで含めた MCP App を新規に組む。",
-"trigger": "MCP App を新規に作る、MCP ツールにUIを付ける、MCP Apps のパターンを知りたいとき。",
+"want": "agent-app-store",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for app-store - invoke with $agent-app-store",
+"trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@create-mcp-app -g"
+"npx skills add ruvnet/ruflo@agent-app-store -g"
 ],
-"install": "npx skills add tldraw/tldraw@create-mcp-app -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-app-store -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"create-mcp-app",
-"tldraw",
-"create-mcp-app",
+"agent-app-store",
+"ruvnet",
+"agent-app-store",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-tldraw-tldraw-skills-dotcom-release-crew",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-arch-system-design",
 "priority": 422,
 "category": "community",
 "type": "skill",
-"want": "tldraw の dotcom リリース告知を投稿したい",
-"feature": "tldraw/tldraw",
-"summary": "tldraw の dotcom リリースに関する投稿を行う。説明文が途中で切れており詳細は不明。",
+"want": "agent-arch-system-design",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for arch-system-design - invoke with $agent-arch-system-design",
 "trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@dotcom-release-crew -g"
+"npx skills add ruvnet/ruflo@agent-arch-system-design -g"
 ],
-"install": "npx skills add tldraw/tldraw@dotcom-release-crew -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-arch-system-design -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"dotcom-release-crew",
-"tldraw",
-"dotcom-release-crew",
+"agent-arch-system-design",
+"ruvnet",
+"agent-arch-system-design",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-tldraw-tldraw-skills-issue",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-architecture",
 "priority": 423,
 "category": "community",
 "type": "skill",
-"want": "tldraw に GitHub issue を立てたい",
-"feature": "tldraw/tldraw",
-"summary": "ユーザーの説明から tldraw リポジトリに GitHub issue を作り、追加質問を重ねて中身を詰めていく。",
-"trigger": "issue の作成、バグ報告、機能要望の提出を頼むとき。この Skill が作った issue への追加質問に答えるときも含む。",
+"want": "agent-architecture",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for architecture - invoke with $agent-architecture",
+"trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@issue -g"
+"npx skills add ruvnet/ruflo@agent-architecture -g"
 ],
-"install": "npx skills add tldraw/tldraw@issue -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-architecture -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"issue",
-"tldraw",
-"issue",
+"agent-architecture",
+"ruvnet",
+"agent-architecture",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-tldraw-tldraw-apps-mcp-app-.claude-skills-migrate-oai-app",
+"id": "skill-ruvnet-ruflo-.agents-skills-agent-authentication",
 "priority": 424,
 "category": "community",
 "type": "skill",
-"want": "OpenAI Apps SDK のアプリを MCP に移行したい",
-"feature": "tldraw/tldraw",
-"summary": "OpenAI Apps SDK で書かれたアプリを MCP Apps SDK へ移す手順を、API 対応表つきで段階的に示す。",
-"trigger": "OpenAI Apps SDK からの移行、window.openai や skybridge、openai/outputTemplate からの置き換えを尋ねるとき。",
+"want": "agent-authentication",
+"feature": "ruvnet/ruflo",
+"summary": "Agent skill for authentication - invoke with $agent-authentication",
+"trigger": "",
 "commands": [
-"npx skills add tldraw/tldraw@migrate-oai-app -g"
+"npx skills add ruvnet/ruflo@agent-authentication -g"
 ],
-"install": "npx skills add tldraw/tldraw@migrate-oai-app -g",
-"stars": 48738,
-"repoUrl": "https://github.com/tldraw/tldraw",
+"install": "npx skills add ruvnet/ruflo@agent-authentication -g",
+"stars": 65315,
+"repoUrl": "https://github.com/ruvnet/ruflo",
 "aliases": [
-"migrate-oai-app",
-"tldraw",
-"migrate-oai-app",
+"agent-authentication",
+"ruvnet",
+"agent-authentication",
 "skill",
 "スキル"
 ]
@@ -589,7 +589,7 @@ window.CCF_SKILLS = [
 "npx skills add alibaba/arthas@skills -g"
 ],
 "install": "npx skills add alibaba/arthas@skills -g",
-"stars": 37431,
+"stars": 37438,
 "repoUrl": "https://github.com/alibaba/arthas",
 "aliases": [
 "skills",
@@ -612,7 +612,7 @@ window.CCF_SKILLS = [
 "npx skills add alibaba/arthas@cpu-high -g"
 ],
 "install": "npx skills add alibaba/arthas@cpu-high -g",
-"stars": 37431,
+"stars": 37438,
 "repoUrl": "https://github.com/alibaba/arthas",
 "aliases": [
 "cpu-high",
@@ -635,7 +635,7 @@ window.CCF_SKILLS = [
 "npx skills add alibaba/arthas@eagleeye-traceid -g"
 ],
 "install": "npx skills add alibaba/arthas@eagleeye-traceid -g",
-"stars": 37431,
+"stars": 37438,
 "repoUrl": "https://github.com/alibaba/arthas",
 "aliases": [
 "eagleeye-traceid",
@@ -658,7 +658,7 @@ window.CCF_SKILLS = [
 "npx skills add alibaba/arthas@spring-context -g"
 ],
 "install": "npx skills add alibaba/arthas@spring-context -g",
-"stars": 37431,
+"stars": 37438,
 "repoUrl": "https://github.com/alibaba/arthas",
 "aliases": [
 "spring-context",
@@ -669,31 +669,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-abiosoft-colima-skills",
-"priority": 429,
-"category": "community",
-"type": "skill",
-"want": "macOS や Linux で Colima を使ってコンテナを動かしたい",
-"feature": "abiosoft/colima",
-"summary": "軽量な Lima VM 上で Docker・containerd・Kubernetes・Incus を動かす Colima の使い方をまとめる。",
-"trigger": "Colima のインストールや start/stop、ランタイム切り替え、docker.sock に繋がらないエラー、レジストリミラー、マウント、ディスク容量、Colima を起動するスクリプトを書くとき。",
-"commands": [
-"npx skills add abiosoft/colima -g"
-],
-"install": "npx skills add abiosoft/colima -g",
-"stars": 29888,
-"repoUrl": "https://github.com/abiosoft/colima",
-"aliases": [
-"skills",
-"abiosoft",
-"colima",
-"skill",
-"スキル"
-]
-},
-{
 "id": "skill-vercel-labs-agent-skills-skills-deploy-to-vercel",
-"priority": 430,
+"priority": 429,
 "category": "community",
 "type": "skill",
 "want": "アプリを Vercel にデプロイしたい",
@@ -704,7 +681,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "deploy-to-vercel",
@@ -716,7 +693,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-vercel-cli-with-tokens",
-"priority": 431,
+"priority": 430,
 "category": "community",
 "type": "skill",
 "want": "アクセストークンで Vercel CLI を動かしたい",
@@ -727,7 +704,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-cli-with-tokens",
@@ -739,7 +716,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-composition-patterns",
-"priority": 432,
+"priority": 431,
 "category": "community",
 "type": "skill",
 "want": "React コンポーネントの合成パターンを整理したい",
@@ -750,7 +727,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@composition-patterns -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@composition-patterns -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "composition-patterns",
@@ -762,7 +739,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-vercel-optimize",
-"priority": 433,
+"priority": 432,
 "category": "community",
 "type": "skill",
 "want": "Vercel の請求額と遅いルートを見直したい",
@@ -773,7 +750,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-optimize -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-optimize -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-optimize",
@@ -785,7 +762,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-react-best-practices",
-"priority": 434,
+"priority": 433,
 "category": "community",
 "type": "skill",
 "want": "React / Next.js の性能面の書き方を押さえたい",
@@ -796,7 +773,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-best-practices -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-best-practices -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-best-practices",
@@ -808,7 +785,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-react-native-skills",
-"priority": 435,
+"priority": 434,
 "category": "community",
 "type": "skill",
 "want": "React Native / Expo でモバイルアプリを作りたい",
@@ -819,7 +796,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-native-skills -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-native-skills -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-native-skills",
@@ -831,7 +808,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-react-view-transitions",
-"priority": 436,
+"priority": 435,
 "category": "community",
 "type": "skill",
 "want": "React で画面遷移のアニメーションを入れたい",
@@ -842,7 +819,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-view-transitions -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-view-transitions -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-view-transitions",
@@ -854,7 +831,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-web-design-guidelines",
-"priority": 437,
+"priority": 436,
 "category": "community",
 "type": "skill",
 "want": "UI コードをガイドラインに照らして点検したい",
@@ -865,7 +842,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@web-design-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@web-design-guidelines -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "web-design-guidelines",
@@ -877,7 +854,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vercel-labs-agent-skills-skills-writing-guidelines",
-"priority": 438,
+"priority": 437,
 "category": "community",
 "type": "skill",
 "want": "ドキュメントの文体をチェックしたい",
@@ -888,7 +865,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@writing-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@writing-guidelines -g",
-"stars": 29025,
+"stars": 29253,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "writing-guidelines",
@@ -900,7 +877,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-karakeep-app-karakeep-skills",
-"priority": 439,
+"priority": 438,
 "category": "community",
 "type": "skill",
 "want": "ブックマーク管理の karakeep を操作したい",
@@ -911,7 +888,7 @@ window.CCF_SKILLS = [
 "npx skills add karakeep-app/karakeep -g"
 ],
 "install": "npx skills add karakeep-app/karakeep -g",
-"stars": 27382,
+"stars": 27606,
 "repoUrl": "https://github.com/karakeep-app/karakeep",
 "aliases": [
 "skills",
@@ -922,24 +899,47 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-titanwings-colleague-skill-colleague-skill",
+"id": "skill-teng-lin-notebooklm-py-notebooklm-py",
+"priority": 439,
+"category": "community",
+"type": "skill",
+"want": "notebooklm",
+"feature": "teng-lin/notebooklm-py",
+"summary": "Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like \"create a podcast about X\"",
+"trigger": "",
+"commands": [
+"npx skills add teng-lin/notebooklm-py -g"
+],
+"install": "npx skills add teng-lin/notebooklm-py -g",
+"stars": 18005,
+"repoUrl": "https://github.com/teng-lin/notebooklm-py",
+"aliases": [
+"notebooklm-py",
+"teng-lin",
+"notebooklm",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-weifeng2333-videocaptioner-skills",
 "priority": 440,
 "category": "community",
 "type": "skill",
-"want": "同僚や有名人のキャラクターを Skill 化したい",
-"feature": "titanwings/colleague-skill",
-"summary": "同僚・関係性・著名人という3種の人物像を蒸留し、再利用できる Skill に落とし込む meta-skill エンジン。",
-"trigger": "",
+"want": "動画に字幕を付けたい",
+"feature": "WEIFENG2333/VideoCaptioner",
+"summary": "音声を文字起こしし、字幕の推敲や翻訳を行い、スタイルを当てた字幕を動画に焼き込む。",
+"trigger": "動画への字幕追加、音声の文字起こし、字幕の翻訳、字幕スタイルの調整をするとき。",
 "commands": [
-"npx skills add titanwings/colleague-skill -g"
+"npx skills add WEIFENG2333/VideoCaptioner -g"
 ],
-"install": "npx skills add titanwings/colleague-skill -g",
-"stars": 20256,
-"repoUrl": "https://github.com/titanwings/colleague-skill",
+"install": "npx skills add WEIFENG2333/VideoCaptioner -g",
+"stars": 15376,
+"repoUrl": "https://github.com/WEIFENG2333/VideoCaptioner",
 "aliases": [
-"colleague-skill",
-"titanwings",
-"dot-skill",
+"skills",
+"WEIFENG2333",
+"videocaptioner",
 "skill",
 "スキル"
 ]
@@ -957,7 +957,7 @@ window.CCF_SKILLS = [
 "npx skills add crazyguitar/pysheeet@py -g"
 ],
 "install": "npx skills add crazyguitar/pysheeet@py -g",
-"stars": 8149,
+"stars": 8151,
 "repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
 "py",
@@ -980,7 +980,7 @@ window.CCF_SKILLS = [
 "npx skills add crazyguitar/pysheeet@readable-py -g"
 ],
 "install": "npx skills add crazyguitar/pysheeet@readable-py -g",
-"stars": 8149,
+"stars": 8151,
 "repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
 "readable-py",
@@ -991,8 +991,77 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-op7418-claude-to-im-skill-claude-to-im-skill",
+"id": "skill-kaggle-kaggle-cli-skills",
 "priority": 443,
+"category": "community",
+"type": "skill",
+"want": "Kaggle CLIのコマンドや使い方を知りたい",
+"feature": "Kaggle/kaggle-cli",
+"summary": "Kaggle CLIのコマンド・ワークフロー・トラブル対処を、コンペ・データセット・カーネル・モデル・認証など横断で案内する。",
+"trigger": "kaggle CLIのコマンド、例、フラグ、メタデータファイル、ダウンロード/アップロード、提出、ベンチマークについて聞かれたとき。",
+"commands": [
+"npx skills add Kaggle/kaggle-cli -g"
+],
+"install": "npx skills add Kaggle/kaggle-cli -g",
+"stars": 7459,
+"repoUrl": "https://github.com/Kaggle/kaggle-cli",
+"aliases": [
+"skills",
+"Kaggle",
+"kaggle-cli",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-builderz-labs-mission-control-mission-control",
+"priority": 444,
+"category": "community",
+"type": "skill",
+"want": "mission-control",
+"feature": "builderz-labs/mission-control",
+"summary": "Interact with Mission Control — AI agent orchestration dashboard.",
+"trigger": "Use when registering agents, managing tasks, syncing skills, or querying agent/task status via MC APIs.",
+"commands": [
+"npx skills add builderz-labs/mission-control -g"
+],
+"install": "npx skills add builderz-labs/mission-control -g",
+"stars": 5796,
+"repoUrl": "https://github.com/builderz-labs/mission-control",
+"aliases": [
+"mission-control",
+"builderz-labs",
+"mission-control",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-vyperlang-vyper-skills",
+"priority": 445,
+"category": "community",
+"type": "skill",
+"want": "Vyperコンパイラの内部を触りたい",
+"feature": "vyperlang/vyper",
+"summary": "Vyperスマートコントラクトコンパイラの内部を扱う。コンパイルパイプライン、Venom IR、意味解析、コード生成、テストを含む。",
+"trigger": "Vyperコンパイラの開発、Venomパス、AST/意味解析の変更、コード生成、テスト作成をするとき。",
+"commands": [
+"npx skills add vyperlang/vyper -g"
+],
+"install": "npx skills add vyperlang/vyper -g",
+"stars": 5174,
+"repoUrl": "https://github.com/vyperlang/vyper",
+"aliases": [
+"skills",
+"vyperlang",
+"vyper-compiler",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-op7418-claude-to-im-skill-claude-to-im-skill",
+"priority": 446,
 "category": "community",
 "type": "skill",
 "want": "Claude Codeのセッションをスマホから使いたい",
@@ -1003,7 +1072,7 @@ window.CCF_SKILLS = [
 "npx skills add op7418/Claude-to-IM-skill -g"
 ],
 "install": "npx skills add op7418/Claude-to-IM-skill -g",
-"stars": 2809,
+"stars": 2824,
 "repoUrl": "https://github.com/op7418/Claude-to-IM-skill",
 "aliases": [
 "Claude-to-IM-skill",
@@ -1014,54 +1083,192 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-conorbronsdon-avoid-ai-writing-avoid-ai-writing",
-"priority": 444,
+"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-adaptyv",
+"priority": 447,
 "category": "community",
 "type": "skill",
-"want": "文章からAIっぽさを取り除きたい",
-"feature": "conorbronsdon/avoid-ai-writing",
-"summary": "文章を監査してAI特有の言い回し(AI-ism)を検出し、書き換えて取り除く。声色プロファイルも選べる。",
-"trigger": "「AI-ismを消す」「AIっぽい文章を直す」「AIらしさを減らす」等を求められたとき。",
+"want": "adaptyv",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "Cloud laboratory platform for automated protein testing and validation.",
+"trigger": "Use when designing proteins and needing experimental validation including binding assays, expression testing, thermostability measurements, enzyme activity assays, or protein sequence optimization. Also use for submitting experiments via API, tracking experiment status, downloading results, optimizing protein sequences for better expression using computational tools (NetSolP, SoluProt, SolubleMPNN, ESM), or managing protein design workflows with wet-lab validation.",
 "commands": [
-"npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g"
+"npx skills add foryourhealth111-pixel/Vibe-Skills@adaptyv -g"
 ],
-"install": "npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g",
-"stars": 2332,
-"repoUrl": "https://github.com/conorbronsdon/avoid-ai-writing",
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@adaptyv -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
 "aliases": [
-"avoid-ai-writing",
-"conorbronsdon",
-"avoid-ai-writing",
+"adaptyv",
+"foryourhealth111-pixel",
+"adaptyv",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-conorbronsdon-avoid-ai-writing-plugins-avoid-ai-writing-skills-avoid-ai-writing",
-"priority": 445,
+"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-aeon",
+"priority": 448,
 "category": "community",
 "type": "skill",
-"want": "文章からAIっぽさを取り除きたい",
-"feature": "conorbronsdon/avoid-ai-writing",
-"summary": "文章を監査してAI特有の言い回し(AI-ism)を検出し、書き換えて取り除く。声色プロファイルも選べる。",
-"trigger": "「AI-ismを消す」「AIっぽい文章を直す」「AIらしさを減らす」等を求められたとき。",
+"want": "aeon",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "This skill should be used for time series machine learning tasks including classification, regression, clustering, forecasting, anomaly detection, segmentation, and similarity search.",
+"trigger": "Use when working with temporal data, sequential patterns, or time-indexed observations requiring specialized algorithms beyond standard ML approaches. Particularly suited for univariate and multivariate time series analysis with scikit-learn compatible APIs.",
 "commands": [
-"npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g"
+"npx skills add foryourhealth111-pixel/Vibe-Skills@aeon -g"
 ],
-"install": "npx skills add conorbronsdon/avoid-ai-writing@avoid-ai-writing -g",
-"stars": 2332,
-"repoUrl": "https://github.com/conorbronsdon/avoid-ai-writing",
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@aeon -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
 "aliases": [
-"avoid-ai-writing",
-"conorbronsdon",
-"avoid-ai-writing",
+"aeon",
+"foryourhealth111-pixel",
+"aeon",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-algorithmic-art",
+"priority": 449,
+"category": "community",
+"type": "skill",
+"want": "algorithmic-art",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration.",
+"trigger": "Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+"commands": [
+"npx skills add foryourhealth111-pixel/Vibe-Skills@algorithmic-art -g"
+],
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@algorithmic-art -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+"aliases": [
+"algorithmic-art",
+"foryourhealth111-pixel",
+"algorithmic-art",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-alpha-vantage",
+"priority": 450,
+"category": "community",
+"type": "skill",
+"want": "alpha-vantage",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "Access real-time and historical stock market data, forex rates, cryptocurrency prices, commodities, economic indicators, and 50+ technical indicators via the Alpha Vantage API.",
+"trigger": "Use when fetching stock prices (OHLCV), company fundamentals (income statement, balance sheet, cash flow), earnings, options data, market news/sentiment, insider transactions, GDP, CPI, treasury yields, gold/silver/oil prices, Bitcoin/crypto prices, forex exchange rates, or calculating technical indicators (SMA, EMA, MACD, RSI, Bollinger Bands). Requires a free API key from alphavantage.co.",
+"commands": [
+"npx skills add foryourhealth111-pixel/Vibe-Skills@alpha-vantage -g"
+],
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@alpha-vantage -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+"aliases": [
+"alpha-vantage",
+"foryourhealth111-pixel",
+"alpha-vantage",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-lqf_machine_learning_expert_guide",
+"priority": 451,
+"category": "community",
+"type": "skill",
+"want": "LQF_Machine_Learning_Expert_Guide",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "LQF Machine Learning Expert Guide - Routed skill for ML/Statistical Modeling with Critical Discussion Mode.\nTriggers on: machine learning, modeling, prediction, training, classification, regression, clustering, deep learning, neural network, model evaluation, feature engineering, hyperparameter tuning, overfitting, underfitting, baseline, ablation study, critique my approach, review my model, is this a good idea, should I use, what's wrong with, evaluate my solution, challenge my assumptions, discuss my approach\nEngages in critical discussion with minimum 3 rounds of iterative refinement. Challenges both user proposals and own suggestions with fact-based critique. Demands evidence and baselines before accepting solutions.",
+"trigger": "",
+"commands": [
+"npx skills add foryourhealth111-pixel/Vibe-Skills@LQF_Machine_Learning_Expert_Guide -g"
+],
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@LQF_Machine_Learning_Expert_Guide -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+"aliases": [
+"LQF_Machine_Learning_Expert_Guide",
+"foryourhealth111-pixel",
+"LQF_Machine_Learning_Expert_Guide",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-.system-skill-creator",
+"priority": 452,
+"category": "community",
+"type": "skill",
+"want": "skill-creator",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "Guide for creating effective skills.",
+"trigger": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.",
+"commands": [
+"npx skills add foryourhealth111-pixel/Vibe-Skills@skill-creator -g"
+],
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@skill-creator -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+"aliases": [
+"skill-creator",
+"foryourhealth111-pixel",
+"skill-creator",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-.system-skill-installer",
+"priority": 453,
+"category": "community",
+"type": "skill",
+"want": "skill-installer",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path.",
+"trigger": "Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+"commands": [
+"npx skills add foryourhealth111-pixel/Vibe-Skills@skill-installer -g"
+],
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@skill-installer -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+"aliases": [
+"skill-installer",
+"foryourhealth111-pixel",
+"skill-installer",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-foryourhealth111-pixel-vibe-skills-vibe-skills",
+"priority": 454,
+"category": "community",
+"type": "skill",
+"want": "vibe",
+"feature": "foryourhealth111-pixel/Vibe-Skills",
+"summary": "Vibe Code Orchestrator (VCO) is a governed runtime entry that freezes requirements, bounds execution, and enforces verification and phase cleanup.",
+"trigger": "",
+"commands": [
+"npx skills add foryourhealth111-pixel/Vibe-Skills@Vibe-Skills -g"
+],
+"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@Vibe-Skills -g",
+"stars": 2405,
+"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+"aliases": [
+"Vibe-Skills",
+"foryourhealth111-pixel",
+"vibe",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-leilei926524-tech-anti-distill-anti-distill",
-"priority": 446,
+"priority": 455,
 "category": "community",
 "type": "skill",
 "want": "提出するSkillから核心のノウハウを抜いておきたい",
@@ -1072,7 +1279,7 @@ window.CCF_SKILLS = [
 "npx skills add leilei926524-tech/anti-distill -g"
 ],
 "install": "npx skills add leilei926524-tech/anti-distill -g",
-"stars": 2318,
+"stars": 2331,
 "repoUrl": "https://github.com/leilei926524-tech/anti-distill",
 "aliases": [
 "anti-distill",
@@ -1084,7 +1291,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-youmind-openlab-nano-banana-pro-prompts-recommend-skill-nano-banana-pro-prompts-recommend-skill",
-"priority": 447,
+"priority": 456,
 "category": "community",
 "type": "skill",
 "want": "画像生成に合うプロンプトを見つけたい",
@@ -1095,7 +1302,7 @@ window.CCF_SKILLS = [
 "npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g"
 ],
 "install": "npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g",
-"stars": 1760,
+"stars": 1774,
 "repoUrl": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
 "aliases": [
 "nano-banana-pro-prompts-recommend-skill",
@@ -1107,7 +1314,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-adamlyttleapps-claude-skill-aso-appstore-screenshots-claude-skill-aso-appstore-screenshots",
-"priority": 448,
+"priority": 457,
 "category": "community",
 "type": "skill",
 "want": "aso-appstore-screenshots",
@@ -1118,7 +1325,7 @@ window.CCF_SKILLS = [
 "npx skills add adamlyttleapps/claude-skill-aso-appstore-screenshots -g"
 ],
 "install": "npx skills add adamlyttleapps/claude-skill-aso-appstore-screenshots -g",
-"stars": 1560,
+"stars": 1586,
 "repoUrl": "https://github.com/adamlyttleapps/claude-skill-aso-appstore-screenshots",
 "aliases": [
 "claude-skill-aso-appstore-screenshots",
@@ -1130,7 +1337,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-litellm-labs-litellm-agent-control-plane-skills",
-"priority": 449,
+"priority": 458,
 "category": "community",
 "type": "skill",
 "want": "skills",
@@ -1141,7 +1348,7 @@ window.CCF_SKILLS = [
 "npx skills add LiteLLM-Labs/litellm-agent-control-plane -g"
 ],
 "install": "npx skills add LiteLLM-Labs/litellm-agent-control-plane -g",
-"stars": 1123,
+"stars": 1144,
 "repoUrl": "https://github.com/LiteLLM-Labs/litellm-agent-control-plane",
 "aliases": [
 "skills",
@@ -1153,7 +1360,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-skills-dd-apm",
-"priority": 450,
+"priority": 459,
 "category": "community",
 "type": "skill",
 "want": "dd-apm",
@@ -1164,7 +1371,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@dd-apm -g"
 ],
 "install": "npx skills add DataDog/pup@dd-apm -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "dd-apm",
@@ -1176,7 +1383,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-skills-dd-code-generation",
-"priority": 451,
+"priority": 460,
 "category": "community",
 "type": "skill",
 "want": "dd-code-generation",
@@ -1187,7 +1394,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@dd-code-generation -g"
 ],
 "install": "npx skills add DataDog/pup@dd-code-generation -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "dd-code-generation",
@@ -1199,7 +1406,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-skills-dd-debugger",
-"priority": 452,
+"priority": 461,
 "category": "community",
 "type": "skill",
 "want": "dd-debugger",
@@ -1210,7 +1417,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@dd-debugger -g"
 ],
 "install": "npx skills add DataDog/pup@dd-debugger -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "dd-debugger",
@@ -1222,7 +1429,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-skills-dd-docs",
-"priority": 453,
+"priority": 462,
 "category": "community",
 "type": "skill",
 "want": "dd-docs",
@@ -1233,7 +1440,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@dd-docs -g"
 ],
 "install": "npx skills add DataDog/pup@dd-docs -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "dd-docs",
@@ -1245,7 +1452,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-skills-dd-file-issue",
-"priority": 454,
+"priority": 463,
 "category": "community",
 "type": "skill",
 "want": "dd-file-issue",
@@ -1256,7 +1463,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@dd-file-issue -g"
 ],
 "install": "npx skills add DataDog/pup@dd-file-issue -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "dd-file-issue",
@@ -1268,7 +1475,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-skills-dd-logs",
-"priority": 455,
+"priority": 464,
 "category": "community",
 "type": "skill",
 "want": "dd-logs",
@@ -1279,7 +1486,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@dd-logs -g"
 ],
 "install": "npx skills add DataDog/pup@dd-logs -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "dd-logs",
@@ -1291,7 +1498,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-skills-dd-monitors",
-"priority": 456,
+"priority": 465,
 "category": "community",
 "type": "skill",
 "want": "dd-monitors",
@@ -1302,7 +1509,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@dd-monitors -g"
 ],
 "install": "npx skills add DataDog/pup@dd-monitors -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "dd-monitors",
@@ -1314,7 +1521,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-datadog-pup-pup",
-"priority": 457,
+"priority": 466,
 "category": "community",
 "type": "skill",
 "want": "pup",
@@ -1325,7 +1532,7 @@ window.CCF_SKILLS = [
 "npx skills add DataDog/pup@pup -g"
 ],
 "install": "npx skills add DataDog/pup@pup -g",
-"stars": 953,
+"stars": 960,
 "repoUrl": "https://github.com/DataDog/pup",
 "aliases": [
 "pup",
@@ -1336,31 +1543,192 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-tripleyak-skillforge-skillforge",
-"priority": 458,
+"id": "skill-talesofai-neta-skills-skills-neta",
+"priority": 467,
 "category": "community",
 "type": "skill",
-"want": "skillforge",
-"feature": "tripleyak/SkillForge",
-"summary": "Intelligent skill router, proactive advisor, and creator. Analyzes ANY input to recommend existing skills, improve them, or create new ones. Adds proactive Context Skill Advisor suggestions from session, project, and personal context using user-controlled Proactivity Levels.",
+"want": "neta",
+"feature": "talesofai/neta-skills",
+"summary": "Neta capability index and routing skill - help choose the appropriate Neta-related skill (neta-space / neta-creative / neta-adventure / neta-community / neta-suggest). Use this skill when you need to understand Neta's overall capabilities, decide which skill fits the current task, or migrate from older documentation that referenced the monolithic neta skill.",
 "trigger": "",
 "commands": [
-"npx skills add tripleyak/SkillForge -g"
+"npx skills add talesofai/neta-skills@neta -g"
 ],
-"install": "npx skills add tripleyak/SkillForge -g",
-"stars": 792,
-"repoUrl": "https://github.com/tripleyak/SkillForge",
+"install": "npx skills add talesofai/neta-skills@neta -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
-"SkillForge",
-"tripleyak",
-"skillforge",
+"neta",
+"talesofai",
+"neta",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-talesofai-neta-skills-skills-neta-adventure",
+"priority": 468,
+"category": "community",
+"type": "skill",
+"want": "neta-adventure",
+"feature": "talesofai/neta-skills",
+"summary": "Neta Adventure Campaign skill - Create and play AI-driven interactive story adventures. Adventure campaigns provide story-crafting and story-telling modes where agents act as DM and roleplay characters following plot, rules, and special guidelines.",
+"trigger": "",
+"commands": [
+"npx skills add talesofai/neta-skills@neta-adventure -g"
+],
+"install": "npx skills add talesofai/neta-skills@neta-adventure -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
+"aliases": [
+"neta-adventure",
+"talesofai",
+"neta-adventure",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-talesofai-neta-skills-skills-neta-character",
+"priority": 469,
+"category": "community",
+"type": "skill",
+"want": "neta-character",
+"feature": "talesofai/neta-skills",
+"summary": "Neta Character Forging Skill - Guides users through creating or updating anime/cultural IP/original character (OC) VTokens (Virtual Tokens, TCP). Includes visual preview, character documentation, backstory confirmation, and complete creative workflow. Use this skill when users want to create new characters, modify existing ones, or begin character design.",
+"trigger": "",
+"commands": [
+"npx skills add talesofai/neta-skills@neta-character -g"
+],
+"install": "npx skills add talesofai/neta-skills@neta-character -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
+"aliases": [
+"neta-character",
+"talesofai",
+"neta-character",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-talesofai-neta-skills-skills-neta-community",
+"priority": 470,
+"category": "community",
+"type": "skill",
+"want": "neta-community",
+"feature": "talesofai/neta-skills",
+"summary": "Neta API community skill — browse interactive feeds, view collection details, like and interact with content, and browse content by tags and characters in a community context. Use this skill when the user wants to “see what people are making”, “scroll the feed”, or “interact with works”. Do not use it for taxonomy/keyword‑level research (handled by neta-suggest) or for generating images/videos/songs (handled by neta-creative).",
+"trigger": "",
+"commands": [
+"npx skills add talesofai/neta-skills@neta-community -g"
+],
+"install": "npx skills add talesofai/neta-skills@neta-community -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
+"aliases": [
+"neta-community",
+"talesofai",
+"neta-community",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-talesofai-neta-skills-skills-neta-creative",
+"priority": 471,
+"category": "community",
+"type": "skill",
+"want": "neta-creative",
+"feature": "talesofai/neta-skills",
+"summary": "Neta API creative skill — generate images, videos, songs, and MVs, and deconstruct creative ideas from existing works. Use this skill when the user wants to create or edit images/videos/songs/MVs, or create based on character settings and existing works. Do not use it for feed browsing or tag/category research (those are handled by neta-community and neta-suggest).",
+"trigger": "",
+"commands": [
+"npx skills add talesofai/neta-skills@neta-creative -g"
+],
+"install": "npx skills add talesofai/neta-skills@neta-creative -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
+"aliases": [
+"neta-creative",
+"talesofai",
+"neta-creative",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-talesofai-neta-skills-skills-neta-elementum",
+"priority": 472,
+"category": "community",
+"type": "skill",
+"want": "neta-elementum",
+"feature": "talesofai/neta-skills",
+"summary": "Neta Elementum Alchemy Skill - Guides users through creating or updating style element (Elementum) VTokens (Virtual Tokens, TCP). Elementum encapsulates a visual concept (scene, prop, clothing, weapon, pose, atmosphere, meme, etc.) and can be referenced in make_image via /ElementName after creation. Use this skill when users want to create new Elementa, encapsulate visual styles or concepts, or modify existing Elementa.",
+"trigger": "",
+"commands": [
+"npx skills add talesofai/neta-skills@neta-elementum -g"
+],
+"install": "npx skills add talesofai/neta-skills@neta-elementum -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
+"aliases": [
+"neta-elementum",
+"talesofai",
+"neta-elementum",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-talesofai-neta-skills-skills-neta-space",
+"priority": 473,
+"category": "community",
+"type": "skill",
+"want": "neta-space",
+"feature": "talesofai/neta-skills",
+"summary": "Neta API space and world‑view browsing skill — browse worldbuilding, sub‑spaces, and playable content by space/hashtag. Use this skill when the user talks about worlds/spaces/universes/scenes, or wants to browse characters and gameplay based on space and activity structure. Do not use it for concrete media creation (handled by neta-creative).",
+"trigger": "",
+"commands": [
+"npx skills add talesofai/neta-skills@neta-space -g"
+],
+"install": "npx skills add talesofai/neta-skills@neta-space -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
+"aliases": [
+"neta-space",
+"talesofai",
+"neta-space",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-talesofai-neta-skills-skills-neta-suggest",
+"priority": 474,
+"category": "community",
+"type": "skill",
+"want": "neta-suggest",
+"feature": "talesofai/neta-skills",
+"summary": "Neta API research and recommendation skill — provide keyword/tag/category suggestions, validate taxonomy paths, and power multi‑mode content feeds, supporting progressive exploration from broad to precise. Use this skill when the user has no clear goal, wants topic/idea suggestions, or needs systematic content filtering by keywords/categories. It does not directly generate media (handled by neta-creative); community interactions are handled by neta-community.",
+"trigger": "",
+"commands": [
+"npx skills add talesofai/neta-skills@neta-suggest -g"
+],
+"install": "npx skills add talesofai/neta-skills@neta-suggest -g",
+"stars": 760,
+"repoUrl": "https://github.com/talesofai/neta-skills",
+"aliases": [
+"neta-suggest",
+"talesofai",
+"neta-suggest",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-denissergeevitch-repo-task-proof-loop-repo-task-proof-loop",
-"priority": 459,
+"priority": 475,
 "category": "community",
 "type": "skill",
 "want": "repo-task-proof-loop",
@@ -1382,8 +1750,77 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-nvidia-torch-harmonics-.skills-disco-kernel-dev",
+"priority": 476,
+"category": "community",
+"type": "skill",
+"want": "disco-kernel-dev",
+"feature": "NVIDIA/torch-harmonics",
+"summary": "Expert guide for adding, optimizing, or debugging DISCO convolution kernels in torch-harmonics. Use this skill whenever the user mentions: adding a new kernel variant or GPU arch path, wiring up a kernel through the Python dispatch layer, fixing bf16/fp16/autocast issues in DISCO, profiling or benchmarking the CSR or kpacked forward/backward, propagating kernel changes to the distributed DISCO path, or writing tests that cover all dispatch branches. Also use for debugging correctness issues in the DISCO fwd/bwd path or distributed a2a collectives.",
+"trigger": "",
+"commands": [
+"npx skills add NVIDIA/torch-harmonics@disco-kernel-dev -g"
+],
+"install": "npx skills add NVIDIA/torch-harmonics@disco-kernel-dev -g",
+"stars": 687,
+"repoUrl": "https://github.com/NVIDIA/torch-harmonics",
+"aliases": [
+"disco-kernel-dev",
+"NVIDIA",
+"disco-kernel-dev",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-nvidia-torch-harmonics-.skills-test-writing",
+"priority": 477,
+"category": "community",
+"type": "skill",
+"want": "test-writing",
+"feature": "NVIDIA/torch-harmonics",
+"summary": "Guide for writing tests in torch-harmonics. Use this skill whenever the user asks to add tests, check or extend test coverage, write a new test class, test a new layer or kernel, or add distributed tests. Also.",
+"trigger": "use when the user asks about tolerance values, how to compare tensors, how to structure distributed test infrastructure, or how to test gradients. Covers serial tests in test_convolution.py and distributed tests in test_distributed_*.py.",
+"commands": [
+"npx skills add NVIDIA/torch-harmonics@test-writing -g"
+],
+"install": "npx skills add NVIDIA/torch-harmonics@test-writing -g",
+"stars": 687,
+"repoUrl": "https://github.com/NVIDIA/torch-harmonics",
+"aliases": [
+"test-writing",
+"NVIDIA",
+"test-writing",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-nvidia-torch-harmonics-torch-harmonics",
+"priority": 478,
+"category": "community",
+"type": "skill",
+"want": "torch-harmonics-skills",
+"feature": "NVIDIA/torch-harmonics",
+"summary": "Index of project-local Claude Code skills for torch-harmonics. Use this to discover which skills are available for this codebase. Individual skills live in the .skills/ directory at the project root.",
+"trigger": "",
+"commands": [
+"npx skills add NVIDIA/torch-harmonics@torch-harmonics -g"
+],
+"install": "npx skills add NVIDIA/torch-harmonics@torch-harmonics -g",
+"stars": 687,
+"repoUrl": "https://github.com/NVIDIA/torch-harmonics",
+"aliases": [
+"torch-harmonics",
+"NVIDIA",
+"torch-harmonics-skills",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-ahmadawais-ramadan-cli-skills",
-"priority": 460,
+"priority": 479,
 "category": "community",
 "type": "skill",
 "want": "skills",
@@ -1406,7 +1843,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mobiusquant-openmobius-skill-openmobius-skill",
-"priority": 461,
+"priority": 480,
 "category": "community",
 "type": "skill",
 "want": "OpenMobius-skill",
@@ -1417,7 +1854,7 @@ window.CCF_SKILLS = [
 "npx skills add MobiusQuant/OpenMobius-skill -g"
 ],
 "install": "npx skills add MobiusQuant/OpenMobius-skill -g",
-"stars": 418,
+"stars": 426,
 "repoUrl": "https://github.com/MobiusQuant/OpenMobius-skill",
 "aliases": [
 "OpenMobius-skill",
@@ -1428,192 +1865,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-android-vuln-analyzer",
-"priority": 462,
-"category": "community",
-"type": "skill",
-"want": "android-vuln-analyzer",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Harness is an AI Agent development guardrail Meta-Skill that establishes four layers of defense for any project in one command: knowledge management, architecture constraints, feedback loops, and entropy management.",
-"trigger": "",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@android-vuln-analyzer -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@android-vuln-analyzer -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"android-vuln-analyzer",
-"xwtro0tk1t-cloud",
-"android-vuln-analyzer",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-design-review",
-"priority": 463,
-"category": "community",
-"type": "skill",
-"want": "design-review",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Dispatch an independent challenger agent to adversarially review a spec or implementation\nplan against the actual codebase. Catches hallucinated APIs, wrong field names, nonexistent\nfiles, and incorrect assumptions. Two modes: (1) spec review — verifies DB model fields,\nAPI paths, config attributes, file paths referenced in a design spec, (2) plan review —\nverifies imports, function signatures, constructor args, file paths in an implementation plan.\nUse after brainstorming produces a spec, or after writing-plans produces a plan, before execution.",
-"trigger": "Triggers: \"review the spec\", \"review the plan\", \"challenge this\", \"check for hallucinations\",\n\"design review\", \"spec review\", \"plan review\", \"/design-review\".",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@design-review -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@design-review -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"design-review",
-"xwtro0tk1t-cloud",
-"design-review",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-explore",
-"priority": 464,
-"category": "community",
-"type": "skill",
-"want": "explore",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Graph-driven project understanding using code-review-graph (CRG). Query architecture,\nmodules, callers/callees, impact radius, hotspots, execution flows, and search nodes.",
-"trigger": "Use when: (1) brainstorming and need to understand project structure, (2) writing plans\nand need impact analysis, (3) user says \"understand this project\", \"how does this module\nwork\", \"impact analysis\", \"/explore\", (4) reviewing code changes and need blast radius.\nRequires .code-review-graph/graph.db — run /graph build first if missing.",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@explore -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@explore -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"explore",
-"xwtro0tk1t-cloud",
-"explore",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-graph",
-"priority": 465,
-"category": "community",
-"type": "skill",
-"want": "graph",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Manage code knowledge graphs via code-review-graph (CRG). Build, update, and check status\nof project code graphs stored in .code-review-graph/graph.db.",
-"trigger": "Use when: (1) user says\n\"build graph\", \"update graph\", \"graph status\", \"/graph\", (2) Harness init detects CRG,\n(3) preparing to use /explore commands. Gracefully degrades if CRG is not installed.",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@graph -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@graph -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"graph",
-"xwtro0tk1t-cloud",
-"graph",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xwtro0tk1t-cloud-harness-harness",
-"priority": 466,
-"category": "community",
-"type": "skill",
-"want": "harness",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Harness is an AI Agent development guardrail Meta-Skill that establishes four layers of defense for any project in one command: knowledge management, architecture constraints, feedback loops, and entropy management.",
-"trigger": "",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@harness -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@harness -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"harness",
-"xwtro0tk1t-cloud",
-"harness",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-harness-audit",
-"priority": 467,
-"category": "community",
-"type": "skill",
-"want": "harness-audit",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Harness is an AI Agent development guardrail Meta-Skill that establishes four layers of defense for any project in one command: knowledge management, architecture constraints, feedback loops, and entropy management.",
-"trigger": "",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@harness-audit -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@harness-audit -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"harness-audit",
-"xwtro0tk1t-cloud",
-"harness-audit",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-harness-cleanup",
-"priority": 468,
-"category": "community",
-"type": "skill",
-"want": "harness-cleanup",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Harness is an AI Agent development guardrail Meta-Skill that establishes four layers of defense for any project in one command: knowledge management, architecture constraints, feedback loops, and entropy management.",
-"trigger": "",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@harness-cleanup -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@harness-cleanup -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"harness-cleanup",
-"xwtro0tk1t-cloud",
-"harness-cleanup",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-harness-guide",
-"priority": 469,
-"category": "community",
-"type": "skill",
-"want": "harness-guide",
-"feature": "xwtro0tk1t-cloud/harness",
-"summary": "Harness is an AI Agent development guardrail Meta-Skill that establishes four layers of defense for any project in one command: knowledge management, architecture constraints, feedback loops, and entropy management.",
-"trigger": "",
-"commands": [
-"npx skills add xwtro0tk1t-cloud/harness@harness-guide -g"
-],
-"install": "npx skills add xwtro0tk1t-cloud/harness@harness-guide -g",
-"stars": 320,
-"repoUrl": "https://github.com/xwtro0tk1t-cloud/harness",
-"aliases": [
-"harness-guide",
-"xwtro0tk1t-cloud",
-"harness-guide",
-"skill",
-"スキル"
-]
-},
-{
 "id": "skill-claw-bench-claw-bench-leaderboard-public",
-"priority": 470,
+"priority": 481,
 "category": "community",
 "type": "skill",
 "want": "claw-bench",
@@ -1636,7 +1889,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-claw-bench-claw-bench-skills",
-"priority": 471,
+"priority": 482,
 "category": "community",
 "type": "skill",
 "want": "claw-bench",
@@ -1658,31 +1911,261 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-spillwavesolutions-sdd-skill-sdd-skill",
-"priority": 472,
+"id": "skill-garycli-garycli-skills",
+"priority": 483,
 "category": "community",
 "type": "skill",
-"want": "sdd",
-"feature": "SpillwaveSolutions/sdd-skill",
-"summary": "This skill should be used when users want guidance on Spec-Driven Development methodology using GitHub's Spec-Kit. Guide users through executable specification workflows for both new projects (greenfield) and existing codebases (brownfield). After any SDD command generates artifacts, automatically provide structured 10-point summaries with feature status tracking, enabling natural language feature management and keeping users engaged throughout the process.",
-"trigger": "This skill should be used when users want guidance on Spec-Driven Development methodology using GitHub's Spec-Kit. Guide users through executable specification workflows for both new projects (greenfield) and existing codebases (brownfield). After any SDD command generates artifacts, automatically provide structured 10-point summaries with feature status tracking, enabling natural language feature management and keeping users engaged throughout the process.",
+"want": "skills",
+"feature": "garycli/garycli",
+"summary": "The Spear Carrier. AI-native CLI agent for STM32 embedded development and automated debugging. (Gary：专为 STM32 打造的 AI 原生命令行开发与调试智能体。)",
+"trigger": "",
 "commands": [
-"npx skills add SpillwaveSolutions/sdd-skill -g"
+"npx skills add garycli/garycli -g"
 ],
-"install": "npx skills add SpillwaveSolutions/sdd-skill -g",
-"stars": 85,
-"repoUrl": "https://github.com/SpillwaveSolutions/sdd-skill",
+"install": "npx skills add garycli/garycli -g",
+"stars": 124,
+"repoUrl": "https://github.com/garycli/garycli",
 "aliases": [
-"sdd-skill",
-"SpillwaveSolutions",
-"sdd",
+"skills",
+"garycli",
+"skills",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-polydile-dile-components-skills-dile-components",
+"priority": 484,
+"category": "community",
+"type": "skill",
+"want": "dile-components",
+"feature": "Polydile/dile-components",
+"summary": "Use when building or modifying UI with the Dile Components library (@dile/ui, @dile/crud, @dile/editor, @dile/utils, @dile/lib, @dile/iconlib, @dile/icons) — a framework-agnostic, Lit-based web component catalog. Trigger when installing/importing dile-* custom elements, using tags like <dile-input>, <dile-modal>, <dile-table>, building CRUD screens, adding a WYSIWYG/Markdown editor, using icon components, or theming with Dile's CSS custom properties.",
+"trigger": "Use when building or modifying UI with the Dile Components library (@dile/ui, @dile/crud, @dile/editor, @dile/utils, @dile/lib, @dile/iconlib, @dile/icons) — a framework-agnostic, Lit-based web component catalog. Trigger when installing/importing dile-* custom elements, using tags like <dile-input>, <dile-modal>, <dile-table>, building CRUD screens, adding a WYSIWYG/Markdown editor, using icon components, or theming with Dile's CSS custom properties.",
+"commands": [
+"npx skills add Polydile/dile-components -g"
+],
+"install": "npx skills add Polydile/dile-components -g",
+"stars": 106,
+"repoUrl": "https://github.com/Polydile/dile-components",
+"aliases": [
+"dile-components",
+"Polydile",
+"dile-components",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-000-tnr-absolute-rigor",
+"priority": 485,
+"category": "community",
+"type": "skill",
+"want": "000-TnR-Absolute-Rigor",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "[00] TnR ABSOLUTE RIGOR — Systemic Verification Doctrine. Forced cognitive exertion for high-stakes investigations. Mandates absolute deconstruction, mathematical proof chains, and ≥95% derived certainty. Zero-tolerance for heuristics or sentiment-based reasoning. Shortcuts are defined as intentional hallucinations.",
+"trigger": "",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@000-tnr-absolute-rigor -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@000-tnr-absolute-rigor -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"000-tnr-absolute-rigor",
+"diegosouzapw",
+"000-TnR-Absolute-Rigor",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-2agent-majiayu000",
+"priority": 486,
+"category": "community",
+"type": "skill",
+"want": "2agent",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "Configures 2-Agent workflow between PM and implementation roles.",
+"trigger": "Use when user mentions 2-Agent, 2エージェント, PM連携設定, Cursor設定, Cursor連携, 2-agent運用. Do NOT load for: 単独運用, ワークフロー実行, ハンドオフ処理.",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@2agent-majiayu000 -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@2agent-majiayu000 -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"2agent-majiayu000",
+"diegosouzapw",
+"2agent",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-2agent",
+"priority": 487,
+"category": "community",
+"type": "skill",
+"want": "2agent",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "Configures 2-Agent workflow between PM and implementation roles.",
+"trigger": "Use when user mentions 2-Agent, 2エージェント, PM連携設定, Cursor設定, Cursor連携, 2-agent運用. Do NOT load for: 単独運用, ワークフロー実行, ハンドオフ処理.",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@2agent -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@2agent -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"2agent",
+"diegosouzapw",
+"2agent",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-add-agent",
+"priority": 488,
+"category": "community",
+"type": "skill",
+"want": "add-agent",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "Add a new AI coding agent to Agent Sandbox. Creates all required files (Dockerfile, templates, CI, docs) and wires the agent into the CLI, proxy, and build system.",
+"trigger": "",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@add-agent -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@add-agent -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"add-agent",
+"diegosouzapw",
+"add-agent",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-add-agent-property",
+"priority": 489,
+"category": "community",
+"type": "skill",
+"want": "add-agent-property",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "Add a new property to the AI agents database.",
+"trigger": "Use when the user wants to add, create, or introduce a new column, property, field, or feature to track across all agents in the comparison matrix. Handles all four required steps - database updates, groups.json, table display, and GitHub issue templates.",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@add-agent-property -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@add-agent-property -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"add-agent-property",
+"diegosouzapw",
+"add-agent-property",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-add-agent-templates",
+"priority": 490,
+"category": "community",
+"type": "skill",
+"want": "add-agent-templates",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "Add new Agent templates to the meta-agent-skills framework.",
+"trigger": "",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@add-agent-templates -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@add-agent-templates -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"add-agent-templates",
+"diegosouzapw",
+"add-agent-templates",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-add-backend-tool",
+"priority": 491,
+"category": "community",
+"type": "skill",
+"want": "add-backend-tool",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "Add a new tool to the backend OpenAI function calling system.",
+"trigger": "Use when user mentions \"new tool\", \"add tool\", \"backend function\", \"agent capability\", or wants to extend what the AI agent can do.",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@add-backend-tool -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@add-backend-tool -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"add-backend-tool",
+"diegosouzapw",
+"add-backend-tool",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-diegosouzapw-awesome-omni-skill-skills-ai-agents-add-embedding-support",
+"priority": 492,
+"category": "community",
+"type": "skill",
+"want": "add-embedding-support",
+"feature": "diegosouzapw/awesome-omni-skill",
+"summary": "Add Qdrant embedding support to v3 WordPress components for RAG chatbot. Implements component-level content chunking for searchable, structured embeddings.",
+"trigger": "Use when adding embedding to new or existing v3 components.",
+"commands": [
+"npx skills add diegosouzapw/awesome-omni-skill@add-embedding-support -g"
+],
+"install": "npx skills add diegosouzapw/awesome-omni-skill@add-embedding-support -g",
+"stars": 50,
+"repoUrl": "https://github.com/diegosouzapw/awesome-omni-skill",
+"aliases": [
+"add-embedding-support",
+"diegosouzapw",
+"add-embedding-support",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-jskits-loggerjs-skills-loggerjs",
+"priority": 493,
+"category": "community",
+"type": "skill",
+"want": "loggerjs",
+"feature": "jskits/loggerjs",
+"summary": "Use LoggerJS in JavaScript or TypeScript projects. Trigger when adding structured logging, choosing LoggerJS packages for Node.js, browser, worker, edge, CLI, or library code, configuring transports, integrations, processors, codecs, OpenTelemetry or vendor delivery, migrating from console, pino, winston, loglevel, debug, or other loggers, or troubleshooting LoggerJS logging behavior.",
+"trigger": "",
+"commands": [
+"npx skills add jskits/loggerjs -g"
+],
+"install": "npx skills add jskits/loggerjs -g",
+"stars": 37,
+"repoUrl": "https://github.com/jskits/loggerjs",
+"aliases": [
+"loggerjs",
+"jskits",
+"loggerjs",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-taishan1994-agent-handbook-mini-agents-mini_agents-skills-data-analysis",
-"priority": 473,
+"priority": 494,
 "category": "community",
 "type": "skill",
 "want": "data-analysis",
@@ -1693,7 +2176,7 @@ window.CCF_SKILLS = [
 "npx skills add taishan1994/Agent-Handbook@data-analysis -g"
 ],
 "install": "npx skills add taishan1994/Agent-Handbook@data-analysis -g",
-"stars": 28,
+"stars": 29,
 "repoUrl": "https://github.com/taishan1994/Agent-Handbook",
 "aliases": [
 "data-analysis",
@@ -1705,7 +2188,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-taishan1994-agent-handbook-mini-agents-mini_agents-skills-example-skill",
-"priority": 474,
+"priority": 495,
 "category": "community",
 "type": "skill",
 "want": "example-skill",
@@ -1716,7 +2199,7 @@ window.CCF_SKILLS = [
 "npx skills add taishan1994/Agent-Handbook@example-skill -g"
 ],
 "install": "npx skills add taishan1994/Agent-Handbook@example-skill -g",
-"stars": 28,
+"stars": 29,
 "repoUrl": "https://github.com/taishan1994/Agent-Handbook",
 "aliases": [
 "example-skill",
@@ -1728,7 +2211,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-taishan1994-agent-handbook-mini-agents-mini_agents-skills-document-skills-pdf",
-"priority": 475,
+"priority": 496,
 "category": "community",
 "type": "skill",
 "want": "pdf-processing",
@@ -1739,7 +2222,7 @@ window.CCF_SKILLS = [
 "npx skills add taishan1994/Agent-Handbook@pdf -g"
 ],
 "install": "npx skills add taishan1994/Agent-Handbook@pdf -g",
-"stars": 28,
+"stars": 29,
 "repoUrl": "https://github.com/taishan1994/Agent-Handbook",
 "aliases": [
 "pdf",
@@ -1751,7 +2234,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-horiacristescu-nub-skills",
-"priority": 476,
+"priority": 497,
 "category": "community",
 "type": "skill",
 "want": "nub",
@@ -1773,8 +2256,307 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-untitled-data-company-data-skills-skills-dlt-dagster",
+"priority": 498,
+"category": "community",
+"type": "skill",
+"want": "dlt-dagster",
+"feature": "untitled-data-company/data-skills",
+"summary": "Runs dlt pipelines in Dagster as software-defined assets (Component or Pythonic @dlt_assets) or as a single standard Dagster asset.",
+"trigger": "Use when orchestrating dlt with Dagster; scaffolding loads.py/defs.yaml; jobs/schedules; secrets/env; incremental/backfill via apply_hints; parallelization (one asset per resource); Dagster Cloud deployment; or external compute (ECS, Fargate — refer to dagster-integrations). Triggers: dagster-dlt, dlt on Dagster, deploy dlt with Dagster, standard Dagster asset, external compute.",
+"commands": [
+"npx skills add untitled-data-company/data-skills@dlt-dagster -g"
+],
+"install": "npx skills add untitled-data-company/data-skills@dlt-dagster -g",
+"stars": 20,
+"repoUrl": "https://github.com/untitled-data-company/data-skills",
+"aliases": [
+"dlt-dagster",
+"untitled-data-company",
+"dlt-dagster",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-untitled-data-company-data-skills-skills-dlt-skill",
+"priority": 499,
+"category": "community",
+"type": "skill",
+"want": "dlt-skill",
+"feature": "untitled-data-company/data-skills",
+"summary": "Creates and maintains dlt (data load tool) pipelines from APIs, databases, and other sources.",
+"trigger": "Use when the user wants to build or debug pipelines; use verified sources (e.g. Salesforce, GitHub, Stripe) or declarative REST API or custom Python; configure destinations (e.g. DuckDB, BigQuery, Snowflake); implement incremental loading; or edit .dlt config and secrets. Use when the user mentions data ingestion, dlt pipeline, dlt init, rest_api_source, incremental load, or pipeline dashboard.",
+"commands": [
+"npx skills add untitled-data-company/data-skills@dlt-skill -g"
+],
+"install": "npx skills add untitled-data-company/data-skills@dlt-skill -g",
+"stars": 20,
+"repoUrl": "https://github.com/untitled-data-company/data-skills",
+"aliases": [
+"dlt-skill",
+"untitled-data-company",
+"dlt-skill",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-untitled-data-company-data-skills-skills-uv",
+"priority": 500,
+"category": "community",
+"type": "skill",
+"want": "uv",
+"feature": "untitled-data-company/data-skills",
+"summary": "Uses the uv Python package and project manager correctly for dependencies, venvs, and scripts.",
+"trigger": "Use when creating or modifying Python projects, adding dependencies, running scripts with inline deps, managing virtual environments, pinning Python versions, running CLI tools from PyPI, setting the IDE Python interpreter, or using uv in CI (e.g. GitHub Actions) or Docker containers. Use when the user mentions uv, pyproject.toml, uv.lock, uv run, uv add, uv sync, .venv, Python interpreter, poetry, pipenv, conda, CI, Docker, GitHub Actions, or asks to use uv instead of pip or poetry.",
+"commands": [
+"npx skills add untitled-data-company/data-skills@uv -g"
+],
+"install": "npx skills add untitled-data-company/data-skills@uv -g",
+"stars": 20,
+"repoUrl": "https://github.com/untitled-data-company/data-skills",
+"aliases": [
+"uv",
+"untitled-data-company",
+"uv",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-alexanderop-app-screenshots-app-screenshots",
+"priority": 501,
+"category": "community",
+"type": "skill",
+"want": "screenshotting-apps",
+"feature": "alexanderop/app-screenshots",
+"summary": "Generates annotated screenshot documentation for web apps and websites — local dev servers or live sites.",
+"trigger": "Use when asked to \"screenshot the app\", \"document the app\", \"visual docs\", \"screenshot documentation\", \"show me the app\", \"screenshot <url>\", or \"document this website\".",
+"commands": [
+"npx skills add alexanderop/app-screenshots -g"
+],
+"install": "npx skills add alexanderop/app-screenshots -g",
+"stars": 15,
+"repoUrl": "https://github.com/alexanderop/app-screenshots",
+"aliases": [
+"app-screenshots",
+"alexanderop",
+"screenshotting-apps",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-administer-ams",
+"priority": 502,
+"category": "community",
+"type": "skill",
+"want": "administer-ams",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "施测学术动机量表（AMS-GSR 28），采集科研人员的内在动机、外在动机和无动机数据。当用户选择填写量表、或画像中AMS数据缺失时使用。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@administer-ams -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@administer-ams -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"administer-ams",
+"TashanGKD",
+"administer-ams",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-administer-mini-ipip",
+"priority": 503,
+"category": "community",
+"type": "skill",
+"want": "administer-mini-ipip",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "施测大五人格量表（Mini-IPIP，20题），评估外向性、宜人性、尽责性、神经质和开放性。当用户选择填写量表、或画像中人格数据缺失时使用。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@administer-mini-ipip -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@administer-mini-ipip -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"administer-mini-ipip",
+"TashanGKD",
+"administer-mini-ipip",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-administer-rcss",
+"priority": 504,
+"category": "community",
+"type": "skill",
+"want": "administer-rcss",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "施测科研人员认知风格量表（RCSS），评估横向整合 vs 垂直深度的认知偏好。当用户选择填写量表、或画像中RCSS数据缺失时使用。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@administer-rcss -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@administer-rcss -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"administer-rcss",
+"TashanGKD",
+"administer-rcss",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-ai-image-generator",
+"priority": 505,
+"category": "community",
+"type": "skill",
+"want": "ai-image-generator",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "AI配图能力层 Skill。任何需要生成信息图的任务都调用此 Skill，而不是自行调用 API。包含：模型选择、API调用、多视角草图流程、风格库引用、配图索引联动。触发词：「需要绘图」「生成配图」「画一张图」「制作信息图」「根据这段文字画图」「图片提示词」。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@ai-image-generator -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@ai-image-generator -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"ai-image-generator",
+"TashanGKD",
+"ai-image-generator",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-architecture-gap-mapper",
+"priority": 506,
+"category": "community",
+"type": "skill",
+"want": "architecture-gap-mapper",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "架构/系统差距分析 Skill。将当前系统/代码库/文档与目标框架/标准/竞品对比，生成带证据链的差距报告（兼容/冲突/缺失三类），为整改计划提供输入。触发词：「对比XXX和YYY」「这两个项目有什么异同」「找出差距」「现有系统与目标有什么不对齐」「竞品分析」「和XXX相比缺什么」。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@architecture-gap-mapper -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@architecture-gap-mapper -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"architecture-gap-mapper",
+"TashanGKD",
+"architecture-gap-mapper",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-article-image-angles",
+"priority": 507,
+"category": "community",
+"type": "skill",
+"want": "article-image-angles",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "分析文章可用的多种配图视角，为每个角度生成提示词草图供用户选择。触发词：帮我分析配图角度/生成多视角草图/配图有几种选择/给我几个配图方案。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@article-image-angles -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@article-image-angles -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"article-image-angles",
+"TashanGKD",
+"article-image-angles",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-article-image-styles",
+"priority": 508,
+"category": "community",
+"type": "skill",
+"want": "article-image-styles",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "管理他山公众号的配图风格库，提供风格模板调用和新风格沉淀。触发词：调用风格库/用XX风格/存入风格库/更新风格模板/风格库有哪些风格。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@article-image-styles -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@article-image-styles -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"article-image-styles",
+"TashanGKD",
+"article-image-styles",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-tashangkd-tashan-cursor-skills-skills-article-proofreading",
+"priority": 509,
+"category": "community",
+"type": "skill",
+"want": "article-proofreading",
+"feature": "TashanGKD/tashan-cursor-skills",
+"summary": "按郑总的审稿标准审阅中文文章草稿，检查AI腔、标题写法（4种错误类型）、绝对表达、结构层次污染、结语完整性，逐条给出修改方案。当用户说\"审稿\"\"帮我检查文章\"\"review一下\"时使用，也可在完成文章草稿后主动执行。",
+"trigger": "",
+"commands": [
+"npx skills add TashanGKD/tashan-cursor-skills@article-proofreading -g"
+],
+"install": "npx skills add TashanGKD/tashan-cursor-skills@article-proofreading -g",
+"stars": 13,
+"repoUrl": "https://github.com/TashanGKD/tashan-cursor-skills",
+"aliases": [
+"article-proofreading",
+"TashanGKD",
+"article-proofreading",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-ammdevl-vibe-match-.claude-skills-vibe-search",
+"priority": 510,
+"category": "community",
+"type": "skill",
+"want": "vibe-search",
+"feature": "ammdevl/vibe-match",
+"summary": "A tool for searching MCPs, SKILLs adn AGENTs for Vibe-Code Projects. Describe what you want --> Get what you need",
+"trigger": "",
+"commands": [
+"npx skills add ammdevl/vibe-match -g"
+],
+"install": "npx skills add ammdevl/vibe-match -g",
+"stars": 8,
+"repoUrl": "https://github.com/ammdevl/vibe-match",
+"aliases": [
+"vibe-search",
+"ammdevl",
+"vibe-search",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-yeet-src-yeet-scripts-yeet-scripts",
-"priority": 477,
+"priority": 511,
 "category": "community",
 "type": "skill",
 "want": "yeet-scripts",
@@ -1796,231 +2578,185 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-nicoaspace-seo-copywriting-agents-skills-copywriting-redactor",
-"priority": 478,
+"id": "skill-yiouli-pixie-qa-skills-eval-driven-dev",
+"priority": 512,
 "category": "community",
 "type": "skill",
-"want": "copywriting-redactor",
-"feature": "nicoaspace/seo-copywriting-agents",
-"summary": "Skill for copywriting agents. Use it ALWAYS when the agent needs to produce a copy draft for any type of web page or marketing content. It takes as input the output of the Research Agent (brand DNA, buyer persona, keywords, value proposition, competition) and produces a structured, humanized, and SEO-optimized draft. It applies the correct copywriting techniques based on the page type (Landing/Sales, Home, About, Blog, Product, Pricing, Service, Category, Case Study, FAQ) and the funnel stage (TOFU / MOFU / BOFU). The skill automatically determines which techniques to use and how to structure the content. The resulting draft is ready to be evaluated by a QA agent.",
+"want": "eval-driven-dev",
+"feature": "yiouli/pixie-qa",
+"summary": "Improve AI application with evaluation-driven development. Define eval criteria, instrument the application, build golden datasets, observe and evaluate application runs, analyze results, and produce a concrete action plan for improvements. ALWAYS USE THIS SKILL when the user asks to set up QA, add tests, add evals, evaluate, benchmark, fix wrong behaviors, improve quality, or do quality assurance for any Python project that calls an LLM model.",
 "trigger": "",
 "commands": [
-"npx skills add nicoaspace/seo-copywriting-agents -g"
+"npx skills add yiouli/pixie-qa -g"
 ],
-"install": "npx skills add nicoaspace/seo-copywriting-agents -g",
-"stars": 1,
-"repoUrl": "https://github.com/nicoaspace/seo-copywriting-agents",
+"install": "npx skills add yiouli/pixie-qa -g",
+"stars": 7,
+"repoUrl": "https://github.com/yiouli/pixie-qa",
 "aliases": [
-"copywriting-redactor",
-"nicoaspace",
-"copywriting-redactor",
+"eval-driven-dev",
+"yiouli",
+"eval-driven-dev",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-ry071702-prog-web-design-playbook-skills-web-design-playbook",
-"priority": 479,
+"id": "skill-mikecheng1208-battletree-.agents-skills-00-andruia-consultant",
+"priority": 513,
 "category": "community",
 "type": "skill",
-"want": "web-design-playbook",
-"feature": "ry071702-prog/web-design-playbook",
-"summary": "Webサイト/LP/HTMLモックのデザイン実装ワークフロー  新規作成・リデザイン・「おしゃれにして」等のデザイン依頼で使用し、参照レイヤー→方向決め→実装→実機検証→学びの還元 の型を強制する  ユーザーが「このサイトいいな/参考にして」とURLを共有したときの参考サイト蓄積にも使用.",
-"trigger": "Use when building or redesigning websites, landing pages, or HTML mockups, or when the user shares a website they like",
+"want": "00-andruia-consultant",
+"feature": "MikeCheng1208/BattleTree",
+"summary": "Arquitecto de Soluciones Principal y Consultor Tecnológico de Andru.ia. Diagnostica y traza la hoja de ruta óptima para proyectos de IA en español.",
+"trigger": "",
 "commands": [
-"npx skills add ry071702-prog/web-design-playbook -g"
+"npx skills add MikeCheng1208/BattleTree@00-andruia-consultant -g"
 ],
-"install": "npx skills add ry071702-prog/web-design-playbook -g",
-"stars": 0,
-"repoUrl": "https://github.com/ry071702-prog/web-design-playbook",
+"install": "npx skills add MikeCheng1208/BattleTree@00-andruia-consultant -g",
+"stars": 2,
+"repoUrl": "https://github.com/MikeCheng1208/BattleTree",
 "aliases": [
-"web-design-playbook",
-"ry071702-prog",
-"web-design-playbook",
+"00-andruia-consultant",
+"MikeCheng1208",
+"00-andruia-consultant",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-zinojeng-cgm_skill-cgm_skill",
-"priority": 480,
+"id": "skill-mikecheng1208-battletree-.agents-skills-00-meta-chain-flow-150",
+"priority": 514,
 "category": "community",
 "type": "skill",
-"want": "cgm-analyzer",
-"feature": "zinojeng/cgm_skill",
-"summary": "Analyzes continuous glucose monitor CSV data, calculates TIR/TAR/TBR metrics, generates AGP charts, and provides AI-powered diabetes management recommendations. Handles Dexcom, FreeStyle Libre, Guardian formats.",
+"want": "00-meta-chain-flow-150",
+"feature": "MikeCheng1208/BattleTree",
+"summary": "[00] META. Orchestrate skills into dynamic chains for complex tasks. Analyzes the task, discovers available skills, builds an optimal chain, explains why each skill is needed, and executes step-by-step with user confirmation. Use for any complex task requiring multiple thinking/research/analysis steps. Triggers on \"plan this\", \"how to approach\", \"what's the strategy\", \"build a plan\", or any multi-step problem requiring skill orchestration.",
 "trigger": "",
 "commands": [
-"npx skills add zinojeng/cgm_skill -g"
+"npx skills add MikeCheng1208/BattleTree@00-meta-chain-flow-150 -g"
 ],
-"install": "npx skills add zinojeng/cgm_skill -g",
-"stars": 0,
-"repoUrl": "https://github.com/zinojeng/cgm_skill",
+"install": "npx skills add MikeCheng1208/BattleTree@00-meta-chain-flow-150 -g",
+"stars": 2,
+"repoUrl": "https://github.com/MikeCheng1208/BattleTree",
 "aliases": [
-"cgm_skill",
-"zinojeng",
-"cgm-analyzer",
+"00-meta-chain-flow-150",
+"MikeCheng1208",
+"00-meta-chain-flow-150",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-kilimcininkoroglu-hermeswhois-mcp-server-hermeswhois-mcp-server",
-"priority": 481,
+"id": "skill-mikecheng1208-battletree-.agents-skills-000-tnr-absolute-rigor",
+"priority": 515,
 "category": "community",
 "type": "skill",
-"want": "hermeswhois-mcp-server",
-"feature": "KilimcininKorOglu/hermeswhois-mcp-server",
-"summary": "Model Context Protocol (MCP) sunucusu - HermesWhois servisi üzerinden domain WHOIS ve SSL sertifika bilgilerini sorgulama aracı.",
+"want": "000-TnR-Absolute-Rigor",
+"feature": "MikeCheng1208/BattleTree",
+"summary": "[00] TnR ABSOLUTE RIGOR — Systemic Verification Doctrine. Forced cognitive exertion for high-stakes investigations. Mandates absolute deconstruction, mathematical proof chains, and ≥95% derived certainty. Zero-tolerance for heuristics or sentiment-based reasoning. Shortcuts are defined as intentional hallucinations.",
 "trigger": "",
 "commands": [
-"npx skills add KilimcininKorOglu/hermeswhois-mcp-server -g"
+"npx skills add MikeCheng1208/BattleTree@000-tnr-absolute-rigor -g"
 ],
-"install": "npx skills add KilimcininKorOglu/hermeswhois-mcp-server -g",
-"stars": 0,
-"repoUrl": "https://github.com/KilimcininKorOglu/hermeswhois-mcp-server",
+"install": "npx skills add MikeCheng1208/BattleTree@000-tnr-absolute-rigor -g",
+"stars": 2,
+"repoUrl": "https://github.com/MikeCheng1208/BattleTree",
 "aliases": [
-"hermeswhois-mcp-server",
-"KilimcininKorOglu",
-"hermeswhois-mcp-server",
+"000-tnr-absolute-rigor",
+"MikeCheng1208",
+"000-TnR-Absolute-Rigor",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-gil-air-may-scribe-scribe",
-"priority": 482,
+"id": "skill-mikecheng1208-battletree-.agents-skills-01-meta-chain-of-skills-150",
+"priority": 516,
 "category": "community",
 "type": "skill",
-"want": "scribe",
-"feature": "gil-air-may/scribe",
-"summary": "Turns chaotic AI coding sessions into structured, searchable documentation",
+"want": "01-meta-chain-of-skills-150",
+"feature": "MikeCheng1208/BattleTree",
+"summary": "[01] META. Сканирует доступные skills, создает план выполнения и идет шаг за шагом с подтверждением каждого этапа. Triggers on complex tasks, multi-step work, or when structured execution is needed.",
 "trigger": "",
 "commands": [
-"npx skills add gil-air-may/scribe -g"
+"npx skills add MikeCheng1208/BattleTree@01-meta-chain-of-skills-150 -g"
 ],
-"install": "npx skills add gil-air-may/scribe -g",
-"stars": 0,
-"repoUrl": "https://github.com/gil-air-may/scribe",
+"install": "npx skills add MikeCheng1208/BattleTree@01-meta-chain-of-skills-150 -g",
+"stars": 2,
+"repoUrl": "https://github.com/MikeCheng1208/BattleTree",
 "aliases": [
-"scribe",
-"gil-air-may",
-"scribe",
+"01-meta-chain-of-skills-150",
+"MikeCheng1208",
+"01-meta-chain-of-skills-150",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-ryan-lingle-claude-worktrees-claude-worktrees",
-"priority": 483,
+"id": "skill-mikecheng1208-battletree-.agents-skills-02-meta-skill-forge-150",
+"priority": 517,
 "category": "community",
 "type": "skill",
-"want": "worktree",
-"feature": "ryan-lingle/claude-worktrees",
-"summary": "Manage git worktrees for parallel Claude Code sessions. Create, list, navigate, and remove worktrees with automatic port allocation for local native development.",
-"trigger": "",
+"want": "02-meta-skill-forge-150",
+"feature": "MikeCheng1208/BattleTree",
+"summary": "[02] META. Create new skills when existing ones don't cover the task. Analyze unique requirements, build framework (Frame → Research → Plan → Execute), integrate risks, and declare new skill.",
+"trigger": "Use when facing novel problems that existing skills can't address.",
 "commands": [
-"npx skills add ryan-lingle/claude-worktrees -g"
+"npx skills add MikeCheng1208/BattleTree@02-meta-skill-forge-150 -g"
 ],
-"install": "npx skills add ryan-lingle/claude-worktrees -g",
-"stars": 0,
-"repoUrl": "https://github.com/ryan-lingle/claude-worktrees",
+"install": "npx skills add MikeCheng1208/BattleTree@02-meta-skill-forge-150 -g",
+"stars": 2,
+"repoUrl": "https://github.com/MikeCheng1208/BattleTree",
 "aliases": [
-"claude-worktrees",
-"ryan-lingle",
-"worktree",
+"02-meta-skill-forge-150",
+"MikeCheng1208",
+"02-meta-skill-forge-150",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-sam-ayyy15-realtime-inventory-sync-engine-skills",
-"priority": 484,
+"id": "skill-mikecheng1208-battletree-.agents-skills-05-20-mcp-less",
+"priority": 518,
 "category": "community",
 "type": "skill",
-"want": "data-engineer",
-"feature": "sam-ayyy15/realtime-inventory-sync-engine",
-"summary": "Data engineering agent for ETL pipelines, data warehousing, and analytics",
+"want": "05-20-mcp-less",
+"feature": "MikeCheng1208/BattleTree",
+"summary": "Use MCP without installing",
 "trigger": "",
 "commands": [
-"npx skills add sam-ayyy15/realtime-inventory-sync-engine -g"
+"npx skills add MikeCheng1208/BattleTree@05-20-mcp-less -g"
 ],
-"install": "npx skills add sam-ayyy15/realtime-inventory-sync-engine -g",
-"stars": 0,
-"repoUrl": "https://github.com/sam-ayyy15/realtime-inventory-sync-engine",
+"install": "npx skills add MikeCheng1208/BattleTree@05-20-mcp-less -g",
+"stars": 2,
+"repoUrl": "https://github.com/MikeCheng1208/BattleTree",
 "aliases": [
-"SKILLS",
-"sam-ayyy15",
-"data-engineer",
+"05-20-mcp-less",
+"MikeCheng1208",
+"05-20-mcp-less",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-alejandro05-afk-fitnes_tracker-skills",
-"priority": 485,
+"id": "skill-mikecheng1208-battletree-.agents-skills-10-andruia-skill-smith",
+"priority": 519,
 "category": "community",
 "type": "skill",
-"want": "fall-activity-voice-detector",
-"feature": "Alejandro05-afk/fitnes_tracker",
-"summary": "Implementa el \"Mega Reto: Detector de actividad física con aviso por voz\" sobre el proyecto Flutter fitness_tracker (Clean Architecture + Vertical Slicing). Cubre detección continua de caminar/correr/quieto y de caídas usando sensors_plus (acelerómetro crudo), avisos por voz con flutter_tts, debounce de estado estable, diálogo de confirmación de caída con reintento a los 15s, permisos en runtime y AndroidManifest. Usa esta skill siempre que el usuario mencione \"detector de actividad\", \"detección de caídas\", \"fall detection\", \"aviso por voz\", \"flutter_tts\", \"sensors_plus\", \"activity_recognition_flutter\", \"debounce de sensores\", o pida ampliar fitness_tracker con reconocimiento de actividad/caídas. NO modifica la lógica de Platform Channels ya existente (biometría, contador de pasos, GPS) — se integra en paralelo como feature nueva.",
+"want": "10-andruia-skill-smith",
+"feature": "MikeCheng1208/BattleTree",
+"summary": "Ingeniero de Sistemas de Andru.ia. Diseña, redacta y despliega nuevas habilidades (skills) dentro del repositorio siguiendo el Estándar de Diamante.",
 "trigger": "",
 "commands": [
-"npx skills add Alejandro05-afk/fitnes_tracker@Skills -g"
+"npx skills add MikeCheng1208/BattleTree@10-andruia-skill-smith -g"
 ],
-"install": "npx skills add Alejandro05-afk/fitnes_tracker@Skills -g",
-"stars": 0,
-"repoUrl": "https://github.com/Alejandro05-afk/fitnes_tracker",
+"install": "npx skills add MikeCheng1208/BattleTree@10-andruia-skill-smith -g",
+"stars": 2,
+"repoUrl": "https://github.com/MikeCheng1208/BattleTree",
 "aliases": [
-"Skills",
-"Alejandro05-afk",
-"fall-activity-voice-detector",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-alejandro05-afk-fitnes_tracker-skills-deber",
-"priority": 486,
-"category": "community",
-"type": "skill",
-"want": "fitness-tracker-plugin-crud",
-"feature": "Alejandro05-afk/fitnes_tracker",
-"summary": "Skill para el proyecto Flutter `fitness_tracker` con Clean Architecture + Vertical Slicing + flutter_bloc + get_it. Úsala SIEMPRE que el usuario pida: - Migrar Platform Channels a plugins (local_auth, geolocator, sensors_plus) - Eliminar código nativo de MainActivity.kt / AppDelegate.swift - Añadir o mejorar el CRUD del historial de actividad física - Registrar datasources, repositorios o BLoCs en get_it para las features auth, tracking,\n  activity_detection o activity_history\n- Agregar persistencia local (sqlite, sqflite, hive, shared_preferences) al registro histórico - Cualquier modificación en biometric_datasource.dart, gps_datasource.dart,\n  accelerometer_datasource.dart, motion_sensor_datasource.dart o injection_container.dart",
-"trigger": "",
-"commands": [
-"npx skills add Alejandro05-afk/fitnes_tracker@deber -g"
-],
-"install": "npx skills add Alejandro05-afk/fitnes_tracker@deber -g",
-"stars": 0,
-"repoUrl": "https://github.com/Alejandro05-afk/fitnes_tracker",
-"aliases": [
-"deber",
-"Alejandro05-afk",
-"fitness-tracker-plugin-crud",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-minhyeokyang-llm_hw-skills",
-"priority": 487,
-"category": "community",
-"type": "skill",
-"want": "skills",
-"feature": "MinHyeokYang/LLM_HW",
-"summary": "과제",
-"trigger": "",
-"commands": [
-"npx skills add MinHyeokYang/LLM_HW -g"
-],
-"install": "npx skills add MinHyeokYang/LLM_HW -g",
-"stars": 0,
-"repoUrl": "https://github.com/MinHyeokYang/LLM_HW",
-"aliases": [
-"skills",
-"MinHyeokYang",
-"skills",
+"10-andruia-skill-smith",
+"MikeCheng1208",
+"10-andruia-skill-smith",
 "skill",
 "スキル"
 ]

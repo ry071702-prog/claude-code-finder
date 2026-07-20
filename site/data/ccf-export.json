@@ -961,193 +961,193 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
-     "id": "changelog-2.1.207",
-     "title": "v2.1.207",
-     "summary": "Auto mode is now available without CLAUDE_CODE_ENABLE_AUTO_MODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings / Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks / Fixed remote managed settings from a non-interactive run (claude -p, the SDK) being permanently recorded as consented without ever showing the security consent dialog",
+     "id": "changelog-2.1.216",
+     "title": "v2.1.216",
+     "summary": "Added sandbox.filesystem.disabled setting to skip filesystem isolation while keeping network egress control / Fixed a slowdown in long sessions where message normalization cost grew quadratically with the number of turns, causing multi-second stalls and slow resumes / Fixed auto mode denying commands with \"HTTP 401\" classifier errors after the OAuth token expired or rotated mid-session",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added sandbox.filesystem.disabled setting to skip filesystem isolation while keeping network egress control"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a slowdown in long sessions where message normalization cost grew quadratically with the number of turns, causing multi-second stalls and slow resumes"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed auto mode denying commands with \"HTTP 401\" classifier errors after the OAuth token expired or rotated mid-session"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed AskUserQuestion telling Claude to continue even when your answer asked it to wait or explain first — free-text answers now get neutral wording"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Claude Code on the web re-asking the same question and dropping your answer after the session sat idle for a few minutes"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.215",
+     "title": "v2.1.215",
+     "summary": "Claude no longer runs the /verify and /code-review skills on its own; invoke them with /verify or /code-review when you want them",
      "highlights": [
       {
        "kind": "その他",
-       "text": "Auto mode is now available without CLAUDE_CODE_ENABLE_AUTO_MODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed remote managed settings from a non-interactive run (claude -p, the SDK) being permanently recorded as consented without ever showing the security consent dialog"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed spurious prompt-injection warnings triggered by benign system-generated conversation updates"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed the auto-updater overwriting a custom launcher script or symlink at ~/.local/bin/claude on every release; /doctor now reports an externally managed launcher"
+       "text": "Claude no longer runs the /verify and /code-review skills on its own; invoke them with /verify or /code-review when you want them"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.206",
-     "title": "v2.1.206",
-     "summary": "Added directory path suggestions to /cd, matching /add-dir behavior / Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase / /commit-push-pr now auto-allows git push to the repo's configured push remote (remote.pushDefault, or the sole remote when only one is configured) in addition to origin",
+     "id": "changelog-2.1.214",
+     "title": "v2.1.214",
+     "summary": "Fixed single-segment dir/** allow rules like Edit(src/**) auto-approving writes to nested dir/ directories anywhere in the tree instead of only <cwd>/dir / Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions / Fixed Bash permission checks to fail closed on file-descriptor redirect forms that bash parses differently than the permission analyzer",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed single-segment dir/** allow rules like Edit(src/**) auto-approving writes to nested dir/ directories anywhere in the tree instead of only <cwd>/dir"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Bash permission checks to fail closed on file-descriptor redirect forms that bash parses differently than the permission analyzer"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Bash permission checks misjudging very long commands — commands over 10,000 characters now always prompt instead of running automatically"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Bash permission checks treating zsh variable subscripts and modifiers in [[ ]] comparisons as inert text — these commands now prompt for approval"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.212",
+     "title": "v2.1.212",
+     "summary": "/fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask / Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt (pass --yes to skip) / Added a session-wide limit on WebSearch tool calls (default 200, tunable via CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION) to stop runaway search loops",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added directory path suggestions to /cd, matching /add-dir behavior"
+       "text": "/fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask"
       },
       {
        "kind": "追加",
-       "text": "Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase"
+       "text": "Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt (pass --yes to skip)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a session-wide limit on WebSearch tool calls (default 200, tunable via CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION) to stop runaway search loops"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a per-session cap on subagent spawns (default 200, override with CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION) to stop runaway delegation loops; /clear resets the budget"
       },
       {
        "kind": "その他",
-       "text": "/commit-push-pr now auto-allows git push to the repo's configured push remote (remote.pushDefault, or the sole remote when only one is configured) in addition to origin"
-      },
-      {
-       "kind": "追加",
-       "text": "Gateway: /login now supports Anthropic-operated public gateway endpoints"
-      },
-      {
-       "kind": "その他",
-       "text": "EnterWorktree now asks for confirmation before entering a git worktree outside the project's .claude/worktrees/ directory"
+       "text": "MCP tool calls running longer than 2 minutes now move to the background automatically so the session stays usable; configure the threshold or disable with CLAUDE_CODE_MCP_AUTO_BACKGROUND_MS"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.205",
-     "title": "v2.1.205",
-     "summary": "Added an auto mode rule that blocks tampering with session transcript files / Fixed --json-schema silently producing unstructured output when the schema was invalid, and schemas using the format keyword being rejected / Fixed a message sent while Claude was working being silently lost when the turn ended at the --max-turns limit",
+     "id": "changelog-2.1.211",
+     "title": "v2.1.211",
+     "summary": "Added --forward-subagent-text flag and CLAUDE_CODE_FORWARD_SUBAGENT_TEXT environment variable to include subagent text and thinking in stream-json output / Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool inputs cannot visually alter the approval message / Fixed auto mode overriding a PreToolUse hook's ask decision for unsandboxed Bash — a hook ask now floors the decision at a prompt",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added an auto mode rule that blocks tampering with session transcript files"
+       "text": "Added --forward-subagent-text flag and CLAUDE_CODE_FORWARD_SUBAGENT_TEXT environment variable to include subagent text and thinking in stream-json output"
       },
       {
        "kind": "修正",
-       "text": "Fixed --json-schema silently producing unstructured output when the schema was invalid, and schemas using the format keyword being rejected"
+       "text": "Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool inputs cannot visually alter the approval message"
       },
       {
        "kind": "修正",
-       "text": "Fixed a message sent while Claude was working being silently lost when the turn ended at the --max-turns limit"
+       "text": "Fixed auto mode overriding a PreToolUse hook's ask decision for unsandboxed Bash — a hook ask now floors the decision at a prompt"
       },
       {
        "kind": "修正",
-       "text": "Fixed Windows worktree removal deleting files outside the worktree when an NTFS junction or directory symlink existed inside it"
+       "text": "Fixed parallel Claude Code sessions all logging out simultaneously after wake-from-sleep when many sessions share one credential store"
       },
       {
        "kind": "修正",
-       "text": "Fixed background agents staying shown as \"failed\" or \"completed\" in the agent list after being resumed with SendMessage"
+       "text": "Fixed plugin MCP servers not reconnecting after an idle web session woke, leaving MCP calls failing until the next message"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.204",
-     "title": "v2.1.204",
-     "summary": "Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook",
+     "id": "changelog-2.1.210",
+     "title": "v2.1.210",
+     "summary": "Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck / Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead / Fixed isolation: 'worktree' subagents being able to run git-mutating commands against the main repo checkout instead of their own isolated worktree",
      "highlights": [
       {
+       "kind": "追加",
+       "text": "Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead"
+      },
+      {
        "kind": "修正",
-       "text": "Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook"
+       "text": "Fixed isolation: 'worktree' subagents being able to run git-mutating commands against the main repo checkout instead of their own isolated worktree"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed the ultracode keyword opt-in firing on non-human-originated input such as webhook payloads and relayed PR comments"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a rendered text fragment leaking into crash telemetry when a UI component returned content outside a styled text element"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.203",
-     "title": "v2.1.203",
-     "summary": "Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted / Added a grey ⏸ badge to the footer when in manual permission mode, making the active mode always visible / Added the session's additional working directories to MCP roots/list, with notifications/roots/list_changed sent when the set changes",
+     "id": "changelog-2.1.209",
+     "title": "v2.1.209",
+     "summary": "Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)",
      "highlights": [
       {
-       "kind": "追加",
-       "text": "Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a grey ⏸ badge to the footer when in manual permission mode, making the active mode always visible"
-      },
-      {
-       "kind": "追加",
-       "text": "Added the session's additional working directories to MCP roots/list, with notifications/roots/list_changed sent when the set changes"
-      },
-      {
        "kind": "修正",
-       "text": "Fixed opening or switching background agent sessions on macOS stalling for 15–20 seconds due to a false low-memory detection (regression in 2.1.196)"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed background sessions becoming permanently unresponsive to attach, replies, and stop when the daemon's session token went stale — the session now recovers automatically"
+       "text": "Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.202",
-     "title": "v2.1.202",
-     "summary": "Added a \"Dynamic workflow size\" setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap / Added workflow.run_id and workflow.name OpenTelemetry attributes to telemetry emitted by workflow-spawned agents, so a workflow run's activity can be reconstructed from OTel data / Fixed a crash in the inline Ctrl+R history search when accepting or cancelling while the search was still scanning the history file",
+     "id": "changelog-2.1.208",
+     "title": "v2.1.208",
+     "summary": "Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDE_AX_SCREEN_READER=1, or add \"axScreenReader\": true to settings. / Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode / Added CLAUDE_CODE_PROCESS_WRAPPER: agent view and the background service now honor a corporate launcher by running every Claude Code self-spawn through a required wrapper executable",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added a \"Dynamic workflow size\" setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap"
+       "text": "Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDE_AX_SCREEN_READER=1, or add \"axScreenReader\": true to settings."
       },
       {
        "kind": "追加",
-       "text": "Added workflow.run_id and workflow.name OpenTelemetry attributes to telemetry emitted by workflow-spawned agents, so a workflow run's activity can be reconstructed from OTel data"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed a crash in the inline Ctrl+R history search when accepting or cancelling while the search was still scanning the history file"
+       "text": "Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode"
       },
       {
        "kind": "追加",
-       "text": "Fixed /rename on background sessions being reverted when the job restarts, which broke addressing the session by its new name"
+       "text": "Added CLAUDE_CODE_PROCESS_WRAPPER: agent view and the background service now honor a corporate launcher by running every Claude Code self-spawn through a required wrapper executable"
+      },
+      {
+       "kind": "追加",
+       "text": "Added mouse-click support for multi-select menus and \"Other\" input rows in fullscreen mode"
       },
       {
        "kind": "修正",
-       "text": "Fixed transient mTLS handshake failures when settings were re-applied during an in-place client certificate rotation"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.201",
-     "title": "v2.1.201",
-     "summary": "Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders",
-     "highlights": [
-      {
-       "kind": "その他",
-       "text": "Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.200",
-     "title": "v2.1.200",
-     "summary": "Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config / Changed the \"default\" permission mode to \"Manual\" across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and \"defaultMode\": \"manual\" are accepted alongside default / Fixed a crash at startup when disabledMcpServers or enabledMcpServers in .claude.json is set to a non-array value",
-     "highlights": [
-      {
-       "kind": "変更",
-       "text": "Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config"
-      },
-      {
-       "kind": "変更",
-       "text": "Changed the \"default\" permission mode to \"Manual\" across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and \"defaultMode\": \"manual\" are accepted alongside default"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed a crash at startup when disabledMcpServers or enabledMcpServers in .claude.json is set to a non-array value"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed background sessions silently stopping mid-turn after sleep/wake or when reopening a stalled session"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed background sessions re-running a turn cancelled with Esc after a stall respawn"
+       "text": "Fixed fast mode staying off after switching back to a model that supports it — it now restores automatically when enabled in settings"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
