@@ -961,6 +961,102 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.220",
+     "title": "v2.1.220",
+     "summary": "Bug fixes and reliability improvements",
+     "highlights": [
+      {
+       "kind": "改善",
+       "text": "Bug fixes and reliability improvements"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.219",
+     "title": "v2.1.219",
+     "summary": "Added Claude Opus 5 (claude-opus-5), now the default Opus model — 1M context, fast mode at $10/$50 per Mtok / Added sandbox.network.strictAllowlist setting to deny non-allowlisted hosts for sandboxed commands without prompting / Added DirectoryAdded hook that fires after /add-dir or the SDK register_repo_root control request registers a new working directory mid-session",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added Claude Opus 5 (claude-opus-5), now the default Opus model — 1M context, fast mode at $10/$50 per Mtok"
+      },
+      {
+       "kind": "追加",
+       "text": "Added sandbox.network.strictAllowlist setting to deny non-allowlisted hosts for sandboxed commands without prompting"
+      },
+      {
+       "kind": "追加",
+       "text": "Added DirectoryAdded hook that fires after /add-dir or the SDK register_repo_root control request registers a new working directory mid-session"
+      },
+      {
+       "kind": "追加",
+       "text": "Added mcp_server_errors to the headless stream-json init event, listing --mcp-config entries skipped by config validation; terminal runs print a startup warning"
+      },
+      {
+       "kind": "追加",
+       "text": "Added the workflowSizeGuideline settings key so the advisory Dynamic workflow size guideline can be set from any settings file; the /config row is hidden while one does"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.218",
+     "title": "v2.1.218",
+     "summary": "Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target / Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K) in --ax-screen-reader mode / Fixed Windows paths with \\u-prefixed segments (like C:\\Users\\unicorn) being corrupted into CJK characters in tool inputs, which made those files inaccessible",
+     "highlights": [
+      {
+       "kind": "変更",
+       "text": "Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target"
+      },
+      {
+       "kind": "追加",
+       "text": "Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K) in --ax-screen-reader mode"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Windows paths with \\u-prefixed segments (like C:\\Users\\unicorn) being corrupted into CJK characters in tool inputs, which made those files inaccessible"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed the left arrow key discarding the conversation with no undo: presses right after editing now ask to confirm, and Esc in the agent view returns to the conversation it backgrounded"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed multi-line paste collapsing into one line with j in place of newlines in terminals that encode pasted newlines as Ctrl+J"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.217",
+     "title": "v2.1.217",
+     "summary": "Added emoji shortcode autocomplete in the prompt input: type :heart: to insert ❤️, or :hea for suggestions — disable with the emojiCompletionEnabled setting / Added warnings when transcript writes are failing (e.g. disk full) or when session saving is off due to an inherited environment variable, instead of losing transcripts silently / Fixed a memory leak where truncated MCP tool outputs kept the full untruncated result in memory for the rest of the session",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added emoji shortcode autocomplete in the prompt input: type :heart: to insert ❤️, or :hea for suggestions — disable with the emojiCompletionEnabled setting"
+      },
+      {
+       "kind": "追加",
+       "text": "Added warnings when transcript writes are failing (e.g. disk full) or when session saving is off due to an inherited environment variable, instead of losing transcripts silently"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a memory leak where truncated MCP tool outputs kept the full untruncated result in memory for the rest of the session"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Windows auto-update failures that could leave claude.exe missing; failed updates now restore the preserved executable automatically"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed background session isolation not canonicalizing symlinked working directories, which could let sessions escape their workspace folder"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.216",
      "title": "v2.1.216",
      "summary": "Added sandbox.filesystem.disabled setting to skip filesystem isolation while keeping network egress control / Fixed a slowdown in long sessions where message normalization cost grew quadratically with the number of turns, causing multi-second stalls and slow resumes / Fixed auto mode denying commands with \"HTTP 401\" classifier errors after the OAuth token expired or rotated mid-session",
@@ -1052,102 +1148,6 @@
       {
        "kind": "その他",
        "text": "MCP tool calls running longer than 2 minutes now move to the background automatically so the session stays usable; configure the threshold or disable with CLAUDE_CODE_MCP_AUTO_BACKGROUND_MS"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.211",
-     "title": "v2.1.211",
-     "summary": "Added --forward-subagent-text flag and CLAUDE_CODE_FORWARD_SUBAGENT_TEXT environment variable to include subagent text and thinking in stream-json output / Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool inputs cannot visually alter the approval message / Fixed auto mode overriding a PreToolUse hook's ask decision for unsandboxed Bash — a hook ask now floors the decision at a prompt",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added --forward-subagent-text flag and CLAUDE_CODE_FORWARD_SUBAGENT_TEXT environment variable to include subagent text and thinking in stream-json output"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool inputs cannot visually alter the approval message"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed auto mode overriding a PreToolUse hook's ask decision for unsandboxed Bash — a hook ask now floors the decision at a prompt"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed parallel Claude Code sessions all logging out simultaneously after wake-from-sleep when many sessions share one credential store"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed plugin MCP servers not reconnecting after an idle web session woke, leaving MCP calls failing until the next message"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.210",
-     "title": "v2.1.210",
-     "summary": "Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck / Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead / Fixed isolation: 'worktree' subagents being able to run git-mutating commands against the main repo checkout instead of their own isolated worktree",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed isolation: 'worktree' subagents being able to run git-mutating commands against the main repo checkout instead of their own isolated worktree"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed the ultracode keyword opt-in firing on non-human-originated input such as webhook payloads and relayed PR comments"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed a rendered text fragment leaking into crash telemetry when a UI component returned content outside a styled text element"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.209",
-     "title": "v2.1.209",
-     "summary": "Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)",
-     "highlights": [
-      {
-       "kind": "修正",
-       "text": "Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.208",
-     "title": "v2.1.208",
-     "summary": "Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDE_AX_SCREEN_READER=1, or add \"axScreenReader\": true to settings. / Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode / Added CLAUDE_CODE_PROCESS_WRAPPER: agent view and the background service now honor a corporate launcher by running every Claude Code self-spawn through a required wrapper executable",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDE_AX_SCREEN_READER=1, or add \"axScreenReader\": true to settings."
-      },
-      {
-       "kind": "追加",
-       "text": "Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode"
-      },
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_PROCESS_WRAPPER: agent view and the background service now honor a corporate launcher by running every Claude Code self-spawn through a required wrapper executable"
-      },
-      {
-       "kind": "追加",
-       "text": "Added mouse-click support for multi-select menus and \"Other\" input rows in fullscreen mode"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed fast mode staying off after switching back to a model that supports it — it now restores automatically when enabled in settings"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"

@@ -7,6 +7,350 @@ window.CCF_CHANGELOG = {
   "source": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
   "versions": [
     {
+      "version": "2.1.220",
+      "items": [
+        {
+          "kind": "改善",
+          "text": "Bug fixes and reliability improvements"
+        }
+      ]
+    },
+    {
+      "version": "2.1.219",
+      "items": [
+        {
+          "kind": "追加",
+          "text": "Added Claude Opus 5 (claude-opus-5), now the default Opus model — 1M context, fast mode at $10/$50 per Mtok"
+        },
+        {
+          "kind": "追加",
+          "text": "Added sandbox.network.strictAllowlist setting to deny non-allowlisted hosts for sandboxed commands without prompting"
+        },
+        {
+          "kind": "追加",
+          "text": "Added DirectoryAdded hook that fires after /add-dir or the SDK register_repo_root control request registers a new working directory mid-session"
+        },
+        {
+          "kind": "追加",
+          "text": "Added mcp_server_errors to the headless stream-json init event, listing --mcp-config entries skipped by config validation; terminal runs print a startup warning"
+        },
+        {
+          "kind": "追加",
+          "text": "Added the workflowSizeGuideline settings key so the advisory Dynamic workflow size guideline can be set from any settings file; the /config row is hidden while one does"
+        },
+        {
+          "kind": "追加",
+          "text": "Added nested subagent forwarding in stream-json: subagents spawned at depth-2+ now appear when --forward-subagent-text is set, keyed by their spawning Agent tool_use id"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed claude -p text output dropping the answer already produced when a turn dies on a mid-stream API error"
+        },
+        {
+          "kind": "追加",
+          "text": "Added HTTP status and error text to claude mcp list and /mcp when a server fails to connect, and a warning for MCP config values with hidden leading or trailing whitespace"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the Fable model row showing \"Requires usage credits\" for plans that include it, when a stale cache had baked the label in"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the /model picker showing the merged Opus row as plain \"Opus\" instead of \"Opus (1M context)\""
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed copy-on-select inside GNU screen printing base64 into the terminal instead of copying the selection"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Remote Control clients keeping a stale fast-mode status after a model switch, reconnect, or failed org check"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed CLAUDE_CODE_GIT_BASH_PATH on Windows exiting or being used as bash when the path isn't a bash/sh binary; it's now ignored with a warning"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Vim mode: pressing ← on an empty prompt now returns to the agent view from NORMAL mode, not just INSERT"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed screen-reader mode rewriting the entire input line on every keystroke instead of echoing only the typed character"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved the \"Remote Control is only available via api.anthropic.com\" error to name the specific setting that caused it"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved claude --teleport to show which repo your current checkout points at when it doesn't match the session's repo"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed dynamic workflows to default to a medium size guideline (aim for fewer than 15 agents); pick another size or unrestricted with Dynamic workflow size in /config"
+        },
+        {
+          "kind": "修正",
+          "text": "Changed managed MCP allowlist/denylist ${VAR} entries to resolve from the startup environment and managed-settings env instead of settings-file env"
+        },
+        {
+          "kind": "追加",
+          "text": "Changed the /model picker to highlight only the newest model's name, so the highlight marks the new release rather than an arbitrary subset of the list"
+        },
+        {
+          "kind": "追加",
+          "text": "Added the current default workflow size to the running-workflow status line, with a pointer to /config for changing it"
+        },
+        {
+          "kind": "変更",
+          "text": "Removed Opus 4.7 from fast mode; /fast now applies to Opus 5 and Opus 4.8"
+        },
+        {
+          "kind": "その他",
+          "text": "Updated the claude-api skill to default to Claude Opus 5, with a migration path from Opus 4.8"
+        },
+        {
+          "kind": "その他",
+          "text": "Subagents can now spawn nested subagents up to depth 3 by default (was 1); set CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1 to disable nesting"
+        }
+      ]
+    },
+    {
+      "version": "2.1.218",
+      "items": [
+        {
+          "kind": "変更",
+          "text": "Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target"
+        },
+        {
+          "kind": "追加",
+          "text": "Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K) in --ax-screen-reader mode"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Windows paths with \\u-prefixed segments (like C:\\Users\\unicorn) being corrupted into CJK characters in tool inputs, which made those files inaccessible"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the left arrow key discarding the conversation with no undo: presses right after editing now ask to confirm, and Esc in the agent view returns to the conversation it backgrounded"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed multi-line paste collapsing into one line with j in place of newlines in terminals that encode pasted newlines as Ctrl+J"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed /context reporting stale pre-compact token usage after compacting from the message picker"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed /ultrareview failing on descriptive arguments like \"review my auth changes\" — they now run a review of your current branch with the text applied as a note to the findings"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed /code-review ultra silently running a local review in non-interactive sessions — it now launches the cloud review"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed gateway spend metering to price Bedrock application-inference-profile ARNs and other config-mapped upstream model IDs at the configured model's rates"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed mojibake when a long IDE selection was truncated mid-emoji, and a case where a tool executor error could be silently dropped"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed an engine teardown race that could start and abandon a phantom turn, and made input pushed after close consistently rejected"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed spurious \"[Request interrupted by user]\" messages after interrupted tool calls, and an unpaired tool_use block left in the transcript when a tool aborted mid-response"
+        },
+        {
+          "kind": "追加",
+          "text": "Fixed VoiceOver reading \"new line\" instead of echoing the typed space at the end of the input in --ax-screen-reader mode"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed plugin and settings panels not moving the terminal cursor to the focused row, so screen readers and magnifiers can follow arrow-key navigation"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed crashes (maximum call stack exceeded) when a deeply nested watched directory tree was deleted or moved, and when rendering deeply nested UI trees"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed pull request events occasionally being lost when a session exited immediately after creating or linking a PR"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the Bedrock setup wizard failing profile verification for assume-role profiles in partitioned AWS regions and on proxy-only networks"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed rare negative or incorrect turn duration measurements after a system clock adjustment by timing turns with a monotonic clock"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the \"N MCP servers need authentication\" startup notice over-counting claude.ai connectors that aren't connected in claude.ai"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed prompt history entries being dropped or duplicated when history writes raced or failed"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed a retry loop that re-sent identical doomed requests after a context-overflow error with a large thinking budget; Ctrl+B backgrounding now applies the same background-shell caps as other paths"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed agent frontmatter hooks running from untrusted folders: hooks now require the agent file's own folder to have accepted workspace trust"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed fork-session lineage being lost after compaction in headless and SDK sessions"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed a resumed session failing every turn, or crashing on resume, when its history held a malformed delta attachment"
+        },
+        {
+          "kind": "修正",
+          "text": "Improved /ultrareview error feedback so Claude can correct an invalid argument instead of retrying it unchanged"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved auto mode: the dangerous-rm, background-&, and suspicious-Windows-path checks no longer open permission dialogs; the auto-mode classifier adjudicates them instead"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved sandbox command restrictions for IDE interactions"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved trust dialogs to name the repository root the grant covers"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed /deep-research to start only when invoked manually; Claude no longer launches it on its own"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed plan mode with auto to no longer prompt for Bash commands the static analyzer can't prove read-only; the auto-mode classifier judges them instead"
+        },
+        {
+          "kind": "追加",
+          "text": "Added an announcement when fast mode changes as a result of switching models via /config model=<x> or Remote Control"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed server-managed settings so benign feature and cost toggles no longer trigger the settings-approval prompt"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed agent markdown files to reject agent names containing :, which is reserved for plugin namespacing"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed skills with context: fork to run in the background by default; opt out per skill with background: false"
+        },
+        {
+          "kind": "追加",
+          "text": "Added yes/no/on/off/1/0 (case-insensitive) as accepted values for skill and plugin frontmatter booleans, alongside true/false"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed remote sessions continuing to send heartbeats after their worker was replaced, which left long-lived desktop and IDE processes retrying a rejected request every few seconds forever"
+        }
+      ]
+    },
+    {
+      "version": "2.1.217",
+      "items": [
+        {
+          "kind": "追加",
+          "text": "Added emoji shortcode autocomplete in the prompt input: type :heart: to insert ❤️, or :hea for suggestions — disable with the emojiCompletionEnabled setting"
+        },
+        {
+          "kind": "追加",
+          "text": "Added warnings when transcript writes are failing (e.g. disk full) or when session saving is off due to an inherited environment variable, instead of losing transcripts silently"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed a memory leak where truncated MCP tool outputs kept the full untruncated result in memory for the rest of the session"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Windows auto-update failures that could leave claude.exe missing; failed updates now restore the preserved executable automatically"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed background session isolation not canonicalizing symlinked working directories, which could let sessions escape their workspace folder"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed auto-compact never triggering for Claude Opus 4.8 on Bedrock and /compact failing once over the limit"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed corporate mTLS, TLS-verify, OAuth scope, and proxy settings being ignored in Claude Desktop sessions"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed screen reader mode's startup announcement being cut off by the first prompt render, and the thinking status row re-rendering every few seconds to update elapsed time and token counts"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed managed settings that set OTEL_EXPORTER_OTLP_ENDPOINT not governing all signals — lower-scope signal-specific overrides no longer redirect telemetry away from the managed endpoint"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed --resume/--continue and /resume failing with a TypeError when a transcript has a malformed attachment entry"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed Remote Control sessions not showing a pending permission prompt or dialog to viewers that connected after it appeared"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed background shells sometimes becoming impossible to stop after a session is sent to the background (/background or ←) or when the session exits on a heavily loaded machine, most visible on Windows"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed a CLAUDE.md or SKILL.md paths frontmatter value with many brace groups OOM-killing or stalling the CLI at startup — brace expansion is now budget-bounded"
+        },
+        {
+          "kind": "修正",
+          "text": "Fixed the transcript preview sitting flush against the input area when attaching to a starting background session; it now leaves the same one-line gap as the live layout, so the transcript no longer shifts when the session takes over"
+        },
+        {
+          "kind": "改善",
+          "text": "Improved footer PR badge links to be clickable hyperlinks even when terminal support can't be detected (e.g. over ssh/tmux); set FORCE_HYPERLINK=0 to opt out"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed the login-expiry warning to appear 3 days before expiry instead of 5"
+        },
+        {
+          "kind": "その他",
+          "text": "Capped the frontend-design plugin suggestion tip at 3 lifetime impressions instead of repeating indefinitely"
+        },
+        {
+          "kind": "追加",
+          "text": "Added a cap on concurrently-running subagents (default 20, override with CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS) so one message can't fan out unbounded background agents"
+        },
+        {
+          "kind": "変更",
+          "text": "Changed subagents to no longer spawn nested subagents by default; set CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH to allow deeper nesting"
+        },
+        {
+          "kind": "追加",
+          "text": "Fixed --max-budget-usd not stopping background subagents: once the cap is reached, new spawns are denied and running background agents are halted"
+        }
+      ]
+    },
+    {
       "version": "2.1.216",
       "items": [
         {
@@ -567,490 +911,6 @@ window.CCF_CHANGELOG = {
         {
           "kind": "修正",
           "text": "Corrected an earlier release note (2.1.200): tmux through the 3.6 series lacks synchronized output; newer tmux with support is detected automatically"
-        }
-      ]
-    },
-    {
-      "version": "2.1.211",
-      "items": [
-        {
-          "kind": "追加",
-          "text": "Added --forward-subagent-text flag and CLAUDE_CODE_FORWARD_SUBAGENT_TEXT environment variable to include subagent text and thinking in stream-json output"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool inputs cannot visually alter the approval message"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed auto mode overriding a PreToolUse hook's ask decision for unsandboxed Bash — a hook ask now floors the decision at a prompt"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed parallel Claude Code sessions all logging out simultaneously after wake-from-sleep when many sessions share one credential store"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed plugin MCP servers not reconnecting after an idle web session woke, leaving MCP calls failing until the next message"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Claude Code on Vertex and Bedrock attempting the default Opus model at startup and printing a spurious fallback notice when a model is explicitly configured"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed subagents spawned with an explicit model override reverting to the parent's model when resumed or sent a follow-up message"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed nested .claude/rules/*.md files loading even when setting sources exclude project settings"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed file upload validation: filenames ending in a DOS device suffix (.prn) or trailing dot are now accepted, and files with multiple hard links are refused"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed file uploads to Claude in Chrome from remote and CLI sessions"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed edits that leave the input as \"?\" being silently swallowed and toggling the shortcuts panel"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a startup hang when the Claude in Chrome extension is enabled but Chrome is not running"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a 300ms delay revealing async content (Settings tabs, Stats, diff views, and other loading states)"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed reopening a just-stopped background session from the agents view starting a blank conversation under the same session id"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed /loop hiding the session from /resume after a single use"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed screen reader users losing the audible terminal bell after /terminal-setup or onboarding terminal setup"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background jobs on LLM gateway auth (ANTHROPIC_AUTH_TOKEN + ANTHROPIC_BASE_URL) coming back \"Not logged in\" after the daemon respawns them"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed claude agents jobs becoming permanently undeletable when git no longer recognizes their worktree — the row now shows why the delete was refused instead of silently reappearing"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed /clear not resetting the session cost counter — the statusline's cost now starts at $0 after /clear"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Claude in Chrome setup pages failing to open in the browser on Windows"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed headless print-mode sessions on Windows crashing or silently exiting when stdin is unreadable"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background session titles in the agents view showing the naming model's refusal text when the prompt contains a link"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background agents killed by the user auto-respawning, and revived agents re-running stale prompts from old sessions"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed routines with no schedule reporting a next run time in the year 1"
-        },
-        {
-          "kind": "その他",
-          "text": "Hardened synced skill/plugin directory naming on Windows and kept CCR web fetch/search proxies working after /clear"
-        },
-        {
-          "kind": "改善",
-          "text": "Improved terminal layout and rendering performance"
-        },
-        {
-          "kind": "改善",
-          "text": "Improved background agent result reporting — Claude now reports the status of still-running agents and waits for the real completion instead of fabricating results"
-        },
-        {
-          "kind": "改善",
-          "text": "Improved the memory index over-limit warning to measure only loaded content, excluding frontmatter and HTML comments"
-        },
-        {
-          "kind": "その他",
-          "text": "Updated integer environment variables (timeouts, token budgets, retry counts) to accept scientific notation and digit-separator spellings like 1e6 and 64_000"
-        },
-        {
-          "kind": "その他",
-          "text": "Updated documentation links to the current docs sites"
-        },
-        {
-          "kind": "変更",
-          "text": "Changed \"always allow\" permission rules to save at the repository root, so approvals granted in a git worktree persist across sessions and worktrees"
-        },
-        {
-          "kind": "変更",
-          "text": "Changed /usage-credits to ask for confirmation before sending a request to organization admins"
-        },
-        {
-          "kind": "変更",
-          "text": "Changed Vim mode s and S (substitute char/line) to work in NORMAL mode, matching vim behavior"
-        },
-        {
-          "kind": "その他",
-          "text": "[VSCode] Updated the Remote Control banner to describe what it does"
-        },
-        {
-          "kind": "その他",
-          "text": "Claude in Chrome: hardened file-upload path validation"
-        },
-        {
-          "kind": "その他",
-          "text": "Claude in Chrome: save_to_disk on screenshot actions now writes the image to disk and returns the path; previously it did nothing"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a prompt-caching regression on Bedrock, Vertex, Mantle, and Foundry that billed the trailing system context block as fresh input tokens on every request."
-        }
-      ]
-    },
-    {
-      "version": "2.1.210",
-      "items": [
-        {
-          "kind": "追加",
-          "text": "Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck"
-        },
-        {
-          "kind": "追加",
-          "text": "Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed isolation: 'worktree' subagents being able to run git-mutating commands against the main repo checkout instead of their own isolated worktree"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed the ultracode keyword opt-in firing on non-human-originated input such as webhook payloads and relayed PR comments"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a rendered text fragment leaking into crash telemetry when a UI component returned content outside a styled text element"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed paste markers leaking into external editors opened from Claude Code, which could appear as stray È/É characters around pasted text"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed claude attach sometimes failing with \"job not found\" or \"agent is still starting\" errors during session transitions — attach now waits for the daemon to settle, and terminal resizes during a slow attach are applied once it completes"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a session crash when a tool's result renderer returned a numeric bigint value or plain text instead of a UI element"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a hook callback timeout being misreported to the model as a user rejection, which made unattended sessions stop and wait"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Claude assuming a cd took effect after its command was moved to the background; the tool result now states the working directory is unchanged"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed plugin-provided MCP servers being torn down when MCP servers are re-synced mid-session"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed plan approvals without edits being labeled \"(edited by user)\" and overwriting the plan file with a stale snapshot"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed /doctor skipping its auto-mode-default proposal on Bedrock, Vertex, and Foundry, where auto mode no longer needs an opt-in"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Grep content mode claiming \"No matches found\" when paginating past the end of results"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed unmatched $1/$2 positional placeholders in skills and commands being silently stripped; they are now preserved verbatim"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed plugin cache writes leaving temp files behind on failure and failing on locked-file renames on Windows and network filesystems"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background workers crash-looping when a client resets its connection to the background service"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed claude agents --effort ultracode not reaching dispatched sessions; the value was silently dropped"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed pressing ← to open the agents view dropping the task tracker when returning to the session"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed the agents dashboard retaining pasted images from abandoned reply drafts after their session was deleted"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed killed background sessions leaving a permanent git worktree lock behind; the periodic sweep now releases locks whose owning process is gone"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed SDK MCP servers registered via an initialize control request waiting until the next turn to start connecting"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed returning to the agents view from a session leaving overlapping ghost frames with CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed late-appearing .claude/* symlinks not being reconciled into the sandbox deny-write list"
-        },
-        {
-          "kind": "その他",
-          "text": "Hardened the Agent tool against indirect prompt injection via content a subagent read"
-        },
-        {
-          "kind": "改善",
-          "text": "Improved the Bash/PowerShell tool message when a command hits its timeout and is auto-backgrounded, so the model can distinguish a hang from an explicit background request"
-        },
-        {
-          "kind": "改善",
-          "text": "Improved auto mode: the permission classifier now defaults to Sonnet 5 for external sessions, validated on the session's first request and pinned for the session"
-        },
-        {
-          "kind": "改善",
-          "text": "Improved the bundled dataviz skill's chart color validation with perceptual OKLab color difference and recalibrated color-blindness thresholds"
-        },
-        {
-          "kind": "その他",
-          "text": "Memory writes that leave a MEMORY.md index over its read limit now produce an explicit error instead of silent truncation"
-        },
-        {
-          "kind": "その他",
-          "text": "Screen reader mode now announces permission mode changes aloud when cycling modes with Shift+Tab"
-        },
-        {
-          "kind": "その他",
-          "text": "The agents footer hint now shows how many background agents are waiting on your input, with a brief color emphasis when the count changes"
-        },
-        {
-          "kind": "その他",
-          "text": "Agent view: the session you pressed ← from stays visibly marked even after mouse hover or arrow keys move the selection"
-        },
-        {
-          "kind": "修正",
-          "text": "Fable temporarily shows as unavailable in the advisor picker while a server-side issue causing Fable advisor failures is fixed"
-        }
-      ]
-    },
-    {
-      "version": "2.1.209",
-      "items": [
-        {
-          "kind": "修正",
-          "text": "Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)"
-        }
-      ]
-    },
-    {
-      "version": "2.1.208",
-      "items": [
-        {
-          "kind": "追加",
-          "text": "Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDE_AX_SCREEN_READER=1, or add \"axScreenReader\": true to settings."
-        },
-        {
-          "kind": "追加",
-          "text": "Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode"
-        },
-        {
-          "kind": "追加",
-          "text": "Added CLAUDE_CODE_PROCESS_WRAPPER: agent view and the background service now honor a corporate launcher by running every Claude Code self-spawn through a required wrapper executable"
-        },
-        {
-          "kind": "追加",
-          "text": "Added mouse-click support for multi-select menus and \"Other\" input rows in fullscreen mode"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed fast mode staying off after switching back to a model that supports it — it now restores automatically when enabled in settings"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed replies typed to a background agent being lost when delivery fails — the text is now saved and delivered when the session restarts"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed background-session attach failing permanently (\"Couldn't start the background daemon\") after an update replaced the binary a running claude agents process was launched from"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed the context window (and auto-compact indicator) briefly resetting to 200k after the CLI auto-updates, causing a false \"100% context used\" when resuming long-context sessions"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed supervised and background sessions crashing when a server closed an HTTP/2 connection with a GOAWAY while requests were in flight"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed truncated stream-json/JSON output and missing result message when piping large responses from claude -p"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed CLAUDE_CODE_MAX_OUTPUT_TOKENS and similar env vars silently using the mantissa of scientific-notation values (1e6 became 1)"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed very large markdown tables stalling rendering or using excessive memory; tables over 200 rows show the first 200 with a \"… N more rows\" notice"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed the Edit tool failing on files modified after reading when the target text still matches uniquely"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Read reporting empty files as \"shorter than offset\", Grep silently returning \"No files found\" for invalid regex patterns, Grep count mode under-reporting totals when paginated, and Glob crashing with an unclear error when the pattern, path, or working directory contained a null byte"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed apiKeyHelper script failures being hidden behind a generic 401 after ~10 silent retries; the script's own error is now shown within 3 attempts"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Bedrock streaming requests failing with a misleading \"Truncated event message received\" when a gateway transforms the response — the error now names the content-type and points at the proxy"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed /upgrade showing a login flow instead of the upgrade URL when the browser fails to open"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed stream-json input killing the session on blank CRLF or whitespace-only lines from Windows-style SDK hosts"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed headless stream-json sessions hanging permanently when a control_request carried a non-string set_model payload; the CLI now answers with an error response"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed repeated \"No completion record was found\" notices on session resume — orphaned background tasks now collapse into a single summary"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Remote Control clients attaching to a terminal-hosted session not seeing background agents and workflow progress until a task started or stopped"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed the Agent tool launching with no tools when a subagent's tools list resolves to nothing — it now returns a clear error naming the unrecognized entries"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed /usage showing stale cached bars over fresher data, and /mcp not reclassifying placeholder servers after config edits"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed \"Change directory\" in SDK hosts (e.g. Claude Desktop) failing with \"A turn is in progress\" on idle sessions that have a running background task"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed the workflow save dialog showing ~/.claude/workflows/ instead of the CLAUDE_CONFIG_DIR location for user-scope saves"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed /release-notes adding the viewed notes to the model's context — \"Show all\" previously injected the entire changelog into every subsequent request"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a memory leak in the agent view where pasted images were retained for the screen's lifetime after sending peek replies"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed SDK sessions losing agents defined via the initialize request when a plugin refresh ran before the client attached"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed several memory leaks in long sessions: MCP stdio server stderr accumulating up to 64 MB per server, LSP documents staying open indefinitely (now LRU with 50-doc cap), async hook output retained after backgrounding, and unbounded growth in headless/SDK sessions from large tool-result payloads"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed a memory blowup when reading files with extremely long single lines using offset/limit — the read now returns a clean error instead of loading the whole line"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed multi-second per-turn slowdowns in sessions with many permission deny/ask rules — rule matchers are now compiled once and cached"
-        },
-        {
-          "kind": "改善",
-          "text": "Improved input responsiveness while agent task lists update — task updates no longer re-render the entire UI"
-        },
-        {
-          "kind": "改善",
-          "text": "Reduced per-tool-call CPU overhead in print/SDK sessions with many MCP tools by caching tool-pool assembly (up to 7x faster tool rounds at high tool counts)"
-        },
-        {
-          "kind": "改善",
-          "text": "Reduced memory usage by bounding the file edit read cache to 16 MB instead of pinning up to 1,000 full files"
-        },
-        {
-          "kind": "改善",
-          "text": "Reduced session transcript size (up to 79x in edit-heavy sessions) and bounded checkpoint disk usage by pruning superseded file-history backups"
-        },
-        {
-          "kind": "改善",
-          "text": "Reduced memory usage when resuming sessions with background agents or forks spawned from large conversations"
-        },
-        {
-          "kind": "その他",
-          "text": "Completed background agents now stay listed in /tasks until cleanup instead of vanishing the moment they finish"
-        },
-        {
-          "kind": "その他",
-          "text": "Attaching to a stopped background agent now shows its transcript immediately while the session warms up, instead of a blank \"Session is starting\" screen"
-        },
-        {
-          "kind": "その他",
-          "text": "Background sessions: an older daemon no longer silently restarts workers spawned by a newer version onto the older binary"
-        },
-        {
-          "kind": "変更",
-          "text": "Agent view: Ctrl+X now deletes renamed-branch worktrees, never destroys unpushed commits, keeps the session row when a worktree is kept, and reused worktree names reset to the current base"
-        },
-        {
-          "kind": "その他",
-          "text": "Catastrophic removals (e.g. rm -rf ~) in commands containing $(…)/backticks/<(…) now prompt in --dangerously-skip-permissions and auto mode, matching the plain form"
-        },
-        {
-          "kind": "その他",
-          "text": "/install-github-app and the /mcp settings menu no longer open in background sessions"
-        },
-        {
-          "kind": "その他",
-          "text": "MCP servers configured with an empty URL now show as \"not configured\" in /mcp instead of a config error"
-        },
-        {
-          "kind": "その他",
-          "text": "/usage now shows your last-known usage bars with an \"as of\" note when the usage endpoint is rate-limited, instead of an error screen"
-        },
-        {
-          "kind": "修正",
-          "text": "Fixed Bedrock auth failing with \"Session token not found or invalid\" for AWS SSO profiles whose sso_region differs from the Bedrock region (2.1.207 regression)"
         }
       ]
     }
