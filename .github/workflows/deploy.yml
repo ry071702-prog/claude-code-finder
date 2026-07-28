@@ -23,7 +23,7 @@ jobs:
       # secrets は式評価コンテキストで真偽化できる（値は露出しない）
       HAS_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Guard (トークン未設定ならスキップ)
         if: env.HAS_TOKEN != 'true'
