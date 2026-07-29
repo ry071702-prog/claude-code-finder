@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Code 逆引き辞典 (cc-finder)",
+  "version": "1.0.0",
+  "description": "アドレスバーに cc と打つだけで Claude Code の「〜したい」を逆引き。全件同梱でオフライン動作・通信ゼロ。",
+  "omnibox": { "keyword": "cc" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Claude Code 逆引き (cc-finder)",
+    "default_icon": { "16": "icons/icon-16.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" }
+  },
+  "icons": { "16": "icons/icon-16.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png", "512": "icons/icon-512.png" },
+  "permissions": ["clipboardWrite"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+C", "mac": "Alt+Shift+C" },
+      "description": "逆引きパネルを開く"
+    }
+  }
+}

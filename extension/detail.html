@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Claude Code 逆引き</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="detail">
+  <div class="wrap">
+    <header class="detail-head">
+      <span class="brand">cc-finder</span>
+      <span id="qlabel" class="q"></span>
+    </header>
+    <div class="bar">
+      <input id="q" type="search" autocomplete="off" placeholder="別の言い方で引き直す">
+    </div>
+    <main id="main"></main>
+    <section class="results">
+      <h3 class="sec" id="alsoLabel" hidden>ほかの候補</h3>
+      <div id="also" class="list"></div>
+    </section>
+  </div>
+  <script type="module" src="detail.js"></script>
+</body>
+</html>

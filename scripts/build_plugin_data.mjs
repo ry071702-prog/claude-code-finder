@@ -39,3 +39,13 @@ const dir = path.join(root, "plugin", "mcp");
 fs.mkdirSync(dir, { recursive: true });
 fs.writeFileSync(path.join(dir, "data.json"), JSON.stringify(out));
 process.stdout.write(`wrote plugin/mcp/data.json (${entries.length} entries)\n`);
+
+// Chrome 拡張(extension/)にも同じデータと検索ロジックを配る。
+// 拡張は自ディレクトリ外を読めないので「コピーを置く」しかない。生成物なのでここで必ず上書きし、
+// plugin/mcp/search.mjs を単一ソースに保つ（extension/search.mjs は直接編集しないこと）。
+const ext = path.join(root, "extension");
+if (fs.existsSync(ext)) {
+  fs.writeFileSync(path.join(ext, "data.json"), JSON.stringify(out));
+  fs.copyFileSync(path.join(dir, "search.mjs"), path.join(ext, "search.mjs"));
+  process.stdout.write("synced extension/data.json + extension/search.mjs\n");
+}

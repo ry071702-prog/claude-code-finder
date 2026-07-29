@@ -50,6 +50,14 @@
 - [x] SEO: sitemap.xml / robots.txt
 - [x] **ingest→deploy 断線の修正**: `GITHUB_TOKEN` push は deploy.yml の on:push を発火させない仕様のため、週次データ更新が本番に反映されていなかった。ingest ワークフロー自身が変更時に `wrangler pages deploy` するよう修正（`changed` 出力で分岐）
 
+## Phase 7 — Chrome拡張 (omnibox 逆引き)（2026-07-29）✅ 稼働
+- [x] `extension/` : アドレスバーで `cc` + Space → 候補表示 → Enter で詳細ページ（コマンドのコピー付き）。ポップアップ検索も同梱
+- [x] **全件同梱でオフライン動作・通信ゼロ**。データは `build_plugin_data.mjs` が plugin/mcp と extension の両方へ配る（週次 ingest の commit 対象にも追加済み）
+- [x] 検索ロジックの三重持ちを回避 → `plugin/mcp/search.mjs` を単一ソースに切り出し、server.mjs は薄いラッパー、extension へはビルドでコピー
+- [x] `tests/test_extension.mjs`（manifest参照切れ / データ同期ズレ / omnibox description の XML エスケープ）を ingest CI に組込
+- 導入: chrome://extensions → デベロッパーモード → 「パッケージ化されていない拡張機能を読み込む」→ `extension/`
+- 注意: **拡張側の生成物 (`extension/data.json` / `extension/search.mjs`) を直接編集しない**。直すのは `plugin/mcp/search.mjs`
+
 ## 運用メモ
 - 週次ingest(火07:00 JST)は tests→fetch_skills→fetch_updates→build→commit→deploy まで自己完結
 - data-skills 件数は `ingest` の `--limit`（既定120）でキャップ。増やすなら workflow_dispatch の limit か cron の値を変更
