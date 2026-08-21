@@ -961,193 +961,197 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
-     "id": "changelog-2.1.226",
-     "title": "v2.1.226",
-     "summary": "Bug fixes and reliability improvements",
+     "id": "changelog-2.1.238",
+     "title": "v2.1.238",
+     "summary": "Added a keybindingFlavor setting: set it to \"readline\" to make Ctrl+W in the prompt delete back to the previous whitespace, as in Bash; the default (\"classic\") is unchanged / A catalog entry's headersHelper runs only when you install or update that plugin, after its command is shown; claude plugin install/update ask [y/N] (or pass -y) / Added claude self-hosted-runner --defer-shutdown-max-min <minutes>: on SIGTERM, keep serving attached sessions, park what is left after that many minutes, then exit",
      "highlights": [
       {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
+       "kind": "追加",
+       "text": "Added a keybindingFlavor setting: set it to \"readline\" to make Ctrl+W in the prompt delete back to the previous whitespace, as in Bash; the default (\"classic\") is unchanged"
+      },
+      {
+       "kind": "その他",
+       "text": "A catalog entry's headersHelper runs only when you install or update that plugin, after its command is shown; claude plugin install/update ask [y/N] (or pass -y)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added claude self-hosted-runner --defer-shutdown-max-min <minutes>: on SIGTERM, keep serving attached sessions, park what is left after that many minutes, then exit"
+      },
+      {
+       "kind": "追加",
+       "text": "Added claude self-hosted-runner --proxy-authorization-command / --proxy-authorization-file for egress proxies that require a freshly issued Proxy-Authorization header on every connection"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed unbounded memory growth in long interactive sessions: subagent tool results are now released once they leave the recent display window"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.225",
-     "title": "v2.1.225",
-     "summary": "Added gateway spend-limit support to Claude Code's usage warning; the limit-reached message now names the cap, its reset time, and the operator's message (requires the gateway on 2.1.225) / Added a workspace trust prompt to claude agents for untrusted directories, matching the behavior of claude / Fixed a transient 401 replacing a long-lived CLAUDE_CODE_OAUTH_TOKEN with a stored login's short-lived token, breaking headless sessions until restart",
+     "id": "changelog-2.1.237",
+     "title": "v2.1.237",
+     "summary": "Fixed prompt caching for sessions using an LLM gateway or custom base URL / Added a built-in \"Concise\" output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config.",
      "highlights": [
       {
+       "kind": "修正",
+       "text": "Fixed prompt caching for sessions using an LLM gateway or custom base URL"
+      },
+      {
        "kind": "追加",
-       "text": "Added gateway spend-limit support to Claude Code's usage warning; the limit-reached message now names the cap, its reset time, and the operator's message (requires the gateway on 2.1.225)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a workspace trust prompt to claude agents for untrusted directories, matching the behavior of claude"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed a transient 401 replacing a long-lived CLAUDE_CODE_OAUTH_TOKEN with a stored login's short-lived token, breaking headless sessions until restart"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed MCP OAuth servers on macOS intermittently failing with a burst of 401 errors, as if never authenticated, after a keychain read timed out"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed auto mode counting a safety-filter refusal of its own permission check toward the consecutive-block limit; the action is still denied, but the model is now told to move on rather than retry"
+       "text": "Added a built-in \"Concise\" output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config."
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.224",
-     "title": "v2.1.224",
-     "summary": "Added self-hosted environments: claude self-hosted-runner turns your own machines or containers into a place Claude Code web, mobile, and desktop sessions can run, on Team and Enterprise plans / Added archive plugin source: install plugins from a zip over HTTPS without git or npm, with optional SHA-256 pinning / Added a cancel-and-confirm step when removing an unavailable paste changes a command's text",
+     "id": "changelog-2.1.236",
+     "title": "v2.1.236",
+     "summary": "Added ANTHROPIC_DEFAULT_MODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPIC_MODEL) / Added notify_when_idle to cross-session SendMessage: ask another Claude Code session on this machine to send one notice when it next goes idle — opt-in, one-shot, no polling (macOS and Linux) / Sandbox: on macOS, wildcard read-deny rules (e.g. **/.env) now take precedence inside allowed read regions, cover matched directories' contents, and can't be bypassed by renaming the denied file",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added self-hosted environments: claude self-hosted-runner turns your own machines or containers into a place Claude Code web, mobile, and desktop sessions can run, on Team and Enterprise plans"
+       "text": "Added ANTHROPIC_DEFAULT_MODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPIC_MODEL)"
       },
       {
        "kind": "追加",
-       "text": "Added archive plugin source: install plugins from a zip over HTTPS without git or npm, with optional SHA-256 pinning"
+       "text": "Added notify_when_idle to cross-session SendMessage: ask another Claude Code session on this machine to send one notice when it next goes idle — opt-in, one-shot, no polling (macOS and Linux)"
       },
       {
-       "kind": "追加",
-       "text": "Added a cancel-and-confirm step when removing an unavailable paste changes a command's text"
+       "kind": "その他",
+       "text": "Sandbox: on macOS, wildcard read-deny rules (e.g. **/.env) now take precedence inside allowed read regions, cover matched directories' contents, and can't be bypassed by renaming the denied file"
       },
       {
-       "kind": "追加",
-       "text": "Added ANTHROPIC_BEDROCK_REGION_PREFIX env var for Bedrock to prefer a specific cross-region inference profile over the AWS_REGION-derived one"
+       "kind": "修正",
+       "text": "Fixed clipboard copy, background housekeeping, background sessions, and local MCP logs breaking after the directory a session had switched into was removed (since 2.1.229)"
       },
       {
-       "kind": "追加",
-       "text": "Added crossSessionInbound and dialogExpiry settings: cross-session messages sent to a session running with bypassed permissions are held for your approval, and messages to other sessions auto-deliver"
+       "kind": "修正",
+       "text": "Fixed the fullscreen renderer failing permanently after a single failed start: it now falls back to the classic renderer instead of exiting on every subsequent launch"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.223",
-     "title": "v2.1.223",
-     "summary": "Added owner wildcard entries (\"owner/*\") to the strictKnownMarketplaces and blockedMarketplaces managed settings for allowing or blocking all marketplace repos under a GitHub org / Added a warning when workflow agents, forked skills, slash commands, or resumed background agents' requested subagent model is restricted and the parent model runs instead / Added a /teleport hint in cloud sessions showing how to continue locally with claude --teleport <session id>",
+     "id": "changelog-2.1.235",
+     "title": "v2.1.235",
+     "summary": "Added an optional spellcheck setting that underlines misspelled words in the prompt input as you type, using your installed aspell, hunspell, or ispell / Fixed whole-prompt-cache invalidation when a language server disconnected or reconnected mid-session / Fixed nested markdown list items misaligning at depth 3+ and added a hanging indent to wrapped list items in the terminal UI",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added owner wildcard entries (\"owner/*\") to the strictKnownMarketplaces and blockedMarketplaces managed settings for allowing or blocking all marketplace repos under a GitHub org"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a warning when workflow agents, forked skills, slash commands, or resumed background agents' requested subagent model is restricted and the parent model runs instead"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a /teleport hint in cloud sessions showing how to continue locally with claude --teleport <session id>"
+       "text": "Added an optional spellcheck setting that underlines misspelled words in the prompt input as you type, using your installed aspell, hunspell, or ispell"
       },
       {
        "kind": "修正",
-       "text": "Fixed a Bash permission bypass where a crafted command could hide parts of itself from permission checks"
+       "text": "Fixed whole-prompt-cache invalidation when a language server disconnected or reconnected mid-session"
       },
       {
        "kind": "追加",
-       "text": "Fixed permission prompts so commands padded with tabs or invisible Unicode can no longer hide part of the command from the approval dialog"
+       "text": "Fixed nested markdown list items misaligning at depth 3+ and added a hanging indent to wrapped list items in the terminal UI"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed prompt input highlights (slash commands, keywords, mentions) appearing shifted by one or more characters in some multi-line prompts"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Shift+Tab inside the permission prompt's comment field approving the edit and granting session-wide edit permission instead of closing the field"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.222",
-     "title": "v2.1.222",
-     "summary": "Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type / Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (summaries, compaction, renames) / Fixed /usage-credits on Team and Enterprise showing \"you've already sent a usage credit request\" for members whose earlier request was dismissed, blocking them from sending a new one",
+     "id": "changelog-2.1.234",
+     "title": "v2.1.234",
+     "summary": "Added the optional CLAUDE_CODE_PROJECT_DIR_NAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory / Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selection; also works in the agents view / Added a GitLab merge request badge to the footer and statusline: repos with a GitLab remote and an authenticated glab CLI show MR !N with draft/pending/green states",
      "highlights": [
       {
-       "kind": "修正",
-       "text": "Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (summaries, compaction, renames)"
+       "kind": "追加",
+       "text": "Added the optional CLAUDE_CODE_PROJECT_DIR_NAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory"
       },
       {
        "kind": "追加",
-       "text": "Fixed /usage-credits on Team and Enterprise showing \"you've already sent a usage credit request\" for members whose earlier request was dismissed, blocking them from sending a new one"
+       "text": "Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selection; also works in the agents view"
       },
       {
-       "kind": "修正",
-       "text": "Fixed the startup connectivity check hanging and then failing behind an HTTPS proxy; it now uses the same proxy-aware transport as API requests and times out with a clear message"
+       "kind": "追加",
+       "text": "Added a GitLab merge request badge to the footer and statusline: repos with a GitLab remote and an authenticated glab CLI show MR !N with draft/pending/green states"
       },
       {
-       "kind": "修正",
-       "text": "Fixed \"Connection closed mid-response\" errors being reported on responses that had actually completed"
+       "kind": "その他",
+       "text": "Claude Code now continues your session automatically when a claude.ai usage limit resets; turn it off in /config (\"Continue automatically at usage limit\")"
+      },
+      {
+       "kind": "その他",
+       "text": "Claude is now told to use your account email only to identify you, and not to send it to unrelated services unless you ask"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.221",
-     "title": "v2.1.221",
-     "summary": "[VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the \"Claude Code: Toggle Focus view\" command / Added mode: \"mask\" for sandbox credential files on Linux and WSL — sandboxed commands read a sentinel copy (the whole file, or just the spans captured by an extract regex) while the sandbox proxy substitutes the real value on egress; on macOS file masking falls back to deny / Added warnings to claude plugin validate when a marketplace or plugin name would be rejected by Claude Desktop's managed marketplace sync",
+     "id": "changelog-2.1.233",
+     "title": "v2.1.233",
+     "summary": "Added GitLab merge request URL support to the --worktree flag and the claude agents view (where MRs display as !N) / Added an opt-in forward_user_identity apps gateway setting on Anthropic upstreams that sends the signed-in user's identity as headers, so a proxy behind the gateway can attribute spend per user / Added opt-in memory cgroup support for Bash tool commands on Linux (CLAUDE_CODE_TOOL_MEMORY_LIMIT) so a runaway build can't stall the session",
      "highlights": [
       {
        "kind": "追加",
-       "text": "[VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the \"Claude Code: Toggle Focus view\" command"
+       "text": "Added GitLab merge request URL support to the --worktree flag and the claude agents view (where MRs display as !N)"
       },
       {
        "kind": "追加",
-       "text": "Added mode: \"mask\" for sandbox credential files on Linux and WSL — sandboxed commands read a sentinel copy (the whole file, or just the spans captured by an extract regex) while the sandbox proxy substitutes the real value on egress; on macOS file masking falls back to deny"
+       "text": "Added an opt-in forward_user_identity apps gateway setting on Anthropic upstreams that sends the signed-in user's identity as headers, so a proxy behind the gateway can attribute spend per user"
       },
       {
        "kind": "追加",
-       "text": "Added warnings to claude plugin validate when a marketplace or plugin name would be rejected by Claude Desktop's managed marketplace sync"
+       "text": "Added opt-in memory cgroup support for Bash tool commands on Linux (CLAUDE_CODE_TOOL_MEMORY_LIMIT) so a runaway build can't stall the session"
       },
       {
        "kind": "追加",
-       "text": "Added a prompt-audit subcommand to the claude-api skill for auditing prompts and tool descriptions for patterns written for older models"
+       "text": "Added CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS environment variable to configure the WebFetch session URL cache TTL (default unchanged: 15 minutes)"
       },
       {
        "kind": "修正",
-       "text": "Fixed a Bash tool permission-check bypass where zsh could execute hidden commands in [[ ]] regex conditionals; affected commands now prompt for permission"
+       "text": "Fixed cloud sessions occasionally being marked as lost when the environment shut down while Claude was waiting on a permission prompt"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.220",
-     "title": "v2.1.220",
-     "summary": "Bug fixes and reliability improvements",
+     "id": "changelog-2.1.232",
+     "title": "v2.1.232",
+     "summary": "Subagent forking is now on by default: a subagent_type: \"fork\" subagent inherits the full conversation and prompt cache, and non-teammate agent spawns in interactive sessions now run in the background by default / Type @ in the prompt to mention another Claude session by name; Claude then uses SendMessage to reach that session directly / SendMessage now delivers to a bare name that exactly matches one live session, instead of asking to confirm with a ref first",
      "highlights": [
       {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
+       "kind": "その他",
+       "text": "Subagent forking is now on by default: a subagent_type: \"fork\" subagent inherits the full conversation and prompt cache, and non-teammate agent spawns in interactive sessions now run in the background by default"
+      },
+      {
+       "kind": "その他",
+       "text": "Type @ in the prompt to mention another Claude session by name; Claude then uses SendMessage to reach that session directly"
+      },
+      {
+       "kind": "その他",
+       "text": "SendMessage now delivers to a bare name that exactly matches one live session, instead of asking to confirm with a ref first"
+      },
+      {
+       "kind": "その他",
+       "text": "Interactive sessions on one machine now keep unique names: starting or renaming a session to a name another live session already uses gives it a name-word-word variant and tells you"
+      },
+      {
+       "kind": "追加",
+       "text": "Added /config rows for \"Dialog expiry\" and \"Messages from your other sessions\" (cross-session inbound accept/hold/refuse)"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.219",
-     "title": "v2.1.219",
-     "summary": "Added Claude Opus 5 (claude-opus-5), now the default Opus model — 1M context, fast mode at $10/$50 per Mtok / Added sandbox.network.strictAllowlist setting to deny non-allowlisted hosts for sandboxed commands without prompting / Added DirectoryAdded hook that fires after /add-dir or the SDK register_repo_root control request registers a new working directory mid-session",
+     "id": "changelog-2.1.231",
+     "title": "v2.1.231",
+     "summary": "Fixed MCP OAuth sign-in failing with a redirect URI mismatch for servers that use a pre-registered OAuth client, such as Slack",
      "highlights": [
       {
-       "kind": "追加",
-       "text": "Added Claude Opus 5 (claude-opus-5), now the default Opus model — 1M context, fast mode at $10/$50 per Mtok"
-      },
-      {
-       "kind": "追加",
-       "text": "Added sandbox.network.strictAllowlist setting to deny non-allowlisted hosts for sandboxed commands without prompting"
-      },
-      {
-       "kind": "追加",
-       "text": "Added DirectoryAdded hook that fires after /add-dir or the SDK register_repo_root control request registers a new working directory mid-session"
-      },
-      {
-       "kind": "追加",
-       "text": "Added mcp_server_errors to the headless stream-json init event, listing --mcp-config entries skipped by config validation; terminal runs print a startup warning"
-      },
-      {
-       "kind": "追加",
-       "text": "Added the workflowSizeGuideline settings key so the advisory Dynamic workflow size guideline can be set from any settings file; the /config row is hidden while one does"
+       "kind": "修正",
+       "text": "Fixed MCP OAuth sign-in failing with a redirect URI mismatch for servers that use a pre-registered OAuth client, such as Slack"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
