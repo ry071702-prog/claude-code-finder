@@ -37,6 +37,13 @@ const SITE = "https://claude-code-finder.pages.dev";
 const EXCLUDED_IDS = new Set(["cc-finder-plugin", "cc-finder-discover-skills", "team-xxx", "team-sample"]);
 const isExcluded = (e) => EXCLUDED_IDS.has(e.id) || String(e.id || "").startsWith("cc-finder");
 
+// 導入導線ワードを含むテキストは export に流さない (tests/test_export.mjs の不変条件と対)。
+// 公式 CHANGELOG 由来の項目 (例: "plugin marketplace" に触れる修正メモ) でもここで落とす。
+const BANNED_PHRASES = [/npx\s+skills\s+add/i, /plugin\s+marketplaces?/i];
+const isClean = (s) => !BANNED_PHRASES.some((re) => re.test(String(s ?? "")));
+// 最終防衛線: item 全体を文字列化して検査し、残っていたら item ごと落とす
+const dropBanned = (items) => items.filter((i) => isClean(JSON.stringify(i)));
+
 // install を落とし、MeetS が表示に使うフィールドだけに絞る
 const toItem = (e) => ({
   id: e.id,
@@ -44,8 +51,8 @@ const toItem = (e) => ({
   feature: e.feature || "",
   summary: e.summary || "",
   category: e.category || "",
-  commands: (e.commands || []).slice(0, 3),
-  steps: (e.steps || []).slice(0, 5),
+  commands: (e.commands || []).filter(isClean).slice(0, 3),
+  steps: (e.steps || []).filter(isClean).slice(0, 5),
   url: `${SITE}/#${encodeURIComponent(e.id || "")}`,
 });
 
@@ -61,16 +68,20 @@ const patterns = custom.filter((e) => String(e.id || "").startsWith("pat-"));
 const changelogSource =
   (w.CCF_CHANGELOG && w.CCF_CHANGELOG.source) ||
   "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md";
-const changelog = ((w.CCF_CHANGELOG && w.CCF_CHANGELOG.versions) || []).slice(0, 8).map((v) => ({
-  id: `changelog-${v.version}`,
-  title: `v${v.version}`,
-  summary: (v.items || [])
-    .slice(0, 3)
-    .map((i) => i.text)
-    .join(" / "),
-  highlights: (v.items || []).slice(0, 5).map((i) => ({ kind: i.kind, text: i.text })),
-  url: changelogSource,
-}));
+const changelog = ((w.CCF_CHANGELOG && w.CCF_CHANGELOG.versions) || []).slice(0, 8).map((v) => {
+  // 公式 CHANGELOG に導入導線ワードが載る週があるため、項目単位でフィルタしてから切り出す
+  const items = (v.items || []).filter((i) => isClean(i.text));
+  return {
+    id: `changelog-${v.version}`,
+    title: `v${v.version}`,
+    summary: items
+      .slice(0, 3)
+      .map((i) => i.text)
+      .join(" / "),
+    highlights: items.slice(0, 5).map((i) => ({ kind: i.kind, text: i.text })),
+    url: changelogSource,
+  };
+});
 
 // 編集者まとめ (手書きハイライト) も「AIニュース窓」に添える
 const updates = (w.CCF_UPDATES || []).slice(0, 6).map((u) => ({
@@ -88,28 +99,28 @@ const sections = [
     meetsCategory: "Q&A",
     label: "やりたいこと逆引き",
     note: "「◯◯したい」から機能を引く  一次情報は公式 docs",
-    items: base.slice(0, 40).map(toItem),
+    items: dropBanned(base.slice(0, 40).map(toItem)),
   },
   {
     key: "cowork",
     meetsCategory: "ツール活用",
     label: "コード不要・仕事で使える",
     note: "エンジニア以外でもそのまま使える活用例",
-    items: cowork.map(toItem),
+    items: dropBanned(cowork.map(toItem)),
   },
   {
     key: "prompts",
     meetsCategory: "プロンプト",
     label: "頼み方のパターン",
     note: "うまくいく頼み方の型 (バグ調査 / リファクタ / テスト生成 / 解説)",
-    items: patterns.map(toItem),
+    items: dropBanned(patterns.map(toItem)),
   },
   {
     key: "updates",
     meetsCategory: "AIニュース窓",
     label: "Claude Code の更新",
     note: "公式 CHANGELOG の機械パース + 編集者まとめ (LLM 生成ではない)",
-    items: [...updates, ...changelog],
+    items: dropBanned([...updates, ...changelog]),
   },
 ];
 
