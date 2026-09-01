@@ -1,5 +1,5 @@
 // 生成物: scripts/build_data.py が skills.jsonl + overrides.ja.json から作成。手で編集しない。
-// GitHub の Claude Code Skills を非LLMで取り込み、日本語化 48/120 件（週次 ingest-skills.yml）。
+// GitHub の Claude Code Skills を非LLMで取り込み、日本語化 46/120 件（週次 ingest-skills.yml）。
 window.CCF_SKILLS = [
 {
 "id": "skill-anthropics-skills-skills-academy-guide",
@@ -14,7 +14,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@academy-guide -g"
 ],
 "install": "npx skills add anthropics/skills@academy-guide -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "academy-guide",
@@ -37,7 +37,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@algorithmic-art -g"
 ],
 "install": "npx skills add anthropics/skills@algorithmic-art -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "algorithmic-art",
@@ -60,7 +60,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@brand-guidelines -g"
 ],
 "install": "npx skills add anthropics/skills@brand-guidelines -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "brand-guidelines",
@@ -83,7 +83,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@canvas-design -g"
 ],
 "install": "npx skills add anthropics/skills@canvas-design -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "canvas-design",
@@ -106,7 +106,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@claude-api -g"
 ],
 "install": "npx skills add anthropics/skills@claude-api -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "claude-api",
@@ -129,7 +129,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@discernment-nudge -g"
 ],
 "install": "npx skills add anthropics/skills@discernment-nudge -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "discernment-nudge",
@@ -152,7 +152,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@doc-coauthoring -g"
 ],
 "install": "npx skills add anthropics/skills@doc-coauthoring -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "doc-coauthoring",
@@ -175,7 +175,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@docx -g"
 ],
 "install": "npx skills add anthropics/skills@docx -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "docx",
@@ -198,7 +198,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@frontend-design -g"
 ],
 "install": "npx skills add anthropics/skills@frontend-design -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "frontend-design",
@@ -221,7 +221,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@internal-comms -g"
 ],
 "install": "npx skills add anthropics/skills@internal-comms -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "internal-comms",
@@ -244,7 +244,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@mcp-builder -g"
 ],
 "install": "npx skills add anthropics/skills@mcp-builder -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "mcp-builder",
@@ -267,7 +267,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pdf -g"
 ],
 "install": "npx skills add anthropics/skills@pdf -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pdf",
@@ -290,7 +290,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pptx -g"
 ],
 "install": "npx skills add anthropics/skills@pptx -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pptx",
@@ -313,7 +313,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@skill-creator -g"
 ],
 "install": "npx skills add anthropics/skills@skill-creator -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "skill-creator",
@@ -336,7 +336,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@slack-gif-creator -g"
 ],
 "install": "npx skills add anthropics/skills@slack-gif-creator -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "slack-gif-creator",
@@ -359,7 +359,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@theme-factory -g"
 ],
 "install": "npx skills add anthropics/skills@theme-factory -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "theme-factory",
@@ -382,7 +382,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@web-artifacts-builder -g"
 ],
 "install": "npx skills add anthropics/skills@web-artifacts-builder -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "web-artifacts-builder",
@@ -405,7 +405,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@webapp-testing -g"
 ],
 "install": "npx skills add anthropics/skills@webapp-testing -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "webapp-testing",
@@ -428,7 +428,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@xlsx -g"
 ],
 "install": "npx skills add anthropics/skills@xlsx -g",
-"stars": 171376,
+"stars": 172815,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "xlsx",
@@ -451,7 +451,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "deploy-to-vercel",
@@ -474,7 +474,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-cli-with-tokens",
@@ -497,7 +497,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@composition-patterns -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@composition-patterns -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "composition-patterns",
@@ -520,7 +520,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-optimize -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-optimize -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-optimize",
@@ -543,7 +543,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-best-practices -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-best-practices -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-best-practices",
@@ -566,7 +566,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-native-skills -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-native-skills -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-native-skills",
@@ -589,7 +589,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-view-transitions -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-view-transitions -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-view-transitions",
@@ -612,7 +612,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@web-design-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@web-design-guidelines -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "web-design-guidelines",
@@ -635,7 +635,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@writing-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@writing-guidelines -g",
-"stars": 30415,
+"stars": 30676,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "writing-guidelines",
@@ -658,7 +658,7 @@ window.CCF_SKILLS = [
 "npx skills add crazyguitar/pysheeet@py -g"
 ],
 "install": "npx skills add crazyguitar/pysheeet@py -g",
-"stars": 8150,
+"stars": 8153,
 "repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
 "py",
@@ -681,7 +681,7 @@ window.CCF_SKILLS = [
 "npx skills add crazyguitar/pysheeet@readable-py -g"
 ],
 "install": "npx skills add crazyguitar/pysheeet@readable-py -g",
-"stars": 8150,
+"stars": 8153,
 "repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
 "readable-py",
@@ -704,7 +704,7 @@ window.CCF_SKILLS = [
 "npx skills add lewislulu/html-ppt-skill -g"
 ],
 "install": "npx skills add lewislulu/html-ppt-skill -g",
-"stars": 8043,
+"stars": 8149,
 "repoUrl": "https://github.com/lewislulu/html-ppt-skill",
 "aliases": [
 "html-ppt-skill",
@@ -715,31 +715,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-alchaincyf-darwin-skill-darwin-skill",
-"priority": 431,
-"category": "community",
-"type": "skill",
-"want": "darwin-skill",
-"feature": "alchaincyf/darwin-skill",
-"summary": "Darwin Skill 2.0 (达尔文.skill 2.0): autonomous skill optimizer, v2.0 integrates Microsoft Research SkillLens (arXiv 2605.23899) 9-dim rubric + SkillOpt (arXiv 2605.23904) validation-gated design + human-in-the-loop checkpoints. Evaluates SKILL.md files using a 9-dimension rubric (structure + effectiveness + meta-skill blacklists), runs hill-climbing with git version control, spawns independent judge agents for blind evaluation, validates improvements through test prompts with auto-break on diminishing returns, and generates visual result cards.",
-"trigger": "Use when user mentions \"优化skill\", \"skill评分\", \"自动优化\", \"auto optimize\", \"skill质量检查\", \"达尔文\", \"darwin\", \"帮我改改skill\", \"skill怎么样\", \"提升skill质量\", \"skill review\", \"skill打分\".",
-"commands": [
-"npx skills add alchaincyf/darwin-skill -g"
-],
-"install": "npx skills add alchaincyf/darwin-skill -g",
-"stars": 5719,
-"repoUrl": "https://github.com/alchaincyf/darwin-skill",
-"aliases": [
-"darwin-skill",
-"alchaincyf",
-"darwin-skill",
-"skill",
-"スキル"
-]
-},
-{
 "id": "skill-vyperlang-vyper-skills",
-"priority": 432,
+"priority": 431,
 "category": "community",
 "type": "skill",
 "want": "Vyperコンパイラの内部を触りたい",
@@ -750,7 +727,7 @@ window.CCF_SKILLS = [
 "npx skills add vyperlang/vyper -g"
 ],
 "install": "npx skills add vyperlang/vyper -g",
-"stars": 5180,
+"stars": 5179,
 "repoUrl": "https://github.com/vyperlang/vyper",
 "aliases": [
 "skills",
@@ -762,7 +739,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-antvis-l7-skills-l7-single",
-"priority": 433,
+"priority": 432,
 "category": "community",
 "type": "skill",
 "want": "WebGLで地理空間データを可視化したい",
@@ -773,7 +750,7 @@ window.CCF_SKILLS = [
 "npx skills add antvis/L7@l7-single -g"
 ],
 "install": "npx skills add antvis/L7@l7-single -g",
-"stars": 4056,
+"stars": 4057,
 "repoUrl": "https://github.com/antvis/L7",
 "aliases": [
 "l7-single",
@@ -785,7 +762,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-antvis-l7-skills-l7",
-"priority": 434,
+"priority": 433,
 "category": "community",
 "type": "skill",
 "want": "AntV L7で地図の可視化を実装したい",
@@ -796,7 +773,7 @@ window.CCF_SKILLS = [
 "npx skills add antvis/L7@l7 -g"
 ],
 "install": "npx skills add antvis/L7@l7 -g",
-"stars": 4056,
+"stars": 4057,
 "repoUrl": "https://github.com/antvis/L7",
 "aliases": [
 "l7",
@@ -807,31 +784,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-paper2poster-paper2poster-skills",
-"priority": 435,
-"category": "community",
-"type": "skill",
-"want": "論文を学会ポスターに変換したい",
-"feature": "Paper2Poster/Paper2Poster",
-"summary": "学術論文を、学会ポスターや構成案・コピー・レイアウト指示・poster.yamlの下書きに変換する。",
-"trigger": "PDF論文・arXivリンク・原稿・PPTXポスター・学会投稿などを、ポスターに変換したいとき。",
-"commands": [
-"npx skills add Paper2Poster/Paper2Poster -g"
-],
-"install": "npx skills add Paper2Poster/Paper2Poster -g",
-"stars": 3918,
-"repoUrl": "https://github.com/Paper2Poster/Paper2Poster",
-"aliases": [
-"skills",
-"Paper2Poster",
-"paper2poster-poster",
-"skill",
-"スキル"
-]
-},
-{
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-auto-empirical-research-skills",
-"priority": 436,
+"priority": 434,
 "category": "community",
 "type": "skill",
 "want": "auto-empirical-research-skills",
@@ -842,7 +796,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@Auto-Empirical-Research-Skills -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@Auto-Empirical-Research-Skills -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "Auto-Empirical-Research-Skills",
@@ -854,7 +808,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-plugins-empirical-analysis-python-skills-pipeline",
-"priority": 437,
+"priority": 435,
 "category": "community",
 "type": "skill",
 "want": "Full-empirical-analysis-skill",
@@ -865,7 +819,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@pipeline -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@pipeline -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "pipeline",
@@ -877,7 +831,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-skills-00.1-full-empirical-analysis-skill_python",
-"priority": 438,
+"priority": 436,
 "category": "community",
 "type": "skill",
 "want": "Full-empirical-analysis-skill",
@@ -888,7 +842,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00.1-Full-empirical-analysis-skill_Python -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00.1-Full-empirical-analysis-skill_Python -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "00.1-Full-empirical-analysis-skill_Python",
@@ -900,7 +854,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-plugins-empirical-analysis-r-skills-pipeline",
-"priority": 439,
+"priority": 437,
 "category": "community",
 "type": "skill",
 "want": "Full-empirical-analysis-skill-R",
@@ -911,7 +865,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@pipeline -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@pipeline -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "pipeline",
@@ -923,7 +877,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-skills-00.3-full-empirical-analysis-skill_r",
-"priority": 440,
+"priority": 438,
 "category": "community",
 "type": "skill",
 "want": "Full-empirical-analysis-skill-R",
@@ -934,7 +888,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00.3-Full-empirical-analysis-skill_R -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00.3-Full-empirical-analysis-skill_R -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "00.3-Full-empirical-analysis-skill_R",
@@ -946,7 +900,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-plugins-empirical-analysis-stata-skills-pipeline",
-"priority": 441,
+"priority": 439,
 "category": "community",
 "type": "skill",
 "want": "Full-empirical-analysis-skill-Stata",
@@ -957,7 +911,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@pipeline -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@pipeline -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "pipeline",
@@ -969,7 +923,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-skills-00.2-full-empirical-analysis-skill_stata",
-"priority": 442,
+"priority": 440,
 "category": "community",
 "type": "skill",
 "want": "Full-empirical-analysis-skill-Stata",
@@ -980,7 +934,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00.2-Full-empirical-analysis-skill_Stata -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00.2-Full-empirical-analysis-skill_Stata -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "00.2-Full-empirical-analysis-skill_Stata",
@@ -992,7 +946,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-brycewang-stanford-auto-empirical-research-skills-skills-00-full-empirical-analysis-skill_statspai",
-"priority": 443,
+"priority": 441,
 "category": "community",
 "type": "skill",
 "want": "StatsPAI_skill",
@@ -1003,7 +957,7 @@ window.CCF_SKILLS = [
 "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00-Full-empirical-analysis-skill_StatsPAI -g"
 ],
 "install": "npx skills add brycewang-stanford/Auto-Empirical-Research-Skills@00-Full-empirical-analysis-skill_StatsPAI -g",
-"stars": 3530,
+"stars": 3628,
 "repoUrl": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
 "aliases": [
 "00-Full-empirical-analysis-skill_StatsPAI",
@@ -1015,7 +969,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-butterbase-ai-butterbase-butterbase",
-"priority": 444,
+"priority": 442,
 "category": "community",
 "type": "skill",
 "want": "MCP付きのオープンソースBaaSを使いたい",
@@ -1026,7 +980,7 @@ window.CCF_SKILLS = [
 "npx skills add butterbase-ai/butterbase -g"
 ],
 "install": "npx skills add butterbase-ai/butterbase -g",
-"stars": 3223,
+"stars": 3376,
 "repoUrl": "https://github.com/butterbase-ai/butterbase",
 "aliases": [
 "butterbase",
@@ -1037,215 +991,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-adaptyv",
-"priority": 445,
-"category": "community",
-"type": "skill",
-"want": "adaptyv",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "Cloud laboratory platform for automated protein testing and validation.",
-"trigger": "Use when designing proteins and needing experimental validation including binding assays, expression testing, thermostability measurements, enzyme activity assays, or protein sequence optimization. Also use for submitting experiments via API, tracking experiment status, downloading results, optimizing protein sequences for better expression using computational tools (NetSolP, SoluProt, SolubleMPNN, ESM), or managing protein design workflows with wet-lab validation.",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@adaptyv -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@adaptyv -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"adaptyv",
-"foryourhealth111-pixel",
-"adaptyv",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-aeon",
-"priority": 446,
-"category": "community",
-"type": "skill",
-"want": "aeon",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "This skill should be used for time series machine learning tasks including classification, regression, clustering, forecasting, anomaly detection, segmentation, and similarity search.",
-"trigger": "Use when working with temporal data, sequential patterns, or time-indexed observations requiring specialized algorithms beyond standard ML approaches. Particularly suited for univariate and multivariate time series analysis with scikit-learn compatible APIs.",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@aeon -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@aeon -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"aeon",
-"foryourhealth111-pixel",
-"aeon",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-algorithmic-art",
-"priority": 447,
-"category": "community",
-"type": "skill",
-"want": "algorithmic-art",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration.",
-"trigger": "Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@algorithmic-art -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@algorithmic-art -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"algorithmic-art",
-"foryourhealth111-pixel",
-"algorithmic-art",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-alpha-vantage",
-"priority": 448,
-"category": "community",
-"type": "skill",
-"want": "alpha-vantage",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "Access real-time and historical stock market data, forex rates, cryptocurrency prices, commodities, economic indicators, and 50+ technical indicators via the Alpha Vantage API.",
-"trigger": "Use when fetching stock prices (OHLCV), company fundamentals (income statement, balance sheet, cash flow), earnings, options data, market news/sentiment, insider transactions, GDP, CPI, treasury yields, gold/silver/oil prices, Bitcoin/crypto prices, forex exchange rates, or calculating technical indicators (SMA, EMA, MACD, RSI, Bollinger Bands). Requires a free API key from alphavantage.co.",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@alpha-vantage -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@alpha-vantage -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"alpha-vantage",
-"foryourhealth111-pixel",
-"alpha-vantage",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-lqf_machine_learning_expert_guide",
-"priority": 449,
-"category": "community",
-"type": "skill",
-"want": "LQF_Machine_Learning_Expert_Guide",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "LQF Machine Learning Expert Guide - Routed skill for ML/Statistical Modeling with Critical Discussion Mode.\nTriggers on: machine learning, modeling, prediction, training, classification, regression, clustering, deep learning, neural network, model evaluation, feature engineering, hyperparameter tuning, overfitting, underfitting, baseline, ablation study, critique my approach, review my model, is this a good idea, should I use, what's wrong with, evaluate my solution, challenge my assumptions, discuss my approach\nEngages in critical discussion with minimum 3 rounds of iterative refinement. Challenges both user proposals and own suggestions with fact-based critique. Demands evidence and baselines before accepting solutions.",
-"trigger": "",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@LQF_Machine_Learning_Expert_Guide -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@LQF_Machine_Learning_Expert_Guide -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"LQF_Machine_Learning_Expert_Guide",
-"foryourhealth111-pixel",
-"LQF_Machine_Learning_Expert_Guide",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-.system-skill-creator",
-"priority": 450,
-"category": "community",
-"type": "skill",
-"want": "skill-creator",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "Guide for creating effective skills.",
-"trigger": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@skill-creator -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@skill-creator -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"skill-creator",
-"foryourhealth111-pixel",
-"skill-creator",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-foryourhealth111-pixel-vibe-skills-bundled-skills-.system-skill-installer",
-"priority": 451,
-"category": "community",
-"type": "skill",
-"want": "skill-installer",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path.",
-"trigger": "Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@skill-installer -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@skill-installer -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"skill-installer",
-"foryourhealth111-pixel",
-"skill-installer",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-foryourhealth111-pixel-vibe-skills-vibe-skills",
-"priority": 452,
-"category": "community",
-"type": "skill",
-"want": "vibe",
-"feature": "foryourhealth111-pixel/Vibe-Skills",
-"summary": "Vibe Code Orchestrator (VCO) is a governed runtime entry that freezes requirements, bounds execution, and enforces verification and phase cleanup.",
-"trigger": "",
-"commands": [
-"npx skills add foryourhealth111-pixel/Vibe-Skills@Vibe-Skills -g"
-],
-"install": "npx skills add foryourhealth111-pixel/Vibe-Skills@Vibe-Skills -g",
-"stars": 2981,
-"repoUrl": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-"aliases": [
-"Vibe-Skills",
-"foryourhealth111-pixel",
-"vibe",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-op7418-claude-to-im-skill-claude-to-im-skill",
-"priority": 453,
-"category": "community",
-"type": "skill",
-"want": "Claude Codeのセッションをスマホから使いたい",
-"feature": "op7418/Claude-to-IM-skill",
-"summary": "今のClaude CodeやCodexのセッションをTelegram・Discord・Feishu・QQ・WeChatへ橋渡しし、スマホからClaudeと会話できるようにする。",
-"trigger": "claude-to-imブリッジの設定・起動・停止・診断や、Claudeの返信をメッセージアプリへ転送したいとき。",
-"commands": [
-"npx skills add op7418/Claude-to-IM-skill -g"
-],
-"install": "npx skills add op7418/Claude-to-IM-skill -g",
-"stars": 2868,
-"repoUrl": "https://github.com/op7418/Claude-to-IM-skill",
-"aliases": [
-"Claude-to-IM-skill",
-"op7418",
-"claude-to-im",
-"skill",
-"スキル"
-]
-},
-{
 "id": "skill-stellarlinkco-myclaude-skills-browser",
-"priority": 454,
+"priority": 443,
 "category": "community",
 "type": "skill",
 "want": "Chromeをブラウザ自動操作したい",
@@ -1256,7 +1003,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@browser -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@browser -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "browser",
@@ -1268,7 +1015,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-stellarlinkco-myclaude-skills-codeagent",
-"priority": 455,
+"priority": 444,
 "category": "community",
 "type": "skill",
 "want": "複数のAIバックエンドにコード作業を投げたい",
@@ -1279,7 +1026,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@codeagent -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@codeagent -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "codeagent",
@@ -1291,7 +1038,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-stellarlinkco-myclaude-skills-dev",
-"priority": 456,
+"priority": 445,
 "category": "community",
 "type": "skill",
 "want": "要件定義から実装まで一気通貫で開発したい",
@@ -1302,7 +1049,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@dev -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@dev -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "dev",
@@ -1314,7 +1061,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-stellarlinkco-myclaude-skills-do",
-"priority": 457,
+"priority": 446,
 "category": "community",
 "type": "skill",
 "want": "コードベースを理解しながら機能開発を進めたい",
@@ -1325,7 +1072,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@do -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@do -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "do",
@@ -1337,7 +1084,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-stellarlinkco-myclaude-skills-harness",
-"priority": 458,
+"priority": 447,
 "category": "community",
 "type": "skill",
 "want": "複数セッションにまたがる長時間のエージェント作業を続けたい",
@@ -1348,7 +1095,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@harness -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@harness -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "harness",
@@ -1360,7 +1107,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-stellarlinkco-myclaude-skills-omo",
-"priority": 459,
+"priority": 448,
 "category": "community",
 "type": "skill",
 "want": "複数エージェントでコード調査から修正まで進めたい",
@@ -1371,7 +1118,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@omo -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@omo -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "omo",
@@ -1383,7 +1130,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-stellarlinkco-myclaude-skills-product-requirements",
-"priority": 460,
+"priority": 449,
 "category": "community",
 "type": "skill",
 "want": "要件を整理してPRDを作りたい",
@@ -1394,7 +1141,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@product-requirements -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@product-requirements -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "product-requirements",
@@ -1406,7 +1153,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-stellarlinkco-myclaude-skills-prototype-prompt-generator",
-"priority": 461,
+"priority": 450,
 "category": "community",
 "type": "skill",
 "want": "UI/UXプロトタイプ用のプロンプトを作りたい",
@@ -1417,7 +1164,7 @@ window.CCF_SKILLS = [
 "npx skills add stellarlinkco/myclaude@prototype-prompt-generator -g"
 ],
 "install": "npx skills add stellarlinkco/myclaude@prototype-prompt-generator -g",
-"stars": 2750,
+"stars": 2747,
 "repoUrl": "https://github.com/stellarlinkco/myclaude",
 "aliases": [
 "prototype-prompt-generator",
@@ -1429,7 +1176,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-leilei926524-tech-anti-distill-anti-distill",
-"priority": 462,
+"priority": 451,
 "category": "community",
 "type": "skill",
 "want": "提出するSkillから核心のノウハウを抜いておきたい",
@@ -1440,7 +1187,7 @@ window.CCF_SKILLS = [
 "npx skills add leilei926524-tech/anti-distill -g"
 ],
 "install": "npx skills add leilei926524-tech/anti-distill -g",
-"stars": 2387,
+"stars": 2406,
 "repoUrl": "https://github.com/leilei926524-tech/anti-distill",
 "aliases": [
 "anti-distill",
@@ -1452,7 +1199,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-op7418-youtube-clipper-skill-youtube-clipper-skill",
-"priority": 463,
+"priority": 452,
 "category": "community",
 "type": "skill",
 "want": "YouTube動画を切り抜いて字幕付き短尺にしたい",
@@ -1463,7 +1210,7 @@ window.CCF_SKILLS = [
 "npx skills add op7418/Youtube-clipper-skill -g"
 ],
 "install": "npx skills add op7418/Youtube-clipper-skill -g",
-"stars": 2155,
+"stars": 2170,
 "repoUrl": "https://github.com/op7418/Youtube-clipper-skill",
 "aliases": [
 "Youtube-clipper-skill",
@@ -1475,7 +1222,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-upstash-ratelimit-js-skills",
-"priority": 464,
+"priority": 453,
 "category": "community",
 "type": "skill",
 "want": "Upstashでレート制限を実装したい",
@@ -1498,7 +1245,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-zakirkun-guardian-cli-guardian-cli",
-"priority": 465,
+"priority": 454,
 "category": "community",
 "type": "skill",
 "want": "ペネトレーションテストを自動で回したい",
@@ -1509,7 +1256,7 @@ window.CCF_SKILLS = [
 "npx skills add zakirkun/guardian-cli -g"
 ],
 "install": "npx skills add zakirkun/guardian-cli -g",
-"stars": 1854,
+"stars": 1859,
 "repoUrl": "https://github.com/zakirkun/guardian-cli",
 "aliases": [
 "guardian-cli",
@@ -1521,7 +1268,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-youmind-openlab-nano-banana-pro-prompts-recommend-skill-nano-banana-pro-prompts-recommend-skill",
-"priority": 466,
+"priority": 455,
 "category": "community",
 "type": "skill",
 "want": "画像生成に合うプロンプトを見つけたい",
@@ -1532,7 +1279,7 @@ window.CCF_SKILLS = [
 "npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g"
 ],
 "install": "npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g",
-"stars": 1834,
+"stars": 1838,
 "repoUrl": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
 "aliases": [
 "nano-banana-pro-prompts-recommend-skill",
@@ -1543,8 +1290,31 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-daymade-claude-code-skills-daymade-audio-asr-transcribe-to-text",
+"priority": 456,
+"category": "community",
+"type": "skill",
+"want": "asr-transcribe-to-text",
+"feature": "daymade/claude-code-skills",
+"summary": "Transcribe audio/video to speaker-labeled text — who-said-what by default, plain-text opt-out; MLX-local on Apple Silicon or remote; local files, media URLs. Use for transcribing recordings/podcasts/lectures/meetings, ASR, speech-to-text, 转录, 语音转文字, 录音转文字, speaker diarization/说话人分离/识别/谁在说话, timestamps 字幕/时间戳/音画对齐, CAM++ voiceprint ID. This skill ALSO owns audio PREPROCESSING for ASR as a first-class trigger, even without transcription: convert any audio/video into an ASR-ready file (转换成适合 ASR 的格式, 转格式, convert/prepare audio for ASR, 音频预处理), downsample to 16kHz mono 16-bit (降采样, 重采样, 单声道, 归一化), merge multi-segment recorder dumps (多段合并/拼接, DJI TX01/TX02), transcode to small M4A + pitch-preserved speedup to cut metered-ASR billed minutes (转 M4A, 压缩上传, 加速, 1.3x, 飞书妙记/Feishu Minutes). Trigger even when it looks like a trivial one-line ffmpeg — the skill owns sample-rate/bit-depth/channel, merge-order, speed-vs-WER, format choices + a blessed prepare_asr_input.py.",
+"trigger": "",
+"commands": [
+"npx skills add daymade/claude-code-skills@asr-transcribe-to-text -g"
+],
+"install": "npx skills add daymade/claude-code-skills@asr-transcribe-to-text -g",
+"stars": 1366,
+"repoUrl": "https://github.com/daymade/claude-code-skills",
+"aliases": [
+"asr-transcribe-to-text",
+"daymade",
+"asr-transcribe-to-text",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-daymade-claude-code-skills-auto-repo-setup",
-"priority": 467,
+"priority": 457,
 "category": "community",
 "type": "skill",
 "want": "auto-repo-setup",
@@ -1555,88 +1325,42 @@ window.CCF_SKILLS = [
 "npx skills add daymade/claude-code-skills@auto-repo-setup -g"
 ],
 "install": "npx skills add daymade/claude-code-skills@auto-repo-setup -g",
-"stars": 1348,
+"stars": 1366,
 "repoUrl": "https://github.com/daymade/claude-code-skills",
 "aliases": [
 "auto-repo-setup",
 "daymade",
 "auto-repo-setup",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-daymade-claude-code-skills-benchmark-due-diligence",
-"priority": 468,
-"category": "community",
-"type": "skill",
-"want": "benchmark-due-diligence",
-"feature": "daymade/claude-code-skills",
-"summary": "Runs adversarial due-diligence on a benchmark the user envies — a founder, KOL, company, or product whose claimed success looks inflated — splitting marketing bubble from real signal, then mapping the validated playbook onto the user's own resources.",
-"trigger": "Use whenever the user wants to 尽调/对标/拆解 a competitor or role-model, 抄/偷师 someone's playbook, suspects 水分/泡沫 in their claims (#1 on Product Hunt, 0-to-1M users, funding, 估值几个亿), asks whether wins are 真本事 vs 运气/时机, or says someone is 太成功了/crushing it and wants the real story — even if they never say 尽调. Prefer over deep-research for debunking inflated claims and extracting a replicable playbook rather than a neutral briefing.",
-"commands": [
-"npx skills add daymade/claude-code-skills@benchmark-due-diligence -g"
-],
-"install": "npx skills add daymade/claude-code-skills@benchmark-due-diligence -g",
-"stars": 1348,
-"repoUrl": "https://github.com/daymade/claude-code-skills",
-"aliases": [
-"benchmark-due-diligence",
-"daymade",
-"benchmark-due-diligence",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-daymade-claude-code-skills-bilibili-source",
-"priority": 469,
+"priority": 458,
 "category": "community",
 "type": "skill",
 "want": "bilibili-source",
 "feature": "daymade/claude-code-skills",
-"summary": "Fetch comprehensive, login-free data for any Bilibili (B站) video — title, UP name and follower count, publish date, partition, tags, per-part cids, live stats (view, like, coin, favorite, share, reply, danmaku), and full danmaku (bullet-comment) text. Use this skill whenever working with a Bilibili video and needing real, citable numbers or metadata — ingesting a Bilibili source into a knowledge base, analyzing why a video performed, verifying a creator's claimed metrics, building a case study, or any time a Bilibili view/like/favorite count is about to be written into a document — fetch it, never hand-type or estimate it. Accepts BVID, av numbers, b23.tv short links, or full URLs. Subtitles are also covered but require the user's Bilibili login.",
+"summary": "Fetch comprehensive, login-free data for any Bilibili (B站) video — title, UP name and follower count, publish date, partition, tags, per-part cids, live stats (view, like, coin, favorite, share, reply, danmaku), and full danmaku (bullet-comment) text. Use this skill whenever working with a Bilibili video and needing real, citable numbers or metadata — ingesting a Bilibili source into a knowledge base, analyzing why a video performed, verifying a creator's claimed metrics, building a case study, or any time a Bilibili view/like/favorite count is about to be written into a document — fetch it, never hand-type or estimate it. Accepts BVID, av numbers, b23.tv short links, or full URLs. Subtitles and favorites-folder (收藏夹) enumeration are also covered but require the user's Bilibili login.",
 "trigger": "",
 "commands": [
 "npx skills add daymade/claude-code-skills@bilibili-source -g"
 ],
 "install": "npx skills add daymade/claude-code-skills@bilibili-source -g",
-"stars": 1348,
+"stars": 1366,
 "repoUrl": "https://github.com/daymade/claude-code-skills",
 "aliases": [
 "bilibili-source",
 "daymade",
 "bilibili-source",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-daymade-claude-code-skills-capture-screen",
-"priority": 470,
-"category": "community",
-"type": "skill",
-"want": "capture-screen",
-"feature": "daymade/claude-code-skills",
-"summary": "Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture with screencapture.",
-"trigger": "Use when automating screenshots, capturing application windows for documentation, or building multi-shot visual workflows.",
-"commands": [
-"npx skills add daymade/claude-code-skills@capture-screen -g"
-],
-"install": "npx skills add daymade/claude-code-skills@capture-screen -g",
-"stars": 1348,
-"repoUrl": "https://github.com/daymade/claude-code-skills",
-"aliases": [
-"capture-screen",
-"daymade",
-"capture-screen",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-daymade-claude-code-skills-cli-demo-generator",
-"priority": 471,
+"priority": 459,
 "category": "community",
 "type": "skill",
 "want": "cli-demo-generator",
@@ -1647,7 +1371,7 @@ window.CCF_SKILLS = [
 "npx skills add daymade/claude-code-skills@cli-demo-generator -g"
 ],
 "install": "npx skills add daymade/claude-code-skills@cli-demo-generator -g",
-"stars": 1348,
+"stars": 1366,
 "repoUrl": "https://github.com/daymade/claude-code-skills",
 "aliases": [
 "cli-demo-generator",
@@ -1659,7 +1383,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-daymade-claude-code-skills-cloudflare-troubleshooting",
-"priority": 472,
+"priority": 460,
 "category": "community",
 "type": "skill",
 "want": "cloudflare-troubleshooting",
@@ -1670,42 +1394,19 @@ window.CCF_SKILLS = [
 "npx skills add daymade/claude-code-skills@cloudflare-troubleshooting -g"
 ],
 "install": "npx skills add daymade/claude-code-skills@cloudflare-troubleshooting -g",
-"stars": 1348,
+"stars": 1366,
 "repoUrl": "https://github.com/daymade/claude-code-skills",
 "aliases": [
 "cloudflare-troubleshooting",
 "daymade",
 "cloudflare-troubleshooting",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-daymade-claude-code-skills-codex-image-gallery",
-"priority": 473,
-"category": "community",
-"type": "skill",
-"want": "codex-image-gallery",
-"feature": "daymade/claude-code-skills",
-"summary": "Start or reuse a self-contained local web gallery for browsing Codex-generated images.",
-"trigger": "Use when the user asks to browse Codex generated images, open a local image gallery, inspect ~/.codex/generated_images, view a Codex image output folder, or browse image files produced by Codex.",
-"commands": [
-"npx skills add daymade/claude-code-skills@codex-image-gallery -g"
-],
-"install": "npx skills add daymade/claude-code-skills@codex-image-gallery -g",
-"stars": 1348,
-"repoUrl": "https://github.com/daymade/claude-code-skills",
-"aliases": [
-"codex-image-gallery",
-"daymade",
-"codex-image-gallery",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-daymade-claude-code-skills-competitors-analysis",
-"priority": 474,
+"priority": 461,
 "category": "community",
 "type": "skill",
 "want": "competitors-analysis",
@@ -1716,7 +1417,7 @@ window.CCF_SKILLS = [
 "npx skills add daymade/claude-code-skills@competitors-analysis -g"
 ],
 "install": "npx skills add daymade/claude-code-skills@competitors-analysis -g",
-"stars": 1348,
+"stars": 1366,
 "repoUrl": "https://github.com/daymade/claude-code-skills",
 "aliases": [
 "competitors-analysis",
@@ -1727,8 +1428,54 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-daymade-claude-code-skills-daymade-audio-meeting-minutes-taker",
+"priority": 462,
+"category": "community",
+"type": "skill",
+"want": "meeting-minutes-taker",
+"feature": "daymade/claude-code-skills",
+"summary": "Transforms raw meeting transcripts into high-fidelity, structured meeting minutes (notes / summaries).",
+"trigger": "Use when (1) a meeting transcript is provided and meeting minutes, notes, or a summary are requested; (2) multiple versions of minutes must be merged without losing content; (3) existing minutes need review against the original transcript for missing items; (4) the transcript has anonymous speakers like \"Speaker 1/2/3\" or \"发言人1\" that need identifying (optionally mapped via a context.md team directory). Triggers on 会议纪要 / 会议记录 / 整理纪要 / 妙记转纪要, \"write meeting minutes\", \"summarize this meeting\", \"merge these minutes\", \"what's missing from these notes\". For fixing ASR/STT recognition errors in the raw transcript first, use transcript-fixer; this skill structures clean transcripts into minutes.",
+"commands": [
+"npx skills add daymade/claude-code-skills@meeting-minutes-taker -g"
+],
+"install": "npx skills add daymade/claude-code-skills@meeting-minutes-taker -g",
+"stars": 1366,
+"repoUrl": "https://github.com/daymade/claude-code-skills",
+"aliases": [
+"meeting-minutes-taker",
+"daymade",
+"meeting-minutes-taker",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-daymade-claude-code-skills-daymade-audio-stepfun-asr",
+"priority": 463,
+"category": "community",
+"type": "skill",
+"want": "stepfun-asr",
+"feature": "daymade/claude-code-skills",
+"summary": "Transcribe audio with StepFun's stepaudio-2.5-asr — an SSE endpoint (NOT /v1/audio/transcriptions) with 32K context, ~85-101x RTF on long audio, and a single-call ceiling around 30 minutes (no client-side chunking).",
+"trigger": "Use when transcribing Chinese / English audio with StepFun, when long-form recordings (5-30 min) need to land in one request, when migrating from step-asr / step-asr-1.1, or when hitting the misleading `model stepaudio-2.5-asr not supported` error (which actually means wrong endpoint). Triggers on 阶跃 ASR, StepFun ASR, stepaudio-2.5-asr, 转录, 语音识别, 长音频转写, 语音转文字. For TTS with the sibling stepaudio-2.5-tts model, use the stepfun-tts skill instead.",
+"commands": [
+"npx skills add daymade/claude-code-skills@stepfun-asr -g"
+],
+"install": "npx skills add daymade/claude-code-skills@stepfun-asr -g",
+"stars": 1366,
+"repoUrl": "https://github.com/daymade/claude-code-skills",
+"aliases": [
+"stepfun-asr",
+"daymade",
+"stepfun-asr",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-better-auth-better-icons-skills",
-"priority": 475,
+"priority": 464,
 "category": "community",
 "type": "skill",
 "want": "better-icons",
@@ -1739,7 +1486,7 @@ window.CCF_SKILLS = [
 "npx skills add better-auth/better-icons -g"
 ],
 "install": "npx skills add better-auth/better-icons -g",
-"stars": 1254,
+"stars": 1257,
 "repoUrl": "https://github.com/better-auth/better-icons",
 "aliases": [
 "skills",
@@ -1750,31 +1497,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-alchaincyf-x-mentor-skill-x-mentor-skill",
-"priority": 476,
-"category": "community",
-"type": "skill",
-"want": "x-mastery-mentor",
-"feature": "alchaincyf/x-mentor-skill",
-"summary": "$10K/hr级X/Twitter运营导师。基于Nicolas Cole、Dickie Bush、Sahil Bloom、Justin Welsh、\nDan Koe、Alex Hormozi六位顶级创作者的方法论 + X开源算法深度分析 + AI/科技赛道专精策略，\n提炼6个核心心智模型、10条决策启发式、完整的选题-写作-增长操作手册。\n通用方法论为底座，AI/科技赛道为专精。\n当用户提到「X运营」「推特」「Twitter」「怎么写推文」「怎么涨粉」「X策略」「推特选题」「tweet」「thread」「X算法」时使用。\n即使用户只是说「这条推文怎么写」「帮我想个X内容」「推特增长」「发推」「write a tweet」「X account」「grow on X」也应触发。",
-"trigger": "",
-"commands": [
-"npx skills add alchaincyf/x-mentor-skill -g"
-],
-"install": "npx skills add alchaincyf/x-mentor-skill -g",
-"stars": 1175,
-"repoUrl": "https://github.com/alchaincyf/x-mentor-skill",
-"aliases": [
-"x-mentor-skill",
-"alchaincyf",
-"x-mastery-mentor",
-"skill",
-"スキル"
-]
-},
-{
 "id": "skill-itsmostafa-aws-agent-skills-skills-api-gateway",
-"priority": 477,
+"priority": 465,
 "category": "community",
 "type": "skill",
 "want": "api-gateway",
@@ -1785,7 +1509,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@api-gateway -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@api-gateway -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "api-gateway",
@@ -1797,7 +1521,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-itsmostafa-aws-agent-skills-skills-bedrock",
-"priority": 478,
+"priority": 466,
 "category": "community",
 "type": "skill",
 "want": "bedrock",
@@ -1808,7 +1532,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@bedrock -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@bedrock -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "bedrock",
@@ -1820,7 +1544,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-itsmostafa-aws-agent-skills-skills-cloudformation",
-"priority": 479,
+"priority": 467,
 "category": "community",
 "type": "skill",
 "want": "cloudformation",
@@ -1831,7 +1555,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@cloudformation -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@cloudformation -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "cloudformation",
@@ -1843,7 +1567,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-itsmostafa-aws-agent-skills-skills-cloudwatch",
-"priority": 480,
+"priority": 468,
 "category": "community",
 "type": "skill",
 "want": "cloudwatch",
@@ -1854,7 +1578,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@cloudwatch -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@cloudwatch -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "cloudwatch",
@@ -1866,7 +1590,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-itsmostafa-aws-agent-skills-skills-cognito",
-"priority": 481,
+"priority": 469,
 "category": "community",
 "type": "skill",
 "want": "cognito",
@@ -1877,7 +1601,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@cognito -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@cognito -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "cognito",
@@ -1889,7 +1613,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-itsmostafa-aws-agent-skills-skills-dynamodb",
-"priority": 482,
+"priority": 470,
 "category": "community",
 "type": "skill",
 "want": "dynamodb",
@@ -1900,7 +1624,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@dynamodb -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@dynamodb -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "dynamodb",
@@ -1912,7 +1636,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-itsmostafa-aws-agent-skills-skills-ec2",
-"priority": 483,
+"priority": 471,
 "category": "community",
 "type": "skill",
 "want": "ec2",
@@ -1923,7 +1647,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@ec2 -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@ec2 -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "ec2",
@@ -1935,7 +1659,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-itsmostafa-aws-agent-skills-skills-ecs",
-"priority": 484,
+"priority": 472,
 "category": "community",
 "type": "skill",
 "want": "ecs",
@@ -1946,7 +1670,7 @@ window.CCF_SKILLS = [
 "npx skills add itsmostafa/aws-agent-skills@ecs -g"
 ],
 "install": "npx skills add itsmostafa/aws-agent-skills@ecs -g",
-"stars": 1147,
+"stars": 1150,
 "repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
 "aliases": [
 "ecs",
@@ -1957,8 +1681,192 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-spacezephyr-creator-buddy-gzh-skills-baokuan-article-analysis",
+"priority": 473,
+"category": "community",
+"type": "skill",
+"want": "baokuan-article-analysis",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "Fetch and analyze WeChat Official Account hot articles / 公众号爆款文章 by sector or keywords.",
+"trigger": "Use when the user asks for 爆款文章分析, 赛道爆款, 公众号爆款数据, reading counts, likes, shares, comments, title patterns, writing style, 爆款原因分析, or writing references for content creation.",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@baokuan-article-analysis -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@baokuan-article-analysis -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"baokuan-article-analysis",
+"SpaceZephyr",
+"baokuan-article-analysis",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-spacezephyr-creator-buddy-gzh-skills-baokuan-title-generator",
+"priority": 474,
+"category": "community",
+"type": "skill",
+"want": "baokuan-title-generator",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "科技/AI/互联网领域的公众号 10 万+ 爆款标题生成器。输入一篇文章、一段内容或一个主题，先建内容简报，再按多种方法产出多个候选标题，逐个评分、标风险、按用途分角色推荐，并给 A/B 测试建议。当用户说\"起标题\"\"想个爆款标题\"\"这篇文章叫什么好\"\"标题优化\"\"标题改写\"\"多组标题\"\"标题评分\"\"10万+标题\"时触发。方法论提炼自 100 篇真实科技类爆文标题。",
+"trigger": "",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@baokuan-title-generator -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@baokuan-title-generator -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"baokuan-title-generator",
+"SpaceZephyr",
+"baokuan-title-generator",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-spacezephyr-creator-buddy-creator-buddy",
+"priority": 475,
+"category": "community",
+"type": "skill",
+"want": "creator-buddy",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "创作者全域内容搜索总控 Skill。用户发送平台名+关键词、平台链接，或要求分析博主、文章风格、热度、点赞、收藏、评论、爆款原因、选题方向时触发；根据平台和任务自动路由到小红书热门笔记、全域内容搜索、公众号爆款搜索、公众号赛道分析等分支 Skill。",
+"trigger": "",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@creator-buddy -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@creator-buddy -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"creator-buddy",
+"SpaceZephyr",
+"creator-buddy",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-spacezephyr-creator-buddy-gzh-skills-global-content-search",
+"priority": 476,
+"category": "community",
+"type": "skill",
+"want": "global-content-search",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "全域内容搜索｜当提到小红书/B站/抖音关键词搜索、笔记/视频详情、评论、博主/UP主作品监控时使用。优先基于 Agent Reach / OpenCLI / bili-cli / 公开只读接口访问；Agent Reach 不可用时，小红书可用 Guaikei API 作为最后兜底。",
+"trigger": "",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@global-content-search -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@global-content-search -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"global-content-search",
+"SpaceZephyr",
+"global-content-search",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-explosive-content-detector",
+"priority": 477,
+"category": "community",
+"type": "skill",
+"want": "gzh-explosive-content-detector",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "为公众号文章创作打造的专业数据洞察工具。全网持续收录每日爆款文章，收录依据：低粉高阅读、阅读靠前、数据增长中、原创靠前，助力号主获取数据参考。",
+"trigger": "",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@gzh-explosive-content-detector -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@gzh-explosive-content-detector -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"gzh-explosive-content-detector",
+"SpaceZephyr",
+"gzh-explosive-content-detector",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-longform-writer",
+"priority": 478,
+"category": "community",
+"type": "skill",
+"want": "gzh-longform-writer",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "公众号长文写作（1500–4000 字）。先诊断作者手上已有什么（一个念头 / 一堆素材 / 半篇草稿 / 一份大纲 / 一篇不满意的成稿），再路由到对应的六种写法之一，产出成稿并过公众号专属质检。当用户说\"写篇公众号\"\"帮我写文章\"\"这个主题怎么写\"\"我有一堆素材不知道怎么组织\"\"帮我扩写\"\"这篇改一下\"\"写不下去了\"\"长文\"\"深度文\"时触发。",
+"trigger": "",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@gzh-longform-writer -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@gzh-longform-writer -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"gzh-longform-writer",
+"SpaceZephyr",
+"gzh-longform-writer",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-positioning",
+"priority": 479,
+"category": "community",
+"type": "skill",
+"want": "gzh-positioning",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "公众号定位分析 + 三件套设计（账号简介 / 关注后自动回复 / 自定义菜单）。先通过分层访谈和历史文章反推，收敛出一句话定位，再派生出可直接粘贴进公众号后台的三份内容，全部带字数校验。当用户说\"公众号定位\"\"账号简介怎么写\"\"功能介绍\"\"公众号介绍\"\"关注后回复\"\"欢迎语\"\"自动回复\"\"菜单怎么设计\"\"菜单栏\"\"公众号装修\"\"新号怎么起步\"\"号没人关注\"时触发。",
+"trigger": "",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@gzh-positioning -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@gzh-positioning -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"gzh-positioning",
+"SpaceZephyr",
+"gzh-positioning",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-short-post",
+"priority": 480,
+"category": "community",
+"type": "skill",
+"want": "gzh-short-post",
+"feature": "SpaceZephyr/creator-buddy",
+"summary": "公众号短文写作（1000 字以内，纯文字不配图）。把一个观察、一次实测、一段思考写成短平快的推送，或把长文/素材压成短文。核心是一套风格规则：第一人称不说教、去 AI 腔、靠分段做节奏、收尾落到具体画面。当用户说\"写个短的\"\"公众号短文\"\"一千字以内\"\"随手写一条\"\"这事写个短篇\"\"压成短文\"\"不配图那种\"时触发。",
+"trigger": "",
+"commands": [
+"npx skills add SpaceZephyr/creator-buddy@gzh-short-post -g"
+],
+"install": "npx skills add SpaceZephyr/creator-buddy@gzh-short-post -g",
+"stars": 1072,
+"repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
+"aliases": [
+"gzh-short-post",
+"SpaceZephyr",
+"gzh-short-post",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-upstash-redis-js-skills",
-"priority": 485,
+"priority": 481,
 "category": "community",
 "type": "skill",
 "want": "redis-js",
@@ -1969,7 +1877,7 @@ window.CCF_SKILLS = [
 "npx skills add upstash/redis-js -g"
 ],
 "install": "npx skills add upstash/redis-js -g",
-"stars": 968,
+"stars": 967,
 "repoUrl": "https://github.com/upstash/redis-js",
 "aliases": [
 "skills",
@@ -1980,8 +1888,31 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-feicaiclub-video-spec-builder-video-spec-builder",
+"priority": 482,
+"category": "community",
+"type": "skill",
+"want": "video-spec-builder",
+"feature": "feicaiclub/video-spec-builder",
+"summary": "当用户说想做一个视频、宣传片、产品演示、动画短片、抖音/YouTube 内容，或者说要改分镜、调节奏、换镜头、调字幕、加配音、改转场时使用。通过苏格拉底式追问收集视频需求，主动激发渲染层的全部能力（TTS / 字幕 / 3D / shader / 音频反应等），输出标准化的 video-spec.md 用于渲染。",
+"trigger": "",
+"commands": [
+"npx skills add feicaiclub/video-spec-builder -g"
+],
+"install": "npx skills add feicaiclub/video-spec-builder -g",
+"stars": 939,
+"repoUrl": "https://github.com/feicaiclub/video-spec-builder",
+"aliases": [
+"video-spec-builder",
+"feicaiclub",
+"video-spec-builder",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-sethgammon-citadel-skills-architect",
-"priority": 486,
+"priority": 483,
 "category": "community",
 "type": "skill",
 "want": "architect",
@@ -1992,7 +1923,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@architect -g"
 ],
 "install": "npx skills add SethGammon/Citadel@architect -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "architect",
@@ -2004,7 +1935,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sethgammon-citadel-skills-archon",
-"priority": 487,
+"priority": 484,
 "category": "community",
 "type": "skill",
 "want": "archon",
@@ -2015,7 +1946,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@archon -g"
 ],
 "install": "npx skills add SethGammon/Citadel@archon -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "archon",
@@ -2027,7 +1958,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sethgammon-citadel-skills-ascii-diagram",
-"priority": 488,
+"priority": 485,
 "category": "community",
 "type": "skill",
 "want": "ascii-diagram",
@@ -2038,7 +1969,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@ascii-diagram -g"
 ],
 "install": "npx skills add SethGammon/Citadel@ascii-diagram -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "ascii-diagram",
@@ -2050,7 +1981,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sethgammon-citadel-skills-autopilot",
-"priority": 489,
+"priority": 486,
 "category": "community",
 "type": "skill",
 "want": "autopilot",
@@ -2061,7 +1992,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@autopilot -g"
 ],
 "install": "npx skills add SethGammon/Citadel@autopilot -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "autopilot",
@@ -2073,7 +2004,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sethgammon-citadel-skills-cost",
-"priority": 490,
+"priority": 487,
 "category": "community",
 "type": "skill",
 "want": "cost",
@@ -2084,7 +2015,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@cost -g"
 ],
 "install": "npx skills add SethGammon/Citadel@cost -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "cost",
@@ -2096,7 +2027,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sethgammon-citadel-skills-create-app",
-"priority": 491,
+"priority": 488,
 "category": "community",
 "type": "skill",
 "want": "create-app",
@@ -2107,7 +2038,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@create-app -g"
 ],
 "install": "npx skills add SethGammon/Citadel@create-app -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "create-app",
@@ -2119,7 +2050,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sethgammon-citadel-skills-create-skill",
-"priority": 492,
+"priority": 489,
 "category": "community",
 "type": "skill",
 "want": "create-skill",
@@ -2130,7 +2061,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@create-skill -g"
 ],
 "install": "npx skills add SethGammon/Citadel@create-skill -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "create-skill",
@@ -2142,7 +2073,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sethgammon-citadel-skills-daemon",
-"priority": 493,
+"priority": 490,
 "category": "community",
 "type": "skill",
 "want": "daemon",
@@ -2153,7 +2084,7 @@ window.CCF_SKILLS = [
 "npx skills add SethGammon/Citadel@daemon -g"
 ],
 "install": "npx skills add SethGammon/Citadel@daemon -g",
-"stars": 910,
+"stars": 912,
 "repoUrl": "https://github.com/SethGammon/Citadel",
 "aliases": [
 "daemon",
@@ -2165,7 +2096,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-raphaelsalaja-userinterface-wiki-skills",
-"priority": 494,
+"priority": 491,
 "category": "community",
 "type": "skill",
 "want": "userinterface-wiki",
@@ -2176,7 +2107,7 @@ window.CCF_SKILLS = [
 "npx skills add raphaelsalaja/userinterface-wiki -g"
 ],
 "install": "npx skills add raphaelsalaja/userinterface-wiki -g",
-"stars": 877,
+"stars": 884,
 "repoUrl": "https://github.com/raphaelsalaja/userinterface-wiki",
 "aliases": [
 "skills",
@@ -2188,7 +2119,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-bhanunamikaze-agentic-seo-skill-agentic-seo-skill",
-"priority": 495,
+"priority": 492,
 "category": "community",
 "type": "skill",
 "want": "seo",
@@ -2199,7 +2130,7 @@ window.CCF_SKILLS = [
 "npx skills add Bhanunamikaze/Agentic-SEO-Skill -g"
 ],
 "install": "npx skills add Bhanunamikaze/Agentic-SEO-Skill -g",
-"stars": 865,
+"stars": 880,
 "repoUrl": "https://github.com/Bhanunamikaze/Agentic-SEO-Skill",
 "aliases": [
 "Agentic-SEO-Skill",
@@ -2211,7 +2142,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-affiliate-marketing-strategy",
-"priority": 496,
+"priority": 493,
 "category": "community",
 "type": "skill",
 "want": "affiliate-marketing-strategy",
@@ -2222,7 +2153,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@affiliate-marketing-strategy -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@affiliate-marketing-strategy -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "affiliate-marketing-strategy",
@@ -2234,7 +2165,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-api-monitoring",
-"priority": 497,
+"priority": 494,
 "category": "community",
 "type": "skill",
 "want": "api-monitoring",
@@ -2245,7 +2176,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@api-monitoring -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@api-monitoring -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "api-monitoring",
@@ -2257,7 +2188,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-monitoring",
-"priority": 498,
+"priority": 495,
 "category": "community",
 "type": "skill",
 "want": "brand-monitoring",
@@ -2268,7 +2199,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-monitoring -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-monitoring -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-monitoring",
@@ -2280,7 +2211,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-amazon",
-"priority": 499,
+"priority": 496,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-amazon",
@@ -2291,7 +2222,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-amazon -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-amazon -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-amazon",
@@ -2303,7 +2234,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-ebay",
-"priority": 500,
+"priority": 497,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-ebay",
@@ -2314,7 +2245,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-ebay -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-ebay -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-ebay",
@@ -2326,7 +2257,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-shopify",
-"priority": 501,
+"priority": 498,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-shopify",
@@ -2337,7 +2268,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-shopify -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-shopify -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-shopify",
@@ -2349,7 +2280,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-tiktok",
-"priority": 502,
+"priority": 499,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-tiktok",
@@ -2360,7 +2291,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-tiktok -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-tiktok -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-tiktok",
@@ -2372,7 +2303,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-walmart",
-"priority": 503,
+"priority": 500,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-walmart",
@@ -2383,7 +2314,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-walmart -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-walmart -g",
-"stars": 782,
+"stars": 829,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-walmart",
@@ -2395,7 +2326,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-do1e-mijia-api-skills",
-"priority": 504,
+"priority": 501,
 "category": "community",
 "type": "skill",
 "want": "mijia-api",
@@ -2406,7 +2337,7 @@ window.CCF_SKILLS = [
 "npx skills add Do1e/mijia-api -g"
 ],
 "install": "npx skills add Do1e/mijia-api -g",
-"stars": 744,
+"stars": 760,
 "repoUrl": "https://github.com/Do1e/mijia-api",
 "aliases": [
 "skills",
@@ -2418,7 +2349,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-denissergeevitch-repo-task-proof-loop-repo-task-proof-loop",
-"priority": 505,
+"priority": 502,
 "category": "community",
 "type": "skill",
 "want": "repo-task-proof-loop",
@@ -2429,7 +2360,7 @@ window.CCF_SKILLS = [
 "npx skills add DenisSergeevitch/repo-task-proof-loop -g"
 ],
 "install": "npx skills add DenisSergeevitch/repo-task-proof-loop -g",
-"stars": 720,
+"stars": 726,
 "repoUrl": "https://github.com/DenisSergeevitch/repo-task-proof-loop",
 "aliases": [
 "repo-task-proof-loop",
@@ -2441,7 +2372,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta",
-"priority": 506,
+"priority": 503,
 "category": "community",
 "type": "skill",
 "want": "neta",
@@ -2452,7 +2383,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta",
@@ -2464,7 +2395,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta-adventure",
-"priority": 507,
+"priority": 504,
 "category": "community",
 "type": "skill",
 "want": "neta-adventure",
@@ -2475,7 +2406,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta-adventure -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta-adventure -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta-adventure",
@@ -2487,7 +2418,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta-character",
-"priority": 508,
+"priority": 505,
 "category": "community",
 "type": "skill",
 "want": "neta-character",
@@ -2498,7 +2429,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta-character -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta-character -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta-character",
@@ -2510,7 +2441,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta-community",
-"priority": 509,
+"priority": 506,
 "category": "community",
 "type": "skill",
 "want": "neta-community",
@@ -2521,7 +2452,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta-community -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta-community -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta-community",
@@ -2533,7 +2464,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta-creative",
-"priority": 510,
+"priority": 507,
 "category": "community",
 "type": "skill",
 "want": "neta-creative",
@@ -2544,7 +2475,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta-creative -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta-creative -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta-creative",
@@ -2556,7 +2487,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta-elementum",
-"priority": 511,
+"priority": 508,
 "category": "community",
 "type": "skill",
 "want": "neta-elementum",
@@ -2567,7 +2498,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta-elementum -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta-elementum -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta-elementum",
@@ -2579,7 +2510,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta-space",
-"priority": 512,
+"priority": 509,
 "category": "community",
 "type": "skill",
 "want": "neta-space",
@@ -2590,7 +2521,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta-space -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta-space -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta-space",
@@ -2602,7 +2533,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-talesofai-neta-skills-skills-neta-suggest",
-"priority": 513,
+"priority": 510,
 "category": "community",
 "type": "skill",
 "want": "neta-suggest",
@@ -2613,7 +2544,7 @@ window.CCF_SKILLS = [
 "npx skills add talesofai/neta-skills@neta-suggest -g"
 ],
 "install": "npx skills add talesofai/neta-skills@neta-suggest -g",
-"stars": 717,
+"stars": 719,
 "repoUrl": "https://github.com/talesofai/neta-skills",
 "aliases": [
 "neta-suggest",
@@ -2624,100 +2555,8 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-inline-chat-inline-plugins-inline-skills-inline",
-"priority": 514,
-"category": "community",
-"type": "skill",
-"want": "inline",
-"feature": "inline-chat/inline",
-"summary": "Find, read, summarize, and act in Inline work chats through Inline MCP, the Inline CLI, or a local-agent bridge. Use for Inline spaces, people, DMs, threads, unread messages, history, search, files, creating conversations, sending messages, or installing, authenticating, and operating the Inline CLI. Do not use for developing the Inline codebase, administering production infrastructure, or unrelated chat services.",
-"trigger": "",
-"commands": [
-"npx skills add inline-chat/inline@inline -g"
-],
-"install": "npx skills add inline-chat/inline@inline -g",
-"stars": 681,
-"repoUrl": "https://github.com/inline-chat/inline",
-"aliases": [
-"inline",
-"inline-chat",
-"inline",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inline-chat-inline-skills-inline",
-"priority": 515,
-"category": "community",
-"type": "skill",
-"want": "inline",
-"feature": "inline-chat/inline",
-"summary": "Find, read, summarize, and act in Inline work chats through Inline MCP, the Inline CLI, or a local-agent bridge. Use for Inline spaces, people, DMs, threads, unread messages, history, search, files, creating conversations, sending messages, or installing, authenticating, and operating the Inline CLI. Do not use for developing the Inline codebase, administering production infrastructure, or unrelated chat services.",
-"trigger": "",
-"commands": [
-"npx skills add inline-chat/inline@inline -g"
-],
-"install": "npx skills add inline-chat/inline@inline -g",
-"stars": 681,
-"repoUrl": "https://github.com/inline-chat/inline",
-"aliases": [
-"inline",
-"inline-chat",
-"inline",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-inline-chat-inline-cli-skill",
-"priority": 516,
-"category": "community",
-"type": "skill",
-"want": "inline-cli",
-"feature": "inline-chat/inline",
-"summary": "Explain and use the Inline CLI (`inline`) for authentication, chats, users, spaces, messages, search, bots, typing, notifications, tasks, schema, attachments, downloads, JSON output, and configuration.",
-"trigger": "Use when asked how to use the Inline CLI or its commands, flags, outputs, or workflows.",
-"commands": [
-"npx skills add inline-chat/inline@skill -g"
-],
-"install": "npx skills add inline-chat/inline@skill -g",
-"stars": 681,
-"repoUrl": "https://github.com/inline-chat/inline",
-"aliases": [
-"skill",
-"inline-chat",
-"inline-cli",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-wechat-gggithub-wechat-claude-code-wechat-claude-code",
-"priority": 517,
-"category": "community",
-"type": "skill",
-"want": "wechat-claude-code",
-"feature": "Wechat-ggGitHub/wechat-claude-code",
-"summary": "微信消息桥接 - 在微信中与 Claude Code 聊天。支持文字对话、图片识别、实时进度推送、斜杠命令。",
-"trigger": "",
-"commands": [
-"npx skills add Wechat-ggGitHub/wechat-claude-code -g"
-],
-"install": "npx skills add Wechat-ggGitHub/wechat-claude-code -g",
-"stars": 672,
-"repoUrl": "https://github.com/Wechat-ggGitHub/wechat-claude-code",
-"aliases": [
-"wechat-claude-code",
-"Wechat-ggGitHub",
-"wechat-claude-code",
-"skill",
-"スキル"
-]
-},
-{
 "id": "skill-mobiusquant-openmobius-skill-openmobius-skill",
-"priority": 518,
+"priority": 511,
 "category": "community",
 "type": "skill",
 "want": "OpenMobius-skill",
@@ -2728,7 +2567,7 @@ window.CCF_SKILLS = [
 "npx skills add MobiusQuant/OpenMobius-skill -g"
 ],
 "install": "npx skills add MobiusQuant/OpenMobius-skill -g",
-"stars": 657,
+"stars": 669,
 "repoUrl": "https://github.com/MobiusQuant/OpenMobius-skill",
 "aliases": [
 "OpenMobius-skill",
@@ -2740,7 +2579,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-quantco-dataframely-skills",
-"priority": 519,
+"priority": 512,
 "category": "community",
 "type": "skill",
 "want": "dataframely",
@@ -2751,12 +2590,173 @@ window.CCF_SKILLS = [
 "npx skills add Quantco/dataframely -g"
 ],
 "install": "npx skills add Quantco/dataframely -g",
-"stars": 612,
+"stars": 616,
 "repoUrl": "https://github.com/Quantco/dataframely",
 "aliases": [
 "skills",
 "Quantco",
 "dataframely",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-ahmadawais-ramadan-cli-skills",
+"priority": 513,
+"category": "community",
+"type": "skill",
+"want": "skills",
+"feature": "ahmadawais/ramadan-cli",
+"summary": "CLI to check Sehar and Iftar times in Ramadan anywhere in the world.",
+"trigger": "",
+"commands": [
+"npx skills add ahmadawais/ramadan-cli -g"
+],
+"install": "npx skills add ahmadawais/ramadan-cli -g",
+"stars": 602,
+"repoUrl": "https://github.com/ahmadawais/ramadan-cli",
+"aliases": [
+"skills",
+"ahmadawais",
+"skills",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-ksimback-tech-debt-skill-tech-debt-skill",
+"priority": 514,
+"category": "community",
+"type": "skill",
+"want": "tech-debt-audit",
+"feature": "ksimback/tech-debt-skill",
+"summary": "Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimates, and a required \"looks bad but is actually fine\" section.",
+"trigger": "Use when the user asks for a debt audit, codebase health check, architecture review, or code quality assessment of an entire repo. Does not auto-invoke.",
+"commands": [
+"npx skills add ksimback/tech-debt-skill -g"
+],
+"install": "npx skills add ksimback/tech-debt-skill -g",
+"stars": 589,
+"repoUrl": "https://github.com/ksimback/tech-debt-skill",
+"aliases": [
+"tech-debt-skill",
+"ksimback",
+"tech-debt-audit",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-op7418-document-illustrator-skill-document-illustrator-skill",
+"priority": 515,
+"category": "community",
+"type": "skill",
+"want": "document-illustrator",
+"feature": "op7418/Document-illustrator-skill",
+"summary": "基于文档内容自动生成配图。AI 智能分析文档结构，归纳核心要点， 为每个主题生成符合特定风格的配图。支持封面图生成和自定义图片比例。 使用场景：当用户需要为文档、文章、笔记生成配图时。 关键词：配图、插图、illustration、generate images、document images",
+"trigger": "",
+"commands": [
+"npx skills add op7418/Document-illustrator-skill -g"
+],
+"install": "npx skills add op7418/Document-illustrator-skill -g",
+"stars": 587,
+"repoUrl": "https://github.com/op7418/Document-illustrator-skill",
+"aliases": [
+"Document-illustrator-skill",
+"op7418",
+"document-illustrator",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-butterbase-ai-butterbase-skills-skills-agents",
+"priority": 516,
+"category": "community",
+"type": "skill",
+"want": "agents",
+"feature": "butterbase-ai/butterbase-skills",
+"summary": "Use when designing, deploying, or debugging a Butterbase Agent (declarative LLM/tool graph), registering an MCP server for tool use, or wiring access controls and rate limits. Agents are first-class app resources defined by a `graph_spec` and invoked over `/v1/<app_id>/agents/<name>/runs`.",
+"trigger": "Use when designing, deploying, or debugging a Butterbase Agent (declarative LLM/tool graph), registering an MCP server for tool use, or wiring access controls and rate limits. Agents are first-class app resources defined by a `graph_spec` and invoked over `/v1/<app_id>/agents/<name>/runs`.",
+"commands": [
+"npx skills add butterbase-ai/butterbase-skills@agents -g"
+],
+"install": "npx skills add butterbase-ai/butterbase-skills@agents -g",
+"stars": 533,
+"repoUrl": "https://github.com/butterbase-ai/butterbase-skills",
+"aliases": [
+"agents",
+"butterbase-ai",
+"agents",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-butterbase-ai-butterbase-skills-skills-ai",
+"priority": 517,
+"category": "community",
+"type": "skill",
+"want": "ai",
+"feature": "butterbase-ai/butterbase-skills",
+"summary": "Use when calling the app's AI gateway from agent tools — chat completions, embeddings, listing models, configuring defaults or BYOK, reading token/cost usage",
+"trigger": "Use when calling the app's AI gateway from agent tools — chat completions, embeddings, listing models, configuring defaults or BYOK, reading token/cost usage",
+"commands": [
+"npx skills add butterbase-ai/butterbase-skills@ai -g"
+],
+"install": "npx skills add butterbase-ai/butterbase-skills@ai -g",
+"stars": 533,
+"repoUrl": "https://github.com/butterbase-ai/butterbase-skills",
+"aliases": [
+"ai",
+"butterbase-ai",
+"ai",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-butterbase-ai-butterbase-skills-skills-auth-setup",
+"priority": 518,
+"category": "community",
+"type": "skill",
+"want": "auth-setup",
+"feature": "butterbase-ai/butterbase-skills",
+"summary": "Use when configuring OAuth providers (Google/GitHub/Apple/X/etc.), setting up post-login auth hooks, tuning JWT lifetimes, or generating service API keys",
+"trigger": "Use when configuring OAuth providers (Google/GitHub/Apple/X/etc.), setting up post-login auth hooks, tuning JWT lifetimes, or generating service API keys",
+"commands": [
+"npx skills add butterbase-ai/butterbase-skills@auth-setup -g"
+],
+"install": "npx skills add butterbase-ai/butterbase-skills@auth-setup -g",
+"stars": 533,
+"repoUrl": "https://github.com/butterbase-ai/butterbase-skills",
+"aliases": [
+"auth-setup",
+"butterbase-ai",
+"auth-setup",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-butterbase-ai-butterbase-skills-skills-build-app",
+"priority": 519,
+"category": "community",
+"type": "skill",
+"want": "build-app",
+"feature": "butterbase-ai/butterbase-skills",
+"summary": "Use when building a new Butterbase app from scratch, creating a full-stack application, or when the user asks to set up a complete backend with database, auth, and deployment",
+"trigger": "Use when building a new Butterbase app from scratch, creating a full-stack application, or when the user asks to set up a complete backend with database, auth, and deployment",
+"commands": [
+"npx skills add butterbase-ai/butterbase-skills@build-app -g"
+],
+"install": "npx skills add butterbase-ai/butterbase-skills@build-app -g",
+"stars": 533,
+"repoUrl": "https://github.com/butterbase-ai/butterbase-skills",
+"aliases": [
+"build-app",
+"butterbase-ai",
+"build-app",
 "skill",
 "スキル"
 ]

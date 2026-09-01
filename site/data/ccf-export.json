@@ -961,8 +961,60 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
-     "id": "changelog-2.1.241",
-     "title": "v2.1.241",
+     "id": "changelog-2.1.252",
+     "title": "v2.1.252",
+     "summary": "Fixed Bash commands failing with \"task output swap refused (tasks dir moved or linked)\" on some Macs / Fixed \"always allow\" not saving in a project that has no .claude/settings.local.json yet / Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes after a tool finished when the connection to claude.ai was degraded",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed Bash commands failing with \"task output swap refused (tasks dir moved or linked)\" on some Macs"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed \"always allow\" not saving in a project that has no .claude/settings.local.json yet"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes after a tool finished when the connection to claude.ai was degraded"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed background task notifications with very large failure output (for example git errors on a full disk) making the conversation exceed the API request size limit"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.251",
+     "title": "v2.1.251",
+     "summary": "Added PreModelSwitch and PostModelSwitch hook events (block, confirm, or annotate a model switch); SessionStart resume hooks now receive session staleness and the estimated re-cache cost / Added live streaming of a foreground subagent's tool calls and results to Remote Control clients (background subagents, the default, still show status only) / Added a Spend limit bar to /usage and a rate_limits.spend_limit status line field for developers behind a Claude apps gateway with spend limits",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added PreModelSwitch and PostModelSwitch hook events (block, confirm, or annotate a model switch); SessionStart resume hooks now receive session staleness and the estimated re-cache cost"
+      },
+      {
+       "kind": "追加",
+       "text": "Added live streaming of a foreground subagent's tool calls and results to Remote Control clients (background subagents, the default, still show status only)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a Spend limit bar to /usage and a rate_limits.spend_limit status line field for developers behind a Claude apps gateway with spend limits"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a per-session prompt-cache line to /cost (hit ratio, misses, tokens re-cached, warm/cold) and a matching prompt_cache object for status line scripts"
+      },
+      {
+       "kind": "追加",
+       "text": "Added attach, logs, stop, respawn, and rm to claude --help; the --resume message for a running background session now names the exact claude attach <id> command"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.250",
+     "title": "v2.1.250",
      "summary": "Bug fixes and reliability improvements",
      "highlights": [
       {
@@ -973,169 +1025,125 @@
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.240",
-     "title": "v2.1.240",
-     "summary": "Bug fixes and reliability improvements",
+     "id": "changelog-2.1.248",
+     "title": "v2.1.248",
+     "summary": "Added --restricted (or CLAUDE_CODE_RESTRICTED=1): removes the built-in tools that run commands or code and WebFetch (unless named in --tools), keeps file tools inside the working directory, refuses bypassPermissions, and ignores user, project and local settings files / Added experimental.cacheTtl (\"5m\" or \"1h\") to agent frontmatter: a per-agent prompt cache TTL used when no subagent TTL setting is configured / Added claude self-hosted-runner --client-label <label> (or SELF_HOSTED_RUNNER_CLIENT_LABEL) to override the label the runner registers with (default: hostname)",
      "highlights": [
       {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
+       "kind": "追加",
+       "text": "Added --restricted (or CLAUDE_CODE_RESTRICTED=1): removes the built-in tools that run commands or code and WebFetch (unless named in --tools), keeps file tools inside the working directory, refuses bypassPermissions, and ignores user, project and local settings files"
+      },
+      {
+       "kind": "追加",
+       "text": "Added experimental.cacheTtl (\"5m\" or \"1h\") to agent frontmatter: a per-agent prompt cache TTL used when no subagent TTL setting is configured"
+      },
+      {
+       "kind": "追加",
+       "text": "Added claude self-hosted-runner --client-label <label> (or SELF_HOSTED_RUNNER_CLIENT_LABEL) to override the label the runner registers with (default: hostname)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added server-managed settings diagnostics: a startup warning when the settings fail to load, and a /doctor and /status line explaining a load failure or why they weren't fetched (Bedrock/Vertex/third-party provider, custom ANTHROPIC_BASE_URL)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a warning in /web-setup when the GitHub CLI token lacks the workflow scope, since pushes to very large repositories can be rejected without it"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.239",
-     "title": "v2.1.239",
-     "summary": "Cost estimates (/cost, status line, --max-budget-usd) now include the 1.1× US-only-inference premium for data-residency workspaces / Added the one-time fullscreen renderer offer on Bedrock, Vertex, Foundry and other previously excluded setups; new installs there now start in fullscreen / Added /claude-api upgrade to migrate Python projects from anthropic 0.x to 1.x, and updated the skill's Python reference for 1.x (timeouts use anthropic.Timeout, not httpx.Timeout)",
+     "id": "changelog-2.1.247",
+     "title": "v2.1.247",
+     "summary": "Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting) / Added {id, text, cooldownSessions, priority} entries, tipsFile, and label to spinnerTipsOverride, so organizations can rotate their own tips alongside the built-in ones / Added a tip on Bash permission prompts pointing to auto mode, with a one-keystroke \"Yes, and switch to auto mode\" option",
      "highlights": [
       {
-       "kind": "その他",
-       "text": "Cost estimates (/cost, status line, --max-budget-usd) now include the 1.1× US-only-inference premium for data-residency workspaces"
+       "kind": "追加",
+       "text": "Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting)"
       },
       {
        "kind": "追加",
-       "text": "Added the one-time fullscreen renderer offer on Bedrock, Vertex, Foundry and other previously excluded setups; new installs there now start in fullscreen"
+       "text": "Added {id, text, cooldownSessions, priority} entries, tipsFile, and label to spinnerTipsOverride, so organizations can rotate their own tips alongside the built-in ones"
       },
       {
        "kind": "追加",
-       "text": "Added /claude-api upgrade to migrate Python projects from anthropic 0.x to 1.x, and updated the skill's Python reference for 1.x (timeouts use anthropic.Timeout, not httpx.Timeout)"
+       "text": "Added a tip on Bash permission prompts pointing to auto mode, with a one-keystroke \"Yes, and switch to auto mode\" option"
+      },
+      {
+       "kind": "追加",
+       "text": "Added /claude-api cost-optimize to profile an existing project's Claude API spend and work through cost levers (caching, token hygiene, batch, effort, model choice) one measured change at a time"
       },
       {
        "kind": "その他",
-       "text": "Cloud sessions: plugins synced from claude.ai now show as name@synced, work with claude plugin enable/disable <name>@synced, and never override a same-named plugin you installed"
-      },
-      {
-       "kind": "その他",
-       "text": "Alpine/musl builds: native image paste, clipboard, and audio-capture add-ons now load (musl-built binaries instead of glibc ones refused by the runtime)"
+       "text": "Updated the /claude-api skill with Admin API coverage (organization members, invites, workspaces, API keys, rate limit reports, workload identity federation, CMEK)"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.238",
-     "title": "v2.1.238",
-     "summary": "Added a keybindingFlavor setting: set it to \"readline\" to make Ctrl+W in the prompt delete back to the previous whitespace, as in Bash; the default (\"classic\") is unchanged / A catalog entry's headersHelper runs only when you install or update that plugin, after its command is shown; claude plugin install/update ask [y/N] (or pass -y) / Added claude self-hosted-runner --defer-shutdown-max-min <minutes>: on SIGTERM, keep serving attached sessions, park what is left after that many minutes, then exit",
+     "id": "changelog-2.1.246",
+     "title": "v2.1.246",
+     "summary": "Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. Bash(git * main)), since they also match options inserted before the subcommand / Added an Auto mode tab to /permissions for viewing and editing auto mode classifier rules / Added the turn's completion time to the end-of-turn duration line, e.g. ✻ Sautéed for 23s · done 6:05 PM",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added a keybindingFlavor setting: set it to \"readline\" to make Ctrl+W in the prompt delete back to the previous whitespace, as in Bash; the default (\"classic\") is unchanged"
-      },
-      {
-       "kind": "その他",
-       "text": "A catalog entry's headersHelper runs only when you install or update that plugin, after its command is shown; claude plugin install/update ask [y/N] (or pass -y)"
+       "text": "Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. Bash(git * main)), since they also match options inserted before the subcommand"
       },
       {
        "kind": "追加",
-       "text": "Added claude self-hosted-runner --defer-shutdown-max-min <minutes>: on SIGTERM, keep serving attached sessions, park what is left after that many minutes, then exit"
+       "text": "Added an Auto mode tab to /permissions for viewing and editing auto mode classifier rules"
       },
       {
        "kind": "追加",
-       "text": "Added claude self-hosted-runner --proxy-authorization-command / --proxy-authorization-file for egress proxies that require a freshly issued Proxy-Authorization header on every connection"
+       "text": "Added the turn's completion time to the end-of-turn duration line, e.g. ✻ Sautéed for 23s · done 6:05 PM"
       },
       {
        "kind": "修正",
-       "text": "Fixed unbounded memory growth in long interactive sessions: subagent tool results are now released once they leave the recent display window"
+       "text": "Fixed fullscreen mode showing a blank transcript after resizing the terminal and jumping to the bottom until the next keypress"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a severe transcript slowdown when a diff contained a very long single line (e.g. a base64 string); such lines now render truncated with a marker"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.237",
-     "title": "v2.1.237",
-     "summary": "Fixed prompt caching for sessions using an LLM gateway or custom base URL / Added a built-in \"Concise\" output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config.",
+     "id": "changelog-2.1.245",
+     "title": "v2.1.245",
+     "summary": "Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)",
      "highlights": [
       {
        "kind": "修正",
-       "text": "Fixed prompt caching for sessions using an LLM gateway or custom base URL"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a built-in \"Concise\" output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config."
+       "text": "Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
     },
     {
-     "id": "changelog-2.1.236",
-     "title": "v2.1.236",
-     "summary": "Added ANTHROPIC_DEFAULT_MODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPIC_MODEL) / Added notify_when_idle to cross-session SendMessage: ask another Claude Code session on this machine to send one notice when it next goes idle — opt-in, one-shot, no polling (macOS and Linux) / Sandbox: on macOS, wildcard read-deny rules (e.g. **/.env) now take precedence inside allowed read regions, cover matched directories' contents, and can't be bypassed by renaming the denied file",
+     "id": "changelog-2.1.243",
+     "title": "v2.1.243",
+     "summary": "Added a Loops breakdown to /usage: per-loop run count, total tokens, tokens per run, and last run, so runaway or chatty /loop tasks are easy to spot / Added modelPicker setting: curate the /model picker with an ordered, labeled list of models (any id spelling, including Vertex/Bedrock ids), appended to or replacing the built-in lineup / Added promptCacheTtl and subagentPromptCacheTtl settings so API-key and cloud-provider users can keep a 1-hour prompt cache on the main conversation while subagents stay at 5 minutes",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added ANTHROPIC_DEFAULT_MODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPIC_MODEL)"
+       "text": "Added a Loops breakdown to /usage: per-loop run count, total tokens, tokens per run, and last run, so runaway or chatty /loop tasks are easy to spot"
       },
       {
        "kind": "追加",
-       "text": "Added notify_when_idle to cross-session SendMessage: ask another Claude Code session on this machine to send one notice when it next goes idle — opt-in, one-shot, no polling (macOS and Linux)"
-      },
-      {
-       "kind": "その他",
-       "text": "Sandbox: on macOS, wildcard read-deny rules (e.g. **/.env) now take precedence inside allowed read regions, cover matched directories' contents, and can't be bypassed by renaming the denied file"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed clipboard copy, background housekeeping, background sessions, and local MCP logs breaking after the directory a session had switched into was removed (since 2.1.229)"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed the fullscreen renderer failing permanently after a single failed start: it now falls back to the classic renderer instead of exiting on every subsequent launch"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.235",
-     "title": "v2.1.235",
-     "summary": "Added an optional spellcheck setting that underlines misspelled words in the prompt input as you type, using your installed aspell, hunspell, or ispell / Fixed whole-prompt-cache invalidation when a language server disconnected or reconnected mid-session / Fixed nested markdown list items misaligning at depth 3+ and added a hanging indent to wrapped list items in the terminal UI",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added an optional spellcheck setting that underlines misspelled words in the prompt input as you type, using your installed aspell, hunspell, or ispell"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed whole-prompt-cache invalidation when a language server disconnected or reconnected mid-session"
+       "text": "Added modelPicker setting: curate the /model picker with an ordered, labeled list of models (any id spelling, including Vertex/Bedrock ids), appended to or replacing the built-in lineup"
       },
       {
        "kind": "追加",
-       "text": "Fixed nested markdown list items misaligning at depth 3+ and added a hanging indent to wrapped list items in the terminal UI"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed prompt input highlights (slash commands, keywords, mentions) appearing shifted by one or more characters in some multi-line prompts"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed Shift+Tab inside the permission prompt's comment field approving the edit and granting session-wide edit permission instead of closing the field"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.234",
-     "title": "v2.1.234",
-     "summary": "Added the optional CLAUDE_CODE_PROJECT_DIR_NAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory / Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selection; also works in the agents view / Added a GitLab merge request badge to the footer and statusline: repos with a GitLab remote and an authenticated glab CLI show MR !N with draft/pending/green states",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added the optional CLAUDE_CODE_PROJECT_DIR_NAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory"
+       "text": "Added promptCacheTtl and subagentPromptCacheTtl settings so API-key and cloud-provider users can keep a 1-hour prompt cache on the main conversation while subagents stay at 5 minutes"
       },
       {
        "kind": "追加",
-       "text": "Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selection; also works in the agents view"
+       "text": "Added modelPricing managed setting so an organization's contracted per-model rates and discount multiplier are used for /cost, the status line, and telemetry cost figures instead of list price"
       },
       {
        "kind": "追加",
-       "text": "Added a GitLab merge request badge to the footer and statusline: repos with a GitLab remote and an authenticated glab CLI show MR !N with draft/pending/green states"
-      },
-      {
-       "kind": "その他",
-       "text": "Claude Code now continues your session automatically when a claude.ai usage limit resets; turn it off in /config (\"Continue automatically at usage limit\")"
-      },
-      {
-       "kind": "その他",
-       "text": "Claude is now told to use your account email only to identify you, and not to send it to unrelated services unless you ask"
+       "text": "Added a keyless sign-in under /login → Anthropic Console: \"Sign in with your Console account\" (recommended) alongside creating an API key, so organizations that don't allow API keys can sign in"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
