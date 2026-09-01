@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# 実データ・秘密情報
+config/profile.toml
+config/filters.toml
+config/upwork_query.graphql
+.env
+state.db
+drafts/
+digests/
+eml/
+
+# 手貼り収集元の入力
+jobs.json

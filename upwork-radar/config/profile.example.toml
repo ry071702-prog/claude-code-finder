@@ -1,0 +1,40 @@
+# cp config/profile.example.toml config/profile.toml して自分の内容に書き換える。
+# ここに書いた事実だけが提案文に使われる。書いていない実績は生成されない。
+
+name = "Your Name"
+headline = "Python / データ基盤エンジニア"
+hourly_rate_usd = 75
+timezone = "Asia/Tokyo (UTC+9)"
+languages = ["Japanese (native)", "English (professional)"]
+
+# スコアリングの「スキル一致」はこの配列を案件の題名・本文に対して照合する。
+# 表記ゆれは別項目として並べる（例: "PostgreSQL" と "Postgres"）。
+skills = [
+  "Python",
+  "FastAPI",
+  "Airflow",
+  "PostgreSQL",
+  "dbt",
+  "AWS",
+  "Docker",
+]
+
+bio = """
+データ基盤の設計と実装を主にやっている。ETL/ELT パイプライン、
+API バックエンド、社内データ整備。小規模チームでの立ち上げが多い。
+"""
+
+# 提案文の文体の指示。空でもよい。
+proposal_style = "簡潔・具体的。誇張しない。最初の一歩を必ず提案する。"
+
+[[portfolio]]
+title = "受発注データの ETL 基盤"
+summary = "日次 200 万行の取込を Airflow + dbt で再構築し、集計の待ち時間を 40 分から 4 分にした。"
+tech = ["Python", "Airflow", "dbt", "PostgreSQL"]
+url = ""
+
+[[portfolio]]
+title = "在庫管理 API"
+summary = "FastAPI + PostgreSQL で在庫 API を新規実装。ピーク 300 req/s を単一インスタンスで処理。"
+tech = ["Python", "FastAPI", "Docker", "AWS"]
+url = ""

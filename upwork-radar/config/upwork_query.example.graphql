@@ -1,0 +1,42 @@
+# marketplaceJobPostingsSearch のクエリ。
+#
+# 重要: Upwork の GraphQL スキーマは変更されることがあり、フィールド名は
+# 承認済みの API キーでしか検証できない。初回実行の前に Upwork の GQL Explorer
+# (https://www.upwork.com/developer/documentation/graphql/api/docs/index.html)
+# にこのクエリを貼って通ることを確認し、通らないフィールドはここで直す。
+# コードは欠けたフィールドを「不明」として扱うので、削っても壊れない。
+#
+# このファイルを config/upwork_query.graphql にコピーすると読み込まれる。
+
+query JobSearch($filter: MarketplaceJobFilter, $pagination: MarketplaceJobPostingSearchPagination) {
+  marketplaceJobPostingsSearch(
+    marketPlaceJobFilter: $filter
+    searchType: USER_JOBS_SEARCH
+    sortAttributes: [{ field: RECENCY }]
+    pagination: $pagination
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        description
+        ciphertext
+        experienceLevel
+        totalApplicants
+        publishedDateTime
+        createdDateTime
+        amount { rawValue currency }
+        hourlyBudgetMin { rawValue }
+        hourlyBudgetMax { rawValue }
+        skills { name }
+        client {
+          totalFeedback
+          totalSpent { rawValue }
+          verificationStatus
+          location { country }
+        }
+      }
+    }
+  }
+}
