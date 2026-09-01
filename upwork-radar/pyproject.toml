@@ -1,0 +1,23 @@
+[project]
+name = "upwork-radar"
+version = "0.1.0"
+description = "Upwork の案件を収集・選別・通知し、提案文の下書きまでを作る人間介在型パイプライン"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+draft = ["anthropic>=1.0.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+upwork-radar = "upwork_radar.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["upwork_radar*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

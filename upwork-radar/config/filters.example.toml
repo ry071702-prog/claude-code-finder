@@ -1,0 +1,47 @@
+# cp config/filters.example.toml config/filters.toml して調整する。
+#
+# 二段構え:
+#   [hard]    1 つでも違反したら即除外。スコアは計算しない。
+#   [weights] 残ったものの重み付け。合計 100 でなくてよい（正規化される）。
+#   [targets] その部分点が満点になる水準。[hard] の下限とは別物。
+
+notify_min_score = 60   # これ以上のスコアだけ通知する
+draft_min_score = 75    # これ以上のスコアだけ提案文の下書きを作る
+draft_max_per_run = 3   # 1 回の run で作る下書きの上限（API 費用の歯止め）
+
+[hard]
+require_payment_verified = true
+min_fixed_budget_usd = 800
+min_hourly_rate_usd = 40
+min_client_spent_usd = 0
+max_proposals = 30
+
+# 案件の題名・本文・スキルのどこかに含まれたら落とす。
+exclude_keywords = [
+  "data entry",
+  "copy paste",
+  "virtual assistant",
+  "write articles",
+  "unpaid",
+  "equity only",
+]
+
+# 空なら無条件。指定するとどれか 1 つは含む必要がある。
+require_any_keywords = []
+exclude_countries = []
+
+# 予算が読めない案件を落とすか。Gmail のアラートメールは情報が薄く、
+# true にすると取りこぼしが増える。まず false で運用して様子を見る。
+drop_when_budget_unknown = false
+
+[weights]
+skill_match = 40
+budget = 20
+client_quality = 20
+competition = 10
+recency = 10
+
+[targets]
+fixed_budget_usd = 3000   # この額の固定案件で予算点が満点
+hourly_rate_usd = 80      # この時給で予算点が満点
+recency_hours = 24        # 掲載直後が満点、24 時間で 0
