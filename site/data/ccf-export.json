@@ -961,6 +961,146 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.263",
+     "title": "v2.1.263",
+     "summary": "Bug fixes and reliability improvements",
+     "highlights": [
+      {
+       "kind": "改善",
+       "text": "Bug fixes and reliability improvements"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.261",
+     "title": "v2.1.261",
+     "summary": "Added an \"Organization policy\" line to /status and claude doctor that says why your organization's policy could not be loaded, such as a proxy not passing the endpoint through / Added bashOutputMaxChars and taskOutputMaxChars settings to raise how much command and background-task output Claude receives inline before it is saved to a file, up to 128K characters / Added --append-subagent-system-prompt-file to read the subagent system prompt from a file, for prompts too large to pass on the command line",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added an \"Organization policy\" line to /status and claude doctor that says why your organization's policy could not be loaded, such as a proxy not passing the endpoint through"
+      },
+      {
+       "kind": "追加",
+       "text": "Added bashOutputMaxChars and taskOutputMaxChars settings to raise how much command and background-task output Claude receives inline before it is saved to a file, up to 128K characters"
+      },
+      {
+       "kind": "追加",
+       "text": "Added --append-subagent-system-prompt-file to read the subagent system prompt from a file, for prompts too large to pass on the command line"
+      },
+      {
+       "kind": "追加",
+       "text": "Added /skill-doctor to show which loaded skills go unused and what they cost in context, so you can prune them"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed typed or pasted characters occasionally landing out of order or being dropped during fast input or key repeat"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.260",
+     "title": "v2.1.260",
+     "summary": "Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted changes as Claude edits; toggle it with /diff / Added a likely cause for prompt-cache misses (e.g. tool definitions or system prompt changed, idle past the TTL) to /cost and the status line's prompt_cache field / Added /reload-plugins to headless sessions, so it appears in the Claude Code Desktop and SDK command lists",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted changes as Claude edits; toggle it with /diff"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a likely cause for prompt-cache misses (e.g. tool definitions or system prompt changed, idle past the TTL) to /cost and the status line's prompt_cache field"
+      },
+      {
+       "kind": "追加",
+       "text": "Added /reload-plugins to headless sessions, so it appears in the Claude Code Desktop and SDK command lists"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a text form of /advisor (/advisor, /advisor <model>, /advisor off) for the desktop app, Remote Control, and other headless (-p/Agent SDK) sessions"
+      },
+      {
+       "kind": "追加",
+       "text": "Added oidc.scope_on_refresh to the Claude apps gateway for IdPs that return an id_token on refresh only when asked for openid again"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.259",
+     "title": "v2.1.259",
+     "summary": "Added managedMcpServers managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as .mcp.json); entries that name a command to run are skipped / Added --permission-prompts none for unattended headless hosts: anything that would prompt is denied automatically while the active permission mode (including auto mode) keeps deciding / Added recognition of glab mr create/merge/close/reopen/note/update so GitLab merge requests show as MR !N in the collapsed tool summary and refresh the footer MR badge",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added managedMcpServers managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as .mcp.json); entries that name a command to run are skipped"
+      },
+      {
+       "kind": "追加",
+       "text": "Added --permission-prompts none for unattended headless hosts: anything that would prompt is denied automatically while the active permission mode (including auto mode) keeps deciding"
+      },
+      {
+       "kind": "追加",
+       "text": "Added recognition of glab mr create/merge/close/reopen/note/update so GitLab merge requests show as MR !N in the collapsed tool summary and refresh the footer MR badge"
+      },
+      {
+       "kind": "追加",
+       "text": "Added --json to claude plugin validate for a machine-readable validation report"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed concurrent sessions silently reverting each other's ~/.claude.json changes — workspace trust no longer resets and MCP/project state is no longer lost when running many sessions at once"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.258",
+     "title": "v2.1.258",
+     "summary": "Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255 / Fixed remote and scheduled sessions failing with \"user messages must have non-empty content\" after a re-sent permission approval could not be applied",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed remote and scheduled sessions failing with \"user messages must have non-empty content\" after a re-sent permission approval could not be applied"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.257",
+     "title": "v2.1.257",
+     "summary": "Added Claude Fable 5.1 (claude-fable-5-1), now the default Fable model — 1M context, $10/$50 per Mtok with $0.25/Mtok cache reads / Added \"Time format\" (timeFormat) and timeZone settings: 12-hour, 24-hour, 24-hour UTC, or a strftime pattern for the turn-end clock and transcript-view timestamps / Added a Containment Escape rule to auto mode so cloud metadata-credential fetches, egress evasion, and cross-tenant reach are no longer auto-approved unless your environment marks them expected",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added Claude Fable 5.1 (claude-fable-5-1), now the default Fable model — 1M context, $10/$50 per Mtok with $0.25/Mtok cache reads"
+      },
+      {
+       "kind": "追加",
+       "text": "Added \"Time format\" (timeFormat) and timeZone settings: 12-hour, 24-hour, 24-hour UTC, or a strftime pattern for the turn-end clock and transcript-view timestamps"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a Containment Escape rule to auto mode so cloud metadata-credential fetches, egress evasion, and cross-tenant reach are no longer auto-approved unless your environment marks them expected"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_SUBAGENT_MODEL_FORCE to apply CLAUDE_CODE_SUBAGENT_MODEL (or the main model) to every subagent, ignoring per-spawn and agent-definition model overrides"
+      },
+      {
+       "kind": "追加",
+       "text": "Added s in /effort to change effort for the current session only, matching /model"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.252",
      "title": "v2.1.252",
      "summary": "Fixed Bash commands failing with \"task output swap refused (tasks dir moved or linked)\" on some Macs / Fixed \"always allow\" not saving in a project that has no .claude/settings.local.json yet / Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes after a tool finished when the connection to claude.ai was degraded",
@@ -1008,142 +1148,6 @@
       {
        "kind": "追加",
        "text": "Added attach, logs, stop, respawn, and rm to claude --help; the --resume message for a running background session now names the exact claude attach <id> command"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.250",
-     "title": "v2.1.250",
-     "summary": "Bug fixes and reliability improvements",
-     "highlights": [
-      {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.248",
-     "title": "v2.1.248",
-     "summary": "Added --restricted (or CLAUDE_CODE_RESTRICTED=1): removes the built-in tools that run commands or code and WebFetch (unless named in --tools), keeps file tools inside the working directory, refuses bypassPermissions, and ignores user, project and local settings files / Added experimental.cacheTtl (\"5m\" or \"1h\") to agent frontmatter: a per-agent prompt cache TTL used when no subagent TTL setting is configured / Added claude self-hosted-runner --client-label <label> (or SELF_HOSTED_RUNNER_CLIENT_LABEL) to override the label the runner registers with (default: hostname)",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added --restricted (or CLAUDE_CODE_RESTRICTED=1): removes the built-in tools that run commands or code and WebFetch (unless named in --tools), keeps file tools inside the working directory, refuses bypassPermissions, and ignores user, project and local settings files"
-      },
-      {
-       "kind": "追加",
-       "text": "Added experimental.cacheTtl (\"5m\" or \"1h\") to agent frontmatter: a per-agent prompt cache TTL used when no subagent TTL setting is configured"
-      },
-      {
-       "kind": "追加",
-       "text": "Added claude self-hosted-runner --client-label <label> (or SELF_HOSTED_RUNNER_CLIENT_LABEL) to override the label the runner registers with (default: hostname)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added server-managed settings diagnostics: a startup warning when the settings fail to load, and a /doctor and /status line explaining a load failure or why they weren't fetched (Bedrock/Vertex/third-party provider, custom ANTHROPIC_BASE_URL)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a warning in /web-setup when the GitHub CLI token lacks the workflow scope, since pushes to very large repositories can be rejected without it"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.247",
-     "title": "v2.1.247",
-     "summary": "Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting) / Added {id, text, cooldownSessions, priority} entries, tipsFile, and label to spinnerTipsOverride, so organizations can rotate their own tips alongside the built-in ones / Added a tip on Bash permission prompts pointing to auto mode, with a one-keystroke \"Yes, and switch to auto mode\" option",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added {id, text, cooldownSessions, priority} entries, tipsFile, and label to spinnerTipsOverride, so organizations can rotate their own tips alongside the built-in ones"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a tip on Bash permission prompts pointing to auto mode, with a one-keystroke \"Yes, and switch to auto mode\" option"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /claude-api cost-optimize to profile an existing project's Claude API spend and work through cost levers (caching, token hygiene, batch, effort, model choice) one measured change at a time"
-      },
-      {
-       "kind": "その他",
-       "text": "Updated the /claude-api skill with Admin API coverage (organization members, invites, workspaces, API keys, rate limit reports, workload identity federation, CMEK)"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.246",
-     "title": "v2.1.246",
-     "summary": "Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. Bash(git * main)), since they also match options inserted before the subcommand / Added an Auto mode tab to /permissions for viewing and editing auto mode classifier rules / Added the turn's completion time to the end-of-turn duration line, e.g. ✻ Sautéed for 23s · done 6:05 PM",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. Bash(git * main)), since they also match options inserted before the subcommand"
-      },
-      {
-       "kind": "追加",
-       "text": "Added an Auto mode tab to /permissions for viewing and editing auto mode classifier rules"
-      },
-      {
-       "kind": "追加",
-       "text": "Added the turn's completion time to the end-of-turn duration line, e.g. ✻ Sautéed for 23s · done 6:05 PM"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed fullscreen mode showing a blank transcript after resizing the terminal and jumping to the bottom until the next keypress"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed a severe transcript slowdown when a diff contained a very long single line (e.g. a base64 string); such lines now render truncated with a marker"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.245",
-     "title": "v2.1.245",
-     "summary": "Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)",
-     "highlights": [
-      {
-       "kind": "修正",
-       "text": "Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.243",
-     "title": "v2.1.243",
-     "summary": "Added a Loops breakdown to /usage: per-loop run count, total tokens, tokens per run, and last run, so runaway or chatty /loop tasks are easy to spot / Added modelPicker setting: curate the /model picker with an ordered, labeled list of models (any id spelling, including Vertex/Bedrock ids), appended to or replacing the built-in lineup / Added promptCacheTtl and subagentPromptCacheTtl settings so API-key and cloud-provider users can keep a 1-hour prompt cache on the main conversation while subagents stay at 5 minutes",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added a Loops breakdown to /usage: per-loop run count, total tokens, tokens per run, and last run, so runaway or chatty /loop tasks are easy to spot"
-      },
-      {
-       "kind": "追加",
-       "text": "Added modelPicker setting: curate the /model picker with an ordered, labeled list of models (any id spelling, including Vertex/Bedrock ids), appended to or replacing the built-in lineup"
-      },
-      {
-       "kind": "追加",
-       "text": "Added promptCacheTtl and subagentPromptCacheTtl settings so API-key and cloud-provider users can keep a 1-hour prompt cache on the main conversation while subagents stay at 5 minutes"
-      },
-      {
-       "kind": "追加",
-       "text": "Added modelPricing managed setting so an organization's contracted per-model rates and discount multiplier are used for /cost, the status line, and telemetry cost figures instead of list price"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a keyless sign-in under /login → Anthropic Console: \"Sign in with your Console account\" (recommended) alongside creating an API key, so organizations that don't allow API keys can sign in"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
