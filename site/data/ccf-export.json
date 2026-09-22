@@ -961,6 +961,158 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.278",
+     "title": "v2.1.278",
+     "summary": "Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways, to default to the server-side classifier, which does not charge for classifier overhead (CLAUDE_CODE_AUTO_MODE_SERVER=0 opts out on Bedrock, Vertex, Foundry and gateways); warns on billed fallback. See https://code.claude.com/docs/en/auto-mode-classifier-billing / Added an Auto mode server row to /status showing whether this session's auto mode classifier runs on the server",
+     "highlights": [
+      {
+       "kind": "変更",
+       "text": "Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways, to default to the server-side classifier, which does not charge for classifier overhead (CLAUDE_CODE_AUTO_MODE_SERVER=0 opts out on Bedrock, Vertex, Foundry and gateways); warns on billed fallback. See https://code.claude.com/docs/en/auto-mode-classifier-billing"
+      },
+      {
+       "kind": "追加",
+       "text": "Added an Auto mode server row to /status showing whether this session's auto mode classifier runs on the server"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.277",
+     "title": "v2.1.277",
+     "summary": "Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \"Project instructions\" in /config (not yet on Bedrock, Vertex or Foundry) / Added CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY=1 for Claude apps gateways whose only egress is a forward proxy: every outbound request hands the proxy the hostname instead of resolving it locally / Added an optional headers: map on Claude apps gateway upstreams, to send static headers to a proxy you run in front of a provider",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \"Project instructions\" in /config (not yet on Bedrock, Vertex or Foundry)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY=1 for Claude apps gateways whose only egress is a forward proxy: every outbound request hands the proxy the hostname instead of resolving it locally"
+      },
+      {
+       "kind": "追加",
+       "text": "Added an optional headers: map on Claude apps gateway upstreams, to send static headers to a proxy you run in front of a provider"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a line saying a background task's update is waiting when it finishes while a panel such as /tasks is open"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed claude -p and Agent SDK sessions that could hang with no result after an internal error; they now report the error and exit with code 1"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.276",
+     "title": "v2.1.276",
+     "summary": "Fixed every request failing with 400 … Input tag 'advisor_20260301' when ANTHROPIC_BASE_URL points at a proxy or gateway (2.1.275 regression)",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed every request failing with 400 … Input tag 'advisor_20260301' when ANTHROPIC_BASE_URL points at a proxy or gateway (2.1.275 regression)"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.275",
+     "title": "v2.1.275",
+     "summary": "Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm it before the credential is saved, and /status shows it / Added a send-now key (ctrl+enter, or ctrl+x ctrl+s) that interrupts the current turn and sends all queued messages at once; sent and queued messages show in gray until the model receives them / Added a startup warning when a configured otelHeadersHelper fails, so sessions that silently export no telemetry are noticed",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm it before the credential is saved, and /status shows it"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a send-now key (ctrl+enter, or ctrl+x ctrl+s) that interrupts the current turn and sends all queued messages at once; sent and queued messages show in gray until the model receives them"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a startup warning when a configured otelHeadersHelper fails, so sessions that silently export no telemetry are noticed"
+      },
+      {
+       "kind": "追加",
+       "text": "Added syncing of the skills and plugins enabled on your claude.ai account to terminal sessions signed in with it; opt out with syncClaudeAiSkills: false or syncClaudeAiPlugins: false"
+      },
+      {
+       "kind": "追加",
+       "text": "Added /plugin install <plugin> --marketplace <source>, which offers to add the marketplace before installing the plugin"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.274",
+     "title": "v2.1.274",
+     "summary": "Added a visible warning when memory usage is critical, with steps to free memory or restart safely / Added CLAUDE_CODE_MCP_STARTUP_WAIT_MS to bound how long the first non-interactive turn waits for connecting MCP servers (0 = don't wait) / Added effort attribute to the claude_code.llm_request OpenTelemetry trace span, matching the api_request event",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a visible warning when memory usage is critical, with steps to free memory or restart safely"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_MCP_STARTUP_WAIT_MS to bound how long the first non-interactive turn waits for connecting MCP servers (0 = don't wait)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added effort attribute to the claude_code.llm_request OpenTelemetry trace span, matching the api_request event"
+      },
+      {
+       "kind": "追加",
+       "text": "Added claude_code.managed_settings_resolved OTel event: managed-settings sources and policy helper state; redacted settings and digests with OTEL_LOG_MANAGED_SETTINGS=1"
+      },
+      {
+       "kind": "追加",
+       "text": "Added store.connect_timeout_seconds to the Claude apps gateway config to lengthen the Postgres connect timeout (default 5 seconds), and improved the boot error when the database is unreachable to point to store.postgres_url and the configured timeout"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.273",
+     "title": "v2.1.273",
+     "summary": "Added x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction and x-claude-code-context-compacted request headers for LLM gateways; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 / Added a notification when an MCP server disconnects mid-session and automatic reconnection gives up, pointing at /mcp / Added forking a session started with claude --remote-control or /remote-control from the Claude app; the fork runs as a background session on your computer",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction and x-claude-code-context-compacted request headers for LLM gateways; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a notification when an MCP server disconnects mid-session and automatic reconnection gives up, pointing at /mcp"
+      },
+      {
+       "kind": "追加",
+       "text": "Added forking a session started with claude --remote-control or /remote-control from the Claude app; the fork runs as a background session on your computer"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Bash commands the permission checker cannot fully analyze skipping the prompt under permissions.blockReadsOutsideWorkingDirectories, and a subshell hiding a dangerous rm in bypass mode"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed skills synced from claude.ai staying available after your organization turns Skills off; they now move to the recoverable trash"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.272",
+     "title": "v2.1.272",
+     "summary": "Bug fixes and reliability improvements",
+     "highlights": [
+      {
+       "kind": "改善",
+       "text": "Bug fixes and reliability improvements"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.271",
      "title": "v2.1.271",
      "summary": "Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host's fast-mode setting or /fast typed in the session applies where your organization allows it / Added mouse support to the /config panel in fullscreen mode: the wheel scrolls the settings list, a click on a setting's value changes it, and the row under the pointer is highlighted / Added claude self-hosted-runner --drain-marker-file <path>: when that file exists at a SIGTERM drain, the runner reports its exit to the server as a host drain (telemetry only)",
@@ -984,154 +1136,6 @@
       {
        "kind": "追加",
        "text": "Added omitClaudeMd to agent frontmatter and --agents JSON, letting custom and plugin subagents run without user, project and local CLAUDE.md files; managed policy files still load"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.270",
-     "title": "v2.1.270",
-     "summary": "Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)",
-     "highlights": [
-      {
-       "kind": "修正",
-       "text": "Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.269",
-     "title": "v2.1.269",
-     "summary": "Added claude plugin eval: run a plugin's eval suite against Claude Code and get scored, reproducible results (JSON + HTML report); see claude plugin eval --help / Added /output-style [name] to list and switch output styles, including over Remote Control and in cloud and other headless sessions / Added a diff of the files a Bash command changed to the Bash tool result when the Bash tool handles file edits (setting bashEditDiffEnabled)",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added claude plugin eval: run a plugin's eval suite against Claude Code and get scored, reproducible results (JSON + HTML report); see claude plugin eval --help"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /output-style [name] to list and switch output styles, including over Remote Control and in cloud and other headless sessions"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a diff of the files a Bash command changed to the Bash tool result when the Bash tool handles file edits (setting bashEditDiffEnabled)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added OTEL_METRICS_INCLUDE_REPOSITORY to tag OpenTelemetry metrics and events with vcs.* repository attributes; commit events get vcs.ref.head.* with OTEL_LOG_TOOL_DETAILS"
-      },
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_GATEWAY_MODEL_DISCOVERY_TIMEOUT_MS to extend the LLM gateway /v1/models discovery timeout (default 3s)"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.268",
-     "title": "v2.1.268",
-     "summary": "Added to the Claude apps gateway: with pricing: set in gateway.yaml, signed-in Claude Code clients receive the same rates through managed settings, so /cost and telemetry match the spend meter / Added a startup warning for gateways when access_control.allow_cidrs is empty, and a one-time warning the first time a request arrives from a public address / Added the gatewayInternalNetworks managed setting, letting administrators allow /login to a Claude apps gateway on their organization's own public IPv4 block",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added to the Claude apps gateway: with pricing: set in gateway.yaml, signed-in Claude Code clients receive the same rates through managed settings, so /cost and telemetry match the spend meter"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a startup warning for gateways when access_control.allow_cidrs is empty, and a one-time warning the first time a request arrives from a public address"
-      },
-      {
-       "kind": "追加",
-       "text": "Added the gatewayInternalNetworks managed setting, letting administrators allow /login to a Claude apps gateway on their organization's own public IPv4 block"
-      },
-      {
-       "kind": "追加",
-       "text": "Added claude self-hosted-runner --remove-session-state (default off): delete each session's per-session directories under <base-dir>/_sessions/ when the session ends"
-      },
-      {
-       "kind": "追加",
-       "text": "Added configDirectory to the output of claude auth status --json"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.267",
-     "title": "v2.1.267",
-     "summary": "Added maxEffortLevel setting (top-level or per model under modelSettings): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level / Added --system-prompt-snapshot off to render the system prompt fresh on every request instead of reusing the conversation's recorded prompt (for iterating on prompt text) / Fixed Cowork scheduled tasks in the cloud failing at startup for organizations whose managed settings require sandboxing",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added maxEffortLevel setting (top-level or per model under modelSettings): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level"
-      },
-      {
-       "kind": "追加",
-       "text": "Added --system-prompt-snapshot off to render the system prompt fresh on every request instead of reusing the conversation's recorded prompt (for iterating on prompt text)"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed Cowork scheduled tasks in the cloud failing at startup for organizations whose managed settings require sandboxing"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed /context and other local command output rendering blank on mobile clients"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed shift+enter and option+backspace not working after reconnecting to a tmux or ssh session inside an agent view"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.266",
-     "title": "v2.1.266",
-     "summary": "Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented CLAUDE_CODE_USE_GATEWAY environment variable, previously ignored unless ANTHROPIC_BASE_URL and ANTHROPIC_AUTH_TOKEN were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configurations that set it alongside an API key, apiKeyHelper, or custom auth headers failed every request with \"Not signed in to the Cloud gateway\". The variable on its own is ignored again; no configuration change is needed",
-     "highlights": [
-      {
-       "kind": "修正",
-       "text": "Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented CLAUDE_CODE_USE_GATEWAY environment variable, previously ignored unless ANTHROPIC_BASE_URL and ANTHROPIC_AUTH_TOKEN were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configurations that set it alongside an API key, apiKeyHelper, or custom auth headers failed every request with \"Not signed in to the Cloud gateway\". The variable on its own is ignored again; no configuration change is needed"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.265",
-     "title": "v2.1.265",
-     "summary": "Added user.email and user.groups to the telemetry Claude Desktop and Cowork send through a Claude apps gateway, matching terminal sessions / Added support for pointing --plugin-dir at a folder of plugins: each child folder with a manifest loads, and children added or removed while running are picked up / Added a 1 GB cap on tool results saved to disk; the in-conversation preview says when a saved file was truncated",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added user.email and user.groups to the telemetry Claude Desktop and Cowork send through a Claude apps gateway, matching terminal sessions"
-      },
-      {
-       "kind": "追加",
-       "text": "Added support for pointing --plugin-dir at a folder of plugins: each child folder with a manifest loads, and children added or removed while running are picked up"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a 1 GB cap on tool results saved to disk; the in-conversation preview says when a saved file was truncated"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed resuming a foreground-spawned subagent changing its tool list and system prompt prefix, which broke prompt-cache reuse for that agent"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed agent teammates and resumed subagents moving SubagentStart hook context and preloaded skills out of the prompt prefix on later turns, which broke prompt-cache reuse"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.263",
-     "title": "v2.1.263",
-     "summary": "Bug fixes and reliability improvements",
-     "highlights": [
-      {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
