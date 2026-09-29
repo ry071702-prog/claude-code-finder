@@ -961,6 +961,146 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.284",
+     "title": "v2.1.284",
+     "summary": "Added Claude Sonnet 5.5 (claude-sonnet-5-5), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads / Added a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can allow that one read and still be asked about later ones / Added dollar amounts to the Claude apps gateway spend limit in /usage and the status line (for example \"$271.40 / $500.00 spent this month\") when the gateway runs this version or later; the status line's rate_limits.spend_limit also gains used_usd, limit_usd and period",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added Claude Sonnet 5.5 (claude-sonnet-5-5), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can allow that one read and still be asked about later ones"
+      },
+      {
+       "kind": "追加",
+       "text": "Added dollar amounts to the Claude apps gateway spend limit in /usage and the status line (for example \"$271.40 / $500.00 spent this month\") when the gateway runs this version or later; the status line's rate_limits.spend_limit also gains used_usd, limit_usd and period"
+      },
+      {
+       "kind": "追加",
+       "text": "Added effortSlider:decreaseEffort, increaseEffort and toggleUltracode keybinding actions, so the /effort slider's arrow and Tab keys can be rebound in keybindings.json"
+      },
+      {
+       "kind": "追加",
+       "text": "Added /rate-limit-options to /help and the command menu for claude.ai subscribers, so the usage-limit notices that mention it point to a command you can find"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.283",
+     "title": "v2.1.283",
+     "summary": "Added x-claude-code-prompt-id to the gateway hint headers so LLM gateways can group the requests that serve one user prompt; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 / Added availableModelsMatch managed setting: with \"exact\", an availableModels entry allows only the model version it names, so new releases stay blocked until listed / Added deniedModels managed setting to block specific models, even when availableModels allows them",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added x-claude-code-prompt-id to the gateway hint headers so LLM gateways can group the requests that serve one user prompt; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1"
+      },
+      {
+       "kind": "追加",
+       "text": "Added availableModelsMatch managed setting: with \"exact\", an availableModels entry allows only the model version it names, so new releases stay blocked until listed"
+      },
+      {
+       "kind": "追加",
+       "text": "Added deniedModels managed setting to block specific models, even when availableModels allows them"
+      },
+      {
+       "kind": "追加",
+       "text": "Added MCP tool, WebFetch and WebSearch outputs to the tool.output OpenTelemetry span event when OTEL_LOG_TOOL_CONTENT=1"
+      },
+      {
+       "kind": "追加",
+       "text": "Added /doctor prompt-audit (also /checkup prompt-audit) to audit your CLAUDE.md files, skills, agents and commands for prompting patterns written for older models"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.282",
+     "title": "v2.1.282",
+     "summary": "Added a maxProseWidth setting that caps the width of Claude's prose in wide terminals while tables and code blocks keep the full width / Added a startup notice, and /status and claude doctor entries, listing telemetry variables in a project's settings files that were ignored or that turned telemetry off / Added the allowClaudeInChromeWithManagedMcp managed setting to let claude --chrome run alongside an exclusive managed-mcp.json; the error shown when Chrome is blocked now names it",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a maxProseWidth setting that caps the width of Claude's prose in wide terminals while tables and code blocks keep the full width"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a startup notice, and /status and claude doctor entries, listing telemetry variables in a project's settings files that were ignored or that turned telemetry off"
+      },
+      {
+       "kind": "追加",
+       "text": "Added the allowClaudeInChromeWithManagedMcp managed setting to let claude --chrome run alongside an exclusive managed-mcp.json; the error shown when Chrome is blocked now names it"
+      },
+      {
+       "kind": "追加",
+       "text": "Added store.readiness_grace_seconds to the Claude apps gateway so /readyz can stay ready through a short Postgres outage such as a database failover"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a scrollbar to the /feedback drafts list in fullscreen mode; it appears while the mouse is over the list"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.281",
+     "title": "v2.1.281",
+     "summary": "Added Claude apps gateway support for newer Claude Desktop keys in desktop policy blocks, including blockReadsOutsideWorkingDirectories and disableBypassPermissionsMode / Added assume_role on Claude apps gateway Bedrock upstreams: the gateway calls Bedrock as an IAM role it assumes through STS, in another AWS account if needed, optionally one session per developer / Added guardrail: {id, version} on Claude apps gateway Bedrock upstreams to apply an Amazon Bedrock guardrail to every request sent through them (set it on all Bedrock upstreams or none)",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added Claude apps gateway support for newer Claude Desktop keys in desktop policy blocks, including blockReadsOutsideWorkingDirectories and disableBypassPermissionsMode"
+      },
+      {
+       "kind": "追加",
+       "text": "Added assume_role on Claude apps gateway Bedrock upstreams: the gateway calls Bedrock as an IAM role it assumes through STS, in another AWS account if needed, optionally one session per developer"
+      },
+      {
+       "kind": "追加",
+       "text": "Added guardrail: {id, version} on Claude apps gateway Bedrock upstreams to apply an Amazon Bedrock guardrail to every request sent through them (set it on all Bedrock upstreams or none)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added telemetry.resource_attributes to the Claude apps gateway config, to put fixed labels on the telemetry of Claude Desktop and /login sessions"
+      },
+      {
+       "kind": "追加",
+       "text": "Added \"attribution\": false in settings.json to hide all commit and PR attribution; older CLI versions skip a settings file that holds it, so keep the object form in files shared across versions"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.280",
+     "title": "v2.1.280",
+     "summary": "Added Claude Opus 5.5 (claude-opus-5-5), now the default Opus model — 1M context, $4/$20 per Mtok with $0.20/Mtok cache reads / Added mouse support to more lists in fullscreen mode: the wheel scrolls the /skills list, and a skill's state options in /plugin can be clicked / Added CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH to change the 2,048-character cap on MCP tool descriptions and server instructions for every MCP server in the session",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added Claude Opus 5.5 (claude-opus-5-5), now the default Opus model — 1M context, $4/$20 per Mtok with $0.20/Mtok cache reads"
+      },
+      {
+       "kind": "追加",
+       "text": "Added mouse support to more lists in fullscreen mode: the wheel scrolls the /skills list, and a skill's state options in /plugin can be clicked"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH to change the 2,048-character cap on MCP tool descriptions and server instructions for every MCP server in the session"
+      },
+      {
+       "kind": "追加",
+       "text": "Added hook output sizes and the number of oversized outputs saved to a file to the hook_execution_complete OpenTelemetry event"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed writes through a symlinked path being judged by their in-tree spelling: the prompt names where the write lands, and acceptEdits, allow rules and auto mode no longer approve one landing outside"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.278",
      "title": "v2.1.278",
      "summary": "Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways, to default to the server-side classifier, which does not charge for classifier overhead (CLAUDE_CODE_AUTO_MODE_SERVER=0 opts out on Bedrock, Vertex, Foundry and gateways); warns on billed fallback. See https://code.claude.com/docs/en/auto-mode-classifier-billing / Added an Auto mode server row to /status showing whether this session's auto mode classifier runs on the server",
@@ -979,11 +1119,11 @@
     {
      "id": "changelog-2.1.277",
      "title": "v2.1.277",
-     "summary": "Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \"Project instructions\" in /config (not yet on Bedrock, Vertex or Foundry) / Added CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY=1 for Claude apps gateways whose only egress is a forward proxy: every outbound request hands the proxy the hostname instead of resolving it locally / Added an optional headers: map on Claude apps gateway upstreams, to send static headers to a proxy you run in front of a provider",
+     "summary": "Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \"Project instructions\" in /config / Added CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY=1 for Claude apps gateways whose only egress is a forward proxy: every outbound request hands the proxy the hostname instead of resolving it locally / Added an optional headers: map on Claude apps gateway upstreams, to send static headers to a proxy you run in front of a provider",
      "highlights": [
       {
        "kind": "追加",
-       "text": "Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \"Project instructions\" in /config (not yet on Bedrock, Vertex or Foundry)"
+       "text": "Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \"Project instructions\" in /config"
       },
       {
        "kind": "追加",
@@ -1012,130 +1152,6 @@
       {
        "kind": "修正",
        "text": "Fixed every request failing with 400 … Input tag 'advisor_20260301' when ANTHROPIC_BASE_URL points at a proxy or gateway (2.1.275 regression)"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.275",
-     "title": "v2.1.275",
-     "summary": "Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm it before the credential is saved, and /status shows it / Added a send-now key (ctrl+enter, or ctrl+x ctrl+s) that interrupts the current turn and sends all queued messages at once; sent and queued messages show in gray until the model receives them / Added a startup warning when a configured otelHeadersHelper fails, so sessions that silently export no telemetry are noticed",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm it before the credential is saved, and /status shows it"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a send-now key (ctrl+enter, or ctrl+x ctrl+s) that interrupts the current turn and sends all queued messages at once; sent and queued messages show in gray until the model receives them"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a startup warning when a configured otelHeadersHelper fails, so sessions that silently export no telemetry are noticed"
-      },
-      {
-       "kind": "追加",
-       "text": "Added syncing of the skills and plugins enabled on your claude.ai account to terminal sessions signed in with it; opt out with syncClaudeAiSkills: false or syncClaudeAiPlugins: false"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /plugin install <plugin> --marketplace <source>, which offers to add the marketplace before installing the plugin"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.274",
-     "title": "v2.1.274",
-     "summary": "Added a visible warning when memory usage is critical, with steps to free memory or restart safely / Added CLAUDE_CODE_MCP_STARTUP_WAIT_MS to bound how long the first non-interactive turn waits for connecting MCP servers (0 = don't wait) / Added effort attribute to the claude_code.llm_request OpenTelemetry trace span, matching the api_request event",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added a visible warning when memory usage is critical, with steps to free memory or restart safely"
-      },
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_MCP_STARTUP_WAIT_MS to bound how long the first non-interactive turn waits for connecting MCP servers (0 = don't wait)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added effort attribute to the claude_code.llm_request OpenTelemetry trace span, matching the api_request event"
-      },
-      {
-       "kind": "追加",
-       "text": "Added claude_code.managed_settings_resolved OTel event: managed-settings sources and policy helper state; redacted settings and digests with OTEL_LOG_MANAGED_SETTINGS=1"
-      },
-      {
-       "kind": "追加",
-       "text": "Added store.connect_timeout_seconds to the Claude apps gateway config to lengthen the Postgres connect timeout (default 5 seconds), and improved the boot error when the database is unreachable to point to store.postgres_url and the configured timeout"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.273",
-     "title": "v2.1.273",
-     "summary": "Added x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction and x-claude-code-context-compacted request headers for LLM gateways; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 / Added a notification when an MCP server disconnects mid-session and automatic reconnection gives up, pointing at /mcp / Added forking a session started with claude --remote-control or /remote-control from the Claude app; the fork runs as a background session on your computer",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction and x-claude-code-context-compacted request headers for LLM gateways; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a notification when an MCP server disconnects mid-session and automatic reconnection gives up, pointing at /mcp"
-      },
-      {
-       "kind": "追加",
-       "text": "Added forking a session started with claude --remote-control or /remote-control from the Claude app; the fork runs as a background session on your computer"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed Bash commands the permission checker cannot fully analyze skipping the prompt under permissions.blockReadsOutsideWorkingDirectories, and a subshell hiding a dangerous rm in bypass mode"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed skills synced from claude.ai staying available after your organization turns Skills off; they now move to the recoverable trash"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.272",
-     "title": "v2.1.272",
-     "summary": "Bug fixes and reliability improvements",
-     "highlights": [
-      {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.271",
-     "title": "v2.1.271",
-     "summary": "Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host's fast-mode setting or /fast typed in the session applies where your organization allows it / Added mouse support to the /config panel in fullscreen mode: the wheel scrolls the settings list, a click on a setting's value changes it, and the row under the pointer is highlighted / Added claude self-hosted-runner --drain-marker-file <path>: when that file exists at a SIGTERM drain, the runner reports its exit to the server as a host drain (telemetry only)",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host's fast-mode setting or /fast typed in the session applies where your organization allows it"
-      },
-      {
-       "kind": "追加",
-       "text": "Added mouse support to the /config panel in fullscreen mode: the wheel scrolls the settings list, a click on a setting's value changes it, and the row under the pointer is highlighted"
-      },
-      {
-       "kind": "追加",
-       "text": "Added claude self-hosted-runner --drain-marker-file <path>: when that file exists at a SIGTERM drain, the runner reports its exit to the server as a host drain (telemetry only)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added per-command allowed_domains to Bash, PowerShell and Monitor in auto mode with sandboxing: the hosts a command needs are reviewed with it and opened for it alone; other hosts are refused"
-      },
-      {
-       "kind": "追加",
-       "text": "Added omitClaudeMd to agent frontmatter and --agents JSON, letting custom and plugin subagents run without user, project and local CLAUDE.md files; managed policy files still load"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
