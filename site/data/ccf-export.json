@@ -961,6 +961,150 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.296",
+     "title": "v2.1.296",
+     "summary": "Added a code key to the Claude apps gateway's managed.policies[]: the same settings as cli, also applied in Claude Desktop's Code tab; beside desktop, it turns on Claude Desktop's gateway mode / Added autoCompactWindow to subagent frontmatter and --agents definitions, so a subagent can auto-compact earlier than the main conversation's window / Added CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL to run every workflow agent on one model while other subagents keep theirs",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a code key to the Claude apps gateway's managed.policies[]: the same settings as cli, also applied in Claude Desktop's Code tab; beside desktop, it turns on Claude Desktop's gateway mode"
+      },
+      {
+       "kind": "追加",
+       "text": "Added autoCompactWindow to subagent frontmatter and --agents definitions, so a subagent can auto-compact earlier than the main conversation's window"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL to run every workflow agent on one model while other subagents keep theirs"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_OVERLOADED_RETRY_MAX_DELAY_MS environment variable to set a longer maximum delay for the backoff when retrying an overloaded (529) request"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a note in /plugin on a plugin whose hooks are left out because another enabled plugin has the same name"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.295",
+     "title": "v2.1.295",
+     "summary": "Added onFailure: \"block\" for command and HTTP hooks: a hook that can't start, times out, or exits with an unexpected code blocks the action instead of letting it through / Added Program Status Protocol (OSC 7501) support: terminals that implement it can show whether Claude Code is working, waiting on you, or done / Added quoted text to the /copy picker, so a drafted message copies without its > markers",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added onFailure: \"block\" for command and HTTP hooks: a hook that can't start, times out, or exits with an unexpected code blocks the action instead of letting it through"
+      },
+      {
+       "kind": "追加",
+       "text": "Added Program Status Protocol (OSC 7501) support: terminals that implement it can show whether Claude Code is working, waiting on you, or done"
+      },
+      {
+       "kind": "追加",
+       "text": "Added quoted text to the /copy picker, so a drafted message copies without its > markers"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a warning to claude plugin install, enable, disable and marketplace add when the settings file they write to does not load"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a line on stderr, when it is a terminal, that says what a claude -p run is waiting for when it stays open after its last turn"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.294",
+     "title": "v2.1.294",
+     "summary": "Fixed prompt and agent hooks written as instructions (such as \"Block commands that...\") allowing what they should block / Improved how prompt hooks on Stop and SubagentStop written as instructions (such as \"Carry on if the build is broken\") are judged, so Claude is less likely to stop early",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed prompt and agent hooks written as instructions (such as \"Block commands that...\") allowing what they should block"
+      },
+      {
+       "kind": "改善",
+       "text": "Improved how prompt hooks on Stop and SubagentStop written as instructions (such as \"Carry on if the build is broken\") are judged, so Claude is less likely to stop early"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.293",
+     "title": "v2.1.293",
+     "summary": "Added Claude Haiku 5.5 (claude-haiku-5-5), now the default Haiku model on the Anthropic API — 1M context, $0.10/$0.50 per Mtok ($0.50/$2.50 for prompts over 100K) / Added agentType to the subagentStatusLine payload, so scripts can tell custom subagent types apart / Added isDeferred to $.tool.register for mods: false lists the tool's schema in the prompt from the start instead of behind tool search",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added Claude Haiku 5.5 (claude-haiku-5-5), now the default Haiku model on the Anthropic API — 1M context, $0.10/$0.50 per Mtok ($0.50/$2.50 for prompts over 100K)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added agentType to the subagentStatusLine payload, so scripts can tell custom subagent types apart"
+      },
+      {
+       "kind": "追加",
+       "text": "Added isDeferred to $.tool.register for mods: false lists the tool's schema in the prompt from the start instead of behind tool search"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Claude sometimes treating its own last actions before a context compaction as done after it, and retracting or redoing finished work"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a memory leak where an HTTP MCP connection kept every request it had sent until it closed"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.292",
+     "title": "v2.1.292",
+     "summary": "Added an effort parameter to the Agent tool, so Claude runs a sub-agent at the effort level you ask for / Added CLAUDE_CODE_OVERLOADED_RETRY_BASE_DELAY_MS environment variable to set a longer base delay for the backoff when retrying an overloaded (529) request / Added prompt.autocomplete, an event a mod hooks to add its own rows to the prompt box's autocomplete list",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added an effort parameter to the Agent tool, so Claude runs a sub-agent at the effort level you ask for"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_OVERLOADED_RETRY_BASE_DELAY_MS environment variable to set a longer base delay for the backoff when retrying an overloaded (529) request"
+      },
+      {
+       "kind": "追加",
+       "text": "Added prompt.autocomplete, an event a mod hooks to add its own rows to the prompt box's autocomplete list"
+      },
+      {
+       "kind": "追加",
+       "text": "Added prompt caching to $.model.complete for mods: prompt and system take blocks of text, and cache: true on a block caches the request up to it"
+      },
+      {
+       "kind": "追加",
+       "text": "Added workflow agents to the agent.spawn mod hook, with their run and index, so a mod can refuse them"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.291",
+     "title": "v2.1.291",
+     "summary": "Fixed a regression in 2.1.290 where cloud sessions could drop answers to permission prompts / Fixed a regression in 2.1.288 where the last messages of a session could be lost when quitting",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed a regression in 2.1.290 where cloud sessions could drop answers to permission prompts"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a regression in 2.1.288 where the last messages of a session could be lost when quitting"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.290",
      "title": "v2.1.290",
      "summary": "Added serverToolUses to the result of a mod's turn.step hook: the tool calls the API ran itself (the advisor), each with its id, name, input, start and end / Added agentId to the tool.check event of plugin hooks, so a hook can tell a subagent's permission check from the main session's / Added ceiling to the question and verdict a mod's tool.check hook reads, naming the approval an organization requires for a tool",
@@ -1012,174 +1156,6 @@
       {
        "kind": "改善",
        "text": "Improved how quickly large files open in a plugin code pane by laying the highlighted view out once at its final width"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.288",
-     "title": "v2.1.288",
-     "summary": "Added $.ui.selection() for mods: returns the text you last selected in fullscreen mode and, when the selection lies within one transcript row, that row / Added a built-in gh api to cloud sessions whose image has no GitHub CLI, and fixed the built-in sending control characters from file names, jq filters or GitHub errors to the terminal / Added recovery for a prompt cleared with Ctrl+C: pressing Up on the empty prompt brings the draft back, including pasted text and images",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added $.ui.selection() for mods: returns the text you last selected in fullscreen mode and, when the selection lies within one transcript row, that row"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a built-in gh api to cloud sessions whose image has no GitHub CLI, and fixed the built-in sending control characters from file names, jq filters or GitHub errors to the terminal"
-      },
-      {
-       "kind": "追加",
-       "text": "Added recovery for a prompt cleared with Ctrl+C: pressing Up on the empty prompt brings the draft back, including pasted text and images"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a re-authenticate prompt when an MCP server asks for more OAuth scope during a tool call"
-      },
-      {
-       "kind": "追加",
-       "text": "Added --max-findings <n>|all to /code-review to report more or fewer findings than the usual limit; the choice is reused until you pass --max-findings default"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.287",
-     "title": "v2.1.287",
-     "summary": "Added Claude Mods: plugins may now modify deeper behavior / Added You should know, a built-in mod where a side agent watches your back and flags things you or Claude might miss. Turn it on with /plugin enable cc-plugin-you-should-know@builtin (for first-party sessions with telemetry on) / Added an n:<text> filter to the agents view that matches session names and tasks; a filter now shows matches in collapsed sections and Enter opens the first match",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added Claude Mods: plugins may now modify deeper behavior"
-      },
-      {
-       "kind": "追加",
-       "text": "Added You should know, a built-in mod where a side agent watches your back and flags things you or Claude might miss. Turn it on with /plugin enable cc-plugin-you-should-know@builtin (for first-party sessions with telemetry on)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added an n:<text> filter to the agents view that matches session names and tasks; a filter now shows matches in collapsed sections and Enter opens the first match"
-      },
-      {
-       "kind": "追加",
-       "text": "Added prompt_text to the OpenTelemetry user_prompt event, a copy of prompt for backends that nest dotted keys; drop or mask it wherever you drop or mask prompt (anthropics/claude-code#70763)"
-      },
-      {
-       "kind": "追加",
-       "text": "Added URL prompts from MCP servers on the 2025-11-25 protocol, for example to sign in. If a server no longer connects after this update, add \"bareElicitationCapability\": true to its MCP config entry"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.286",
-     "title": "v2.1.286",
-     "summary": "Added a count such as \"2 of 5\" to the permission prompt when several permission requests stack up / Added mouse support for the \"N more\" rows of lists in fullscreen mode: click one to jump to that end of the list, with hover and pressed states / Fixed several Claude Code processes and IDE extensions each opening a login browser when gcpAuthRefresh or awsAuthRefresh credentials expire",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added a count such as \"2 of 5\" to the permission prompt when several permission requests stack up"
-      },
-      {
-       "kind": "追加",
-       "text": "Added mouse support for the \"N more\" rows of lists in fullscreen mode: click one to jump to that end of the list, with hover and pressed states"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed several Claude Code processes and IDE extensions each opening a login browser when gcpAuthRefresh or awsAuthRefresh credentials expire"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed claude --resume and --continue sometimes losing every turn after a batch of parallel tool calls when the earlier session crashed or was killed"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed API 400 errors after a tool or hook returned an object, number or boolean instead of text, including in resumed sessions"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.285",
-     "title": "v2.1.285",
-     "summary": "Added CLAUDE_CODE_DISABLE_WEB_FETCH environment variable to turn off the WebFetch tool / Added claude --desktop to open the Claude desktop app on the current directory, or on a session with --continue / --resume <id> / Added claude plugin configure <plugin> to show a plugin's options and which are unset, or save new values read from stdin with --values-stdin",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_DISABLE_WEB_FETCH environment variable to turn off the WebFetch tool"
-      },
-      {
-       "kind": "追加",
-       "text": "Added claude --desktop to open the Claude desktop app on the current directory, or on a session with --continue / --resume <id>"
-      },
-      {
-       "kind": "追加",
-       "text": "Added claude plugin configure <plugin> to show a plugin's options and which are unset, or save new values read from stdin with --values-stdin"
-      },
-      {
-       "kind": "追加",
-       "text": "Added <server>.<key>=<value> to claude plugin install --config, so a bundled .mcpb MCP server's own settings can be set at install time and it starts without visiting /plugin → Configure"
-      },
-      {
-       "kind": "追加",
-       "text": "Added allowedProviders managed setting to limit which API providers a machine may use (Anthropic API, a custom endpoint, Bedrock, Mantle, Vertex AI, Foundry, Claude Platform on AWS, or a Cloud gateway)"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.284",
-     "title": "v2.1.284",
-     "summary": "Added Claude Sonnet 5.5 (claude-sonnet-5-5), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads / Added a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can allow that one read and still be asked about later ones / Added dollar amounts to the Claude apps gateway spend limit in /usage and the status line (for example \"$271.40 / $500.00 spent this month\") when the gateway runs this version or later; the status line's rate_limits.spend_limit also gains used_usd, limit_usd and period",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added Claude Sonnet 5.5 (claude-sonnet-5-5), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can allow that one read and still be asked about later ones"
-      },
-      {
-       "kind": "追加",
-       "text": "Added dollar amounts to the Claude apps gateway spend limit in /usage and the status line (for example \"$271.40 / $500.00 spent this month\") when the gateway runs this version or later; the status line's rate_limits.spend_limit also gains used_usd, limit_usd and period"
-      },
-      {
-       "kind": "追加",
-       "text": "Added effortSlider:decreaseEffort, increaseEffort and toggleUltracode keybinding actions, so the /effort slider's arrow and Tab keys can be rebound in keybindings.json"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /rate-limit-options to /help and the command menu for claude.ai subscribers, so the usage-limit notices that mention it point to a command you can find"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.283",
-     "title": "v2.1.283",
-     "summary": "Added x-claude-code-prompt-id to the gateway hint headers so LLM gateways can group the requests that serve one user prompt; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 / Added availableModelsMatch managed setting: with \"exact\", an availableModels entry allows only the model version it names, so new releases stay blocked until listed / Added deniedModels managed setting to block specific models, even when availableModels allows them",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added x-claude-code-prompt-id to the gateway hint headers so LLM gateways can group the requests that serve one user prompt; opt in with CLAUDE_CODE_GATEWAY_HINT_HEADERS=1"
-      },
-      {
-       "kind": "追加",
-       "text": "Added availableModelsMatch managed setting: with \"exact\", an availableModels entry allows only the model version it names, so new releases stay blocked until listed"
-      },
-      {
-       "kind": "追加",
-       "text": "Added deniedModels managed setting to block specific models, even when availableModels allows them"
-      },
-      {
-       "kind": "追加",
-       "text": "Added MCP tool, WebFetch and WebSearch outputs to the tool.output OpenTelemetry span event when OTEL_LOG_TOOL_CONTENT=1"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /doctor prompt-audit (also /checkup prompt-audit) to audit your CLAUDE.md files, skills, agents and commands for prompting patterns written for older models"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"

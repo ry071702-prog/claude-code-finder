@@ -14,7 +14,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@academy-guide -g"
 ],
 "install": "npx skills add anthropics/skills@academy-guide -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "academy-guide",
@@ -37,7 +37,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@algorithmic-art -g"
 ],
 "install": "npx skills add anthropics/skills@algorithmic-art -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "algorithmic-art",
@@ -60,7 +60,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@brand-guidelines -g"
 ],
 "install": "npx skills add anthropics/skills@brand-guidelines -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "brand-guidelines",
@@ -83,7 +83,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@canvas-design -g"
 ],
 "install": "npx skills add anthropics/skills@canvas-design -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "canvas-design",
@@ -106,7 +106,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@claude-api -g"
 ],
 "install": "npx skills add anthropics/skills@claude-api -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "claude-api",
@@ -129,7 +129,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@discernment-nudge -g"
 ],
 "install": "npx skills add anthropics/skills@discernment-nudge -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "discernment-nudge",
@@ -152,7 +152,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@doc-coauthoring -g"
 ],
 "install": "npx skills add anthropics/skills@doc-coauthoring -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "doc-coauthoring",
@@ -175,7 +175,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@docx -g"
 ],
 "install": "npx skills add anthropics/skills@docx -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "docx",
@@ -198,7 +198,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@frontend-design -g"
 ],
 "install": "npx skills add anthropics/skills@frontend-design -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "frontend-design",
@@ -221,7 +221,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@internal-comms -g"
 ],
 "install": "npx skills add anthropics/skills@internal-comms -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "internal-comms",
@@ -244,7 +244,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@mcp-builder -g"
 ],
 "install": "npx skills add anthropics/skills@mcp-builder -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "mcp-builder",
@@ -267,7 +267,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pdf -g"
 ],
 "install": "npx skills add anthropics/skills@pdf -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pdf",
@@ -290,7 +290,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pptx -g"
 ],
 "install": "npx skills add anthropics/skills@pptx -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pptx",
@@ -313,7 +313,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@skill-creator -g"
 ],
 "install": "npx skills add anthropics/skills@skill-creator -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "skill-creator",
@@ -336,7 +336,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@slack-gif-creator -g"
 ],
 "install": "npx skills add anthropics/skills@slack-gif-creator -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "slack-gif-creator",
@@ -359,7 +359,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@theme-factory -g"
 ],
 "install": "npx skills add anthropics/skills@theme-factory -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "theme-factory",
@@ -382,7 +382,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@web-artifacts-builder -g"
 ],
 "install": "npx skills add anthropics/skills@web-artifacts-builder -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "web-artifacts-builder",
@@ -405,7 +405,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@webapp-testing -g"
 ],
 "install": "npx skills add anthropics/skills@webapp-testing -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "webapp-testing",
@@ -428,7 +428,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@xlsx -g"
 ],
 "install": "npx skills add anthropics/skills@xlsx -g",
-"stars": 179797,
+"stars": 180756,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "xlsx",
@@ -451,7 +451,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "deploy-to-vercel",
@@ -474,7 +474,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-cli-with-tokens",
@@ -497,7 +497,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@composition-patterns -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@composition-patterns -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "composition-patterns",
@@ -520,7 +520,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-optimize -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-optimize -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-optimize",
@@ -543,7 +543,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-best-practices -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-best-practices -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-best-practices",
@@ -566,7 +566,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-native-skills -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-native-skills -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-native-skills",
@@ -589,7 +589,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-view-transitions -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-view-transitions -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-view-transitions",
@@ -612,7 +612,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@web-design-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@web-design-guidelines -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "web-design-guidelines",
@@ -635,7 +635,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@writing-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@writing-guidelines -g",
-"stars": 31972,
+"stars": 32303,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "writing-guidelines",
@@ -658,7 +658,7 @@ window.CCF_SKILLS = [
 "npx skills add crazyguitar/pysheeet@py -g"
 ],
 "install": "npx skills add crazyguitar/pysheeet@py -g",
-"stars": 8162,
+"stars": 8159,
 "repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
 "py",
@@ -681,7 +681,7 @@ window.CCF_SKILLS = [
 "npx skills add crazyguitar/pysheeet@readable-py -g"
 ],
 "install": "npx skills add crazyguitar/pysheeet@readable-py -g",
-"stars": 8162,
+"stars": 8159,
 "repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
 "readable-py",
@@ -704,7 +704,7 @@ window.CCF_SKILLS = [
 "npx skills add dgiot/dgiot@fde-ontology -g"
 ],
 "install": "npx skills add dgiot/dgiot@fde-ontology -g",
-"stars": 4851,
+"stars": 4852,
 "repoUrl": "https://github.com/dgiot/dgiot",
 "aliases": [
 "fde-ontology",
@@ -727,7 +727,7 @@ window.CCF_SKILLS = [
 "npx skills add dgiot/dgiot@skills -g"
 ],
 "install": "npx skills add dgiot/dgiot@skills -g",
-"stars": 4851,
+"stars": 4852,
 "repoUrl": "https://github.com/dgiot/dgiot",
 "aliases": [
 "skills",
@@ -750,7 +750,7 @@ window.CCF_SKILLS = [
 "npx skills add antvis/L7@l7-single -g"
 ],
 "install": "npx skills add antvis/L7@l7-single -g",
-"stars": 4070,
+"stars": 4072,
 "repoUrl": "https://github.com/antvis/L7",
 "aliases": [
 "l7-single",
@@ -773,7 +773,7 @@ window.CCF_SKILLS = [
 "npx skills add antvis/L7@l7 -g"
 ],
 "install": "npx skills add antvis/L7@l7 -g",
-"stars": 4070,
+"stars": 4072,
 "repoUrl": "https://github.com/antvis/L7",
 "aliases": [
 "l7",
@@ -796,7 +796,7 @@ window.CCF_SKILLS = [
 "npx skills add op7418/Claude-to-IM-skill -g"
 ],
 "install": "npx skills add op7418/Claude-to-IM-skill -g",
-"stars": 2883,
+"stars": 2891,
 "repoUrl": "https://github.com/op7418/Claude-to-IM-skill",
 "aliases": [
 "Claude-to-IM-skill",
@@ -830,8 +830,31 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-better-auth-better-icons-skills",
+"id": "skill-benavlabs-fastcrud-fastcrud-.agents-skills-fastcrud",
 "priority": 436,
+"category": "community",
+"type": "skill",
+"want": "fastcrud",
+"feature": "benavlabs/fastcrud",
+"summary": "Use when building or modifying CRUD endpoints with FastCRUD (the `fastcrud` PyPI package) in a FastAPI project — covers `FastCRUD`, `crud_router`, `EndpointCreator`, `FilterConfig`, `JoinConfig`, auto-relationship detection, the filter operator syntax (`__gte`, `__in`, `__ilike`, etc.), cursor pagination, soft delete, and how to avoid N+1 queries when fetching related data. Activate when the user mentions FastCRUD, `crud_router`, `FastCRUD()`, `FilterConfig`, `JoinConfig`, or asks how to build CRUD endpoints / generate REST APIs from SQLAlchemy or SQLModel models, even if the user doesn't name the library directly.",
+"trigger": "Use when building or modifying CRUD endpoints with FastCRUD (the `fastcrud` PyPI package) in a FastAPI project — covers `FastCRUD`, `crud_router`, `EndpointCreator`, `FilterConfig`, `JoinConfig`, auto-relationship detection, the filter operator syntax (`__gte`, `__in`, `__ilike`, etc.), cursor pagination, soft delete, and how to avoid N+1 queries when fetching related data. Activate when the user mentions FastCRUD, `crud_router`, `FastCRUD()`, `FilterConfig`, `JoinConfig`, or asks how to build CRUD endpoints / generate REST APIs from SQLAlchemy or SQLModel models, even if the user doesn't name the library directly.",
+"commands": [
+"npx skills add benavlabs/fastcrud -g"
+],
+"install": "npx skills add benavlabs/fastcrud -g",
+"stars": 1595,
+"repoUrl": "https://github.com/benavlabs/fastcrud",
+"aliases": [
+"fastcrud",
+"benavlabs",
+"fastcrud",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-better-auth-better-icons-skills",
+"priority": 437,
 "category": "community",
 "type": "skill",
 "want": "better-icons",
@@ -842,7 +865,7 @@ window.CCF_SKILLS = [
 "npx skills add better-auth/better-icons -g"
 ],
 "install": "npx skills add better-auth/better-icons -g",
-"stars": 1339,
+"stars": 1375,
 "repoUrl": "https://github.com/better-auth/better-icons",
 "aliases": [
 "skills",
@@ -854,7 +877,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-affiliate-marketing-strategy",
-"priority": 437,
+"priority": 438,
 "category": "community",
 "type": "skill",
 "want": "affiliate-marketing-strategy",
@@ -865,7 +888,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@affiliate-marketing-strategy -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@affiliate-marketing-strategy -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "affiliate-marketing-strategy",
@@ -877,7 +900,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-api-monitoring",
-"priority": 438,
+"priority": 439,
 "category": "community",
 "type": "skill",
 "want": "api-monitoring",
@@ -888,7 +911,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@api-monitoring -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@api-monitoring -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "api-monitoring",
@@ -900,7 +923,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-monitoring",
-"priority": 439,
+"priority": 440,
 "category": "community",
 "type": "skill",
 "want": "brand-monitoring",
@@ -911,7 +934,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-monitoring -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-monitoring -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-monitoring",
@@ -923,7 +946,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-amazon",
-"priority": 440,
+"priority": 441,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-amazon",
@@ -934,7 +957,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-amazon -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-amazon -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-amazon",
@@ -946,7 +969,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-ebay",
-"priority": 441,
+"priority": 442,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-ebay",
@@ -957,7 +980,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-ebay -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-ebay -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-ebay",
@@ -969,7 +992,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-shopify",
-"priority": 442,
+"priority": 443,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-shopify",
@@ -980,7 +1003,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-shopify -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-shopify -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-shopify",
@@ -992,7 +1015,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-tiktok",
-"priority": 443,
+"priority": 444,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-tiktok",
@@ -1003,7 +1026,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-tiktok -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-tiktok -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-tiktok",
@@ -1015,7 +1038,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-nexscope-ai-ecommerce-skills-brand-protection-brand-protection-walmart",
-"priority": 444,
+"priority": 445,
 "category": "community",
 "type": "skill",
 "want": "brand-protection-walmart",
@@ -1026,7 +1049,7 @@ window.CCF_SKILLS = [
 "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-walmart -g"
 ],
 "install": "npx skills add nexscope-ai/eCommerce-Skills@brand-protection-walmart -g",
-"stars": 1073,
+"stars": 1130,
 "repoUrl": "https://github.com/nexscope-ai/eCommerce-Skills",
 "aliases": [
 "brand-protection-walmart",
@@ -1038,7 +1061,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-raphaelsalaja-userinterface-wiki-skills",
-"priority": 445,
+"priority": 446,
 "category": "community",
 "type": "skill",
 "want": "userinterface-wiki",
@@ -1049,7 +1072,7 @@ window.CCF_SKILLS = [
 "npx skills add raphaelsalaja/userinterface-wiki -g"
 ],
 "install": "npx skills add raphaelsalaja/userinterface-wiki -g",
-"stars": 902,
+"stars": 909,
 "repoUrl": "https://github.com/raphaelsalaja/userinterface-wiki",
 "aliases": [
 "skills",
@@ -1061,7 +1084,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-denissergeevitch-repo-task-proof-loop-repo-task-proof-loop",
-"priority": 446,
+"priority": 447,
 "category": "community",
 "type": "skill",
 "want": "repo-task-proof-loop",
@@ -1084,7 +1107,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta",
-"priority": 447,
+"priority": 448,
 "category": "community",
 "type": "skill",
 "want": "neta",
@@ -1095,7 +1118,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta",
@@ -1107,7 +1130,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta-adventure",
-"priority": 448,
+"priority": 449,
 "category": "community",
 "type": "skill",
 "want": "neta-adventure",
@@ -1118,7 +1141,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta-adventure -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta-adventure -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta-adventure",
@@ -1130,7 +1153,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta-character",
-"priority": 449,
+"priority": 450,
 "category": "community",
 "type": "skill",
 "want": "neta-character",
@@ -1141,7 +1164,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta-character -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta-character -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta-character",
@@ -1153,7 +1176,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta-community",
-"priority": 450,
+"priority": 451,
 "category": "community",
 "type": "skill",
 "want": "neta-community",
@@ -1164,7 +1187,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta-community -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta-community -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta-community",
@@ -1176,7 +1199,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta-creative",
-"priority": 451,
+"priority": 452,
 "category": "community",
 "type": "skill",
 "want": "neta-creative",
@@ -1187,7 +1210,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta-creative -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta-creative -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta-creative",
@@ -1199,7 +1222,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta-elementum",
-"priority": 452,
+"priority": 453,
 "category": "community",
 "type": "skill",
 "want": "neta-elementum",
@@ -1210,7 +1233,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta-elementum -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta-elementum -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta-elementum",
@@ -1222,7 +1245,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta-space",
-"priority": 453,
+"priority": 454,
 "category": "community",
 "type": "skill",
 "want": "neta-space",
@@ -1233,7 +1256,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta-space -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta-space -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta-space",
@@ -1245,7 +1268,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-netaart-neta-skills-skills-neta-suggest",
-"priority": 454,
+"priority": 455,
 "category": "community",
 "type": "skill",
 "want": "neta-suggest",
@@ -1256,7 +1279,7 @@ window.CCF_SKILLS = [
 "npx skills add netaart/neta-skills@neta-suggest -g"
 ],
 "install": "npx skills add netaart/neta-skills@neta-suggest -g",
-"stars": 667,
+"stars": 662,
 "repoUrl": "https://github.com/netaart/neta-skills",
 "aliases": [
 "neta-suggest",
@@ -1268,7 +1291,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-quantco-dataframely-skills",
-"priority": 455,
+"priority": 456,
 "category": "community",
 "type": "skill",
 "want": "dataframely",
@@ -1291,7 +1314,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-ahmadawais-ramadan-cli-skills",
-"priority": 456,
+"priority": 457,
 "category": "community",
 "type": "skill",
 "want": "skills",
@@ -1314,7 +1337,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-thereddeveloper-ply-engine-ply-engine",
-"priority": 457,
+"priority": 458,
 "category": "community",
 "type": "skill",
 "want": "ply-engine",
@@ -1325,7 +1348,7 @@ window.CCF_SKILLS = [
 "npx skills add TheRedDeveloper/ply-engine -g"
 ],
 "install": "npx skills add TheRedDeveloper/ply-engine -g",
-"stars": 504,
+"stars": 509,
 "repoUrl": "https://github.com/TheRedDeveloper/ply-engine",
 "aliases": [
 "ply-engine",
@@ -1337,7 +1360,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-browser-use-browser-harness-js-browser-harness-js",
-"priority": 458,
+"priority": 459,
 "category": "community",
 "type": "skill",
 "want": "cdp",
@@ -1348,7 +1371,7 @@ window.CCF_SKILLS = [
 "npx skills add browser-use/browser-harness-js -g"
 ],
 "install": "npx skills add browser-use/browser-harness-js -g",
-"stars": 488,
+"stars": 491,
 "repoUrl": "https://github.com/browser-use/browser-harness-js",
 "aliases": [
 "browser-harness-js",
@@ -1360,7 +1383,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-paraschopra-make-pages-interactive-make-pages-interactive",
-"priority": 459,
+"priority": 460,
 "category": "community",
 "type": "skill",
 "want": "make-pages-interactive",
@@ -1371,7 +1394,7 @@ window.CCF_SKILLS = [
 "npx skills add paraschopra/make-pages-interactive -g"
 ],
 "install": "npx skills add paraschopra/make-pages-interactive -g",
-"stars": 480,
+"stars": 482,
 "repoUrl": "https://github.com/paraschopra/make-pages-interactive",
 "aliases": [
 "make-pages-interactive",
@@ -1383,7 +1406,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skills-agentsop-agent-topology-selection",
-"priority": 460,
+"priority": 461,
 "category": "community",
 "type": "skill",
 "want": "agentsop-agent-topology-selection",
@@ -1394,7 +1417,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@agentsop-agent-topology-selection -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@agentsop-agent-topology-selection -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "agentsop-agent-topology-selection",
@@ -1406,7 +1429,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skills-agentsop-aider",
-"priority": 461,
+"priority": 462,
 "category": "community",
 "type": "skill",
 "want": "agentsop-aider",
@@ -1417,7 +1440,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@agentsop-aider -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@agentsop-aider -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "agentsop-aider",
@@ -1429,7 +1452,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skills-agentsop-bio-fraud-forensics",
-"priority": 462,
+"priority": 463,
 "category": "community",
 "type": "skill",
 "want": "agentsop-bio-fraud-forensics",
@@ -1440,7 +1463,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@agentsop-bio-fraud-forensics -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@agentsop-bio-fraud-forensics -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "agentsop-bio-fraud-forensics",
@@ -1452,7 +1475,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skills-agentsop-bounded-loop",
-"priority": 463,
+"priority": 464,
 "category": "community",
 "type": "skill",
 "want": "agentsop-bounded-loop",
@@ -1463,7 +1486,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@agentsop-bounded-loop -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@agentsop-bounded-loop -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "agentsop-bounded-loop",
@@ -1475,7 +1498,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skills-agentsop-code-execution-decision",
-"priority": 464,
+"priority": 465,
 "category": "community",
 "type": "skill",
 "want": "agentsop-code-execution-decision",
@@ -1486,7 +1509,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@agentsop-code-execution-decision -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@agentsop-code-execution-decision -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "agentsop-code-execution-decision",
@@ -1498,7 +1521,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skills-leap",
-"priority": 465,
+"priority": 466,
 "category": "community",
 "type": "skill",
 "want": "LEAP",
@@ -1509,7 +1532,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@LEAP -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@LEAP -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "LEAP",
@@ -1521,7 +1544,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skills-lens",
-"priority": 466,
+"priority": 467,
 "category": "community",
 "type": "skill",
 "want": "Lens",
@@ -1532,7 +1555,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@Lens -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@Lens -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "Lens",
@@ -1544,7 +1567,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-agentsope-skillalchemy-skillalchemy",
-"priority": 467,
+"priority": 468,
 "category": "community",
 "type": "skill",
 "want": "SkillAlchemy",
@@ -1555,7 +1578,7 @@ window.CCF_SKILLS = [
 "npx skills add agentsope/SkillAlchemy@SkillAlchemy -g"
 ],
 "install": "npx skills add agentsope/SkillAlchemy@SkillAlchemy -g",
-"stars": 453,
+"stars": 443,
 "repoUrl": "https://github.com/agentsope/SkillAlchemy",
 "aliases": [
 "SkillAlchemy",
@@ -1567,7 +1590,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-agency-docs-updater",
-"priority": 468,
+"priority": 469,
 "category": "community",
 "type": "skill",
 "want": "agency-docs-updater",
@@ -1578,7 +1601,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@agency-docs-updater -g"
 ],
 "install": "npx skills add glebis/claude-skills@agency-docs-updater -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "agency-docs-updater",
@@ -1590,7 +1613,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-agency-meetup-publish",
-"priority": 469,
+"priority": 470,
 "category": "community",
 "type": "skill",
 "want": "agency-meetup-publish",
@@ -1601,7 +1624,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@agency-meetup-publish -g"
 ],
 "install": "npx skills add glebis/claude-skills@agency-meetup-publish -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "agency-meetup-publish",
@@ -1613,7 +1636,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-agency-socials",
-"priority": 470,
+"priority": 471,
 "category": "community",
 "type": "skill",
 "want": "agency-socials",
@@ -1624,7 +1647,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@agency-socials -g"
 ],
 "install": "npx skills add glebis/claude-skills@agency-socials -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "agency-socials",
@@ -1636,7 +1659,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-agent-cli",
-"priority": 471,
+"priority": 472,
 "category": "community",
 "type": "skill",
 "want": "agent-cli",
@@ -1647,7 +1670,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@agent-cli -g"
 ],
 "install": "npx skills add glebis/claude-skills@agent-cli -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "agent-cli",
@@ -1659,7 +1682,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-app-release",
-"priority": 472,
+"priority": 473,
 "category": "community",
 "type": "skill",
 "want": "app-release",
@@ -1670,7 +1693,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@app-release -g"
 ],
 "install": "npx skills add glebis/claude-skills@app-release -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "app-release",
@@ -1682,7 +1705,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-automation-advisor",
-"priority": 473,
+"priority": 474,
 "category": "community",
 "type": "skill",
 "want": "automation-advisor",
@@ -1693,7 +1716,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@automation-advisor -g"
 ],
 "install": "npx skills add glebis/claude-skills@automation-advisor -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "automation-advisor",
@@ -1705,7 +1728,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-balanced",
-"priority": 474,
+"priority": 475,
 "category": "community",
 "type": "skill",
 "want": "balanced",
@@ -1716,7 +1739,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@balanced -g"
 ],
 "install": "npx skills add glebis/claude-skills@balanced -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "balanced",
@@ -1728,7 +1751,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-glebis-claude-skills-brand-agency",
-"priority": 475,
+"priority": 476,
 "category": "community",
 "type": "skill",
 "want": "brand-agency",
@@ -1739,7 +1762,7 @@ window.CCF_SKILLS = [
 "npx skills add glebis/claude-skills@brand-agency -g"
 ],
 "install": "npx skills add glebis/claude-skills@brand-agency -g",
-"stars": 388,
+"stars": 391,
 "repoUrl": "https://github.com/glebis/claude-skills",
 "aliases": [
 "brand-agency",
@@ -1751,7 +1774,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-physiclaw-physiclaw-skills-jd",
-"priority": 476,
+"priority": 477,
 "category": "community",
 "type": "skill",
 "want": "jd",
@@ -1762,7 +1785,7 @@ window.CCF_SKILLS = [
 "npx skills add physiclaw/PhysiClaw@jd -g"
 ],
 "install": "npx skills add physiclaw/PhysiClaw@jd -g",
-"stars": 386,
+"stars": 389,
 "repoUrl": "https://github.com/physiclaw/PhysiClaw",
 "aliases": [
 "jd",
@@ -1774,7 +1797,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-physiclaw-physiclaw-src-physiclaw-agent-claude-skills-jobs",
-"priority": 477,
+"priority": 478,
 "category": "community",
 "type": "skill",
 "want": "jobs",
@@ -1785,7 +1808,7 @@ window.CCF_SKILLS = [
 "npx skills add physiclaw/PhysiClaw@jobs -g"
 ],
 "install": "npx skills add physiclaw/PhysiClaw@jobs -g",
-"stars": 386,
+"stars": 389,
 "repoUrl": "https://github.com/physiclaw/PhysiClaw",
 "aliases": [
 "jobs",
@@ -1797,7 +1820,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-physiclaw-physiclaw-src-physiclaw-agent-claude-skills-screen-layout",
-"priority": 478,
+"priority": 479,
 "category": "community",
 "type": "skill",
 "want": "screen-layout",
@@ -1808,7 +1831,7 @@ window.CCF_SKILLS = [
 "npx skills add physiclaw/PhysiClaw@screen-layout -g"
 ],
 "install": "npx skills add physiclaw/PhysiClaw@screen-layout -g",
-"stars": 386,
+"stars": 389,
 "repoUrl": "https://github.com/physiclaw/PhysiClaw",
 "aliases": [
 "screen-layout",
@@ -1820,7 +1843,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-physiclaw-physiclaw-skills-taobao",
-"priority": 479,
+"priority": 480,
 "category": "community",
 "type": "skill",
 "want": "taobao",
@@ -1831,7 +1854,7 @@ window.CCF_SKILLS = [
 "npx skills add physiclaw/PhysiClaw@taobao -g"
 ],
 "install": "npx skills add physiclaw/PhysiClaw@taobao -g",
-"stars": 386,
+"stars": 389,
 "repoUrl": "https://github.com/physiclaw/PhysiClaw",
 "aliases": [
 "taobao",
@@ -1843,7 +1866,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-eric-yibo-shen-zhangxuefeng-skillset-zhangxuefeng-skillset",
-"priority": 480,
+"priority": 481,
 "category": "community",
 "type": "skill",
 "want": "gaokao-mentor",
@@ -1866,7 +1889,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-joeseesun-qiaomu-meta-skill-qiaomu-meta-skill",
-"priority": 481,
+"priority": 482,
 "category": "community",
 "type": "skill",
 "want": "qiaomu-meta-skill",
@@ -1877,7 +1900,7 @@ window.CCF_SKILLS = [
 "npx skills add joeseesun/qiaomu-meta-skill -g"
 ],
 "install": "npx skills add joeseesun/qiaomu-meta-skill -g",
-"stars": 385,
+"stars": 384,
 "repoUrl": "https://github.com/joeseesun/qiaomu-meta-skill",
 "aliases": [
 "qiaomu-meta-skill",
@@ -1889,7 +1912,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-floe-labs-floe-guard-floe-guard",
-"priority": 482,
+"priority": 483,
 "category": "community",
 "type": "skill",
 "want": "floe-guard",
@@ -1900,7 +1923,7 @@ window.CCF_SKILLS = [
 "npx skills add Floe-Labs/floe-guard -g"
 ],
 "install": "npx skills add Floe-Labs/floe-guard -g",
-"stars": 356,
+"stars": 357,
 "repoUrl": "https://github.com/Floe-Labs/floe-guard",
 "aliases": [
 "floe-guard",
@@ -1912,7 +1935,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-assess-covariance-method",
-"priority": 483,
+"priority": 484,
 "category": "community",
 "type": "skill",
 "want": "assess-covariance-method",
@@ -1923,7 +1946,7 @@ window.CCF_SKILLS = [
 "npx skills add microprediction/precise@assess-covariance-method -g"
 ],
 "install": "npx skills add microprediction/precise@assess-covariance-method -g",
-"stars": 336,
+"stars": 337,
 "repoUrl": "https://github.com/microprediction/precise",
 "aliases": [
 "assess-covariance-method",
@@ -1935,7 +1958,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-choose-covariance-estimator",
-"priority": 484,
+"priority": 485,
 "category": "community",
 "type": "skill",
 "want": "choose-covariance-estimator",
@@ -1946,7 +1969,7 @@ window.CCF_SKILLS = [
 "npx skills add microprediction/precise@choose-covariance-estimator -g"
 ],
 "install": "npx skills add microprediction/precise@choose-covariance-estimator -g",
-"stars": 336,
+"stars": 337,
 "repoUrl": "https://github.com/microprediction/precise",
 "aliases": [
 "choose-covariance-estimator",
@@ -1958,7 +1981,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-estimate-online-covariance",
-"priority": 485,
+"priority": 486,
 "category": "community",
 "type": "skill",
 "want": "estimate-online-covariance",
@@ -1969,7 +1992,7 @@ window.CCF_SKILLS = [
 "npx skills add microprediction/precise@estimate-online-covariance -g"
 ],
 "install": "npx skills add microprediction/precise@estimate-online-covariance -g",
-"stars": 336,
+"stars": 337,
 "repoUrl": "https://github.com/microprediction/precise",
 "aliases": [
 "estimate-online-covariance",
@@ -1981,7 +2004,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-keyed-dynamic-universe",
-"priority": 486,
+"priority": 487,
 "category": "community",
 "type": "skill",
 "want": "keyed-dynamic-universe",
@@ -1992,7 +2015,7 @@ window.CCF_SKILLS = [
 "npx skills add microprediction/precise@keyed-dynamic-universe -g"
 ],
 "install": "npx skills add microprediction/precise@keyed-dynamic-universe -g",
-"stars": 336,
+"stars": 337,
 "repoUrl": "https://github.com/microprediction/precise",
 "aliases": [
 "keyed-dynamic-universe",
@@ -2004,7 +2027,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-precise",
-"priority": 487,
+"priority": 488,
 "category": "community",
 "type": "skill",
 "want": "precise",
@@ -2015,7 +2038,7 @@ window.CCF_SKILLS = [
 "npx skills add microprediction/precise@precise -g"
 ],
 "install": "npx skills add microprediction/precise@precise -g",
-"stars": 336,
+"stars": 337,
 "repoUrl": "https://github.com/microprediction/precise",
 "aliases": [
 "precise",
@@ -2027,7 +2050,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-score-covariance-estimate",
-"priority": 488,
+"priority": 489,
 "category": "community",
 "type": "skill",
 "want": "score-covariance-estimate",
@@ -2038,7 +2061,7 @@ window.CCF_SKILLS = [
 "npx skills add microprediction/precise@score-covariance-estimate -g"
 ],
 "install": "npx skills add microprediction/precise@score-covariance-estimate -g",
-"stars": 336,
+"stars": 337,
 "repoUrl": "https://github.com/microprediction/precise",
 "aliases": [
 "score-covariance-estimate",
@@ -2050,7 +2073,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-bilibili",
-"priority": 489,
+"priority": 490,
 "category": "community",
 "type": "skill",
 "want": "bilibili",
@@ -2061,7 +2084,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@bilibili -g"
 ],
 "install": "npx skills add sigcli/sigcli@bilibili -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "bilibili",
@@ -2073,7 +2096,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-douyin",
-"priority": 490,
+"priority": 491,
 "category": "community",
 "type": "skill",
 "want": "douyin",
@@ -2084,7 +2107,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@douyin -g"
 ],
 "install": "npx skills add sigcli/sigcli@douyin -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "douyin",
@@ -2096,7 +2119,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-hackernews",
-"priority": 491,
+"priority": 492,
 "category": "community",
 "type": "skill",
 "want": "hackernews",
@@ -2107,7 +2130,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@hackernews -g"
 ],
 "install": "npx skills add sigcli/sigcli@hackernews -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "hackernews",
@@ -2119,7 +2142,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-linkedin",
-"priority": 492,
+"priority": 493,
 "category": "community",
 "type": "skill",
 "want": "linkedin",
@@ -2130,7 +2153,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@linkedin -g"
 ],
 "install": "npx skills add sigcli/sigcli@linkedin -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "linkedin",
@@ -2142,7 +2165,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-msteams",
-"priority": 493,
+"priority": 494,
 "category": "community",
 "type": "skill",
 "want": "msteams",
@@ -2153,7 +2176,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@msteams -g"
 ],
 "install": "npx skills add sigcli/sigcli@msteams -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "msteams",
@@ -2165,7 +2188,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-outlook",
-"priority": 494,
+"priority": 495,
 "category": "community",
 "type": "skill",
 "want": "outlook",
@@ -2176,7 +2199,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@outlook -g"
 ],
 "install": "npx skills add sigcli/sigcli@outlook -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "outlook",
@@ -2188,7 +2211,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-reddit",
-"priority": 495,
+"priority": 496,
 "category": "community",
 "type": "skill",
 "want": "reddit",
@@ -2199,7 +2222,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@reddit -g"
 ],
 "install": "npx skills add sigcli/sigcli@reddit -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "reddit",
@@ -2211,7 +2234,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-sigcli-sigcli-skills-sigcli",
-"priority": 496,
+"priority": 497,
 "category": "community",
 "type": "skill",
 "want": "sigcli",
@@ -2222,7 +2245,7 @@ window.CCF_SKILLS = [
 "npx skills add sigcli/sigcli@sigcli -g"
 ],
 "install": "npx skills add sigcli/sigcli@sigcli -g",
-"stars": 292,
+"stars": 293,
 "repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
 "sigcli",
@@ -2234,7 +2257,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-upstash-qstash-js-skills",
-"priority": 497,
+"priority": 498,
 "category": "community",
 "type": "skill",
 "want": "qstash-js",
@@ -2245,7 +2268,7 @@ window.CCF_SKILLS = [
 "npx skills add upstash/qstash-js -g"
 ],
 "install": "npx skills add upstash/qstash-js -g",
-"stars": 268,
+"stars": 269,
 "repoUrl": "https://github.com/upstash/qstash-js",
 "aliases": [
 "skills",
@@ -2257,7 +2280,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-android-vuln-analyzer",
-"priority": 498,
+"priority": 499,
 "category": "community",
 "type": "skill",
 "want": "android-vuln-analyzer",
@@ -2280,7 +2303,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-design-review",
-"priority": 499,
+"priority": 500,
 "category": "community",
 "type": "skill",
 "want": "design-review",
@@ -2303,7 +2326,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-explore",
-"priority": 500,
+"priority": 501,
 "category": "community",
 "type": "skill",
 "want": "explore",
@@ -2326,7 +2349,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-graph",
-"priority": 501,
+"priority": 502,
 "category": "community",
 "type": "skill",
 "want": "graph",
@@ -2349,7 +2372,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-harness",
-"priority": 502,
+"priority": 503,
 "category": "community",
 "type": "skill",
 "want": "harness",
@@ -2372,7 +2395,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-harness-audit",
-"priority": 503,
+"priority": 504,
 "category": "community",
 "type": "skill",
 "want": "harness-audit",
@@ -2395,7 +2418,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-harness-cleanup",
-"priority": 504,
+"priority": 505,
 "category": "community",
 "type": "skill",
 "want": "harness-cleanup",
@@ -2418,7 +2441,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xwtro0tk1t-cloud-harness-bundled-skills-harness-guide",
-"priority": 505,
+"priority": 506,
 "category": "community",
 "type": "skill",
 "want": "harness-guide",
@@ -2441,7 +2464,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-skills-00-env-setup",
-"priority": 506,
+"priority": 507,
 "category": "community",
 "type": "skill",
 "want": "cc-env-setup",
@@ -2452,7 +2475,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@00-env-setup -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@00-env-setup -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "00-env-setup",
@@ -2464,7 +2487,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-skills-02-github",
-"priority": 507,
+"priority": 508,
 "category": "community",
 "type": "skill",
 "want": "cc-github",
@@ -2475,7 +2498,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@02-github -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@02-github -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "02-github",
@@ -2487,7 +2510,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-skills-00-install-all",
-"priority": 508,
+"priority": 509,
 "category": "community",
 "type": "skill",
 "want": "cc-install-all",
@@ -2498,7 +2521,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@00-install-all -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@00-install-all -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "00-install-all",
@@ -2510,7 +2533,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-skills-01-notebooklm",
-"priority": 509,
+"priority": 510,
 "category": "community",
 "type": "skill",
 "want": "cc-notebooklm",
@@ -2521,7 +2544,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@01-notebooklm -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@01-notebooklm -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "01-notebooklm",
@@ -2533,7 +2556,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-skills-03-obsidian",
-"priority": 510,
+"priority": 511,
 "category": "community",
 "type": "skill",
 "want": "cc-obsidian",
@@ -2544,7 +2567,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@03-obsidian -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@03-obsidian -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "03-obsidian",
@@ -2556,7 +2579,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-skills-04-second-brain",
-"priority": 511,
+"priority": 512,
 "category": "community",
 "type": "skill",
 "want": "cc-second-brain",
@@ -2567,7 +2590,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@04-second-brain -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@04-second-brain -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "04-second-brain",
@@ -2579,7 +2602,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-skills-04-supabase",
-"priority": 512,
+"priority": 513,
 "category": "community",
 "type": "skill",
 "want": "cc-supabase",
@@ -2590,7 +2613,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@04-supabase -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@04-supabase -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "04-supabase",
@@ -2602,7 +2625,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-mathruffian-dot-claude-code-lazy-packs-claude-code-lazy-packs",
-"priority": 513,
+"priority": 514,
 "category": "community",
 "type": "skill",
 "want": "claude-code-lazy-packs",
@@ -2613,7 +2636,7 @@ window.CCF_SKILLS = [
 "npx skills add mathruffian-dot/claude-code-lazy-packs@claude-code-lazy-packs -g"
 ],
 "install": "npx skills add mathruffian-dot/claude-code-lazy-packs@claude-code-lazy-packs -g",
-"stars": 253,
+"stars": 255,
 "repoUrl": "https://github.com/mathruffian-dot/claude-code-lazy-packs",
 "aliases": [
 "claude-code-lazy-packs",
@@ -2625,7 +2648,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-lucaswangzcx-literature-downloader-skill-literature-downloader-skill",
-"priority": 514,
+"priority": 515,
 "category": "community",
 "type": "skill",
 "want": "literature-downloader",
@@ -2636,7 +2659,7 @@ window.CCF_SKILLS = [
 "npx skills add Lucaswangzcx/literature-downloader-skill -g"
 ],
 "install": "npx skills add Lucaswangzcx/literature-downloader-skill -g",
-"stars": 233,
+"stars": 240,
 "repoUrl": "https://github.com/Lucaswangzcx/literature-downloader-skill",
 "aliases": [
 "literature-downloader-skill",
@@ -2648,7 +2671,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-backend-design",
-"priority": 515,
+"priority": 516,
 "category": "community",
 "type": "skill",
 "want": "backend-design",
@@ -2671,7 +2694,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-brainstorming",
-"priority": 516,
+"priority": 517,
 "category": "community",
 "type": "skill",
 "want": "brainstorming",
@@ -2694,7 +2717,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-browser-extension",
-"priority": 517,
+"priority": 518,
 "category": "community",
 "type": "skill",
 "want": "browser-extension",
@@ -2717,7 +2740,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-clean-code",
-"priority": 518,
+"priority": 519,
 "category": "community",
 "type": "skill",
 "want": "clean-code",
@@ -2734,29 +2757,6 @@ window.CCF_SKILLS = [
 "clean-code",
 "xenitV1",
 "clean-code",
-"skill",
-"スキル"
-]
-},
-{
-"id": "skill-xenitv1-claude-code-maestro-skills-debug-mastery",
-"priority": 519,
-"category": "community",
-"type": "skill",
-"want": "debug-mastery",
-"feature": "xenitV1/claude-code-maestro",
-"summary": "Systematic debugging methodology with 4-phase process, root cause tracing, and elite observability standards. No fixes without investigation.",
-"trigger": "",
-"commands": [
-"npx skills add xenitV1/claude-code-maestro@debug-mastery -g"
-],
-"install": "npx skills add xenitV1/claude-code-maestro@debug-mastery -g",
-"stars": 229,
-"repoUrl": "https://github.com/xenitV1/claude-code-maestro",
-"aliases": [
-"debug-mastery",
-"xenitV1",
-"debug-mastery",
 "skill",
 "スキル"
 ]
