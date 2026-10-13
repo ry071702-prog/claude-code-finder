@@ -1,5 +1,5 @@
 {
-  "last_version": "2.1.290",
+  "last_version": "2.1.296",
   "known_skill_ids": [
     "skill-agentsope-skillalchemy-skillalchemy",
     "skill-agentsope-skillalchemy-skills-agentsop-agent-topology-selection",
@@ -31,6 +31,7 @@
     "skill-anthropics-skills-skills-xlsx",
     "skill-antvis-l7-skills-l7",
     "skill-antvis-l7-skills-l7-single",
+    "skill-benavlabs-fastcrud-fastcrud-.agents-skills-fastcrud",
     "skill-better-auth-better-icons-skills",
     "skill-browser-use-browser-harness-js-browser-harness-js",
     "skill-crazyguitar-pysheeet-skills-py",
@@ -112,7 +113,6 @@
     "skill-xenitv1-claude-code-maestro-skills-brainstorming",
     "skill-xenitv1-claude-code-maestro-skills-browser-extension",
     "skill-xenitv1-claude-code-maestro-skills-clean-code",
-    "skill-xenitv1-claude-code-maestro-skills-debug-mastery",
     "skill-xwtro0tk1t-cloud-harness-bundled-skills-android-vuln-analyzer",
     "skill-xwtro0tk1t-cloud-harness-bundled-skills-design-review",
     "skill-xwtro0tk1t-cloud-harness-bundled-skills-explore",
