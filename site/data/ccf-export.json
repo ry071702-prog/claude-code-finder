@@ -961,6 +961,174 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.311",
+     "title": "v2.1.311",
+     "summary": "Added --hold-idle-file and --max-hold-min to self-hosted-runner, to keep an idle session while your host reports processes it left running / Added a tip for the Explanatory output style, shown when you ask Claude for explanations / Fixed long freezes at startup and after reading or editing files when a CLAUDE.md file holds a very long list item",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added --hold-idle-file and --max-hold-min to self-hosted-runner, to keep an idle session while your host reports processes it left running"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a tip for the Explanatory output style, shown when you ask Claude for explanations"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed long freezes at startup and after reading or editing files when a CLAUDE.md file holds a very long list item"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed interrupting Claude not taking effect until a timeout while an MCP server had not answered a resource read or a skill was still downloading"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed standard-context sessions stopping with \"Usage credits required for 1M context\" when a request ran over 200K tokens; Claude Code now compacts the conversation and continues"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.310",
+     "title": "v2.1.310",
+     "summary": "Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too / Fixed requests failing behind some gateways and compatible servers that reject the effort-2025-11-24 beta value or mid-conversation system messages; Claude Code now retries without them / Fixed background cleanup deleting some recent files, such as pasted images, when cleanupPeriodDays is set to a very large value",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed requests failing behind some gateways and compatible servers that reject the effort-2025-11-24 beta value or mid-conversation system messages; Claude Code now retries without them"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed background cleanup deleting some recent files, such as pasted images, when cleanupPeriodDays is set to a very large value"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed compaction after a \"Prompt is too long\" error keeping too much of a conversation with dense text, such as base64 or SVG, so the next request could fail again"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed file read permission prompts not showing where a symbolic link leads"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.309",
+     "title": "v2.1.309",
+     "summary": "Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sandbox before each command / Fixed macOS sandbox denyWrite glob patterns not applying at a path's real location when the pattern's folder is reached through a symlink / Fixed sandboxed commands and auto-accepted edits being able to modify the MCP config file passed with --mcp-config",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sandbox before each command"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed macOS sandbox denyWrite glob patterns not applying at a path's real location when the pattern's folder is reached through a symlink"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed sandboxed commands and auto-accepted edits being able to modify the MCP config file passed with --mcp-config"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a disabled MCP server being reconnected by a later permission prompt in print and SDK sessions"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed the Bash permission check trusting a variable set by a command whose redirect can fail to open"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.308",
+     "title": "v2.1.308",
+     "summary": "Bug fixes and reliability improvements",
+     "highlights": [
+      {
+       "kind": "改善",
+       "text": "Bug fixes and reliability improvements"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.307",
+     "title": "v2.1.307",
+     "summary": "Added /claude-api api-version to move Claude API code to API version 2026-10-21 / Added the claude_code.safety_event OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back / Fixed requests failing with a model-not-found error when CLAUDE_CODE_DISABLE_1M_CONTEXT is set and the model is an alias with the [1m] suffix, such as opus[1m]",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added /claude-api api-version to move Claude API code to API version 2026-10-21"
+      },
+      {
+       "kind": "追加",
+       "text": "Added the claude_code.safety_event OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed requests failing with a model-not-found error when CLAUDE_CODE_DISABLE_1M_CONTEXT is set and the model is an alias with the [1m] suffix, such as opus[1m]"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed the prompt-caching-scope beta header being sent behind custom ANTHROPIC_BASE_URL gateways and on Foundry, where it has no effect"
+      },
+      {
+       "kind": "追加",
+       "text": "Fixed MCP servers showing \"needs authentication\" in claude -p on macOS while the login keychain was locked; they now say why, and the next run after an unlock connects without a new sign-in"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.306",
+     "title": "v2.1.306",
+     "summary": "Fixed claude -p inside cloud sessions reporting \"Not logged in\" when started without the session's environment variables / Fixed an API error being replaced by \"prompt is too long\", and an unneeded compaction, in sessions with many MCP tools",
+     "highlights": [
+      {
+       "kind": "修正",
+       "text": "Fixed claude -p inside cloud sessions reporting \"Not logged in\" when started without the session's environment variables"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed an API error being replaced by \"prompt is too long\", and an unneeded compaction, in sessions with many MCP tools"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.305",
+     "title": "v2.1.305",
+     "summary": "Added sandbox.allowNestedUserNamespaces so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox's file protections / Added CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS so unattended retry mode (CLAUDE_CODE_RETRY_WATCHDOG) notices a usage limit that was lifted before its reset / Fixed every request failing on Vertex, Bedrock and other providers when the endpoint or a gateway rejects tool search, and behind gateways with ToolSearch disallowed or left out of --tools (a 2.1.304 regression): Claude Code now retries without it",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added sandbox.allowNestedUserNamespaces so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox's file protections"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS so unattended retry mode (CLAUDE_CODE_RETRY_WATCHDOG) notices a usage limit that was lifted before its reset"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed every request failing on Vertex, Bedrock and other providers when the endpoint or a gateway rejects tool search, and behind gateways with ToolSearch disallowed or left out of --tools (a 2.1.304 regression): Claude Code now retries without it"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed /effort and /autocompact settings not applying when the model name differed from a modelOverrides value by letter case or a [1m] tag"
+      },
+      {
+       "kind": "追加",
+       "text": "Fixed new worktrees in a bare repository sometimes starting from local HEAD instead of the default branch, and unchanged subagent worktrees sometimes not being cleaned up"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.304",
      "title": "v2.1.304",
      "summary": "Added a transcript line when a plugin that runs first skips one of your mod's hooks, naming the event and the plugin / Added decider: \"person\" to a mod's tool.check answer: only the permission dialog or a host's callback can approve the ask, and it is refused with the mod's reason where nobody can be asked / Added e.isReadOnly to a mod's tool.check event, set when the tool call is read-only",
@@ -984,186 +1152,6 @@
       {
        "kind": "追加",
        "text": "Added /claude-api managed-agents-secure, which compares a Managed Agents agent's settings with Anthropic's published security guide, without changing anything"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.303",
-     "title": "v2.1.303",
-     "summary": "Bug fixes and reliability improvements",
-     "highlights": [
-      {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.302",
-     "title": "v2.1.302",
-     "summary": "Added CLAUDE_CODE_AUTO_MODE_MODEL to choose the model the client-side auto mode classifier uses; it does not change the model for server-side auto mode / Added an Idle compaction row to /config for turning idle compaction off or back on; the notices shown after an idle compaction now say how to turn it off / Added a notice to /design-sync and /design-login that standalone Claude Design (claude.ai/design) closes by December 14, 2026",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_AUTO_MODE_MODEL to choose the model the client-side auto mode classifier uses; it does not change the model for server-side auto mode"
-      },
-      {
-       "kind": "追加",
-       "text": "Added an Idle compaction row to /config for turning idle compaction off or back on; the notices shown after an idle compaction now say how to turn it off"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a notice to /design-sync and /design-login that standalone Claude Design (claude.ai/design) closes by December 14, 2026"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed a \"Prompt is too long\" error when stopping a turn while the conversation was being compacted"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed requests failing with \"diagnostics: Extra inputs are not permitted\" after switching to Vertex or Bedrock mid-session"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.301",
-     "title": "v2.1.301",
-     "summary": "Added CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS so unattended retry mode (CLAUDE_CODE_RETRY_WATCHDOG) ends a request at a usage limit that resets too far away instead of waiting / Added OpenTelemetry tracing guidance to the claude-api skill, including setting up trace destinations with the ant CLI / Added the % motion to vim mode: jump to the matching bracket, alone or with d/c/y",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS so unattended retry mode (CLAUDE_CODE_RETRY_WATCHDOG) ends a request at a usage limit that resets too far away instead of waiting"
-      },
-      {
-       "kind": "追加",
-       "text": "Added OpenTelemetry tracing guidance to the claude-api skill, including setting up trace destinations with the ant CLI"
-      },
-      {
-       "kind": "追加",
-       "text": "Added the % motion to vim mode: jump to the matching bracket, alone or with d/c/y"
-      },
-      {
-       "kind": "追加",
-       "text": "Added rows to a mod's Input: a text field of several lines in the terminal, where Enter submits and Shift+Enter or a backslash before Enter starts a new line"
-      },
-      {
-       "kind": "追加",
-       "text": "Added classifier_verdict and permission_mode to OpenTelemetry tool_decision events, so auto mode classifier decisions can be told apart from permission rules"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.300",
-     "title": "v2.1.300",
-     "summary": "Added virtualText to a mod's prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt / Added cache_creation_5m_tokens and cache_creation_1h_tokens to the OpenTelemetry api_request event, splitting cache writes by lifetime / Added $.ui.view({ agentId }) for mods: shows an agent's transcript in the main view when you ask, and $.ui.view({}) goes back",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added virtualText to a mod's prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt"
-      },
-      {
-       "kind": "追加",
-       "text": "Added cache_creation_5m_tokens and cache_creation_1h_tokens to the OpenTelemetry api_request event, splitting cache writes by lifetime"
-      },
-      {
-       "kind": "追加",
-       "text": "Added $.ui.view({ agentId }) for mods: shows an agent's transcript in the main view when you ask, and $.ui.view({}) goes back"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a dir prop on a mod's Text for right-to-left text: on Windows and in VS Code's terminal its rows read in that direction and sit flush right"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /advisor on Claude Platform on AWS; no advisor runs until you pick one with /advisor, advisorModel or --advisor, and CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1 turns it off"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.299",
-     "title": "v2.1.299",
-     "summary": "Added CLAUDE_CODE_DISABLE_FILE_MENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files' contents / Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour prompt cache expires, so your next message doesn't reprocess it all / Added CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS to change idle compaction's 200K-token minimum; \"idleCompaction\": false in settings.json turns it off. Both need v2.1.290 or later",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_DISABLE_FILE_MENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files' contents"
-      },
-      {
-       "kind": "追加",
-       "text": "Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour prompt cache expires, so your next message doesn't reprocess it all"
-      },
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS to change idle compaction's 200K-token minimum; \"idleCompaction\": false in settings.json turns it off. Both need v2.1.290 or later"
-      },
-      {
-       "kind": "追加",
-       "text": "Added $.prompt.media so a prompt.submit hook of a mod installed by managed settings can read the bytes of an image or document attached to the prompt"
-      },
-      {
-       "kind": "追加",
-       "text": "Added $.session.identity() for mods installed by managed settings: how the session is signed in, and its organization and email when managed forceLoginOrgUUID lists that organization"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.296",
-     "title": "v2.1.296",
-     "summary": "Added a code key to the Claude apps gateway's managed.policies[]: the same settings as cli, also applied in Claude Desktop's Code tab; beside desktop, it turns on Claude Desktop's gateway mode / Added autoCompactWindow to subagent frontmatter and --agents definitions, so a subagent can auto-compact earlier than the main conversation's window / Added CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL to run every workflow agent on one model while other subagents keep theirs",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added a code key to the Claude apps gateway's managed.policies[]: the same settings as cli, also applied in Claude Desktop's Code tab; beside desktop, it turns on Claude Desktop's gateway mode"
-      },
-      {
-       "kind": "追加",
-       "text": "Added autoCompactWindow to subagent frontmatter and --agents definitions, so a subagent can auto-compact earlier than the main conversation's window"
-      },
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL to run every workflow agent on one model while other subagents keep theirs"
-      },
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_OVERLOADED_RETRY_MAX_DELAY_MS environment variable to set a longer maximum delay for the backoff when retrying an overloaded (529) request"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a note in /plugin on a plugin whose hooks are left out because another enabled plugin has the same name"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.295",
-     "title": "v2.1.295",
-     "summary": "Added onFailure: \"block\" for command and HTTP hooks: a hook that can't start, times out, or exits with an unexpected code blocks the action instead of letting it through / Added Program Status Protocol (OSC 7501) support: terminals that implement it can show whether Claude Code is working, waiting on you, or done / Added quoted text to the /copy picker, so a drafted message copies without its > markers",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added onFailure: \"block\" for command and HTTP hooks: a hook that can't start, times out, or exits with an unexpected code blocks the action instead of letting it through"
-      },
-      {
-       "kind": "追加",
-       "text": "Added Program Status Protocol (OSC 7501) support: terminals that implement it can show whether Claude Code is working, waiting on you, or done"
-      },
-      {
-       "kind": "追加",
-       "text": "Added quoted text to the /copy picker, so a drafted message copies without its > markers"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a warning to claude plugin install, enable, disable and marketplace add when the settings file they write to does not load"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a line on stderr, when it is a terminal, that says what a claude -p run is waiting for when it stays open after its last turn"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
