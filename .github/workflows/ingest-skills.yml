@@ -94,7 +94,7 @@ jobs:
       # ingest 自身がデプロイまで行う。これが無いと「データは更新されるが本番に反映されない」状態になる。
       - name: Deploy refreshed data to Cloudflare Pages
         if: steps.commit.outputs.changed == 'true' && env.HAS_TOKEN == 'true'
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
