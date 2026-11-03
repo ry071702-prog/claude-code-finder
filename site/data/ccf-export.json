@@ -961,6 +961,118 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.317",
+     "title": "v2.1.317",
+     "summary": "Added a warning to /schedule when a new cloud scheduled task gets connectors you did not ask for, with how to remove them / Added a check that asks before a web or shell tool call sends your account email address to the network / Added onFailure: \"block\" for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a warning to /schedule when a new cloud scheduled task gets connectors you did not ask for, with how to remove them"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a check that asks before a web or shell tool call sends your account email address to the network"
+      },
+      {
+       "kind": "追加",
+       "text": "Added onFailure: \"block\" for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a notice in Claude Desktop's Code tab when your organization's remote managed settings haven't loaded for the session, and another once they do"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.316",
+     "title": "v2.1.316",
+     "summary": "Added CLAUDE_CODE_DISABLE_ULTRATHINK, which turns the ultrathink keyword off / Added pooled group budgets to the Claude apps gateway: one monthly budget that a group's members share, on top of each member's own limit, set with pooled_budget on the spend limits admin API / Added CLAUDE_CODE_DISABLE_LOOPED_CROSS_CERT_DROP to keep system cross-certificates that certify each other in a loop, for servers whose private CA needs one",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_DISABLE_ULTRATHINK, which turns the ultrathink keyword off"
+      },
+      {
+       "kind": "追加",
+       "text": "Added pooled group budgets to the Claude apps gateway: one monthly budget that a group's members share, on top of each member's own limit, set with pooled_budget on the spend limits admin API"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_DISABLE_LOOPED_CROSS_CERT_DROP to keep system cross-certificates that certify each other in a loop, for servers whose private CA needs one"
+      },
+      {
+       "kind": "追加",
+       "text": "Added CLAUDE_CODE_SUBAGENT_EFFORT to set the effort level subagents run at when nothing else names one, instead of inheriting the session's"
+      },
+      {
+       "kind": "追加",
+       "text": "Added managed.policy_mode: layered to the Claude apps gateway: every policy that matches a developer applies, each merged over the ones listed below it, not only the first"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.314",
+     "title": "v2.1.314",
+     "summary": "Added permissions.blockWritesOutsideWorkingDirectories: Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode / Added an optional groups list to Claude apps gateway upstreams: only developers in the listed IdP groups are sent to that upstream, on failover too / Added guardrail_trace to Claude apps gateway Bedrock upstreams, to log which Amazon Bedrock guardrail filter fired on a request, without the matched text",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added permissions.blockWritesOutsideWorkingDirectories: Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode"
+      },
+      {
+       "kind": "追加",
+       "text": "Added an optional groups list to Claude apps gateway upstreams: only developers in the listed IdP groups are sent to that upstream, on failover too"
+      },
+      {
+       "kind": "追加",
+       "text": "Added guardrail_trace to Claude apps gateway Bedrock upstreams, to log which Amazon Bedrock guardrail filter fired on a request, without the matched text"
+      },
+      {
+       "kind": "追加",
+       "text": "Added idle compaction to VS Code and Claude Desktop's Code tab: a 200K+ token conversation left idle is summarized, and the summary is used on your next message if the prompt cache has expired"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed sessions failing turn after turn with \"Invalid effort level\" when an organization's admin caps a model's effort: Claude Code now lowers the effort, retries, and says which level it uses"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.312",
+     "title": "v2.1.312",
+     "summary": "Added oidc.user_id_claim to the Claude apps gateway, to identify people by an id_token claim other than sub, such as Microsoft Entra ID's oid / Added click to send: in fullscreen, clicking the \"to send now\" hint under a queued message sends it right away, as its key does / Fixed managed settings and organization policy not being fetched for the rest of the session after signing in from the VS Code extension",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added oidc.user_id_claim to the Claude apps gateway, to identify people by an id_token claim other than sub, such as Microsoft Entra ID's oid"
+      },
+      {
+       "kind": "追加",
+       "text": "Added click to send: in fullscreen, clicking the \"to send now\" hint under a queued message sends it right away, as its key does"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed managed settings and organization policy not being fetched for the rest of the session after signing in from the VS Code extension"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed Claude overwriting a very large CLAUDE.md, rules file or @-included file in a subdirectory after seeing only its start; Write now asks Claude to read it all or edit in place"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed per-directory and paths: skills not being found after a Bash cd deeper into a git repository"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.311",
      "title": "v2.1.311",
      "summary": "Added --hold-idle-file and --max-hold-min to self-hosted-runner, to keep an idle session while your host reports processes it left running / Added a tip for the Explanatory output style, shown when you ask Claude for explanations / Fixed long freezes at startup and after reading or editing files when a CLAUDE.md file holds a very long list item",
@@ -1052,106 +1164,6 @@
       {
        "kind": "改善",
        "text": "Bug fixes and reliability improvements"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.307",
-     "title": "v2.1.307",
-     "summary": "Added /claude-api api-version to move Claude API code to API version 2026-10-21 / Added the claude_code.safety_event OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back / Fixed requests failing with a model-not-found error when CLAUDE_CODE_DISABLE_1M_CONTEXT is set and the model is an alias with the [1m] suffix, such as opus[1m]",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added /claude-api api-version to move Claude API code to API version 2026-10-21"
-      },
-      {
-       "kind": "追加",
-       "text": "Added the claude_code.safety_event OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed requests failing with a model-not-found error when CLAUDE_CODE_DISABLE_1M_CONTEXT is set and the model is an alias with the [1m] suffix, such as opus[1m]"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed the prompt-caching-scope beta header being sent behind custom ANTHROPIC_BASE_URL gateways and on Foundry, where it has no effect"
-      },
-      {
-       "kind": "追加",
-       "text": "Fixed MCP servers showing \"needs authentication\" in claude -p on macOS while the login keychain was locked; they now say why, and the next run after an unlock connects without a new sign-in"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.306",
-     "title": "v2.1.306",
-     "summary": "Fixed claude -p inside cloud sessions reporting \"Not logged in\" when started without the session's environment variables / Fixed an API error being replaced by \"prompt is too long\", and an unneeded compaction, in sessions with many MCP tools",
-     "highlights": [
-      {
-       "kind": "修正",
-       "text": "Fixed claude -p inside cloud sessions reporting \"Not logged in\" when started without the session's environment variables"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed an API error being replaced by \"prompt is too long\", and an unneeded compaction, in sessions with many MCP tools"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.305",
-     "title": "v2.1.305",
-     "summary": "Added sandbox.allowNestedUserNamespaces so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox's file protections / Added CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS so unattended retry mode (CLAUDE_CODE_RETRY_WATCHDOG) notices a usage limit that was lifted before its reset / Fixed every request failing on Vertex, Bedrock and other providers when the endpoint or a gateway rejects tool search, and behind gateways with ToolSearch disallowed or left out of --tools (a 2.1.304 regression): Claude Code now retries without it",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added sandbox.allowNestedUserNamespaces so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox's file protections"
-      },
-      {
-       "kind": "追加",
-       "text": "Added CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS so unattended retry mode (CLAUDE_CODE_RETRY_WATCHDOG) notices a usage limit that was lifted before its reset"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed every request failing on Vertex, Bedrock and other providers when the endpoint or a gateway rejects tool search, and behind gateways with ToolSearch disallowed or left out of --tools (a 2.1.304 regression): Claude Code now retries without it"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed /effort and /autocompact settings not applying when the model name differed from a modelOverrides value by letter case or a [1m] tag"
-      },
-      {
-       "kind": "追加",
-       "text": "Fixed new worktrees in a bare repository sometimes starting from local HEAD instead of the default branch, and unchanged subagent worktrees sometimes not being cleaned up"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.304",
-     "title": "v2.1.304",
-     "summary": "Added a transcript line when a plugin that runs first skips one of your mod's hooks, naming the event and the plugin / Added decider: \"person\" to a mod's tool.check answer: only the permission dialog or a host's callback can approve the ask, and it is refused with the mod's reason where nobody can be asked / Added e.isReadOnly to a mod's tool.check event, set when the tool call is read-only",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added a transcript line when a plugin that runs first skips one of your mod's hooks, naming the event and the plugin"
-      },
-      {
-       "kind": "追加",
-       "text": "Added decider: \"person\" to a mod's tool.check answer: only the permission dialog or a host's callback can approve the ask, and it is refused with the mod's reason where nobody can be asked"
-      },
-      {
-       "kind": "追加",
-       "text": "Added e.isReadOnly to a mod's tool.check event, set when the tool call is read-only"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /auto-mode-setup: a guided setup that reads your project and recent sessions to teach auto mode about your environment, now also available on Bedrock, Vertex, Foundry, Claude apps gateway and telemetry-disabled sessions"
-      },
-      {
-       "kind": "追加",
-       "text": "Added /claude-api managed-agents-secure, which compares a Managed Agents agent's settings with Anthropic's published security guide, without changing anything"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
