@@ -961,6 +961,102 @@
      "url": "https://code.claude.com/docs/en/iam"
     },
     {
+     "id": "changelog-2.1.322",
+     "title": "v2.1.322",
+     "summary": "Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.321",
+     "title": "v2.1.321",
+     "summary": "Added Claude Fable 5.2 (claude-fable-5-2), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads / Added --settings <file> to claude remote-control, which applies a settings file to every session it starts; if the file changes, no new session starts until you restart claude remote-control / Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added Claude Fable 5.2 (claude-fable-5-2), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads"
+      },
+      {
+       "kind": "追加",
+       "text": "Added --settings <file> to claude remote-control, which applies a settings file to every session it starts; if the file changes, no new session starts until you restart claude remote-control"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a case where a read-only Bash command ran outside the sandbox without a permission prompt"
+      },
+      {
+       "kind": "修正",
+       "text": "Fixed a case where Bash permission checks judged a file write from the wrong folder and didn't prompt"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.319",
+     "title": "v2.1.319",
+     "summary": "Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set CLAUDE_CODE_AUTO_MODE_SERVER=0 to keep using it (Bedrock, Vertex and Foundry are unchanged) / Changed auto mode behind an LLM gateway: CLAUDE_CODE_AUTO_MODE_SERVER=1 turns on the server-side check even with CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS set; if managed settings set the latter, they must set the 1 too / Added support for MCP tasks in the terminal: when an MCP server runs a tool call as a task, Claude Code moves it to the background right away and tells Claude the result when it finishes",
+     "highlights": [
+      {
+       "kind": "変更",
+       "text": "Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set CLAUDE_CODE_AUTO_MODE_SERVER=0 to keep using it (Bedrock, Vertex and Foundry are unchanged)"
+      },
+      {
+       "kind": "変更",
+       "text": "Changed auto mode behind an LLM gateway: CLAUDE_CODE_AUTO_MODE_SERVER=1 turns on the server-side check even with CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS set; if managed settings set the latter, they must set the 1 too"
+      },
+      {
+       "kind": "追加",
+       "text": "Added support for MCP tasks in the terminal: when an MCP server runs a tool call as a task, Claude Code moves it to the background right away and tells Claude the result when it finishes"
+      },
+      {
+       "kind": "追加",
+       "text": "Added the CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND environment variable to make Claude Code wait for an MCP task inside its tool call instead of moving it to the background right away"
+      },
+      {
+       "kind": "追加",
+       "text": "Added permissions.denyInsteadOfPrompting setting: a tool call that would wait on a permission prompt is denied and the turn continues, in terminal sessions, subagents and teammates"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+     "id": "changelog-2.1.318",
+     "title": "v2.1.318",
+     "summary": "Added a record of your answer when Claude Code asks to turn on the mods it writes in a session / Added assume_role on mantle upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution / Added an effort option to a mod's $.model.fork, so a quick side job can run at low whatever effort the session uses; the result reports the effort sent",
+     "highlights": [
+      {
+       "kind": "追加",
+       "text": "Added a record of your answer when Claude Code asks to turn on the mods it writes in a session"
+      },
+      {
+       "kind": "追加",
+       "text": "Added assume_role on mantle upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution"
+      },
+      {
+       "kind": "追加",
+       "text": "Added an effort option to a mod's $.model.fork, so a quick side job can run at low whatever effort the session uses; the result reports the effort sent"
+      },
+      {
+       "kind": "追加",
+       "text": "Added the date a stored claude.ai sign-in ends to claude auth status (loginExpiresAt) and to claude -p JSON results (credential_expires_at)"
+      },
+      {
+       "kind": "追加",
+       "text": "Added a one-line stderr warning to claude -p text output, starting 10 days before a stored claude.ai sign-in ends"
+      }
+     ],
+     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
      "id": "changelog-2.1.317",
      "title": "v2.1.317",
      "summary": "Added a warning to /schedule when a new cloud scheduled task gets connectors you did not ask for, with how to remove them / Added a check that asks before a web or shell tool call sends your account email address to the network / Added onFailure: \"block\" for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run",
@@ -1068,102 +1164,6 @@
       {
        "kind": "修正",
        "text": "Fixed per-directory and paths: skills not being found after a Bash cd deeper into a git repository"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.311",
-     "title": "v2.1.311",
-     "summary": "Added --hold-idle-file and --max-hold-min to self-hosted-runner, to keep an idle session while your host reports processes it left running / Added a tip for the Explanatory output style, shown when you ask Claude for explanations / Fixed long freezes at startup and after reading or editing files when a CLAUDE.md file holds a very long list item",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added --hold-idle-file and --max-hold-min to self-hosted-runner, to keep an idle session while your host reports processes it left running"
-      },
-      {
-       "kind": "追加",
-       "text": "Added a tip for the Explanatory output style, shown when you ask Claude for explanations"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed long freezes at startup and after reading or editing files when a CLAUDE.md file holds a very long list item"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed interrupting Claude not taking effect until a timeout while an MCP server had not answered a resource read or a skill was still downloading"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed standard-context sessions stopping with \"Usage credits required for 1M context\" when a request ran over 200K tokens; Claude Code now compacts the conversation and continues"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.310",
-     "title": "v2.1.310",
-     "summary": "Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too / Fixed requests failing behind some gateways and compatible servers that reject the effort-2025-11-24 beta value or mid-conversation system messages; Claude Code now retries without them / Fixed background cleanup deleting some recent files, such as pasted images, when cleanupPeriodDays is set to a very large value",
-     "highlights": [
-      {
-       "kind": "追加",
-       "text": "Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed requests failing behind some gateways and compatible servers that reject the effort-2025-11-24 beta value or mid-conversation system messages; Claude Code now retries without them"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed background cleanup deleting some recent files, such as pasted images, when cleanupPeriodDays is set to a very large value"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed compaction after a \"Prompt is too long\" error keeping too much of a conversation with dense text, such as base64 or SVG, so the next request could fail again"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed file read permission prompts not showing where a symbolic link leads"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.309",
-     "title": "v2.1.309",
-     "summary": "Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sandbox before each command / Fixed macOS sandbox denyWrite glob patterns not applying at a path's real location when the pattern's folder is reached through a symlink / Fixed sandboxed commands and auto-accepted edits being able to modify the MCP config file passed with --mcp-config",
-     "highlights": [
-      {
-       "kind": "修正",
-       "text": "Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sandbox before each command"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed macOS sandbox denyWrite glob patterns not applying at a path's real location when the pattern's folder is reached through a symlink"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed sandboxed commands and auto-accepted edits being able to modify the MCP config file passed with --mcp-config"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed a disabled MCP server being reconnected by a later permission prompt in print and SDK sessions"
-      },
-      {
-       "kind": "修正",
-       "text": "Fixed the Bash permission check trusting a variable set by a command whose redirect can fail to open"
-      }
-     ],
-     "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
-    },
-    {
-     "id": "changelog-2.1.308",
-     "title": "v2.1.308",
-     "summary": "Bug fixes and reliability improvements",
-     "highlights": [
-      {
-       "kind": "改善",
-       "text": "Bug fixes and reliability improvements"
       }
      ],
      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
