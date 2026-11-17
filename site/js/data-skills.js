@@ -1,5 +1,5 @@
 // 生成物: scripts/build_data.py が skills.jsonl + overrides.ja.json から作成。手で編集しない。
-// GitHub の Claude Code Skills を非LLMで取り込み、日本語化 29/75 件（週次 ingest-skills.yml）。
+// GitHub の Claude Code Skills を非LLMで取り込み、日本語化 34/120 件（週次 ingest-skills.yml）。
 window.CCF_SKILLS = [
 {
 "id": "skill-anthropics-skills-skills-academy-guide",
@@ -14,7 +14,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@academy-guide -g"
 ],
 "install": "npx skills add anthropics/skills@academy-guide -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "academy-guide",
@@ -37,7 +37,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@algorithmic-art -g"
 ],
 "install": "npx skills add anthropics/skills@algorithmic-art -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "algorithmic-art",
@@ -60,7 +60,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@brand-guidelines -g"
 ],
 "install": "npx skills add anthropics/skills@brand-guidelines -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "brand-guidelines",
@@ -83,7 +83,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@canvas-design -g"
 ],
 "install": "npx skills add anthropics/skills@canvas-design -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "canvas-design",
@@ -106,7 +106,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@claude-api -g"
 ],
 "install": "npx skills add anthropics/skills@claude-api -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "claude-api",
@@ -129,7 +129,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@discernment-nudge -g"
 ],
 "install": "npx skills add anthropics/skills@discernment-nudge -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "discernment-nudge",
@@ -152,7 +152,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@doc-coauthoring -g"
 ],
 "install": "npx skills add anthropics/skills@doc-coauthoring -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "doc-coauthoring",
@@ -175,7 +175,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@docx -g"
 ],
 "install": "npx skills add anthropics/skills@docx -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "docx",
@@ -198,7 +198,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@frontend-design -g"
 ],
 "install": "npx skills add anthropics/skills@frontend-design -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "frontend-design",
@@ -221,7 +221,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@internal-comms -g"
 ],
 "install": "npx skills add anthropics/skills@internal-comms -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "internal-comms",
@@ -244,7 +244,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@mcp-builder -g"
 ],
 "install": "npx skills add anthropics/skills@mcp-builder -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "mcp-builder",
@@ -267,7 +267,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pdf -g"
 ],
 "install": "npx skills add anthropics/skills@pdf -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pdf",
@@ -290,7 +290,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@pptx -g"
 ],
 "install": "npx skills add anthropics/skills@pptx -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "pptx",
@@ -313,7 +313,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@skill-creator -g"
 ],
 "install": "npx skills add anthropics/skills@skill-creator -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "skill-creator",
@@ -336,7 +336,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@slack-gif-creator -g"
 ],
 "install": "npx skills add anthropics/skills@slack-gif-creator -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "slack-gif-creator",
@@ -359,7 +359,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@theme-factory -g"
 ],
 "install": "npx skills add anthropics/skills@theme-factory -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "theme-factory",
@@ -382,7 +382,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@web-artifacts-builder -g"
 ],
 "install": "npx skills add anthropics/skills@web-artifacts-builder -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "web-artifacts-builder",
@@ -405,7 +405,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@webapp-testing -g"
 ],
 "install": "npx skills add anthropics/skills@webapp-testing -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "webapp-testing",
@@ -428,7 +428,7 @@ window.CCF_SKILLS = [
 "npx skills add anthropics/skills@xlsx -g"
 ],
 "install": "npx skills add anthropics/skills@xlsx -g",
-"stars": 191217,
+"stars": 196157,
 "repoUrl": "https://github.com/anthropics/skills",
 "aliases": [
 "xlsx",
@@ -451,7 +451,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@deploy-to-vercel -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "deploy-to-vercel",
@@ -474,7 +474,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-cli-with-tokens -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-cli-with-tokens",
@@ -497,7 +497,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@composition-patterns -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@composition-patterns -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "composition-patterns",
@@ -520,7 +520,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@vercel-optimize -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@vercel-optimize -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "vercel-optimize",
@@ -543,7 +543,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-best-practices -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-best-practices -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-best-practices",
@@ -566,7 +566,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-native-skills -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-native-skills -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-native-skills",
@@ -589,7 +589,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@react-view-transitions -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@react-view-transitions -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "react-view-transitions",
@@ -612,7 +612,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@web-design-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@web-design-guidelines -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "web-design-guidelines",
@@ -635,7 +635,7 @@ window.CCF_SKILLS = [
 "npx skills add vercel-labs/agent-skills@writing-guidelines -g"
 ],
 "install": "npx skills add vercel-labs/agent-skills@writing-guidelines -g",
-"stars": 33792,
+"stars": 34215,
 "repoUrl": "https://github.com/vercel-labs/agent-skills",
 "aliases": [
 "writing-guidelines",
@@ -646,31 +646,146 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-alchaincyf-darwin-skill-darwin-skill",
+"id": "skill-crazyguitar-pysheeet-skills-py",
 "priority": 428,
 "category": "community",
 "type": "skill",
-"want": "darwin-skill",
-"feature": "alchaincyf/darwin-skill",
-"summary": "Darwin Skill 2.0 (达尔文.skill 2.0): autonomous skill optimizer, v2.0 integrates Microsoft Research SkillLens (arXiv 2605.23899) 9-dim rubric + SkillOpt (arXiv 2605.23904) validation-gated design + human-in-the-loop checkpoints. Evaluates SKILL.md files using a 9-dimension rubric (structure + effectiveness + meta-skill blacklists), runs hill-climbing with git version control, spawns independent judge agents for blind evaluation, validates improvements through test prompts with auto-break on diminishing returns, and generates visual result cards.",
-"trigger": "Use when user mentions \"优化skill\", \"skill评分\", \"自动优化\", \"auto optimize\", \"skill质量检查\", \"达尔文\", \"darwin\", \"帮我改改skill\", \"skill怎么样\", \"提升skill质量\", \"skill review\", \"skill打分\".",
+"want": "Python の書き方をまとめて引きたい",
+"feature": "crazyguitar/pysheeet",
+"summary": "構文・並行処理・ネットワーク・データベース・ML/LLM・HPC までを網羅した Python のリファレンス。",
+"trigger": "Python の疑問、面接対策、デバッグ、async パターン、ライブラリの用例、コードレビュー、MLOps や分散処理など Python の作業全般。",
 "commands": [
-"npx skills add alchaincyf/darwin-skill -g"
+"npx skills add crazyguitar/pysheeet@py -g"
 ],
-"install": "npx skills add alchaincyf/darwin-skill -g",
-"stars": 6867,
-"repoUrl": "https://github.com/alchaincyf/darwin-skill",
+"install": "npx skills add crazyguitar/pysheeet@py -g",
+"stars": 8163,
+"repoUrl": "https://github.com/crazyguitar/pysheeet",
 "aliases": [
-"darwin-skill",
-"alchaincyf",
-"darwin-skill",
+"py",
+"crazyguitar",
+"py",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-crazyguitar-pysheeet-skills-readable-py",
+"priority": 429,
+"category": "community",
+"type": "skill",
+"want": "読みやすいPythonコードを書きたい",
+"feature": "crazyguitar/pysheeet",
+"summary": "『リーダブルコード』に着想を得て、短い関数・浅い制御フロー・明快な命名・Pythonらしいイディオムを守らせる。",
+"trigger": "Pythonコードを書く・レビューする・リファクタリングするとき。",
+"commands": [
+"npx skills add crazyguitar/pysheeet@readable-py -g"
+],
+"install": "npx skills add crazyguitar/pysheeet@readable-py -g",
+"stars": 8163,
+"repoUrl": "https://github.com/crazyguitar/pysheeet",
+"aliases": [
+"readable-py",
+"crazyguitar",
+"readable-py",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-dgiot-dgiot-skills-fde-ontology",
+"priority": 430,
+"category": "community",
+"type": "skill",
+"want": "fde-ontology",
+"feature": "dgiot/dgiot",
+"summary": "Open Source Industrial IoT Platform | 300+ protocols | 6-min deploy | Modbus OPC UA MQTT | 12K Stars",
+"trigger": "",
+"commands": [
+"npx skills add dgiot/dgiot@fde-ontology -g"
+],
+"install": "npx skills add dgiot/dgiot@fde-ontology -g",
+"stars": 4866,
+"repoUrl": "https://github.com/dgiot/dgiot",
+"aliases": [
+"fde-ontology",
+"dgiot",
+"fde-ontology",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-dgiot-dgiot-skills",
+"priority": 431,
+"category": "community",
+"type": "skill",
+"want": "skills",
+"feature": "dgiot/dgiot",
+"summary": "Open Source Industrial IoT Platform | 300+ protocols | 6-min deploy | Modbus OPC UA MQTT | 12K Stars",
+"trigger": "",
+"commands": [
+"npx skills add dgiot/dgiot@skills -g"
+],
+"install": "npx skills add dgiot/dgiot@skills -g",
+"stars": 4866,
+"repoUrl": "https://github.com/dgiot/dgiot",
+"aliases": [
+"skills",
+"dgiot",
+"skills",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-antvis-l7-skills-l7-single",
+"priority": 432,
+"category": "community",
+"type": "skill",
+"want": "WebGLで地理空間データを可視化したい",
+"feature": "antvis/L7",
+"summary": "WebGLベースの大規模地理空間データ可視化エンジン AntV L7。地図アプリ、点・線・面・ヒートマップ、レイヤーや動きを扱う。",
+"trigger": "インタラクティブなWebGL地図の作成、地理空間データの可視化、位置データダッシュボードの構築、GeoJSONやCSVの表示をするとき。",
+"commands": [
+"npx skills add antvis/L7@l7-single -g"
+],
+"install": "npx skills add antvis/L7@l7-single -g",
+"stars": 4080,
+"repoUrl": "https://github.com/antvis/L7",
+"aliases": [
+"l7-single",
+"antvis",
+"antv-l7",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-antvis-l7-skills-l7",
+"priority": 433,
+"category": "community",
+"type": "skill",
+"want": "AntV L7で地図の可視化を実装したい",
+"feature": "antvis/L7",
+"summary": "AntV L7 地理空間可視化ライブラリの総合ガイド。WebGL地図、地理データ可視化、地図レイヤー、AMap/Mapbox連携を扱う。",
+"trigger": "WebGL地図の作成、点・線・面・ヒートマップの可視化、位置データダッシュボード構築、GeoJSON/CSV表示、AMap・Mapbox・Maplibre連携、大規模データの描画性能改善をするとき。",
+"commands": [
+"npx skills add antvis/L7@l7 -g"
+],
+"install": "npx skills add antvis/L7@l7 -g",
+"stars": 4080,
+"repoUrl": "https://github.com/antvis/L7",
+"aliases": [
+"l7",
+"antvis",
+"antv-l7",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-butterbase-ai-butterbase-butterbase",
-"priority": 429,
+"priority": 434,
 "category": "community",
 "type": "skill",
 "want": "MCP付きのオープンソースBaaSを使いたい",
@@ -681,7 +796,7 @@ window.CCF_SKILLS = [
 "npx skills add butterbase-ai/butterbase -g"
 ],
 "install": "npx skills add butterbase-ai/butterbase -g",
-"stars": 3030,
+"stars": 3032,
 "repoUrl": "https://github.com/butterbase-ai/butterbase",
 "aliases": [
 "butterbase",
@@ -693,7 +808,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-kokiainet-anti-distill-anti-distill",
-"priority": 430,
+"priority": 435,
 "category": "community",
 "type": "skill",
 "want": "anti-distill",
@@ -704,7 +819,7 @@ window.CCF_SKILLS = [
 "npx skills add kokiainet/anti-distill -g"
 ],
 "install": "npx skills add kokiainet/anti-distill -g",
-"stars": 2483,
+"stars": 2486,
 "repoUrl": "https://github.com/kokiainet/anti-distill",
 "aliases": [
 "anti-distill",
@@ -715,54 +830,330 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-op7418-youtube-clipper-skill-youtube-clipper-skill",
-"priority": 431,
+"id": "skill-auth0-nextjs-auth0-skills-mfa",
+"priority": 436,
 "category": "community",
 "type": "skill",
-"want": "YouTube動画を切り抜いて字幕付き短尺にしたい",
-"feature": "op7418/Youtube-clipper-skill",
-"summary": "YouTube動画と字幕を取得し、AIで章立てして、選んだ区間の切り抜き・中英字幕の翻訳と焼き込み・要約生成まで行う。",
-"trigger": "YouTube動画の切り抜き・短尺化・中英バイリンガル字幕を作るとき。",
+"want": "mfa",
+"feature": "auth0/nextjs-auth0",
+"summary": "Multi-factor authentication with @auth0/nextjs-auth0 v4: redirect step-up via Universal Login (amr gating), server-side step-up on mfa_required, the MFA management API (getAuthenticators, enroll, challenge, verify), and reactive step-up via mfa.challengeWithPopup(). Covers the beforeSessionSaved amr hook, the secure mfa_token handoff, and MFA error classes.",
+"trigger": "",
 "commands": [
-"npx skills add op7418/Youtube-clipper-skill -g"
+"npx skills add auth0/nextjs-auth0@mfa -g"
 ],
-"install": "npx skills add op7418/Youtube-clipper-skill -g",
-"stars": 2298,
-"repoUrl": "https://github.com/op7418/Youtube-clipper-skill",
+"install": "npx skills add auth0/nextjs-auth0@mfa -g",
+"stars": 2312,
+"repoUrl": "https://github.com/auth0/nextjs-auth0",
 "aliases": [
-"Youtube-clipper-skill",
-"op7418",
-"youtube-clipper",
+"mfa",
+"auth0",
+"mfa",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-youmind-openlab-nano-banana-pro-prompts-recommend-skill-nano-banana-pro-prompts-recommend-skill",
-"priority": 432,
+"id": "skill-auth0-nextjs-auth0-skills",
+"priority": 437,
 "category": "community",
 "type": "skill",
-"want": "画像生成に合うプロンプトを見つけたい",
-"feature": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
-"summary": "1万件超の Nano Banana Pro 向け画像生成プロンプトから、要望に合うものを推薦する。他の画像生成モデルでも使える。",
-"trigger": "AIで画像を生成したい、用途に合う画像プロンプトやテンプレートを探すとき。",
+"want": "nextjs-auth0",
+"feature": "auth0/nextjs-auth0",
+"summary": "Add authentication to Next.js applications using @auth0/nextjs-auth0 v4 (App Router + Pages Router): install, Auth0Client singleton, middleware/proxy route mounting, env config, useUser, getSession/getAccessToken, protecting pages and API routes, and step-up MFA. Entry point for all nextjs-auth0 skills.",
+"trigger": "",
 "commands": [
-"npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g"
+"npx skills add auth0/nextjs-auth0@skills -g"
 ],
-"install": "npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g",
-"stars": 1904,
-"repoUrl": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+"install": "npx skills add auth0/nextjs-auth0@skills -g",
+"stars": 2312,
+"repoUrl": "https://github.com/auth0/nextjs-auth0",
 "aliases": [
-"nano-banana-pro-prompts-recommend-skill",
-"YouMind-OpenLab",
-"nano-banana-pro-prompts-recommend-skill",
+"skills",
+"auth0",
+"nextjs-auth0",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-auth0-nextjs-auth0-skills-organizations",
+"priority": 438,
+"category": "community",
+"type": "skill",
+"want": "organizations",
+"feature": "auth0/nextjs-auth0",
+"summary": "Auth0 Organizations (multi-tenant B2B) with @auth0/nextjs-auth0 v4: pass organization at login via authorizationParameters / the /auth/login query param / startInteractiveLogin, read org_id back from the session, validate it on the backend, accept invitations, and configure orgs/connections via the Auth0 CLI or Terraform.",
+"trigger": "",
+"commands": [
+"npx skills add auth0/nextjs-auth0@organizations -g"
+],
+"install": "npx skills add auth0/nextjs-auth0@organizations -g",
+"stars": 2312,
+"repoUrl": "https://github.com/auth0/nextjs-auth0",
+"aliases": [
+"organizations",
+"auth0",
+"organizations",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-auth0-nextjs-auth0-skills-passkeys",
+"priority": 439,
+"category": "community",
+"type": "skill",
+"want": "passkeys",
+"feature": "auth0/nextjs-auth0",
+"summary": "Passkey (WebAuthn) flows with @auth0/nextjs-auth0 v4: signup, sign-in, and My Account enrollment using the server-side auth0.passkey.* API inside App Router route handlers or server actions, with navigator.credentials and serializeCredential in the browser.",
+"trigger": "",
+"commands": [
+"npx skills add auth0/nextjs-auth0@passkeys -g"
+],
+"install": "npx skills add auth0/nextjs-auth0@passkeys -g",
+"stars": 2312,
+"repoUrl": "https://github.com/auth0/nextjs-auth0",
+"aliases": [
+"passkeys",
+"auth0",
+"passkeys",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-opendatalab-omnidocbench-skills",
+"priority": 440,
+"category": "community",
+"type": "skill",
+"want": "OmniDocBenchで文書解析の評価を回したい",
+"feature": "opendatalab/OmniDocBench",
+"summary": "OmniDocBench 評価のデプロイ・検証・実行・結果JSONの解析を助け、Overall/Text/Formula/Table のスコアを報告する。",
+"trigger": "OmniDocBench や文書解析/OCRベンチのスコアリング、MinerU 等のモデル評価に触れるとき。",
+"commands": [
+"npx skills add opendatalab/OmniDocBench -g"
+],
+"install": "npx skills add opendatalab/OmniDocBench -g",
+"stars": 2177,
+"repoUrl": "https://github.com/opendatalab/OmniDocBench",
+"aliases": [
+"skills",
+"opendatalab",
+"omnidocbench-eval-helper",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-upstash-ratelimit-js-skills",
+"priority": 441,
+"category": "community",
+"type": "skill",
+"want": "Upstashでレート制限を実装したい",
+"feature": "upstash/ratelimit-js",
+"summary": "Redis Rate Limit の TypeScript SDK について、セットアップ手順・基本の使い方・応用ドキュメントへの案内をまとめる。",
+"trigger": "",
+"commands": [
+"npx skills add upstash/ratelimit-js -g"
+],
+"install": "npx skills add upstash/ratelimit-js -g",
+"stars": 2052,
+"repoUrl": "https://github.com/upstash/ratelimit-js",
+"aliases": [
+"skills",
+"upstash",
+"upstash-ratelimit-ts",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-brew",
+"priority": 442,
+"category": "community",
+"type": "skill",
+"want": "brew",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when working with Homebrew (`brew`) — the package manager for macOS and Linux. Covers the command structure, formula and cask DSLs, taps, bottles, the Cellar, services, bundle/Brewfile, environment variables, installation internals, and developer commands. Triggers on: \"brew\", \"homebrew\", \"brew install\", \"brew uninstall\", \"brew update\", \"brew upgrade\", \"brew search\", \"brew tap\", \"brew cask\", \"brew bottle\", \"brew services\", \"brew bundle\", \"brew cleanup\", \"brew doctor\", \"brew audit\", \"brew livecheck\", \"brew test-bot\", \"brew bump-formula-pr\", \"Brewfile\", \"HOMEBREW_PREFIX\", \"HOMEBREW_CELLAR\", \"HOMEBREW_NO_INSTALL_FROM_API\", \"HOMEBREW_CASK_OPTS\", \"HOMEBREW_BOTTLE_DOMAIN\", \"Formula\", \"Cask\", \"Cellar\", \"Caskroom\", \"keg\", \"rack\", \"tap\", \"bottle\", \"superenv\", \"Formulary\", \"FormulaInstaller\", \"shellenv\", \"restart_service\", \"keg-only\", \"brew deps\", \"brew uses\", \"brew leaves\", \"brew outdated\", \"brew pin\", \"brew fetch\", \"brew create\", \"brew edit\", \"livecheck\", \"auto_updates\", \"depends_on\".",
+"trigger": "Use when working with Homebrew (`brew`) — the package manager for macOS and Linux. Covers the command structure, formula and cask DSLs, taps, bottles, the Cellar, services, bundle/Brewfile, environment variables, installation internals, and developer commands. Triggers on: \"brew\", \"homebrew\", \"brew install\", \"brew uninstall\", \"brew update\", \"brew upgrade\", \"brew search\", \"brew tap\", \"brew cask\", \"brew bottle\", \"brew services\", \"brew bundle\", \"brew cleanup\", \"brew doctor\", \"brew audit\", \"brew livecheck\", \"brew test-bot\", \"brew bump-formula-pr\", \"Brewfile\", \"HOMEBREW_PREFIX\", \"HOMEBREW_CELLAR\", \"HOMEBREW_NO_INSTALL_FROM_API\", \"HOMEBREW_CASK_OPTS\", \"HOMEBREW_BOTTLE_DOMAIN\", \"Formula\", \"Cask\", \"Cellar\", \"Caskroom\", \"keg\", \"rack\", \"tap\", \"bottle\", \"superenv\", \"Formulary\", \"FormulaInstaller\", \"shellenv\", \"restart_service\", \"keg-only\", \"brew deps\", \"brew uses\", \"brew leaves\", \"brew outdated\", \"brew pin\", \"brew fetch\", \"brew create\", \"brew edit\", \"livecheck\", \"auto_updates\", \"depends_on\".",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@brew -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@brew -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"brew",
+"carapace-sh",
+"brew",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-bubbletea",
+"priority": 443,
+"category": "community",
+"type": "skill",
+"want": "bubbletea",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when working with Bubble Tea (charmbracelet/bubbletea) — the Elm Architecture TUI framework for Go. Covers the Model/Update/View cycle, commands, messages, the View struct, renderer, input handling, program lifecycle, testing, component composition, integration with the Charm ecosystem (lipgloss, bubbles, huh, glamour), and production design patterns. Triggers on: \"bubbletea\", \"bubble tea\", \"tea.Model\", \"tea.Cmd\", \"tea.Msg\", \"tea.Program\", \"tea.View\", \"tea.KeyPressMsg\", \"tea.WindowSizeMsg\", \"tea.MouseMsg\", \"tea.Batch\", \"tea.Sequence\", \"tea.Quit\", \"Elm Architecture\", \"charmbracelet\", \"Bubble Tea v2\", \"tea.NewProgram\", \"tea.Send\", \"tea.Tick\", \"tea.Every\", \"cursedRenderer\", \"ultraviolet\", \"ScreenBuffer\", \"ProgramContext\", \"compositor\".",
+"trigger": "Use when working with Bubble Tea (charmbracelet/bubbletea) — the Elm Architecture TUI framework for Go. Covers the Model/Update/View cycle, commands, messages, the View struct, renderer, input handling, program lifecycle, testing, component composition, integration with the Charm ecosystem (lipgloss, bubbles, huh, glamour), and production design patterns. Triggers on: \"bubbletea\", \"bubble tea\", \"tea.Model\", \"tea.Cmd\", \"tea.Msg\", \"tea.Program\", \"tea.View\", \"tea.KeyPressMsg\", \"tea.WindowSizeMsg\", \"tea.MouseMsg\", \"tea.Batch\", \"tea.Sequence\", \"tea.Quit\", \"Elm Architecture\", \"charmbracelet\", \"Bubble Tea v2\", \"tea.NewProgram\", \"tea.Send\", \"tea.Tick\", \"tea.Every\", \"cursedRenderer\", \"ultraviolet\", \"ScreenBuffer\", \"ProgramContext\", \"compositor\".",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@bubbletea -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@bubbletea -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"bubbletea",
+"carapace-sh",
+"bubbletea",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-bun",
+"priority": 444,
+"category": "community",
+"type": "skill",
+"want": "bun",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when working with the bun CLI — Bun's all-in-one JavaScript runtime and toolkit. Covers the CLI command reference (install, add, remove, run, build, test, x, create, init, pm, upgrade, link, unlink), bunfig.toml configuration, environment variables, the package manager and lockfile, the test runner, the bundler, the Bun runtime API (Bun.serve, Bun.file, Bun.spawn, Bun.write, hashing, transpiler), the Bun shell ($ template literal), module resolution and loaders, and globals. Triggers on: \"bun\", \"bunx\", \"bun install\", \"bun add\", \"bun remove\", \"bun run\", \"bun build\", \"bun test\", \"bun x\", \"bun create\", \"bun init\", \"bun pm\", \"bun upgrade\", \"bun link\", \"bun unlink\", \"bunfig.toml\", \"bun.lock\", \"Bun.serve\", \"Bun.file\", \"Bun.write\", \"Bun.spawn\", \"Bun.hash\", \"Bun.password\", \"bun:test\", \"Bun.build\", \"Bun.Transpiler\", \"bun shell\", \"$ template\", \"import.meta\", \"JavaScriptCore\", \"Bun.serve\", \"HTMLRewriter\", \"Bun.SQL\", \"Bun.RedisClient\", \"Bun.Glob\", \"Bun.plugin\", \"bun:ffi\".",
+"trigger": "Use when working with the bun CLI — Bun's all-in-one JavaScript runtime and toolkit. Covers the CLI command reference (install, add, remove, run, build, test, x, create, init, pm, upgrade, link, unlink), bunfig.toml configuration, environment variables, the package manager and lockfile, the test runner, the bundler, the Bun runtime API (Bun.serve, Bun.file, Bun.spawn, Bun.write, hashing, transpiler), the Bun shell ($ template literal), module resolution and loaders, and globals. Triggers on: \"bun\", \"bunx\", \"bun install\", \"bun add\", \"bun remove\", \"bun run\", \"bun build\", \"bun test\", \"bun x\", \"bun create\", \"bun init\", \"bun pm\", \"bun upgrade\", \"bun link\", \"bun unlink\", \"bunfig.toml\", \"bun.lock\", \"Bun.serve\", \"Bun.file\", \"Bun.write\", \"Bun.spawn\", \"Bun.hash\", \"Bun.password\", \"bun:test\", \"Bun.build\", \"Bun.Transpiler\", \"bun shell\", \"$ template\", \"import.meta\", \"JavaScriptCore\", \"Bun.serve\", \"HTMLRewriter\", \"Bun.SQL\", \"Bun.RedisClient\", \"Bun.Glob\", \"Bun.plugin\", \"bun:ffi\".",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@bun -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@bun -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"bun",
+"carapace-sh",
+"bun",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-but",
+"priority": 445,
+"category": "community",
+"type": "skill",
+"want": "but",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when working with the GitButler CLI (`but`) — virtual branches, stacked branches, workspace model, commit editing (rub, amend, squash, reword), CLI IDs, forge integration, PRs, operations log, conflict resolution, TUI, AI agent setup, skills, aliases, configuration. Triggers on: \"but\", \"gitbutler\", \"but rub\", \"but commit\", \"but status\", \"but branch\", \"but apply\", \"but unapply\", \"but push\", \"but pull\", \"but pr\", \"but oplog\", \"but undo\", \"but redo\", \"but resolve\", \"but stage\", \"but squash\", \"but amend\", \"but reword\", \"but config\", \"but alias\", \"but setup\", \"but teardown\", \"but tui\", \"but diff\", \"but show\", \"but agent\", \"but skill\", \"but clean\", \"but move\", \"but pick\", \"but absorb\", \"but update\", \"but completions\", \"virtual branch\", \"stacked branch\", \"integration branch\", \"gitbutler workspace\", \"but oplog restore\", \"but oplog snapshot\", \"CLI ID\", \"hunk ID\".",
+"trigger": "Use when working with the GitButler CLI (`but`) — virtual branches, stacked branches, workspace model, commit editing (rub, amend, squash, reword), CLI IDs, forge integration, PRs, operations log, conflict resolution, TUI, AI agent setup, skills, aliases, configuration. Triggers on: \"but\", \"gitbutler\", \"but rub\", \"but commit\", \"but status\", \"but branch\", \"but apply\", \"but unapply\", \"but push\", \"but pull\", \"but pr\", \"but oplog\", \"but undo\", \"but redo\", \"but resolve\", \"but stage\", \"but squash\", \"but amend\", \"but reword\", \"but config\", \"but alias\", \"but setup\", \"but teardown\", \"but tui\", \"but diff\", \"but show\", \"but agent\", \"but skill\", \"but clean\", \"but move\", \"but pick\", \"but absorb\", \"but update\", \"but completions\", \"virtual branch\", \"stacked branch\", \"integration branch\", \"gitbutler workspace\", \"but oplog restore\", \"but oplog snapshot\", \"CLI ID\", \"hunk ID\".",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@but -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@but -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"but",
+"carapace-sh",
+"but",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-carapace",
+"priority": 446,
+"category": "community",
+"type": "skill",
+"want": "carapace",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when working with carapace shell completion — integrating into CLIs, writing YAML specs, creating custom actions, building completion-aware lexers for DSLs, looking up macros, setting up shell completion, configuring choices/bridges, using the MCP server, or adding man page documentation.",
+"trigger": "Use when working with carapace shell completion — integrating into CLIs, writing YAML specs, creating custom actions, building completion-aware lexers for DSLs, looking up macros, setting up shell completion, configuring choices/bridges, using the MCP server, or adding man page documentation.",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@carapace -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@carapace -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"carapace",
+"carapace-sh",
+"carapace",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-cargo",
+"priority": 447,
+"category": "community",
+"type": "skill",
+"want": "cargo",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when working with the cargo CLI — Rust's package manager. Covers the manifest format (Cargo.toml), dependencies, features, workspaces, build profiles, build scripts, configuration (.cargo/config.toml), registries and publishing, environment variables, the lockfile and cache, and the command reference. Triggers on: \"cargo\", \"cargo build\", \"cargo check\", \"cargo test\", \"cargo run\", \"cargo add\", \"cargo update\", \"cargo publish\", \"cargo new\", \"cargo init\", \"cargo install\", \"cargo doc\", \"cargo bench\", \"cargo tree\", \"cargo metadata\", \"Cargo.toml\", \"Cargo.lock\", \"crate\", \"workspace\", \"feature\", \"profile\", \"build script\", \"build.rs\", \"registry\", \"crates.io\", \"CARGO_HOME\", \"rustc\", \"rustdoc\", \"rust-version\", \"edition\".",
+"trigger": "Use when working with the cargo CLI — Rust's package manager. Covers the manifest format (Cargo.toml), dependencies, features, workspaces, build profiles, build scripts, configuration (.cargo/config.toml), registries and publishing, environment variables, the lockfile and cache, and the command reference. Triggers on: \"cargo\", \"cargo build\", \"cargo check\", \"cargo test\", \"cargo run\", \"cargo add\", \"cargo update\", \"cargo publish\", \"cargo new\", \"cargo init\", \"cargo install\", \"cargo doc\", \"cargo bench\", \"cargo tree\", \"cargo metadata\", \"Cargo.toml\", \"Cargo.lock\", \"crate\", \"workspace\", \"feature\", \"profile\", \"build script\", \"build.rs\", \"registry\", \"crates.io\", \"CARGO_HOME\", \"rustc\", \"rustdoc\", \"rust-version\", \"edition\".",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@cargo -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@cargo -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"cargo",
+"carapace-sh",
+"cargo",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-cobra",
+"priority": 448,
+"category": "community",
+"type": "skill",
+"want": "cobra",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when building CLI applications with spf13/cobra — creating commands, defining flags, argument validation, lifecycle hooks, help/usage customization, shell completions, or Viper integration. Triggers on: \"cobra\", \"cobra command\", \"cobra flag\", \"cobra subcommand\", \"cobra completion\", \"cobra help\", \"cobra usage\", \"cobra hook\", \"cobra viper\", \"AddCommand\", \"PersistentFlags\", \"LocalFlags\", \"MarkFlagRequired\", \"RunE\", \"PreRun\", \"PostRun\", \"PersistentPreRun\", \"ValidArgs\", \"ValidArgsFunction\", \"RegisterFlagCompletionFunc\", \"ShellCompDirective\", \"ExactArgs\", \"NoArgs\", \"MinimumNArgs\", \"MatchAll\", \"MarkFlagsRequiredTogether\", \"MarkFlagsMutuallyExclusive\", \"cobra-cli\", \"cobra completion\", \"cobra active help\", \"cobra plugin\".",
+"trigger": "Use when building CLI applications with spf13/cobra — creating commands, defining flags, argument validation, lifecycle hooks, help/usage customization, shell completions, or Viper integration. Triggers on: \"cobra\", \"cobra command\", \"cobra flag\", \"cobra subcommand\", \"cobra completion\", \"cobra help\", \"cobra usage\", \"cobra hook\", \"cobra viper\", \"AddCommand\", \"PersistentFlags\", \"LocalFlags\", \"MarkFlagRequired\", \"RunE\", \"PreRun\", \"PostRun\", \"PersistentPreRun\", \"ValidArgs\", \"ValidArgsFunction\", \"RegisterFlagCompletionFunc\", \"ShellCompDirective\", \"ExactArgs\", \"NoArgs\", \"MinimumNArgs\", \"MatchAll\", \"MarkFlagsRequiredTogether\", \"MarkFlagsMutuallyExclusive\", \"cobra-cli\", \"cobra completion\", \"cobra active help\", \"cobra plugin\".",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@cobra -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@cobra -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"cobra",
+"carapace-sh",
+"cobra",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-carapace-sh-carapace-bin-skills-dnf5",
+"priority": 449,
+"category": "community",
+"type": "skill",
+"want": "dnf5",
+"feature": "carapace-sh/carapace-bin",
+"summary": "Use when working with dnf5 — the next-generation RPM package manager for Fedora/RHEL. Covers CLI commands and options, configuration, plugin system (dnf5 active plugins and libdnf5 passive plugins), dnf5daemon D-Bus API, execution workflow, package specs (NEVRA), modularity, caching, migration from DNF4, libdnf5 library architecture, build system, and command-line aliases. Triggers on: \"dnf5\", \"dnf\", \"libdnf5\", \"libdnf\", \"dnf5daemon\", \"dnf5-plugins\", \"libdnf5-plugins\", \"dnf5.conf\", \"repoquery\", \"versionlock\", \"distro-sync\", \"offline upgrade\", \"system-upgrade\", \"advisory\", \"comps\", \"modulemd\", \"NEVRA\", \"installroot\", \"forcearch\", \"repo variables\", \"metadata_expire\", \"setopt\", \"setvar\", \"config-manager\", \"repofrompath\", \"releasever\", \"basearch\", \"pluginpath\".",
+"trigger": "Use when working with dnf5 — the next-generation RPM package manager for Fedora/RHEL. Covers CLI commands and options, configuration, plugin system (dnf5 active plugins and libdnf5 passive plugins), dnf5daemon D-Bus API, execution workflow, package specs (NEVRA), modularity, caching, migration from DNF4, libdnf5 library architecture, build system, and command-line aliases. Triggers on: \"dnf5\", \"dnf\", \"libdnf5\", \"libdnf\", \"dnf5daemon\", \"dnf5-plugins\", \"libdnf5-plugins\", \"dnf5.conf\", \"repoquery\", \"versionlock\", \"distro-sync\", \"offline upgrade\", \"system-upgrade\", \"advisory\", \"comps\", \"modulemd\", \"NEVRA\", \"installroot\", \"forcearch\", \"repo variables\", \"metadata_expire\", \"setopt\", \"setvar\", \"config-manager\", \"repofrompath\", \"releasever\", \"basearch\", \"pluginpath\".",
+"commands": [
+"npx skills add carapace-sh/carapace-bin@dnf5 -g"
+],
+"install": "npx skills add carapace-sh/carapace-bin@dnf5 -g",
+"stars": 2016,
+"repoUrl": "https://github.com/carapace-sh/carapace-bin",
+"aliases": [
+"dnf5",
+"carapace-sh",
+"dnf5",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-spacezephyr-creator-buddy-gzh-skills-baokuan-article-analysis",
-"priority": 433,
+"priority": 450,
 "category": "community",
 "type": "skill",
 "want": "baokuan-article-analysis",
@@ -773,7 +1164,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@baokuan-article-analysis -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@baokuan-article-analysis -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "baokuan-article-analysis",
@@ -785,7 +1176,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-spacezephyr-creator-buddy-gzh-skills-baokuan-title-generator",
-"priority": 434,
+"priority": 451,
 "category": "community",
 "type": "skill",
 "want": "baokuan-title-generator",
@@ -796,7 +1187,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@baokuan-title-generator -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@baokuan-title-generator -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "baokuan-title-generator",
@@ -808,7 +1199,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-spacezephyr-creator-buddy-creator-buddy",
-"priority": 435,
+"priority": 452,
 "category": "community",
 "type": "skill",
 "want": "creator-buddy",
@@ -819,7 +1210,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@creator-buddy -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@creator-buddy -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "creator-buddy",
@@ -831,7 +1222,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-spacezephyr-creator-buddy-gzh-skills-global-content-search",
-"priority": 436,
+"priority": 453,
 "category": "community",
 "type": "skill",
 "want": "global-content-search",
@@ -842,7 +1233,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@global-content-search -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@global-content-search -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "global-content-search",
@@ -854,7 +1245,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-explosive-content-detector",
-"priority": 437,
+"priority": 454,
 "category": "community",
 "type": "skill",
 "want": "gzh-explosive-content-detector",
@@ -865,7 +1256,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@gzh-explosive-content-detector -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@gzh-explosive-content-detector -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "gzh-explosive-content-detector",
@@ -877,7 +1268,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-longform-writer",
-"priority": 438,
+"priority": 455,
 "category": "community",
 "type": "skill",
 "want": "gzh-longform-writer",
@@ -888,7 +1279,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@gzh-longform-writer -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@gzh-longform-writer -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "gzh-longform-writer",
@@ -900,7 +1291,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-positioning",
-"priority": 439,
+"priority": 456,
 "category": "community",
 "type": "skill",
 "want": "gzh-positioning",
@@ -911,7 +1302,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@gzh-positioning -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@gzh-positioning -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "gzh-positioning",
@@ -923,7 +1314,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-spacezephyr-creator-buddy-gzh-skills-gzh-short-post",
-"priority": 440,
+"priority": 457,
 "category": "community",
 "type": "skill",
 "want": "gzh-short-post",
@@ -934,7 +1325,7 @@ window.CCF_SKILLS = [
 "npx skills add SpaceZephyr/creator-buddy@gzh-short-post -g"
 ],
 "install": "npx skills add SpaceZephyr/creator-buddy@gzh-short-post -g",
-"stars": 1865,
+"stars": 1914,
 "repoUrl": "https://github.com/SpaceZephyr/creator-buddy",
 "aliases": [
 "gzh-short-post",
@@ -945,31 +1336,284 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-adamlyttleapps-claude-skill-aso-appstore-screenshots-claude-skill-aso-appstore-screenshots",
-"priority": 441,
+"id": "skill-youmind-openlab-nano-banana-pro-prompts-recommend-skill-nano-banana-pro-prompts-recommend-skill",
+"priority": 458,
 "category": "community",
 "type": "skill",
-"want": "aso-appstore-screenshots",
-"feature": "adamlyttleapps/claude-skill-aso-appstore-screenshots",
-"summary": "Generate high-converting App Store screenshots by analyzing your app's codebase, discovering core benefits, and creating ASO-optimized screenshot images using Nano Banana Pro.",
+"want": "画像生成に合うプロンプトを見つけたい",
+"feature": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+"summary": "1万件超の Nano Banana Pro 向け画像生成プロンプトから、要望に合うものを推薦する。他の画像生成モデルでも使える。",
+"trigger": "AIで画像を生成したい、用途に合う画像プロンプトやテンプレートを探すとき。",
+"commands": [
+"npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g"
+],
+"install": "npx skills add YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill -g",
+"stars": 1912,
+"repoUrl": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+"aliases": [
+"nano-banana-pro-prompts-recommend-skill",
+"YouMind-OpenLab",
+"nano-banana-pro-prompts-recommend-skill",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-langchat-langchat-skills",
+"priority": 459,
+"category": "community",
+"type": "skill",
+"want": "vben",
+"feature": "LangChat/langchat",
+"summary": "Vben Admin 5.0 前端框架开发技能。用于开发基于 Vue3、Vite、TypeScript 的中后台管理系统。",
 "trigger": "",
 "commands": [
-"npx skills add adamlyttleapps/claude-skill-aso-appstore-screenshots -g"
+"npx skills add LangChat/langchat -g"
 ],
-"install": "npx skills add adamlyttleapps/claude-skill-aso-appstore-screenshots -g",
-"stars": 1825,
-"repoUrl": "https://github.com/adamlyttleapps/claude-skill-aso-appstore-screenshots",
+"install": "npx skills add LangChat/langchat -g",
+"stars": 1361,
+"repoUrl": "https://github.com/LangChat/langchat",
 "aliases": [
-"claude-skill-aso-appstore-screenshots",
-"adamlyttleapps",
-"aso-appstore-screenshots",
+"skills",
+"LangChat",
+"vben",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-api-gateway",
+"priority": 460,
+"category": "community",
+"type": "skill",
+"want": "api-gateway",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS API Gateway for REST and HTTP API management.",
+"trigger": "Use when creating APIs, configuring integrations, setting up authorization, managing stages, implementing rate limiting, or troubleshooting API issues.",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@api-gateway -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@api-gateway -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"api-gateway",
+"itsmostafa",
+"api-gateway",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-bedrock",
+"priority": 461,
+"category": "community",
+"type": "skill",
+"want": "bedrock",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS Bedrock foundation models for generative AI.",
+"trigger": "Use when invoking foundation models, building AI applications, creating embeddings, configuring model access, or implementing RAG patterns.",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@bedrock -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@bedrock -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"bedrock",
+"itsmostafa",
+"bedrock",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-cloudformation",
+"priority": 462,
+"category": "community",
+"type": "skill",
+"want": "cloudformation",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS CloudFormation infrastructure as code for stack management.",
+"trigger": "Use when writing templates, deploying stacks, managing drift, troubleshooting deployments, or organizing infrastructure with nested stacks.",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@cloudformation -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@cloudformation -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"cloudformation",
+"itsmostafa",
+"cloudformation",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-cloudwatch",
+"priority": 463,
+"category": "community",
+"type": "skill",
+"want": "cloudwatch",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS CloudWatch monitoring for logs, metrics, alarms, and dashboards.",
+"trigger": "Use when setting up monitoring, creating alarms, querying logs with Insights, configuring metric filters, building dashboards, or troubleshooting application issues.",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@cloudwatch -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@cloudwatch -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"cloudwatch",
+"itsmostafa",
+"cloudwatch",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-cognito",
+"priority": 464,
+"category": "community",
+"type": "skill",
+"want": "cognito",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS Cognito user authentication and authorization service.",
+"trigger": "Use when setting up user pools, configuring identity pools, implementing OAuth flows, managing user attributes, or integrating with social identity providers.",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@cognito -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@cognito -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"cognito",
+"itsmostafa",
+"cognito",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-dynamodb",
+"priority": 465,
+"category": "community",
+"type": "skill",
+"want": "dynamodb",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS DynamoDB NoSQL database for scalable data storage.",
+"trigger": "Use when designing table schemas, writing queries, configuring indexes, managing capacity, implementing single-table design, or troubleshooting performance issues.",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@dynamodb -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@dynamodb -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"dynamodb",
+"itsmostafa",
+"dynamodb",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-ec2",
+"priority": 466,
+"category": "community",
+"type": "skill",
+"want": "ec2",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS EC2 virtual machine management — instances, security groups, key pairs, AMIs, EBS volumes, Auto Scaling Groups, Spot Instances, Session Manager, placement groups, and instance lifecycle automation.\nTrigger on ANY of these, even when EC2 isn't named explicitly: - Launching or provisioning: \"spin up a server\", \"create a VM\", \"new instance\", \"run-instances\", mention of instance types (t3, m5, c5, r6, g5, p4d, t4g, c7g, etc.) - SSH / connectivity problems: \"connection refused\", \"connection timed out\", \"permission denied publickey\", \"can't connect to my instance\", \"SSH not working\" - Instance management: resize, stop, start, terminate, reboot, change instance type - Cost optimization: stop dev instances overnight, save money on EC2, spot vs on-demand, reserved instances - Auto Scaling: ASG, launch template, mixed instances policy, scale to zero, scheduled scaling - Spot Instances: spot fleet, spot interruption, capacity-optimized, price-capacity-optimized - AMIs and backups: create image, custom AMI, EBS snapshot, DLM lifecycle policy, copy AMI - Monitoring: EC2 CPU utilization, CloudWatch metrics for instance, instance status checks, console output - Access methods: Session Manager, EC2 Instance Connect, bastion host, port forwarding - Security: IMDSv2, instance metadata, IAM role on instance, security group rules - User data and bootstrap scripts, cloud-init",
+"trigger": "",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@ec2 -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@ec2 -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"ec2",
+"itsmostafa",
+"ec2",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-itsmostafa-aws-agent-skills-skills-ecs",
+"priority": 467,
+"category": "community",
+"type": "skill",
+"want": "ecs",
+"feature": "itsmostafa/aws-agent-skills",
+"summary": "AWS ECS container orchestration for running Docker containers.",
+"trigger": "Use when deploying containerized applications, configuring task definitions, setting up services, managing clusters, or troubleshooting container issues.",
+"commands": [
+"npx skills add itsmostafa/aws-agent-skills@ecs -g"
+],
+"install": "npx skills add itsmostafa/aws-agent-skills@ecs -g",
+"stars": 1175,
+"repoUrl": "https://github.com/itsmostafa/aws-agent-skills",
+"aliases": [
+"ecs",
+"itsmostafa",
+"ecs",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-upstash-redis-js-skills",
+"priority": 468,
+"category": "community",
+"type": "skill",
+"want": "redis-js",
+"feature": "upstash/redis-js",
+"summary": "Work with the Upstash Redis JavaScript/TypeScript SDK for serverless Redis operations. Use for caching, session storage, rate limiting, leaderboards, full-text search (querying, filtering, aggregating with @upstash/redis search extension), and all Redis data structures. Supports automatic serialization/deserialization of JavaScript types. Search also available via @upstash/search-redis and @upstash/search-ioredis adapters for TCP clients.",
+"trigger": "",
+"commands": [
+"npx skills add upstash/redis-js -g"
+],
+"install": "npx skills add upstash/redis-js -g",
+"stars": 987,
+"repoUrl": "https://github.com/upstash/redis-js",
+"aliases": [
+"skills",
+"upstash",
+"redis-js",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-raphaelsalaja-userinterface-wiki-skills",
+"priority": 469,
+"category": "community",
+"type": "skill",
+"want": "userinterface-wiki",
+"feature": "raphaelsalaja/userinterface-wiki",
+"summary": "UI/UX best practices for web interfaces.",
+"trigger": "Use when reviewing animations, CSS, audio, typography, UX patterns, prefetching, or icon implementations. Covers 11 categories from animation principles to typography. Outputs file:line findings.",
+"commands": [
+"npx skills add raphaelsalaja/userinterface-wiki -g"
+],
+"install": "npx skills add raphaelsalaja/userinterface-wiki -g",
+"stars": 953,
+"repoUrl": "https://github.com/raphaelsalaja/userinterface-wiki",
+"aliases": [
+"skills",
+"raphaelsalaja",
+"userinterface-wiki",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-shadcnspace-shadcnspace-.agents-skills-shadcnspace",
-"priority": 442,
+"priority": 470,
 "category": "community",
 "type": "skill",
 "want": "shadcnspace",
@@ -980,7 +1624,7 @@ window.CCF_SKILLS = [
 "npx skills add shadcnspace/shadcnspace@shadcnspace -g"
 ],
 "install": "npx skills add shadcnspace/shadcnspace@shadcnspace -g",
-"stars": 795,
+"stars": 810,
 "repoUrl": "https://github.com/shadcnspace/shadcnspace",
 "aliases": [
 "shadcnspace",
@@ -992,7 +1636,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-shadcnspace-shadcnspace-shadcnspace",
-"priority": 443,
+"priority": 471,
 "category": "community",
 "type": "skill",
 "want": "shadcnspace",
@@ -1003,7 +1647,7 @@ window.CCF_SKILLS = [
 "npx skills add shadcnspace/shadcnspace@shadcnspace -g"
 ],
 "install": "npx skills add shadcnspace/shadcnspace@shadcnspace -g",
-"stars": 795,
+"stars": 810,
 "repoUrl": "https://github.com/shadcnspace/shadcnspace",
 "aliases": [
 "shadcnspace",
@@ -1015,7 +1659,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-shadcnspace-shadcnspace-public",
-"priority": 444,
+"priority": 472,
 "category": "community",
 "type": "skill",
 "want": "shadcnspace",
@@ -1026,7 +1670,7 @@ window.CCF_SKILLS = [
 "npx skills add shadcnspace/shadcnspace@public -g"
 ],
 "install": "npx skills add shadcnspace/shadcnspace@public -g",
-"stars": 795,
+"stars": 810,
 "repoUrl": "https://github.com/shadcnspace/shadcnspace",
 "aliases": [
 "public",
@@ -1038,7 +1682,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-shadcnspace-shadcnspace-skills-shadcnspace",
-"priority": 445,
+"priority": 473,
 "category": "community",
 "type": "skill",
 "want": "shadcnspace",
@@ -1049,7 +1693,7 @@ window.CCF_SKILLS = [
 "npx skills add shadcnspace/shadcnspace@shadcnspace -g"
 ],
 "install": "npx skills add shadcnspace/shadcnspace@shadcnspace -g",
-"stars": 795,
+"stars": 810,
 "repoUrl": "https://github.com/shadcnspace/shadcnspace",
 "aliases": [
 "shadcnspace",
@@ -1061,7 +1705,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-denissergeevitch-repo-task-proof-loop-repo-task-proof-loop",
-"priority": 446,
+"priority": 474,
 "category": "community",
 "type": "skill",
 "want": "repo-task-proof-loop",
@@ -1072,7 +1716,7 @@ window.CCF_SKILLS = [
 "npx skills add DenisSergeevitch/repo-task-proof-loop -g"
 ],
 "install": "npx skills add DenisSergeevitch/repo-task-proof-loop -g",
-"stars": 726,
+"stars": 725,
 "repoUrl": "https://github.com/DenisSergeevitch/repo-task-proof-loop",
 "aliases": [
 "repo-task-proof-loop",
@@ -1083,8 +1727,100 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-genomoncology-biomcp-skills",
+"priority": 475,
+"category": "community",
+"type": "skill",
+"want": "biomcp",
+"feature": "genomoncology/biomcp",
+"summary": "Search and retrieve biomedical data - genes, variants, clinical trials, diagnostic tests, articles, drugs, diseases, pathways, proteins, adverse events, pharmacogenomics, and phenotype-disease matching. Use for gene function, variant pathogenicity, trials, diagnostics, drug safety, pathway context, disease workups, and literature evidence.",
+"trigger": "",
+"commands": [
+"npx skills add genomoncology/biomcp@skills -g"
+],
+"install": "npx skills add genomoncology/biomcp@skills -g",
+"stars": 681,
+"repoUrl": "https://github.com/genomoncology/biomcp",
+"aliases": [
+"skills",
+"genomoncology",
+"biomcp",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-genomoncology-biomcp-sdlc-archive-skills-biomcp-research",
+"priority": 476,
+"category": "community",
+"type": "skill",
+"want": "biomcp-research",
+"feature": "genomoncology/biomcp",
+"summary": "Do biomedical literature and variant research with the BioMCP CLI, and file what you learn about the tool itself as issues in the biomcp repo.",
+"trigger": "",
+"commands": [
+"npx skills add genomoncology/biomcp@biomcp-research -g"
+],
+"install": "npx skills add genomoncology/biomcp@biomcp-research -g",
+"stars": 681,
+"repoUrl": "https://github.com/genomoncology/biomcp",
+"aliases": [
+"biomcp-research",
+"genomoncology",
+"biomcp-research",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-ksimback-tech-debt-skill-tech-debt-skill",
+"priority": 477,
+"category": "community",
+"type": "skill",
+"want": "tech-debt-audit",
+"feature": "ksimback/tech-debt-skill",
+"summary": "Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimates, and a required \"looks bad but is actually fine\" section.",
+"trigger": "Use when the user asks for a debt audit, codebase health check, architecture review, or code quality assessment of an entire repo. Does not auto-invoke.",
+"commands": [
+"npx skills add ksimback/tech-debt-skill -g"
+],
+"install": "npx skills add ksimback/tech-debt-skill -g",
+"stars": 632,
+"repoUrl": "https://github.com/ksimback/tech-debt-skill",
+"aliases": [
+"tech-debt-skill",
+"ksimback",
+"tech-debt-audit",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-quantco-dataframely-skills",
+"priority": 478,
+"category": "community",
+"type": "skill",
+"want": "dataframely",
+"feature": "Quantco/dataframely",
+"summary": "Best practices for polars data processing with dataframely. Covers definitions of Schema and Collection, usage of .validate() and .filter(), type hints, and testing.",
+"trigger": "Use when writing or modifying code involving dataframely or polars data frames.",
+"commands": [
+"npx skills add Quantco/dataframely -g"
+],
+"install": "npx skills add Quantco/dataframely -g",
+"stars": 627,
+"repoUrl": "https://github.com/Quantco/dataframely",
+"aliases": [
+"skills",
+"Quantco",
+"dataframely",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-op7418-document-illustrator-skill-document-illustrator-skill",
-"priority": 447,
+"priority": 479,
 "category": "community",
 "type": "skill",
 "want": "document-illustrator",
@@ -1095,7 +1831,7 @@ window.CCF_SKILLS = [
 "npx skills add op7418/Document-illustrator-skill -g"
 ],
 "install": "npx skills add op7418/Document-illustrator-skill -g",
-"stars": 609,
+"stars": 613,
 "repoUrl": "https://github.com/op7418/Document-illustrator-skill",
 "aliases": [
 "Document-illustrator-skill",
@@ -1106,8 +1842,31 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-ahmadawais-ramadan-cli-skills",
+"priority": 480,
+"category": "community",
+"type": "skill",
+"want": "skills",
+"feature": "ahmadawais/ramadan-cli",
+"summary": "CLI to check Sehar and Iftar times in Ramadan anywhere in the world.",
+"trigger": "",
+"commands": [
+"npx skills add ahmadawais/ramadan-cli -g"
+],
+"install": "npx skills add ahmadawais/ramadan-cli -g",
+"stars": 605,
+"repoUrl": "https://github.com/ahmadawais/ramadan-cli",
+"aliases": [
+"skills",
+"ahmadawais",
+"skills",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-browser-use-browser-harness-js-browser-harness-js",
-"priority": 448,
+"priority": 481,
 "category": "community",
 "type": "skill",
 "want": "cdp",
@@ -1118,7 +1877,7 @@ window.CCF_SKILLS = [
 "npx skills add browser-use/browser-harness-js -g"
 ],
 "install": "npx skills add browser-use/browser-harness-js -g",
-"stars": 498,
+"stars": 500,
 "repoUrl": "https://github.com/browser-use/browser-harness-js",
 "aliases": [
 "browser-harness-js",
@@ -1130,7 +1889,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-ali2000hos-persian-writing-persian-writing",
-"priority": 449,
+"priority": 482,
 "category": "community",
 "type": "skill",
 "want": "persian-writing",
@@ -1141,7 +1900,7 @@ window.CCF_SKILLS = [
 "npx skills add ali2000hos/persian-writing -g"
 ],
 "install": "npx skills add ali2000hos/persian-writing -g",
-"stars": 420,
+"stars": 434,
 "repoUrl": "https://github.com/ali2000hos/persian-writing",
 "aliases": [
 "persian-writing",
@@ -1152,54 +1911,100 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-cosmoblk-email-marketing-bible-email-marketing-bible",
-"priority": 450,
+"id": "skill-w3c-web-performance-skills",
+"priority": 483,
 "category": "community",
 "type": "skill",
-"want": "email-marketing-bible",
-"feature": "CosmoBlk/email-marketing-bible",
-"summary": "Email marketing operating manual for AI agents, with hard send-safety gates.",
-"trigger": "Use when someone plans, writes, designs, audits or sends an email campaign, newsletter, welcome series, abandoned-cart, post-purchase or win-back flow; builds a list or segment; drives Klaviyo, Mailchimp, Brevo, Kit or any ESP through MCP, an API or a connector; asks to warm up my domain, migrate from Klaviyo, Mailchimp or Brevo, or why am I in spam (bounces, complaints, DMARC, falling opens); checks GDPR, CAN-SPAM, CASL, PECR or Spam Act rules; wants email copy that does not sound like AI; picks an ESP; or needs benchmarks. Also cold email, SMS, RCS and WhatsApp. Load it before any agent stages, schedules or sends email to more than one person. Not for transactional email API code or parsing inbound mail.",
+"want": "bikeshed-conversion",
+"feature": "w3c/web-performance",
+"summary": "Guidelines for converting W3C specs to Bikeshed format. Covers anchor ID preservation, dfn handling, and common pitfalls. Read this before any Bikeshed conversion or migration work.",
+"trigger": "",
 "commands": [
-"npx skills add CosmoBlk/email-marketing-bible@email-marketing-bible -g"
+"npx skills add w3c/web-performance@skills -g"
 ],
-"install": "npx skills add CosmoBlk/email-marketing-bible@email-marketing-bible -g",
-"stars": 368,
-"repoUrl": "https://github.com/CosmoBlk/email-marketing-bible",
+"install": "npx skills add w3c/web-performance@skills -g",
+"stars": 430,
+"repoUrl": "https://github.com/w3c/web-performance",
 "aliases": [
-"email-marketing-bible",
-"CosmoBlk",
-"email-marketing-bible",
+"skills",
+"w3c",
+"bikeshed-conversion",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-cosmoblk-email-marketing-bible-skills-email-marketing-bible",
-"priority": 451,
+"id": "skill-w3c-web-performance-skills-bikeshed-conversion",
+"priority": 484,
 "category": "community",
 "type": "skill",
-"want": "email-marketing-bible",
-"feature": "CosmoBlk/email-marketing-bible",
-"summary": "Email marketing operating manual for AI agents, with hard send-safety gates.",
-"trigger": "Use when someone plans, writes, designs, audits or sends an email campaign, newsletter, welcome series, abandoned-cart, post-purchase or win-back flow; builds a list or segment; drives Klaviyo, Mailchimp, Brevo, Kit or any ESP through MCP, an API or a connector; asks to warm up my domain, migrate from Klaviyo, Mailchimp or Brevo, or why am I in spam (bounces, complaints, DMARC, falling opens); checks GDPR, CAN-SPAM, CASL, PECR or Spam Act rules; wants email copy that does not sound like AI; picks an ESP; or needs benchmarks. Also cold email, SMS, RCS and WhatsApp. Load it before any agent stages, schedules or sends email to more than one person. Not for transactional email API code or parsing inbound mail.",
+"want": "bikeshed-conversion",
+"feature": "w3c/web-performance",
+"summary": "Convert a W3C spec from ReSpec (index.html) to Bikeshed (index.bs), keeping its anchors and exported terms stable",
+"trigger": "",
 "commands": [
-"npx skills add CosmoBlk/email-marketing-bible@email-marketing-bible -g"
+"npx skills add w3c/web-performance@bikeshed-conversion -g"
 ],
-"install": "npx skills add CosmoBlk/email-marketing-bible@email-marketing-bible -g",
-"stars": 368,
-"repoUrl": "https://github.com/CosmoBlk/email-marketing-bible",
+"install": "npx skills add w3c/web-performance@bikeshed-conversion -g",
+"stars": 430,
+"repoUrl": "https://github.com/w3c/web-performance",
 "aliases": [
-"email-marketing-bible",
-"CosmoBlk",
-"email-marketing-bible",
+"bikeshed-conversion",
+"w3c",
+"bikeshed-conversion",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-w3c-web-performance-skills-publish-wg-minutes",
+"priority": 485,
+"category": "community",
+"type": "skill",
+"want": "publish-wg-minutes",
+"feature": "w3c/web-performance",
+"summary": "Process and publish WebPerfWG meeting minutes from Google Docs zip exports. Read this before handling any WebPerfWG meeting minute zip files.",
+"trigger": "",
+"commands": [
+"npx skills add w3c/web-performance@publish-wg-minutes -g"
+],
+"install": "npx skills add w3c/web-performance@publish-wg-minutes -g",
+"stars": 430,
+"repoUrl": "https://github.com/w3c/web-performance",
+"aliases": [
+"publish-wg-minutes",
+"w3c",
+"publish-wg-minutes",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-axtonliu-ai-pair-ai-pair",
+"priority": 486,
+"category": "community",
+"type": "skill",
+"want": "ai-pair",
+"feature": "axtonliu/ai-pair",
+"summary": "AI Pair Collaboration Skill. Coordinate multiple AI models to work together:\none creates (Author/Developer), two others review (Codex + Gemini).\nWorks for code, articles, video scripts, and any creative task.\n.",
+"trigger": "Trigger: /ai-pair, ai pair, dev-team, content-team, team-stop",
+"commands": [
+"npx skills add axtonliu/ai-pair -g"
+],
+"install": "npx skills add axtonliu/ai-pair -g",
+"stars": 354,
+"repoUrl": "https://github.com/axtonliu/ai-pair",
+"aliases": [
+"ai-pair",
+"axtonliu",
+"ai-pair",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-assess-covariance-method",
-"priority": 452,
+"priority": 487,
 "category": "community",
 "type": "skill",
 "want": "assess-covariance-method",
@@ -1222,7 +2027,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-choose-covariance-estimator",
-"priority": 453,
+"priority": 488,
 "category": "community",
 "type": "skill",
 "want": "choose-covariance-estimator",
@@ -1245,7 +2050,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-estimate-online-covariance",
-"priority": 454,
+"priority": 489,
 "category": "community",
 "type": "skill",
 "want": "estimate-online-covariance",
@@ -1268,7 +2073,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-keyed-dynamic-universe",
-"priority": 455,
+"priority": 490,
 "category": "community",
 "type": "skill",
 "want": "keyed-dynamic-universe",
@@ -1291,7 +2096,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-precise",
-"priority": 456,
+"priority": 491,
 "category": "community",
 "type": "skill",
 "want": "precise",
@@ -1314,7 +2119,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-microprediction-precise-.claude-skills-score-covariance-estimate",
-"priority": 457,
+"priority": 492,
 "category": "community",
 "type": "skill",
 "want": "score-covariance-estimate",
@@ -1336,100 +2141,261 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-chenhg5-agencycli-skills-agency-messaging",
-"priority": 458,
+"id": "skill-sigcli-sigcli-skills-bilibili",
+"priority": 493,
 "category": "community",
 "type": "skill",
-"want": "agency-messaging",
-"feature": "chenhg5/agencycli",
-"summary": "Discover all agents in the current agency and send/receive async messages between agents and the human owner via the inbox system.",
+"want": "bilibili",
+"feature": "sigcli/sigcli",
+"summary": "Interact with Bilibili (B站) — browse trending videos, view video details, read comments, search videos and users, view user profiles, like, coin, and favorite videos. Use this skill whenever the user mentions Bilibili, B站, wants to browse Bilibili content, search Bilibili videos, read Bilibili comments, look up Bilibili users, or interact with Bilibili content. Also trigger when the user pastes a Bilibili URL (e.g. bilibili.com/video/BV...) or mentions a BV ID.",
 "trigger": "",
 "commands": [
-"npx skills add chenhg5/agencycli@agency-messaging -g"
+"npx skills add sigcli/sigcli@bilibili -g"
 ],
-"install": "npx skills add chenhg5/agencycli@agency-messaging -g",
-"stars": 242,
-"repoUrl": "https://github.com/chenhg5/agencycli",
+"install": "npx skills add sigcli/sigcli@bilibili -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
-"agency-messaging",
-"chenhg5",
-"agency-messaging",
+"bilibili",
+"sigcli",
+"bilibili",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-chenhg5-agencycli-agencycli",
-"priority": 459,
+"id": "skill-sigcli-sigcli-skills-douyin",
+"priority": 494,
 "category": "community",
 "type": "skill",
-"want": "agencycli",
-"feature": "chenhg5/agencycli",
-"summary": "Manage AI agent teams with agencycli — a CLI tool for organising AI agents (Claude Code, Codex, Gemini, Cursor, etc.) into hierarchical teams (Agency → Team → Role → Project → Agent). Key capabilities: create agencies and teams, hire agents with merged context layers, assign and run tasks with priority queues, manage autonomous playbooks (wakeup.md), send async inbox messages between human and agents, configure heartbeat schedules and cron jobs, run agents inside Docker sandboxes, forward/confirm tasks via inbox, manage templates, and more. Use this skill whenever you need to: create or manage an agencycli workspace, hire/fire/sync agents, add/run/cancel tasks, check inbox confirmations, send messages, configure heartbeats or crons, start the scheduler, or work with agency templates.",
+"want": "douyin",
+"feature": "sigcli/sigcli",
+"summary": "Provide authenticated cookies for Douyin (抖音/TikTok China) — two providers: douyin (www.douyin.com for scraping) and douyin-live (live.douyin.com for livestream). Use this skill whenever the user needs Douyin cookies for scraping tools like DouYin_Spider, or needs to authenticate with Douyin services. Trigger when the user mentions 抖音, Douyin, TikTok China, douyin cookies, or wants to use tools that require Douyin login cookies.",
 "trigger": "",
 "commands": [
-"npx skills add chenhg5/agencycli@agencycli -g"
+"npx skills add sigcli/sigcli@douyin -g"
 ],
-"install": "npx skills add chenhg5/agencycli@agencycli -g",
-"stars": 242,
-"repoUrl": "https://github.com/chenhg5/agencycli",
+"install": "npx skills add sigcli/sigcli@douyin -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
-"agencycli",
-"chenhg5",
-"agencycli",
+"douyin",
+"sigcli",
+"douyin",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-chenhg5-agencycli-skills-agencycli-usage",
-"priority": 460,
+"id": "skill-sigcli-sigcli-skills-hackernews",
+"priority": 495,
 "category": "community",
 "type": "skill",
-"want": "agencycli-usage",
-"feature": "chenhg5/agencycli",
-"summary": "Operate the agencycli tool — create agencies, teams, projects, and hire AI agents into working directories.",
+"want": "hackernews",
+"feature": "sigcli/sigcli",
+"summary": "Interact with Hacker News (news.ycombinator.com) — browse top, new, and best stories, read item details and comment threads, look up user profiles, and search posts via Algolia. Use this skill whenever the user mentions Hacker News, HN, YCombinator news, ycombinator.com, news.ycombinator.com, wants to browse tech news, read HN discussions, search HN posts, or look up HN users. Also trigger when the user pastes an HN URL (e.g. news.ycombinator.com/item?id=12345). Keywords: Hacker News, HN, YC, ycombinator, tech news, Show HN, Ask HN, HN front page.",
 "trigger": "",
 "commands": [
-"npx skills add chenhg5/agencycli@agencycli-usage -g"
+"npx skills add sigcli/sigcli@hackernews -g"
 ],
-"install": "npx skills add chenhg5/agencycli@agencycli-usage -g",
-"stars": 242,
-"repoUrl": "https://github.com/chenhg5/agencycli",
+"install": "npx skills add sigcli/sigcli@hackernews -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
-"agencycli-usage",
-"chenhg5",
-"agencycli-usage",
+"hackernews",
+"sigcli",
+"hackernews",
 "skill",
 "スキル"
 ]
 },
 {
-"id": "skill-chenhg5-agencycli-skills-task-management",
-"priority": 461,
+"id": "skill-sigcli-sigcli-skills-linkedin",
+"priority": 496,
 "category": "community",
 "type": "skill",
-"want": "task-management",
-"feature": "chenhg5/agencycli",
-"summary": "Create, assign, monitor, and close tasks across agents. Covers full task lifecycle — add, priority, dependencies, confirm-request, retry, cancel, bulk ops, and cross-agent search.",
+"want": "linkedin",
+"feature": "sigcli/sigcli",
+"summary": "Interact with LinkedIn — view your profile, browse other profiles, read the feed, search jobs/posts/people, get job details, create posts, like/unlike posts, comment, send connection requests, and follow/unfollow users. Use this skill whenever the user mentions LinkedIn, wants to search for jobs or people, read their LinkedIn feed, view a profile, get job details, create a post, like or comment on content, send a connection request, or follow someone. Also trigger when the user pastes a LinkedIn URL (e.g. linkedin.com/in/..., linkedin.com/jobs/view/...) or mentions LinkedIn networking.",
 "trigger": "",
 "commands": [
-"npx skills add chenhg5/agencycli@task-management -g"
+"npx skills add sigcli/sigcli@linkedin -g"
 ],
-"install": "npx skills add chenhg5/agencycli@task-management -g",
-"stars": 242,
-"repoUrl": "https://github.com/chenhg5/agencycli",
+"install": "npx skills add sigcli/sigcli@linkedin -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
 "aliases": [
-"task-management",
-"chenhg5",
-"task-management",
+"linkedin",
+"sigcli",
+"linkedin",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-sigcli-sigcli-skills-msteams",
+"priority": 497,
+"category": "community",
+"type": "skill",
+"want": "msteams",
+"feature": "sigcli/sigcli",
+"summary": "Interact with Microsoft Teams — send and read messages, search conversations, look up people, check calendar, get meeting transcripts, and manage chats. Use this skill whenever the user mentions Teams, MS Teams, Microsoft Teams, wants to send a message, read chat history, search conversations, look up a colleague, check their calendar, find meeting recordings or transcripts, see direct reports or manager, or do anything involving Teams communication. Also trigger when the user asks about scheduling, org chart, people search, or wants to message someone.",
+"trigger": "",
+"commands": [
+"npx skills add sigcli/sigcli@msteams -g"
+],
+"install": "npx skills add sigcli/sigcli@msteams -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
+"aliases": [
+"msteams",
+"sigcli",
+"msteams",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-sigcli-sigcli-skills-outlook",
+"priority": 498,
+"category": "community",
+"type": "skill",
+"want": "outlook",
+"feature": "sigcli/sigcli",
+"summary": "Interact with Outlook email — read inbox, send emails, search messages, reply/forward, manage folders, download attachments. Use this skill whenever the user mentions email, Outlook, inbox, mail, send email, check email, unread messages, email search, attachments, reply to email, forward email, 邮件, 收件箱, or wants to read, send, search, reply to, forward, or manage emails.",
+"trigger": "",
+"commands": [
+"npx skills add sigcli/sigcli@outlook -g"
+],
+"install": "npx skills add sigcli/sigcli@outlook -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
+"aliases": [
+"outlook",
+"sigcli",
+"outlook",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-sigcli-sigcli-skills-reddit",
+"priority": 499,
+"category": "community",
+"type": "skill",
+"want": "reddit",
+"feature": "sigcli/sigcli",
+"summary": "Interact with Reddit — browse subreddits, read posts and comments, search content, view user profiles, post comments, vote, save posts, subscribe to subreddits. Use this skill whenever the user mentions Reddit, r/, subreddit, wants to browse Reddit posts, read Reddit discussions, search Reddit, look up Reddit users, or interact with Reddit content. Also trigger when the user pastes a Reddit URL (e.g. reddit.com/r/programming/...) or mentions a subreddit name.",
+"trigger": "",
+"commands": [
+"npx skills add sigcli/sigcli@reddit -g"
+],
+"install": "npx skills add sigcli/sigcli@reddit -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
+"aliases": [
+"reddit",
+"sigcli",
+"reddit",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-sigcli-sigcli-skills-sigcli",
+"priority": 500,
+"category": "community",
+"type": "skill",
+"want": "sigcli",
+"feature": "sigcli/sigcli",
+"summary": "Guide Claude to use SigCLI correctly — check auth, login, get credentials, configure providers, and onboard new websites. Trigger when using sig commands, editing ~/.sig/config.yaml, or needing authenticated API access.",
+"trigger": "",
+"commands": [
+"npx skills add sigcli/sigcli@sigcli -g"
+],
+"install": "npx skills add sigcli/sigcli@sigcli -g",
+"stars": 293,
+"repoUrl": "https://github.com/sigcli/sigcli",
+"aliases": [
+"sigcli",
+"sigcli",
+"sigcli",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-sixian-li-knowledge-base-kit-skills-kb",
+"priority": 501,
+"category": "community",
+"type": "skill",
+"want": "kb",
+"feature": "Sixian-Li/knowledge-base-kit",
+"summary": "Read and answer questions from this workspace's local knowledge base. Start at its catalog, read matching summaries and expand to full documents when needed.",
+"trigger": "",
+"commands": [
+"npx skills add Sixian-Li/knowledge-base-kit@kb -g"
+],
+"install": "npx skills add Sixian-Li/knowledge-base-kit@kb -g",
+"stars": 274,
+"repoUrl": "https://github.com/Sixian-Li/knowledge-base-kit",
+"aliases": [
+"kb",
+"Sixian-Li",
+"kb",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-sixian-li-knowledge-base-kit-skills-process_docs",
+"priority": 502,
+"category": "community",
+"type": "skill",
+"want": "process_docs",
+"feature": "Sixian-Li/knowledge-base-kit",
+"summary": "Ingest documents into this local knowledge workspace, preserving source content, drafting full text and summaries, validating, classifying and updating the catalog. Also supports check, batch, group, delete and teach requests.",
+"trigger": "",
+"commands": [
+"npx skills add Sixian-Li/knowledge-base-kit@process_docs -g"
+],
+"install": "npx skills add Sixian-Li/knowledge-base-kit@process_docs -g",
+"stars": 274,
+"repoUrl": "https://github.com/Sixian-Li/knowledge-base-kit",
+"aliases": [
+"process_docs",
+"Sixian-Li",
+"process_docs",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-upstash-qstash-js-skills",
+"priority": 503,
+"category": "community",
+"type": "skill",
+"want": "qstash-js",
+"feature": "upstash/qstash-js",
+"summary": "Work with the QStash JavaScript/TypeScript SDK for serverless messaging, scheduling.",
+"trigger": "Use when publishing messages to HTTP endpoints, creating schedules, managing queues, verifying incoming messages in serverless environments.",
+"commands": [
+"npx skills add upstash/qstash-js -g"
+],
+"install": "npx skills add upstash/qstash-js -g",
+"stars": 271,
+"repoUrl": "https://github.com/upstash/qstash-js",
+"aliases": [
+"skills",
+"upstash",
+"qstash-js",
 "skill",
 "スキル"
 ]
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-backend-design",
-"priority": 462,
+"priority": 504,
 "category": "community",
 "type": "skill",
 "want": "backend-design",
@@ -1452,7 +2418,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-brainstorming",
-"priority": 463,
+"priority": 505,
 "category": "community",
 "type": "skill",
 "want": "brainstorming",
@@ -1475,7 +2441,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-browser-extension",
-"priority": 464,
+"priority": 506,
 "category": "community",
 "type": "skill",
 "want": "browser-extension",
@@ -1498,7 +2464,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-clean-code",
-"priority": 465,
+"priority": 507,
 "category": "community",
 "type": "skill",
 "want": "clean-code",
@@ -1521,7 +2487,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-debug-mastery",
-"priority": 466,
+"priority": 508,
 "category": "community",
 "type": "skill",
 "want": "debug-mastery",
@@ -1544,7 +2510,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-frontend-design",
-"priority": 467,
+"priority": 509,
 "category": "community",
 "type": "skill",
 "want": "frontend-design",
@@ -1567,7 +2533,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-skills-git-worktrees",
-"priority": 468,
+"priority": 510,
 "category": "community",
 "type": "skill",
 "want": "git-worktrees",
@@ -1590,7 +2556,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-xenitv1-claude-code-maestro-claude-code-maestro",
-"priority": 469,
+"priority": 511,
 "category": "community",
 "type": "skill",
 "want": "maestro",
@@ -1613,7 +2579,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-vivixiao980-xhs-cover-skill-xhs-cover-skill",
-"priority": 470,
+"priority": 512,
 "category": "community",
 "type": "skill",
 "want": "xhs-cover",
@@ -1624,7 +2590,7 @@ window.CCF_SKILLS = [
 "npx skills add Vivixiao980/xhs-cover-skill -g"
 ],
 "install": "npx skills add Vivixiao980/xhs-cover-skill -g",
-"stars": 222,
+"stars": 224,
 "repoUrl": "https://github.com/Vivixiao980/xhs-cover-skill",
 "aliases": [
 "xhs-cover-skill",
@@ -1636,7 +2602,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-cslawyer1985-china-lawyer-analyst-china-lawyer-analyst",
-"priority": 471,
+"priority": 513,
 "category": "community",
 "type": "skill",
 "want": "china-lawyer-analyst",
@@ -1647,7 +2613,7 @@ window.CCF_SKILLS = [
 "npx skills add CSlawyer1985/china-lawyer-analyst -g"
 ],
 "install": "npx skills add CSlawyer1985/china-lawyer-analyst -g",
-"stars": 206,
+"stars": 210,
 "repoUrl": "https://github.com/CSlawyer1985/china-lawyer-analyst",
 "aliases": [
 "china-lawyer-analyst",
@@ -1658,8 +2624,54 @@ window.CCF_SKILLS = [
 ]
 },
 {
+"id": "skill-actboy168-bee.lua-skills",
+"priority": 514,
+"category": "community",
+"type": "skill",
+"want": "bee-lua",
+"feature": "actboy168/bee.lua",
+"summary": "bee.lua 运行时库指南——Lua 5.4/5.5 上的跨平台系统级绑定（异步 I/O、网络、子进程、线程、文件系统、文件监控、崩溃 dump）。当需要在本项目里编写、修改或排查使用 `require \"bee.*\"` 的 Lua 代码，涉及 socket/select/epoll/async、thread/channel/serialization、subprocess、filesystem/filewatch、time/sys/crash/debugging/windows，或需要按平台差异处理行为时，使用本 skill。即使用户没有明确提到 bee.lua，只要上下文是在调用 `bee` 命名空间下的模块，也应使用。不要用于纯 Lua 语言/标准库问题、与 bee 无关的第三方 C 模块，或本项目 C++ 层 `bee/`、`binding/` 的实现细节（那些看源码）。",
+"trigger": "",
+"commands": [
+"npx skills add actboy168/bee.lua -g"
+],
+"install": "npx skills add actboy168/bee.lua -g",
+"stars": 195,
+"repoUrl": "https://github.com/actboy168/bee.lua",
+"aliases": [
+"skills",
+"actboy168",
+"bee-lua",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-ngless-toolkit-ngless-skills",
+"priority": 515,
+"category": "community",
+"type": "skill",
+"want": "ngless",
+"feature": "ngless-toolkit/ngless",
+"summary": "Auto-activate when the user mentions NGLess, ngless, NGS processing, metagenomics pipelines with NGLess, writing .ngl scripts, or is working in the ngless repository (Rust source at src/). Also activate when the user asks about preprocessing FASTQ reads, mapping reads to references, counting features, or parallel sample processing in the context of NGLess scripting or development.",
+"trigger": "",
+"commands": [
+"npx skills add ngless-toolkit/ngless -g"
+],
+"install": "npx skills add ngless-toolkit/ngless -g",
+"stars": 152,
+"repoUrl": "https://github.com/ngless-toolkit/ngless",
+"aliases": [
+"skills",
+"ngless-toolkit",
+"ngless",
+"skill",
+"スキル"
+]
+},
+{
 "id": "skill-noahnan-max-chanlun-trading-system-chanlun-trading-system",
-"priority": 472,
+"priority": 516,
 "category": "community",
 "type": "skill",
 "want": "chanlun-trading-system",
@@ -1670,7 +2682,7 @@ window.CCF_SKILLS = [
 "npx skills add noahnan-max/chanlun-trading-system -g"
 ],
 "install": "npx skills add noahnan-max/chanlun-trading-system -g",
-"stars": 80,
+"stars": 81,
 "repoUrl": "https://github.com/noahnan-max/chanlun-trading-system",
 "aliases": [
 "chanlun-trading-system",
@@ -1682,7 +2694,7 @@ window.CCF_SKILLS = [
 },
 {
 "id": "skill-elliottech-lighter-agent-kit-lighter-agent-kit",
-"priority": 473,
+"priority": 517,
 "category": "community",
 "type": "skill",
 "want": "lighter-agent-kit",
@@ -1704,24 +2716,47 @@ window.CCF_SKILLS = [
 ]
 },
 {
-"id": "skill-ry071702-prog-web-design-playbook-skills-web-design-playbook",
-"priority": 474,
+"id": "skill-jjchen17-wps-cli-wps-cli",
+"priority": 518,
 "category": "community",
 "type": "skill",
-"want": "web-design-playbook",
-"feature": "ry071702-prog/web-design-playbook",
-"summary": "Webサイト/LP/HTMLモックのデザイン実装ワークフロー  新規作成・リデザイン・「おしゃれにして」等のデザイン依頼で使用し、参照レイヤー→方向決め→実装→実機検証→学びの還元 の型を強制する  ユーザーが「このサイトいいな/参考にして」とURLを共有したときの参考サイト蓄積にも使用.",
-"trigger": "Use when building or redesigning websites, landing pages, or HTML mockups, or when the user shares a website they like",
+"want": "wps-cli",
+"feature": "jjchen17/wps-cli",
+"summary": "通过 WPS Office COM 自动化操作 Word/Excel/PPT/PDF。76 条 CLI 命令，100% 格式保真，--json 输出适配 AI Agent。触发词：wps, word, excel, ppt, pdf, 文档, 表格, 演示, 公文, 模板, 办公自动化, WPS Office, docx, xlsx, pptx, 合并PDF, 格式转换。When you need to: create/edit/programmatically manipulate Office documents on Windows via WPS COM automation.",
+"trigger": "",
 "commands": [
-"npx skills add ry071702-prog/web-design-playbook -g"
+"npx skills add jjchen17/wps-cli@wps-cli -g"
 ],
-"install": "npx skills add ry071702-prog/web-design-playbook -g",
-"stars": 0,
-"repoUrl": "https://github.com/ry071702-prog/web-design-playbook",
+"install": "npx skills add jjchen17/wps-cli@wps-cli -g",
+"stars": 60,
+"repoUrl": "https://github.com/jjchen17/wps-cli",
 "aliases": [
-"web-design-playbook",
-"ry071702-prog",
-"web-design-playbook",
+"wps-cli",
+"jjchen17",
+"wps-cli",
+"skill",
+"スキル"
+]
+},
+{
+"id": "skill-jjchen17-wps-cli-skills-wps-cli",
+"priority": 519,
+"category": "community",
+"type": "skill",
+"want": "wps-cli",
+"feature": "jjchen17/wps-cli",
+"summary": "通过 WPS Office COM 自动化操作 Word/Excel/PPT/PDF 文档。76 条 CLI 命令，100% 格式保真，--json 输出适配 AI Agent。When you need to: create/edit Word documents (.docx), manipulate Excel spreadsheets (.xlsx) with formulas/charts/data-validation, build PowerPoint presentations (.pptx), process PDF files, batch convert office formats, fill Word templates with {{key}} placeholders, validate document formatting, or diagnose WPS COM issues. 当用户需要操作办公文档、填写模板、生成报表、处理PDF、诊断WPS环境时自动触发。",
+"trigger": "",
+"commands": [
+"npx skills add jjchen17/wps-cli@wps-cli -g"
+],
+"install": "npx skills add jjchen17/wps-cli@wps-cli -g",
+"stars": 60,
+"repoUrl": "https://github.com/jjchen17/wps-cli",
+"aliases": [
+"wps-cli",
+"jjchen17",
+"wps-cli",
 "skill",
 "スキル"
 ]
